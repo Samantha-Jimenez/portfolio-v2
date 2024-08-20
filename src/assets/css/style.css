@@ -462,12 +462,13 @@
   # Sections General
   --------------------------------------------------------------*/
   section {
-    padding: 60px 65px;
+    padding: 90px 65px 60px 65px;
     overflow: hidden;
   }
   
   .section-bg {
-    background: var(--shadow-background)
+    background: var(--shadow-background);
+    height: 100vh;
   }
   
   .section-title {

@@ -10,7 +10,7 @@ const About = () => {
             <div className="row">
                 {/* <div className="col-lg-4 aos-init aos-animate" data-aos="fade-right" style={{"height": "30vh", "overflow": "hidden", "marginLeft": "15px", "marginRight": "15px"}}>
                 </div> */}
-                <div className="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
+                <div className="col-lg-auto pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
                     <h3>Full Stack Software Engineer.</h3>
                     <p className="fst-italic">
                         I aspired to have a career I was passionate about and never looked back.

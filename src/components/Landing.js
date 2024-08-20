@@ -12,11 +12,11 @@ const Landing = () => {
                     <p style={{"display": "inline-flex"}}>I'm a <span style={{"borderBottom": "3px solid var(--highlight)"}} className="typed" >
                         <TypeAnimation
                             sequence={[
-                                'Web Developer',
-                                1800,
-                                'Designer',
+                                'Full Stack Software Engineer',
                                 1800,
                                 'Creator',
+                                1800,
+                                'Web Developer',
                                 1800,
                                 'Collaborator',
                                 1800,

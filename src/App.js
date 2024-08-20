@@ -117,10 +117,10 @@ function App() {
             <nav className="nav-menu">
               <ul className="nav-ul">
                 <li><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><i className="bx bx-home"></i>Home</Link></span></a></li>
-                <li><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-30}><i className="bx bx-user"></i>About</Link></span></a></li>
-                <li><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-30}><i className='bx bx-list-check' style={{"paddingRight": "0px", "fontSize": "34px"}}></i>Skills</Link></span></a></li>
-                <li><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-30}><i className="bx bx-collection"></i>Portfolio</Link></span></a></li>
-                <li><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-77}><i className="bx bx-envelope"></i>Contact</Link></span></a></li>
+                <li><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className="bx bx-user"></i>About</Link></span></a></li>
+                <li><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className='bx bx-list-check' style={{"paddingRight": "0px", "fontSize": "34px"}}></i>Skills</Link></span></a></li>
+                <li><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className="bx bx-collection"></i>Portfolio</Link></span></a></li>
+                <li><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className="bx bx-envelope"></i>Contact</Link></span></a></li>
                 <li><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i className="bx bx-file"></i> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
