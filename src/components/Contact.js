@@ -1,5 +1,5 @@
 import React from 'react';
-import emailjs from 'emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { ToastContainer, toast, Flip } from 'react-toastify';
 import './../css/Toast.css';
 
@@ -38,18 +38,18 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} class="php-email-form">
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" class="form-control" id="name" required/>
+                                <label htmlFor="name">Name</label>
+                                <input type="text" name="from_name" class="form-control" id="name" autoComplete="name" required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="name">Email</label>
-                                <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" required/>
+                                <label htmlFor="name">Email</label>
+                                <input type="email" class="form-control" name="reply_to" id="email" data-rule="email" autoComplete="email" data-msg="Please enter a valid email" required/>
                                 <div class="validate"></div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name">Message</label>
+                            <label htmlFor="name">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="10" data-rule="required" data-msg="Please write something for us" required></textarea>
                             <div class="validate"></div>
                         </div>
