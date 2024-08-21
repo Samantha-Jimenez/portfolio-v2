@@ -105,7 +105,6 @@ function App() {
             <Element id="landing" name="landing"><Landing/></Element>
             <div id="header-hover" style={{"backgroundColor": "rgba(57, 66, 62, 0.8) !important", "position": "sticky !important"}}>
             <div className="profile">
-              <img src={avatar} alt="" className="img-fluid rounded-circle" style={{"height": "100px"}}/>
               <h1 className="text-light"><a href="index.html">Samantha Jimenez</a></h1>
               <div className="social-links mt-3 text-center">
                 <a href='https://github.com/SamanthaBJimenez' target="_blank" rel="noopener noreferrer" className="github"><i className="bx bxl-github"></i></a>
@@ -124,18 +123,18 @@ function App() {
                 <li><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i className="bx bx-file"></i> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
-            <div className="wrapper">
-            <h5 className='theme_title'>Themes:</h5>
-              <div className="toggle_radio">
+            {/* <div className="wrapper"> */}
+            {/* <h5 className='theme_title'>Themes:</h5> */}
+              {/* <div className="toggle_radio"> */}
                 {/* {currentTheme === 'blueTheme' ? <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme}/>}
                 {currentTheme === 'brownTheme' ? <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="brownTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="brownTheme" onClick={changeTheme}/>}
                 {currentTheme === 'greenTheme' ? <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme}/>} */}
-                <label htmlFor="first_toggle"><p>Blue</p></label>
+                {/* <label htmlFor="first_toggle"><p>Blue</p></label>
                 <label htmlFor="second_toggle"><p>Brown</p></label>
                 <label htmlFor="third_toggle"><p>Green</p></label>
-                <div className="toggle_option_slider"></div>
-              </div>
-            </div>
+                <div className="toggle_option_slider"></div> */}
+              {/* </div> */}
+            {/* </div> */}
             </div>
             <section id="about" className="about">
               <Element name='about'><About/></Element>

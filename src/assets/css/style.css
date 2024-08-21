@@ -22,6 +22,7 @@
   
   a {
     color: var(--attention) !important;
+    text-decoration: none !important;
   }
   
   a:hover {
@@ -128,22 +129,7 @@
   
   #header .profile h1 a, #header .profile h1 a:hover {
     color: #fff;
-    text-decoration: none;
-  }
-  
-  #header .profile .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: var(--shadow);
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
+    text-decoration: none !important;
   }
   
   #header .profile .social-links a:hover {
@@ -156,6 +142,21 @@
     display: grid;
     grid-template-columns: 30vw 68vw;
     grid-template-rows: 0.75fr 0.75fr 0.75fr 0.75fr 0.75fr;
+  }
+
+  #main .profile .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: var(--shadow);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
   }
 
   #grid-layout {
@@ -200,7 +201,7 @@
   }
   
   .nav-menu a {
-    display: inline-block;
+    display: inline-flex;    
     align-items: center;
     color: var(--unselected-light);
     transition: 0.3s;
@@ -564,18 +565,17 @@
     display: block;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    color: white;
+    color: var(--highlight);
   }
   
   .skills-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid: repeat(5, 1fr) / repeat(6, 1fr);
   }
   
   .icon {
     font-size: 40px;
-    color: var(--highlight);
+    color: #96B0A3;
   }
   
   .iconDiv {
@@ -585,15 +585,16 @@
     text-align: -webkit-center;
     width: 100px !important;
     overflow: hidden;
+    box-shadow: 5px 5px 9px darkgrey;
+    border-radius: 10%;
   }
 
   .iconDiv:hover {
-    background-color: #96B0A3;
-    border-radius: 3%;
+    box-shadow: inset 5px 5px 9px darkgrey;
   }
 
   .iconDiv:hover .icon {
-    color: white;
+    color: var(--highlight);
   }
 
   .iconDiv:hover .progress {

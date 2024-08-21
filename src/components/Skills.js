@@ -8,11 +8,29 @@ const Skills = () => {
                 <h2>Skills</h2>
                 <p>These are a few of the technical competencies I've developed so far on my tech journey. I look forward to growing my collection of skills.</p>
             </div>
-            <div className="skills-content row">
+            <div className="skills-content">
                 <div className='iconDiv'>
                     <i className='devicon-javascript-plain icon'></i>
                     <div className="progress">
                         <span className="skill">javascript</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-react-original icon'></i>
+                    <div className="progress">
+                        <span className="skill">react</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-nodejs-line icon'></i>
+                    <div className="progress">
+                        <span className="skill">nodejs</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-html5-plain icon'></i>
+                    <div className="progress">
+                        <span className="skill">html</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
@@ -22,15 +40,27 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-vscode-plain icon'></i>
+                    <i className='devicon-typescript-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">vscode</span>
+                        <span className="skill">typescript</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-express-original icon'></i>
+                    <i className='devicon-graphql-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">express</span>
+                        <span className="skill">graphql</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-reactbootstrap-original icon'></i>
+                    <div className="progress">
+                        <span className="skill">reactbootstrap</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-bootstrap-plain icon'></i>
+                    <div className="progress">
+                        <span className="skill">bootstrap</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
@@ -46,51 +76,45 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-html5-plain icon'></i>
+                    <i className='devicon-nextjs-original-wordmark icon'></i>
                     <div className="progress">
-                        <span className="skill">html</span>
+                        <span className="skill">nextjs</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-nodejs-line icon'></i>
+                    <i className='devicon-npm-original-wordmark icon'></i>
                     <div className="progress">
-                        <span className="skill">nodejs</span>
+                        <span className="skill">npm</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-postgresql-plain icon'></i>
+                    <i className='devicon-jest-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">postgres</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-react-original icon'></i>
-                    <div className="progress">
-                        <span className="skill">react</span>
+                        <span className="skill">jest</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
                     <i className='devicon-vscode-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">visual studio</span>
+                        <span className="skill">vscode</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-trello-plain icon'></i>
+                    <i className='devicon-slack-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">trello</span>
+                        <span className="skill">slack</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-bootstrap-plain icon'></i>
+                    <i className='devicon-jira-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">bootstrap</span>
+                        <span className="skill">jira</span>
                     </div>
                 </div>
-                <div className='iconDiv'>
-                    <i className='devicon-canva-plain icon'></i>
+                <div className='iconDiv '>
+                    <i className='devicon-notion-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">canva</span>
+                        <span className="skill">notion</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
@@ -106,81 +130,15 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-firebase-plain icon'></i>
+                    <i className='devicon-canva-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">firebase</span>
+                        <span className="skill">canva</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-graphql-plain icon'></i>
+                    <i className='devicon-trello-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">graphql</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-heroku-original icon'></i>
-                    <div className="progress">
-                        <span className="skill">heroku</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-jest-plain icon'></i>
-                    <div className="progress">
-                        <span className="skill">jest</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-jira-plain icon'></i>
-                    <div className="progress">
-                        <span className="skill">jira</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-netlify-plain icon'></i>
-                    <div className="progress">
-                        <span className="skill">netlify</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-nextjs-original-wordmark icon'></i>
-                    <div className="progress">
-                        <span className="skill">nextjs</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-notion-plain icon'></i>
-                    <div className="progress">
-                        <span className="skill">notion</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-npm-original-wordmark icon'></i>
-                    <div className="progress">
-                        <span className="skill">npm</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-postman-plain icon'></i>
-                    <div className="progress">
-                        <span className="skill">postman</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-reactbootstrap-original icon'></i>
-                    <div className="progress">
-                        <span className="skill">reactbootstrap</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-redux-original icon'></i>
-                    <div className="progress">
-                        <span className="skill">redux</span>
-                    </div>
-                </div>
-                <div className='iconDiv'>
-                    <i className='devicon-slack-plain icon'></i>
-                    <div className="progress">
-                        <span className="skill">slack</span>
+                        <span className="skill">trello</span>
                     </div>
                 </div>
                 <div className='iconDiv'>
@@ -190,9 +148,45 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className='iconDiv'>
-                    <i className='devicon-typescript-plain icon'></i>
+                    <i className='devicon-postgresql-plain icon'></i>
                     <div className="progress">
-                        <span className="skill">typescript</span>
+                        <span className="skill">postgres</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-netlify-plain icon'></i>
+                    <div className="progress">
+                        <span className="skill">netlify</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-heroku-original icon'></i>
+                    <div className="progress">
+                        <span className="skill">heroku</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-redux-original icon'></i>
+                    <div className="progress">
+                        <span className="skill">redux</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-express-original icon'></i>
+                    <div className="progress">
+                        <span className="skill">express</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-postman-plain icon'></i>
+                    <div className="progress">
+                        <span className="skill">postman</span>
+                    </div>
+                </div>
+                <div className='iconDiv'>
+                    <i className='devicon-firebase-plain icon'></i>
+                    <div className="progress">
+                        <span className="skill">firebase</span>
                     </div>
                 </div>
             </div>
