@@ -113,13 +113,24 @@ function App() {
               <div className="social-links mt-3 text-center">
                 <div className="tooltip tooltip-bottom" data-tip="current github">
                   <a href='https://github.com/Samantha-Jimenez' target="_blank" rel="noopener noreferrer" className="github">
-                    <i className="bx bxl-github" data-aos="fade-up" data-aos-duration="1000"></i>
+                    <span className="icon-[line-md--github]"></span>
                   </a>
                 </div>
-                <a href='https://github.com/Samantha-Jimenez' target="_blank" rel="noopener noreferrer" className="github"><i className="bx bxl-github" data-aos="fade-up" data-aos-duration="1000"></i><p className="github-text" style={{"margin": "20px 0px 0px -37px"}}>current github</p></a>
-                <a href='https://github.com/SamanthaBJimenez' target="_blank" rel="noopener noreferrer" className="github"><i className="bx bxl-github" data-aos="fade-up" data-aos-duration="1500"></i><p className="github-text" style={{"margin": "20px 0px 0px -43px"}}>previous github</p></a>
-                <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google"><i className="bx bxl-gmail" data-aos="fade-up" data-aos-duration="2000"></i><p className="github-text" style={{"margin": "20px 0px 0px -4px"}}>gmail</p></a>
-                <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin"><i className="bx bxl-linkedin" data-aos="fade-up" data-aos-duration="2500"></i><p className="github-text" style={{"margin": "20px 0px 0px -12px"}}>linkedin</p></a>
+                <div className="tooltip tooltip-bottom" data-tip="previous github">
+                  <a href='https://github.com/SamanthaBJimenez' target="_blank" rel="noopener noreferrer" className="github">
+                    <span className="icon-[line-md--github-twotone]"></span>
+                  </a>
+                </div>
+                <div className="tooltip tooltip-bottom" data-tip="gmail"> 
+                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google">
+                    <span className="icon-[material-symbols--mail-outline]"></span>
+                  </a>
+                </div>
+                <div className="tooltip tooltip-bottom" data-tip="linkedin">
+                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin">
+                    <span className="icon-[ri--linkedin-line]"></span>
+                  </a>
+                </div>
               </div>
             </div>
             <nav className="nav-menu">
