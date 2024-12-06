@@ -1,18 +1,12 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Link, Element } from 'react-scroll';
-import './assets/css/style.css';
-import './assets/vendor/icofont/icofont.min.css';
-import './assets/vendor/aos-master/dist/aos.css';
-import './assets/vendor/bootstrap-5.3.3-dist/css/bootstrap.css';
-import './assets/vendor/bootstrap-5.3.3-dist/css/bootstrap-reboot.css';
-import './assets/vendor/bootstrap-5.3.3-dist/css/bootstrap.rtl.css';
+import './css/style.css';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
-import avatar from './imgFiles/avatar.jpeg';
 import emailjs from '@emailjs/browser';
 import 'boxicons';
 import AOS from 'aos';
@@ -81,12 +75,7 @@ function App() {
   return (
     <div className="App">
       <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-      <link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css"></link>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossOrigin="anonymous"></link>
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossOrigin="anonymous"></script>
       <style>
         @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
       </style>  
@@ -122,6 +111,11 @@ function App() {
             <div className="profile">
               <h1 className="header-title" data-aos="fade-up">Samantha Jimenez</h1>
               <div className="social-links mt-3 text-center">
+                <div className="tooltip tooltip-bottom" data-tip="current github">
+                  <a href='https://github.com/Samantha-Jimenez' target="_blank" rel="noopener noreferrer" className="github">
+                    <i className="bx bxl-github" data-aos="fade-up" data-aos-duration="1000"></i>
+                  </a>
+                </div>
                 <a href='https://github.com/Samantha-Jimenez' target="_blank" rel="noopener noreferrer" className="github"><i className="bx bxl-github" data-aos="fade-up" data-aos-duration="1000"></i><p className="github-text" style={{"margin": "20px 0px 0px -37px"}}>current github</p></a>
                 <a href='https://github.com/SamanthaBJimenez' target="_blank" rel="noopener noreferrer" className="github"><i className="bx bxl-github" data-aos="fade-up" data-aos-duration="1500"></i><p className="github-text" style={{"margin": "20px 0px 0px -43px"}}>previous github</p></a>
                 <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google"><i className="bx bxl-gmail" data-aos="fade-up" data-aos-duration="2000"></i><p className="github-text" style={{"margin": "20px 0px 0px -4px"}}>gmail</p></a>
