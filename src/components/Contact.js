@@ -12,7 +12,6 @@ const Contact = () => {
             color: '#fff',
             width: '137px',
           },
-          duration: 4000,
         }
     );
 
@@ -27,8 +26,6 @@ const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
-        
-        notify();
         e.target.reset();
     }
 
