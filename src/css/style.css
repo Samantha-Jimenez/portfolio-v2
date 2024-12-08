@@ -584,6 +584,7 @@
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: var(--highlight);
+    font-size: small;
   }
   
   .skills-content {
@@ -603,7 +604,7 @@
     margin: 9px;
     height: 90px;
     text-align: -webkit-center;
-    width: 105px !important;
+    width: 116px !important;
     overflow: hidden;
     box-shadow: 5px 5px 9px darkgrey;
     border-radius: 10%;
@@ -663,7 +664,7 @@
 
   .iconDiv:hover .progress {
     opacity: 1.0;
-    height: 25px;
+    height: 28px;
     top: 0px;
     transition: top .3s ease-out, opacity .5s ease-out;
   }
