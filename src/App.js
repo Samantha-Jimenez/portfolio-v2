@@ -135,12 +135,12 @@ function App() {
             </div>
             <nav className="nav-menu">
               <ul className="nav-ul">
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><i className="bx bx-home"></i>Home</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className="bx bx-user"></i>About</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className='bx bx-list-check' style={{"paddingRight": "0px", "fontSize": "34px"}}></i>Skills</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className="bx bx-collection"></i>Portfolio</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><i className="bx bx-envelope"></i>Contact</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i className="bx bx-file"></i> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
             {/* <div className="wrapper"> */}
