@@ -10,6 +10,11 @@
     --shadow-background: #000000;
     /* --shadow-background: #EFF2F1; */
   }
+
+  :root, [data-theme] {
+    background-color: white;
+    color: black;
+}
   
   /*--------------------------------------------------------------
   # General
