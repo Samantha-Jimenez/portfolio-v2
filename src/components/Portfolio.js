@@ -16,8 +16,8 @@ const Projects = () => {
                 <div className="portfolio-wrap">
                   <img src={project1} className="img-fluid" alt=""/>
                   <div className="portfolio-links">
-                    <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="App 1"><i className="bx bxl-github"></i><p className='github-name'>github</p></a>
-                    <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" title="More Details" className='liveA'><i className="bx bx-window-alt"></i><p className="live-site">live site</p></a>
+                    <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="App 1"><span className='icon-[jam--github]'></span><p className='github-name'>github</p></a>
+                    <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" title="More Details" className='liveA'><span className='icon-[bx--window-alt]'></span><p className="live-site">live site</p></a>
                   </div>
                   <div className="project-header">
                     <p className="project-text">ZooVio</p>
@@ -28,8 +28,8 @@ const Projects = () => {
                 <div className="portfolio-wrap">
                   <img src={project2} className="img-fluid" alt=""/>
                   <div className="portfolio-links">
-                    <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="Web 3"><i className="bx bxl-github"></i><p className='github-name'>github</p></a>
-                    <a href="https://my-ig.netlify.app/" target="_blank" rel="noopener noreferrer" title="More Details" className='liveA'><i className="bx bx-window-alt"></i><p className='live-site'>live site</p></a>
+                    <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="Web 3"><span className='icon-[jam--github]'></span><p className='github-name'>github</p></a>
+                    <a href="https://my-ig.netlify.app/" target="_blank" rel="noopener noreferrer" title="More Details" className='liveA'><span className='icon-[bx--window-alt]'></span><p className='live-site'>live site</p></a>
                   </div>
                   <div className="project-header">
                     <p className="project-text">Finstagram</p>
@@ -40,8 +40,8 @@ const Projects = () => {
                 <div className="portfolio-wrap">
                   <img src={project3} className="img-fluid" alt=""/>
                   <div className="portfolio-links">
-                    <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="App 2"><i className="bx bxl-github"></i><p className='github-name'>github</p></a>
-                    <a href="https://tastebuds.netlify.app/" target="_blank" rel="noopener noreferrer" title="More Details" className='liveA'><i className="bx bx-window-alt"></i><p className='live-site'>live site</p></a>
+                    <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="App 2"><span className='icon-[jam--github]'></span><p className='github-name'>github</p></a>
+                    <a href="https://tastebuds.netlify.app/" target="_blank" rel="noopener noreferrer" title="More Details" className='liveA'><span className='icon-[bx--window-alt]'></span><p className='live-site'>live site</p></a>
                   </div>
                   <div className="project-header">
                     <p className="project-text">Tastebuds</p>
