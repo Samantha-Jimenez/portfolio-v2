@@ -1,22 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast, Flip } from 'react-toastify';
-// import './../css/Toast.css';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { Toaster, toast } from 'react-hot-toast';
 
 const Contact = () => {
-    const notify = () => toast.success('Sent!', {
-        // position: "bottom-right",
-        position: "top-right",
-        // autoClose: 4000,
-        hideProgressBar: false,
-        // closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        });
+    const notify = () => toast.success('Sent!',
+        {
+          position: 'bottom-center',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+            width: '137px',
+          },
+          duration: 4000,
+        }
+    );
 
     const form = useRef();
 
@@ -29,6 +27,8 @@ const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
+        
+        notify();
         e.target.reset();
     }
 
@@ -53,12 +53,12 @@ const Contact = () => {
                         <div className="row">
                             <div className="form-group col-md-6" data-aos="zoom-in" data-aos-duration="1000">
                                 <label htmlFor="from_name">Name</label>
-                                <input type="text" name="from_name" className="form-control bg-white border w-full rounded-lg" id="name" autoComplete="name" required/>
+                                <input type="text" name="from_name" className="form-control bg-white border w-full rounded-lg pl-3" id="name" autoComplete="name" required/>
                                 <div className="validate"></div>
                             </div>
                             <div className="form-group col-md-6" data-aos="zoom-in" data-aos-duration="1000">
                                 <label htmlFor="reply_to">Email</label>
-                                <input type="email" className="form-control bg-white border w-full rounded-lg" name="reply_to" id="email" data-rule="email" autoComplete="email" data-msg="Please enter a valid email" required/>
+                                <input type="email" className="form-control bg-white border w-full rounded-lg pl-3" name="reply_to" id="email" data-rule="email" autoComplete="email" data-msg="Please enter a valid email" required/>
                                 <div className="validate"></div>
                             </div>
                         </div>
@@ -76,20 +76,7 @@ const Contact = () => {
                             <button type="submit">Send Message</button>
                         </div>
                     </form>
-                
-                    <ToastContainer
-                        className="toast"
-                        // position="bottom-right"
-                        // autoClose={4000}
-                        hideProgressBar={false}
-                        transition={Flip}
-                        newestOnTop={false}
-                        // closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                    />
+                    <Toaster />
                 </div>
             </div>
         </div>
