@@ -60,10 +60,12 @@ function App() {
   //     setThemeObj(greenThemeObj);
   //   }
   // }
+  
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     applyTheme();
-  }, [currentTheme, currentThemeObj])
+  }, [currentTheme, currentThemeObj]);
 
   const applyTheme = () => {
     Object.keys(currentThemeObj).map(key => {
@@ -72,6 +74,14 @@ function App() {
     });
   }
 
+  
+  
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+  // let previousGithubIcon = <span className="icon-[line-md--github-twotone]"></span>
+
+  
   return (
     <div className="App">
       <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -95,10 +105,33 @@ function App() {
       </script>
       <div className="vsc-initialized" data-aos-easing="ease-in-out-back" data-aos-duration="1000" data-aos-delay="0" data-spy="scroll" data-target="#header" data-offset="50">
         <div className="show" id="navbarSupportedContent">
-          <main id="main">
-            <header id="header-back"></header>
+            <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
+              {/* <!-- Mobile menu button--> */}
+              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-gray-700 text-white outline-none ring-2 ring-inset ring-white' : ''}`} aria-controls="mobile-menu" aria-expanded="false">
+                <span className="absolute -inset-0.5"></span>
+                <span className="sr-only">Open main menu</span>
+                {/* <!--
+                  Icon when menu is closed.
+
+                  Menu open: "hidden", Menu closed: "block"
+                --> */}
+                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                {/* <!--
+                  Icon when menu is open.
+
+                  Menu open: "block", Menu closed: "hidden"
+                --> */}
+                <svg className="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          <main id="main" className="grid lg:grid-cols-[30vw_70vw] lg:grid-rows-[0.6fr_0.75fr_0.6fr_0.75fr_0.5fr] grid-cols-[0vw_100vw]">
+            <header id="header-back" className={`py-8 px-4 lg:w-[30vw] w-[307px] h-screen bg-[url('./imgFiles/avatar.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing/></Element>
-            <button className="down-arrow">
+            <button className="down-arrow hidden lg:block z-30">
               <a href=''>
                 <span>
                   <Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={-90}>
@@ -107,13 +140,13 @@ function App() {
                 </span>
               </a>
             </button>
-            <div id="header-hover" style={{"backgroundColor": "rgba(57, 66, 62, 0.8) !important", "position": "sticky !important"}}>
+            <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen rounded-[5px] content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
               <h1 className="header-title" data-aos="fade-up">Samantha Jimenez</h1>
               <div className="social-links mt-3 text-center">
                 <div className="tooltip tooltip-bottom" data-tip="current github">
                   <a href='https://github.com/Samantha-Jimenez' target="_blank" rel="noopener noreferrer" className="github">
-                    <span className="icon-[line-md--github]"></span>
+                    <span className={`icon-[line-md--github]`}></span>
                   </a>
                 </div>
                 <div className="tooltip tooltip-bottom" data-tip="previous github">
@@ -123,12 +156,12 @@ function App() {
                 </div>
                 <div className="tooltip tooltip-bottom" data-tip="gmail"> 
                   <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google">
-                    <span className="icon-[material-symbols--mail-outline]"></span>
+                    <span className="icon-[line-md--email]"></span>
                   </a>
                 </div>
                 <div className="tooltip tooltip-bottom" data-tip="linkedin">
                   <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin">
-                    <span className="icon-[ri--linkedin-line]"></span>
+                    <span className="icon-[line-md--linkedin]"></span>
                   </a>
                 </div>
               </div>

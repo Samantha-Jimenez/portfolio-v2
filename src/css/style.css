@@ -72,25 +72,6 @@
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
-  #header {
-    padding: 30px 15px;
-    width: 30vw;
-    height: 100vh;
-    background: url("../imgFiles/avatar.jpeg");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #header-back {
-    padding: 30px 15px;
-    width: 30vw;
-    height: 100vh;
-    background: url("../imgFiles/avatar.jpeg");
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    grid-area: 1 / 1 / 2 / 2;
-  }
 
   .down-arrow {
     bottom: 4%;
@@ -100,21 +81,6 @@
     border: none;
     position: sticky;
     align-self: self-end;
-  }
-
-  #header-hover {
-    position: sticky !important;
-    position: -webkit-sticky !important;
-    top: 0px;
-    background-color: rgb(9, 18, 14) !important;
-    opacity: 80%;
-    padding: 190px 15px 150px 15px;
-    width: 30vw;
-    height: 100vh;
-    grid-area: 2 / 1 / 2 / 2;
-    border-radius: 5px;
-    display: grid;
-    align-content: space-between;
   }
 
   .profile {
@@ -162,12 +128,6 @@
     margin: 20px 0px 0px -13px;
     opacity: 1.0;
     transition: margin .3s ease-out, opacity .5s ease-out;
-  }
-  
-  #main {
-    display: grid;
-    grid-template-columns: 30vw 70vw;
-    grid-template-rows: 0.60fr 0.75fr 0.60fr 0.75fr 0.50fr;
   }
 
   #main .profile .social-links a {
@@ -401,12 +361,6 @@
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-  #hero {
-    width: 70vw;
-    height: 100vh;
-    margin-left: auto;
-    background-color: #EFF2F1;
-  }
   
   #backgroundImg {
     width: 100%;
