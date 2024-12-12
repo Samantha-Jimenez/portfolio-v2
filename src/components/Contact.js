@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
 
 const Contact = () => {
-    const notify = () => toast.success('Sent!',
+    const notifySuccess = () => toast.success('Sent!',
         {
           position: 'bottom-center',
           style: {
@@ -15,6 +15,18 @@ const Contact = () => {
         }
     );
 
+    const notifyError = () => toast.error('Error! Use mail icon instead',
+        {
+          position: 'bottom-center',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+            width: '261px',
+          },
+        }
+    );
+
     const form = useRef();
 
     const handleSubmit = (e) => {
@@ -22,9 +34,10 @@ const Contact = () => {
         emailjs.sendForm('service_7z8bwyp', 'template_gte2cwa', form.current, { publicKey: 'lYPDqWbwbsFTQDuJz'})
             .then((result) => {
                 console.log(result.text);
-                notify();
+                notifySuccess();
             }, (error) => {
                 console.log(error.text);
+                notifyError();
             });
         e.target.reset();
     }
