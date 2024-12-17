@@ -8,7 +8,7 @@ const Landing = () => {
             <section id="hero" className="d-flex flex-column justify-content-end h-screen ml-auto bg-[#EFF2F1] p-0">
                 <div id="backgroundImg"></div>
                 <div className="hero-container aos-init aos-animate" data-aos="fade-left">
-                    <h1>Samantha Jimenez</h1>
+                    <h1 className="space-grotesk-main">Samantha Jimenez</h1>
                     <p style={{"display": "inline-flex"}}>I'm a <span style={{"borderBottom": "3px solid var(--attention)"}} className="typed" >
                         <TypeAnimation
                             sequence={[

@@ -4,13 +4,26 @@ html {
 }
 
 .App {
-  font-family: 'Maven Pro', sans-serif;
   display: grid;
   grid-template-rows: minmax(0, 50px) 30vh minmax(0, 700px) minmax(0, 350px) minmax(0, 789px);
 }
 
 :root {
   --primary: #d58936 !important;
+}
+
+.space-grotesk-main {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.sora-main {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .nav-link {

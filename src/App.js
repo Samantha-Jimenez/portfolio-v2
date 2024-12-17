@@ -86,6 +86,9 @@ function App() {
     <div className="App">
       <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+      <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
       <style>
         @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
       </style>  
