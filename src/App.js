@@ -198,10 +198,10 @@ function App() {
             <section id="portfolio" className="portfolio section-bg" style={{"height": "max-content"}}>
               <Element name='portfolio'><Portfolio/></Element>
             </section>
-            <section id="contact" className="contact" style={{"paddingTop": "70px"}}>
+            <section id="contact" className="contact pt-20">
               <Element name='contact'><Contact/></Element>
               <footer id='footer' data-aos="fade-up">
-                <p className='credits'>
+                <p className='credits pt-5'>
                 Thanks for visiting my corner of the web! 
                 <br></br>
                 Keep exploring, keep creating, and remember — every line of code brings you closer to your next big idea. 🚀

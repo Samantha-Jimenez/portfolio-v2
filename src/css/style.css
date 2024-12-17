@@ -439,6 +439,12 @@
     padding: 90px 65px 60px 65px;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 90px 25px 60px 25px;
+    }
+  }
   
   .section-bg {
     background: var(--shadow-background);
@@ -640,6 +646,12 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     /* grid-template-rows: 40vh 40vh 40vh; */
+  }
+
+  @media (max-width: 580px) {
+    .portfolio .portfolio-grid {
+      grid-template-rows: 40vh 40vh 40vh;
+    }
   }
 
   .portfolio-container {
@@ -877,9 +889,9 @@
   # Contact
   --------------------------------------------------------------*/
   .contact {
-    height: 100vh;
+    /* height: 100vh; */
     grid-area: 5 / 2 / 6 / 3;
-    grid-template-rows: 1fr 0fr;
+    grid-template-rows: .95fr 0fr;
     display: grid;
   }
   
@@ -1077,8 +1089,8 @@
       box-shadow: none;
       font-size: 16px;
     }
-    .contact {
-      height: 120vh;
+    #message {
+        height: 150px; /* Adjust the height as needed */
     }
   }
   
