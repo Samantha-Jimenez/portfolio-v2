@@ -551,10 +551,40 @@
   }
   
   .skills-content {
-    display: grid;
-    grid: repeat(5, 1fr) / repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 30px;
-    row-gap: 10px;
+    gap: 10px;
+  }
+  
+  .skills-content .skill {
+    flex: 1 1 calc(16.66% - 10px);
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 1200px) {
+    .skills-content .skill {
+      flex: 1 1 calc(25% - 10px);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .skills-content .skill {
+      flex: 1 1 calc(33.33% - 10px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills-content .skill {
+      flex: 1 1 calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .skills-content .skill {
+      flex: 1 1 100%;
+    }
   }
   
   .icon {
