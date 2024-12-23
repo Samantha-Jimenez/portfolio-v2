@@ -388,15 +388,15 @@
   #hero .hero-container {
     position: relative;
     z-index: 2;
-    min-width: 300px;
+    min-width: 400px;
     position: absolute;
     top: 70vh;
-    padding-left: 10em;
+    padding: 0em 3em;
   }
   
   #hero h1 {
     margin: 0 0 10px 0;
-    font-size: 64px;
+    font-size: clamp(24px, 4vw + 1rem, 64px);
     font-weight: 700;
     line-height: 56px;
     color: #96B0A3;
@@ -407,7 +407,6 @@
     margin-bottom: 50px;
     font-size: 26px;
     font-weight: 300;
-    /* font-family: "Poppins", sans-serif; */
   }
   
   #hero p span {
@@ -424,7 +423,6 @@
   
   @media (max-width: 768px) {
     #hero h1 {
-      font-size: 28px;
       line-height: 30px;
     }
     #hero h2 {
