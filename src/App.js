@@ -8,7 +8,6 @@ import Portfolio from './components/Portfolio';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
 import emailjs from '@emailjs/browser';
-import 'boxicons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
