@@ -661,8 +661,6 @@
     "react-toastify": "^10.0.6",
     "react-type-animation": "^3.2.0",
     "react-typing-animation": "^2.0.0",
-    "react-typist": "^2.0.5",
-    "react-typist-loop": "^1.0.0",
     "read-cache": "^1.0.0",
     "readable-stream": "^3.6.2",
     "readdirp": "^3.6.0",
