@@ -62,6 +62,12 @@ function App() {
   
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const [isModalOpen, setModalOpen] = useState(true);
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   useEffect(() => {
     applyTheme();
   }, [currentTheme, currentThemeObj]);
@@ -209,6 +215,24 @@ function App() {
           </main>
         </div>
       </div>
+
+      {/* Modal for Under Construction */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+            <span className="absolute top-2 right-2 cursor-pointer text-gray-500" onClick={closeModal}>&times;</span>
+            <h2 className="text-xl font-semibold">Under Construction</h2>
+            <p className="mt-2">This website is currently under construction. <strong>Please enjoy the current version in the meantime.</strong></p>
+            <p>Check back later for updates!</p>
+            <button 
+              className="mt-4 bg-[#254D32] text-white font-bold py-2 px-4 rounded hover:bg-[#2A6A3D]"
+              onClick={closeModal}
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
