@@ -133,14 +133,10 @@ function App() {
           <main id="main" className="grid lg:grid-cols-[30vw_70vw] lg:grid-rows-[0.6fr_0.75fr_0.6fr_0.75fr_0.5fr] grid-cols-[0vw_100vw]">
             <header id="header-back" className={`py-8 px-4 lg:w-[30vw] w-[307px] h-screen bg-[url('./imgFiles/avatar.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing/></Element>
-            <button className="down-arrow hidden lg:block z-30">
-              <a href=''>
-                <span>
-                  <Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={-90}>
-                    <box-icon name='chevron-down' animation='fade-down' color='#ffffff' size='lg' style={{"width": "20%", "height": "100%"}} ></box-icon>
-                  </Link>
-                </span>
-              </a>
+            <button className="down-arrow hidden lg:block z-30 h-[5vh] whit mb-[35%]">
+              <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={-90}>
+                <span className='icon-[line-md--chevron-down] w-[20%] h-[100%] animate-bounce bg-white opacity-[.80]'/>
+              </Link>
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen rounded-[5px] content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
