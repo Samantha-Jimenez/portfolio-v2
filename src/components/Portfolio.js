@@ -13,7 +13,7 @@ const Projects = () => {
           <div className="row portfolio-container aos-init aos-animate" data-aos-delay="100" >
             <div className="portfolio-grid col-md-6" >
               <div className="portfolio-item filter-app" data-aos="fade-left">
-                <div className="portfolio-wrap">
+                <div className="portfolio-wrap max-w-[900px]">
                   <img src={project1} className="img-fluid" alt=""/>
                   <div className="portfolio-links">
                     <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="App 1"><span className='icon-[jam--github]'></span><p className='github-name'>github</p></a>
@@ -25,7 +25,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="portfolio-item filter-web" data-aos="fade-left">
-                <div className="portfolio-wrap">
+                <div className="portfolio-wrap max-w-[900px]">
                   <img src={project2} className="img-fluid" alt=""/>
                   <div className="portfolio-links">
                     <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="Web 3"><span className='icon-[jam--github]'></span><p className='github-name'>github</p></a>
@@ -37,7 +37,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="portfolio-item filter-app" data-aos="fade-left">
-                <div className="portfolio-wrap">
+                <div className="portfolio-wrap max-w-[900px]">
                   <img src={project3} className="img-fluid" alt=""/>
                   <div className="portfolio-links">
                     <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" data-gall="portfolioGallery" className="venobox vbox-item" title="App 2"><span className='icon-[jam--github]'></span><p className='github-name'>github</p></a>

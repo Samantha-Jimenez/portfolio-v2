@@ -388,7 +388,6 @@
   #hero .hero-container {
     position: relative;
     z-index: 2;
-    /* min-width: 400px; */
     position: absolute;
     top: 70vh;
     padding: 0em 3em;
@@ -672,19 +671,11 @@
   .portfolio .portfolio-item {
     margin-bottom: 30px;
     padding: 5px;
-    height: 56vh;
   }
 
   .portfolio .portfolio-grid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    /* grid-template-rows: 40vh 40vh 40vh; */
-  }
-
-  @media (max-width: 580px) {
-    .portfolio .portfolio-grid {
-      grid-template-rows: 40vh 40vh 40vh;
-    }
   }
 
   .portfolio-container {
