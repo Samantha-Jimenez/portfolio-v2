@@ -141,7 +141,7 @@ function App() {
             <Element id="landing" name="landing"><Landing/></Element>
             <button className="down-arrow hidden lg:block z-30 h-[5vh] whit mb-[35%]">
               <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={-90}>
-                <span className='icon-[line-md--chevron-down] w-[20%] h-[100%] animate-bounce bg-white opacity-[.80]'/>
+                <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
               </Link>
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen rounded-[5px] content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
