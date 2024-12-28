@@ -920,7 +920,7 @@
   .contact {
     /* height: 100vh; */
     grid-area: 5 / 2 / 6 / 3;
-    grid-template-rows: .95fr 0fr;
+    grid-template-rows: max-content max-content;
     display: grid;
   }
   
