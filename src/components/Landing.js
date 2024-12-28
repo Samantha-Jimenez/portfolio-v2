@@ -1,5 +1,5 @@
 import React from 'react';
-// import Typing from 'react-typing-animation'; // Changed import
+import { TypeAnimation } from 'react-type-animation';
 
 const Landing = () => {
     return (
@@ -9,16 +9,19 @@ const Landing = () => {
                 <div className="hero-container aos-init aos-animate" data-aos="fade-left">
                     <h1 className="">Samantha Jimenez</h1>
                     <p className="inter-main" style={{"display": "inline-flex"}}>I'm a <span style={{"borderBottom": "3px solid var(--attention)"}} className="typed inter-main" >
-                        {/* <Typing>
-                            <span>Full Stack Software Engineer</span>
-                            <Typing.Backspace count={30} delay={1800} />
-                            <span>Creator</span>
-                            <Typing.Backspace count={7} delay={1800} />
-                            <span>Web Developer</span>
-                            <Typing.Backspace count={15} delay={1800} />
-                            <span>Collaborator</span>
-                            <Typing.Backspace count={12} delay={1800} />
-                        </Typing> */}
+                        <TypeAnimation
+                            sequence={[
+                                'Full Stack Software Engineer',
+                                1000,
+                                'Creator',
+                                1000,
+                                'Web Developer',
+                                1000,
+                                'Collaborator',
+                                1000,
+                            ]}
+                            repeat={Infinity}
+                        />
                     </span></p>
                 </div>
             </section>
