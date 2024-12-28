@@ -363,6 +363,11 @@
     display: flex !important;
   }
 
+  .tooltip-bottom:after, .tooltip-bottom:before {
+    margin-top: 3px;
+    left: 45% !important;
+  }
+
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/

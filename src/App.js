@@ -158,14 +158,19 @@ function App() {
                     <span className="icon-[line-md--github-twotone]"></span>
                   </a>
                 </div>
+                <div className="tooltip tooltip-bottom" data-tip="linkedin">
+                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin">
+                    <span className="icon-[line-md--linkedin]"></span>
+                  </a>
+                </div>
                 <div className="tooltip tooltip-bottom" data-tip="gmail"> 
                   <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google">
                     <span className="icon-[line-md--email]"></span>
                   </a>
                 </div>
-                <div className="tooltip tooltip-bottom" data-tip="linkedin">
-                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin">
-                    <span className="icon-[line-md--linkedin]"></span>
+                <div className="tooltip tooltip-bottom" data-tip="previous portfolio">
+                  <a href='https://www.samantha-jimenez.netlify.app/' target="_blank" rel="noopener noreferrer" className="portfolio">
+                    <span className="icon-[line-md--monitor-arrow-up]"></span>
                   </a>
                 </div>
               </div>
