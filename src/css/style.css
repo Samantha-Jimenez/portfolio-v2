@@ -31,7 +31,7 @@
   }
   
   a:hover {
-    color: var(--highlight);
+    /* color: var(--highlight); */
     text-decoration: none;
   }
   
@@ -112,13 +112,6 @@
     color: #fff;
     text-decoration: none !important;
   }
-
-  #main .profile .social-links a:hover {
-    color: #fff;
-    text-decoration: none;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-  }
  
   .github-text {
     position: absolute;
@@ -135,7 +128,7 @@
     transition: margin .3s ease-out, opacity .5s ease-out;
   }
 
-  #main .profile .social-links a {
+  /* #main .profile .social-links a {
     font-size: 18px;
     display: inline-block;
     background: var(--shadow);
@@ -148,7 +141,7 @@
     width: 36px;
     height: 36px;
     transition: 0.3s;
-  }
+  } */
 
   #grid-layout {
     display: grid;
@@ -363,8 +356,8 @@
     display: flex !important;
   }
 
-  .tooltip-bottom:after, .tooltip-bottom:before {
-    margin-top: 3px;
+  .tooltip:after, .tooltip:before {
+    margin-bottom: 3px;
     left: 45% !important;
   }
 

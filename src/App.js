@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, Element } from 'react-scroll';
 import './css/style.css';
 import About from './components/About';
@@ -10,10 +10,13 @@ import Contact from './components/Contact';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import openMenu from './hooks/openMenu.tsx';
 
 AOS.init();
 
 function App() {
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [openGithubMenu, setOpenGithubMenu] = useState(false);
 
   const [currentTheme, setTheme] = useState("greenTheme");
 
@@ -86,7 +89,32 @@ function App() {
   };
   // let previousGithubIcon = <span className="icon-[line-md--github-twotone]"></span>
 
+  const menuRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setOpenGithubMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   
+  const [isLeavingModalOpen, setLeavingModalOpen] = useState(false);
+
+  const openLeavingModal = () => {
+    setLeavingModalOpen(true);
+  };
+
+  const handleContinue = () => {
+    window.open('https://www.samantha-jimenez.netlify.app/', '_blank');
+    setLeavingModalOpen(false);
+  };
+
   return (
     <div className="App">
       <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -147,30 +175,50 @@ function App() {
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen rounded-[5px] content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
               <h1 className="header-title" data-aos="fade-up">Samantha Jimenez</h1>
-              <div className="social-links mt-3 text-center">
-                <div className="tooltip tooltip-bottom" data-tip="current github">
-                  <a href='https://github.com/Samantha-Jimenez' target="_blank" rel="noopener noreferrer" className="github">
-                    <span className={`icon-[line-md--github]`}></span>
+              <div className="social-links mt-8 text-center">
+                <div className="tooltip" data-tip="github">
+                  <div 
+                    className={`active:bg-white active:dark:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
+                    onClick={() => openMenu('github', openGithubMenu, setOpenGithubMenu, setActiveMenu)}
+                  >
+                    <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[2px]`}></span>
+                  </div>
+                {openGithubMenu && (
+                  <div ref={menuRef} className="relative">
+                    {/* Tooltip Tail */}
+                    <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)]"></div>
+                    <ul className={`ml-[-100%] absolute bg-[var(--shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
+                      <li className="hover:bg-gray-300 hover:dark:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
+                      <li className="hover:bg-gray-300 hover:dark:bg-gray-400/60 rounded p-1"><a href="https://github.com/samanthabjimenez" target="_blank" rel="noopener noreferrer">Previous Account</a></li>
+                    </ul>
+                  </div>
+                )}
+                </div>
+                <div className="tooltip" data-tip="linkedin">
+                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <div 
+                    className={`active:bg-white active:dark:bg-neutral-200 hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                  >
+                    <span className="icon-[ri--linkedin-line] mb-[2px]"></span>
+                  </div>
                   </a>
                 </div>
-                <div className="tooltip tooltip-bottom" data-tip="previous github">
-                  <a href='https://github.com/SamanthaBJimenez' target="_blank" rel="noopener noreferrer" className="github">
-                    <span className="icon-[line-md--github-twotone]"></span>
+                <div className="tooltip" data-tip="gmail"> 
+                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <div 
+                    className={`active:bg-white active:dark:bg-neutral-200 hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                  >
+                    <span className="icon-[material-symbols--mail-outline] mb-[2px]"></span>
+                  </div>
                   </a>
                 </div>
-                <div className="tooltip tooltip-bottom" data-tip="linkedin">
-                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin">
-                    <span className="icon-[line-md--linkedin]"></span>
-                  </a>
-                </div>
-                <div className="tooltip tooltip-bottom" data-tip="gmail"> 
-                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google">
-                    <span className="icon-[line-md--email]"></span>
-                  </a>
-                </div>
-                <div className="tooltip tooltip-bottom" data-tip="previous portfolio">
-                  <a href='https://www.samantha-jimenez.netlify.app/' target="_blank" rel="noopener noreferrer" className="portfolio">
-                    <span className="icon-[line-md--monitor-arrow-up]"></span>
+                <div className="tooltip" data-tip="previous portfolio">
+                  <a onClick={openLeavingModal} className="portfolio text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                    <div 
+                      className={`active:bg-white active:dark:bg-neutral-200 hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                    >
+                      <span className="icon-[material-symbols--devices-outline-rounded] mb-[2px]"></span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -234,6 +282,28 @@ function App() {
               onClick={closeModal}
             >
               Continue
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Modal for Leaving Page */}
+      {isLeavingModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center relative">
+            <button 
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 px-[7px]" 
+              onClick={() => setLeavingModalOpen(false)}
+            >
+              &times;
+            </button>
+            <h2 className="text-xl font-semibold">Leaving Page</h2>
+            <p className="mt-2">You are about to leave this page to open my previous portfolio site, created in 2019.</p>
+            <button 
+              className="mt-4 bg-[#254D32] text-white font-bold py-2 px-4 rounded hover:bg-[#2A6A3D]"
+              onClick={handleContinue}
+            >
+              Enjoy!
             </button>
           </div>
         </div>
