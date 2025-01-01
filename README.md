@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# My Full Stack Software Engineer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website showcases my projects and skills as a full stack software engineer. It includes various applications I've built, demonstrating my proficiency in both front-end and back-end technologies.
+
+## Features
+- Project showcases with descriptions and links
+- Responsive design for mobile and desktop
+- Contact form for inquiries
+
+## Contact
+Feel free to reach out via [email](mailto:SamanthaB.Jimenez@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/samanthabjimenez/).
 
 ## Available Scripts
 
