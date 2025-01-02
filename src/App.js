@@ -195,27 +195,27 @@ function App() {
                 )}
                 </div>
                 <div className="tooltip" data-tip="linkedin">
-                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin active:bg-white active:dark:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
                   <div 
-                    className={`active:bg-white active:dark:bg-neutral-200 hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                    className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                   >
                     <span className="icon-[ri--linkedin-line] mb-[2px]"></span>
                   </div>
                   </a>
                 </div>
                 <div className="tooltip" data-tip="gmail"> 
-                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google active:bg-white active:dark:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
                   <div 
-                    className={`active:bg-white active:dark:bg-neutral-200 hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                    className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                   >
                     <span className="icon-[material-symbols--mail-outline] mb-[2px]"></span>
                   </div>
                   </a>
                 </div>
                 <div className="tooltip" data-tip="previous portfolio">
-                  <a onClick={openLeavingModal} className="portfolio text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a onClick={openLeavingModal} className="portfolio active:bg-white active:dark:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
                     <div 
-                      className={`active:bg-white active:dark:bg-neutral-200 hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                     >
                       <span className="icon-[material-symbols--devices-outline-rounded] mb-[2px]"></span>
                     </div>
