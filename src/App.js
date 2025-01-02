@@ -111,7 +111,7 @@ function App() {
   };
 
   const handleContinue = () => {
-    window.open('https://www.samantha-jimenez.netlify.app/', '_blank');
+    window.open('https://samantha-jimenez.netlify.app/', '_blank');
     setLeavingModalOpen(false);
   };
 
