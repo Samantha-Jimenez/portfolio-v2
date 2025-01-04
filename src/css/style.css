@@ -828,7 +828,7 @@
     vertical-align: 6px;
     margin-left: 6%;
     display: inline-flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: -15px;
     white-space: nowrap;
   }
@@ -1223,7 +1223,7 @@
       font-size: medium !important;
       margin-left: 6% !important;
       display: inline-flex !important;
-      overflow: hidden !important;
+      /* overflow: hidden !important; */
     }
     .portfolio-wrap {
       box-shadow: none;
@@ -1257,7 +1257,7 @@
       font-size: medium;
       margin-left: 6%;
       display: inline-flex;
-      overflow: hidden;
+      /* overflow: hidden; */
     }
 
     .portfolio .portfolio-wrap .portfolio-links a + a {
