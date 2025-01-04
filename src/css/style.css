@@ -530,18 +530,16 @@
   .skills .progress {
     display: block;
     background: none;
-    height: 13px;
-    opacity: 0;
     position: relative;
-    top: 25px;
+    height: 28px;
+    transition: top .3s ease-out, opacity .5s ease-out;
+    align-content: center;
   }
 
   .skills .progress .skill {
-    padding: 10px 0;
-    margin: 0 0 6px 0;
+    padding: 0px 5px;
     text-transform: uppercase;
-    display: block;
-    font-weight: 600;
+    font-weight: 500;
     font-family: "Poppins", sans-serif;
     color: var(--highlight);
     font-size: small;
@@ -576,6 +574,9 @@
     .skills-content .skill {
       flex: 1 1 calc(50% - 10px);
     }
+    .skills-content {
+      gap: 5px;
+    }
   }
 
   @media (max-width: 576px) {
@@ -585,20 +586,17 @@
   }
   
   .icon {
-    font-size: 40px;
-    color: #96B0A3;
+    font-size: 20px;
+    align-content: center;
+    color: var(--highlight);
   }
   
   .iconDiv {
-    padding: 25px;
-    margin: 9px;
-    height: 90px;
+    padding: 3px 10px;
     text-align: -webkit-center;
-    width: 116px !important;
-    overflow: hidden;
-    box-shadow: 5px 5px 9px darkgrey;
-    border-radius: 10%;
+    border-radius: 10px;
     align-content: center;
+    margin: 0px 7px;
   }
 
   @-webkit-keyframes bounce {
@@ -636,27 +634,6 @@
     50% {
       transform: translateY(-10px);
     }
-  }
-
-  .iconDiv:hover {
-    box-shadow: inset 5px 5px 9px darkgrey;
-    padding: 10px;
-    transition: padding .3s ease-out;
-    animation: bounce 1s infinite;
-    -webkit-animation: bounce 1s infinite;
-    -moz-animation: bounce 1s infinite;
-    -o-animation: bounce 1s infinite;
-  }
-
-  .iconDiv:hover .icon {
-    color: var(--highlight);
-  }
-
-  .iconDiv:hover .progress {
-    opacity: 1.0;
-    height: 28px;
-    top: 0px;
-    transition: top .3s ease-out, opacity .5s ease-out;
   }
 
   /*--------------------------------------------------------------
