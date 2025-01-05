@@ -10,12 +10,10 @@ import Contact from './components/Contact';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import openMenu from './hooks/openMenu.tsx';
 
 AOS.init();
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState(null);
   const [openGithubMenu, setOpenGithubMenu] = useState(false);
 
   const [currentTheme, setTheme] = useState("greenTheme");
@@ -81,8 +79,10 @@ function App() {
       document.documentElement.style.setProperty(key, value);
     });
   }
-
   
+  const openMenu = (isOpen, setIsOpen) => {
+    setIsOpen(!isOpen);
+  };  
   
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -176,15 +176,15 @@ function App() {
             <div className="profile">
               <h1 className="header-title" data-aos="fade-up">Samantha Jimenez</h1>
               <div className="social-links mt-8 text-center">
-                <div className="tooltip" data-tip="github">
+                <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
                     className={`active:bg-white active:dark:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
-                    onClick={() => openMenu('github', openGithubMenu, setOpenGithubMenu, setActiveMenu)}
+                    onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
                     <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[2px]`}></span>
                   </div>
                 {openGithubMenu && (
-                  <div ref={menuRef} className="relative">
+                  <div className="relative">
                     {/* Tooltip Tail */}
                     <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)]"></div>
                     <ul className={`ml-[-100%] absolute bg-[var(--shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
