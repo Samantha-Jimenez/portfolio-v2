@@ -30,6 +30,7 @@ const Skills = () => {
                 options={categoryOptions}
                 onChange={handleCategoryChange}
                 placeholder="Select categories..."
+                isSearchable={false}
             />
             <div className="skills-content">
                 {filteredSkills.map((skill, index) => (
