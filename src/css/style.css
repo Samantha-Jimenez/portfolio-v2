@@ -558,6 +558,20 @@
     box-sizing: border-box;
   }
 
+  .icon {
+    font-size: 20px;
+    align-content: center;
+    color: var(--highlight);
+  }
+  
+  .iconDiv {
+    padding: 3px 10px;
+    text-align: -webkit-center;
+    border-radius: 10px;
+    align-content: center;
+    margin: 0px 7px;
+  }
+
   @media (max-width: 1200px) {
     .skills-content .skill {
       flex: 1 1 calc(25% - 10px);
@@ -577,26 +591,18 @@
     .skills-content {
       gap: 5px;
     }
+    .iconDiv {
+      margin: 0px 3px;
+    }
   }
 
   @media (max-width: 576px) {
     .skills-content .skill {
       flex: 1 1 100%;
     }
-  }
-  
-  .icon {
-    font-size: 20px;
-    align-content: center;
-    color: var(--highlight);
-  }
-  
-  .iconDiv {
-    padding: 3px 10px;
-    text-align: -webkit-center;
-    border-radius: 10px;
-    align-content: center;
-    margin: 0px 7px;
+    .iconDiv {
+      margin: 0px 0px;
+    }
   }
 
   @-webkit-keyframes bounce {
