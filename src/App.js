@@ -10,12 +10,10 @@ import Contact from './components/Contact';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import openMenu from './hooks/openMenu.tsx';
 
 AOS.init();
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState(null);
   const [openGithubMenu, setOpenGithubMenu] = useState(false);
 
   const [currentTheme, setTheme] = useState("greenTheme");
@@ -82,7 +80,9 @@ function App() {
     });
   }
 
-  
+  const openMenu = (isOpen, setIsOpen) => {
+    setIsOpen(!isOpen);
+  };  
   
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -114,6 +114,20 @@ function App() {
     window.open('https://samantha-jimenez.netlify.app/', '_blank');
     setLeavingModalOpen(false);
   };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Set offset based on screen width
+  const offset = windowWidth <= 768 ? -20 : -50; // Example: -30px for mobile, -50px for desktop
+
 
   return (
     <div className="App">
@@ -168,7 +182,7 @@ function App() {
             <header id="header-back" className={`py-8 px-4 lg:w-[30vw] w-[307px] h-screen bg-[url('./imgFiles/avatar.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing/></Element>
             <button className="down-arrow hidden lg:block z-30 h-[5vh] whit mb-[35%]">
-              <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={-90}>
+              <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={offset}>
                 <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
               </Link>
             </button>
@@ -176,15 +190,15 @@ function App() {
             <div className="profile">
               <h1 className="header-title" data-aos="fade-up">Samantha Jimenez</h1>
               <div className="social-links mt-8 text-center">
-                <div className="tooltip" data-tip="github">
+                <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
                     className={`active:bg-white active:dark:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
-                    onClick={() => openMenu('github', openGithubMenu, setOpenGithubMenu, setActiveMenu)}
+                    onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
                     <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[2px]`}></span>
                   </div>
                 {openGithubMenu && (
-                  <div ref={menuRef} className="relative">
+                  <div className="relative">
                     {/* Tooltip Tail */}
                     <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)]"></div>
                     <ul className={`ml-[-100%] absolute bg-[var(--shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
@@ -226,10 +240,10 @@ function App() {
             <nav className="nav-menu">
               <ul className="nav-ul">
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
@@ -246,19 +260,19 @@ function App() {
               {/* </div> */}
             {/* </div> */}
             </div>
-            <section id="about" className="about">
+            <section id="about" className="about section">
               <Element name='about'><About/></Element>
             </section>
-            <section id="skills" className="skills section-bg">
+            <section id="skills" className="skills section section-bg">
               <Element name='skills'><Skills/></Element>
             </section>
-            <section id="portfolio" className="portfolio section-bg" style={{"height": "max-content"}}>
+            <section id="portfolio" className="portfolio section section-bg" style={{"height": "max-content"}}>
               <Element name='portfolio'><Portfolio/></Element>
             </section>
-            <section id="contact" className="contact pt-20">
+            <section id="contact" className="contact content-around section">
               <Element name='contact'><Contact/></Element>
               <footer id='footer' data-aos="fade-up">
-                <p className='credits pt-8'>
+                <p className='credits pt-10'>
                 Thanks for visiting my corner of the web! 
                 <br></br>
                 Keep exploring, keep creating, and remember — every line of code brings you closer to your next big idea. 🚀

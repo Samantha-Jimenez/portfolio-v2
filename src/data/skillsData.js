@@ -12,6 +12,7 @@ const skills = [
     { name: 'github', icon: 'devicon-github-original', category: 'tools' },
     { name: 'nextjs', icon: 'devicon-nextjs-original-wordmark', category: 'frontend' },
     { name: 'python', icon: 'devicon-python-plain', category: 'backend' },
+    { name: 'docker', icon: 'devicon-docker-plain', category: 'backend' },
     { name: 'npm', icon: 'devicon-npm-original-wordmark', category: 'tools' },
     { name: 'jest', icon: 'devicon-jest-plain', category: 'tools' },
     { name: 'vscode', icon: 'devicon-vscode-plain', category: 'tools' },
@@ -30,6 +31,7 @@ const skills = [
     { name: 'express', icon: 'devicon-express-original', category: 'backend' },
     { name: 'postman', icon: 'devicon-postman-plain', category: 'tools' },
     { name: 'firebase', icon: 'devicon-firebase-plain', category: 'backend' },
+    { name: 'flask', icon: 'devicon-flask-original', category: 'backend' },
 ];
 
 export default skills;

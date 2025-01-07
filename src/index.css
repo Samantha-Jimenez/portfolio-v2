@@ -12,3 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer components {
+  .section {
+    @apply md:pt-[50px] pt-[20px] pb-[60px] md:px-[65px] px-[25px] overflow-hidden;
+  }
+}
