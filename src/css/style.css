@@ -436,13 +436,13 @@
   # Sections General
   --------------------------------------------------------------*/
   section {
-    padding: 90px 65px 60px 65px;
+    padding: 50px 65px 60px 65px;
     overflow: hidden;
   }
 
   @media (max-width: 768px) {
     section {
-      padding: 90px 25px 60px 25px;
+      padding: 20px 25px 60px 25px;
     }
   }
   
@@ -894,7 +894,7 @@
   # Contact
   --------------------------------------------------------------*/
   .contact {
-    /* height: 100vh; */
+    min-height: 102vh;
     grid-area: 5 / 2 / 6 / 3;
     grid-template-rows: max-content max-content;
     display: grid;

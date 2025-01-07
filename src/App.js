@@ -79,7 +79,7 @@ function App() {
       document.documentElement.style.setProperty(key, value);
     });
   }
-  
+
   const openMenu = (isOpen, setIsOpen) => {
     setIsOpen(!isOpen);
   };  
@@ -114,6 +114,20 @@ function App() {
     window.open('https://samantha-jimenez.netlify.app/', '_blank');
     setLeavingModalOpen(false);
   };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Set offset based on screen width
+  const offset = windowWidth <= 768 ? -20 : -50; // Example: -30px for mobile, -50px for desktop
+
 
   return (
     <div className="App">
@@ -168,7 +182,7 @@ function App() {
             <header id="header-back" className={`py-8 px-4 lg:w-[30vw] w-[307px] h-screen bg-[url('./imgFiles/avatar.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing/></Element>
             <button className="down-arrow hidden lg:block z-30 h-[5vh] whit mb-[35%]">
-              <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={-90}>
+              <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={offset}>
                 <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
               </Link>
             </button>
@@ -226,10 +240,10 @@ function App() {
             <nav className="nav-menu">
               <ul className="nav-ul">
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={-90}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
@@ -255,10 +269,10 @@ function App() {
             <section id="portfolio" className="portfolio section-bg" style={{"height": "max-content"}}>
               <Element name='portfolio'><Portfolio/></Element>
             </section>
-            <section id="contact" className="contact pt-20">
+            <section id="contact" className="contact content-around">
               <Element name='contact'><Contact/></Element>
               <footer id='footer' data-aos="fade-up">
-                <p className='credits pt-8'>
+                <p className='credits pt-10'>
                 Thanks for visiting my corner of the web! 
                 <br></br>
                 Keep exploring, keep creating, and remember — every line of code brings you closer to your next big idea. 🚀
