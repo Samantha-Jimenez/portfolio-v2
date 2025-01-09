@@ -18,6 +18,15 @@ function App() {
 
   const [currentTheme, setTheme] = useState("greenTheme");
 
+  //Current Color Scheme
+  //header-color: #96B0A3
+  //underline-and-button-color: #254D32
+  //background-primary: bg-[#EFF2F1]
+  //background-secondary: #ffffff
+  //menu-text-white: #EFF2F1
+  //menu-text-unselected: rgba(178, 204, 62, .5)
+  //button-selected: #B2CC3E
+
   const [currentThemeObj, setThemeObj] = useState({
     "--shadow": "#2c2f3f",
     // "--header": "#01200F",

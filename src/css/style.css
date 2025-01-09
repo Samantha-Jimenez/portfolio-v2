@@ -1,5 +1,5 @@
 :root {
-    --header:#040b14;
+    /* --header:#040b14;
     --title-text: #96B0A3;
     --attention: #B2CC3E;
     --highlight: #254D32;
@@ -7,8 +7,16 @@
     --shadow: #2c2f3f;
     --unselected-dark: rgba(178, 204, 62, .5);
     --unselected-light: rgba(141, 160, 126, .8);
-    --shadow-background: #000000;
+    --shadow-background: #000000; */
     /* --shadow-background: #EFF2F1; */
+
+    --header-color: #96B0A3;
+    --underline-and-button-color: #254D32;
+    --background-and-text-primary: #EFF2F1;
+    --background-secondary: #ffffff;
+    /* --menu-text-white: #EFF2F1; */
+    --menu-text-unselected: rgba(178, 204, 62, .5);
+    --button-selected: rgb(178, 204, 62);
   }
 
   :root, [data-theme] {
@@ -22,7 +30,7 @@
   body {
     font-family: "Inter", sans-serif;
     color: #272829;
-    background-color: #ffffff !important;
+    background-color: var(--background-secondary) !important;
     background: none !important;
   }
   
@@ -54,7 +62,7 @@
     border-radius: 50px;
     right: 15px;
     bottom: 15px;
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     color: #fff;
     transition: display 0.5s ease-in-out;
     z-index: 99999;
@@ -69,7 +77,7 @@
   
   .back-to-top:hover {
     color: #fff;
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     transition: background 0.2s ease-in-out;
   }
   
@@ -91,7 +99,7 @@
   }
 
   .header-title {
-    color: var(--shadow-background);
+    color: var(--background-and-text-primary);
     font-size: 3.25rem;
   }
   
@@ -168,7 +176,7 @@
   .nav-menu a {
     display: inline-flex;
     align-items: center;
-    color: var(--unselected-dark);
+    color: var(--menu-text-unselected);
     transition: 0.3s;
     font-size: 21px;
     font-weight: 300;
@@ -177,7 +185,7 @@
   .nav-menu a i, .linkA i {
     font-size: 24px;
     padding-right: 8px;
-    color: var(--unselected-dark);
+    color: var(--menu-text-unselected);
   }
   
   .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -202,7 +210,7 @@
   }
   
   .nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
-    color: var(--attention);
+    color: var(--button-selected);
   }
   
   /* Mobile Navigation */
@@ -222,7 +230,7 @@
   }
   
   .mobile-nav-toggle i {
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
   }
   
   .mobile-nav-active {
@@ -234,7 +242,7 @@
   }
   
   .mobile-nav-active .mobile-nav-toggle i {
-    color: #fff;
+    color: var(--menu-text-white);
   }
   
   .icofont-navigation-menu {
@@ -262,7 +270,7 @@
   }
   
   .theme_title {
-    color: var(--unselected-light);
+    color: var(--menu-text-unselected);
     margin-left: 2vh;
   }
   
@@ -381,18 +389,18 @@
     font-size: clamp(24px, 4vw + 1rem, 64px);
     font-weight: 700;
     line-height: 56px;
-    color: #96B0A3;
+    color: var(--header-color);
   }
   
   #hero p {
-    color: #96B0A3;
+    color: var(--header-color);
     margin-bottom: 50px;
     font-size: clamp(18px, 0.5vw + 1rem, 26px);
     font-weight: 300;
   }
   
   #hero p span {
-    color: #96B0A3;
+    color: var(--header-color);
     padding-bottom: 4px;
     margin-left: 5px;
   }
@@ -432,7 +440,7 @@
   } */
   
   .section-bg {
-    background: var(--shadow-background);
+    background: var(--background-and-text-primary);
   }
   
   .section-title {
@@ -445,7 +453,7 @@
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: var(--title-text);
+    color: var(--header-color);
   }
   
   .section-title h2::after {
@@ -454,7 +462,7 @@
     display: block;
     width: 50px;
     height: 3px;
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     bottom: 0;
     left: 0;
   }
@@ -469,7 +477,7 @@
   }
   
   .activeNav .bx {
-    color: var(--attention);
+    color: var(--button-selected);
     transition: 0s;
   }
   
@@ -483,7 +491,7 @@
   .about .content h3 {
     font-weight: 700;
     font-size: 26px;
-    color: var(--title-text);
+    color: var(--header-color);
   }
   
   .about .content ul {
@@ -498,7 +506,7 @@
   .about .content ul i {
     font-size: 20px;
     padding-right: 2px;
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
   }
   
   .about .content p:last-child {
@@ -526,7 +534,7 @@
     text-transform: uppercase;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
     font-size: small;
   }
   
@@ -546,7 +554,7 @@
   .icon {
     font-size: 20px;
     align-content: center;
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
   }
   
   .iconDiv {
@@ -697,11 +705,11 @@
   }
   
   .portfolio .portfolio-wrap .portfolio-links a:hover {
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
   }
   
   .portfolio .portfolio-wrap .portfolio-links a + a {
-    border-left: 1px solid var(--highlight);
+    border-left: 1px solid var(--underline-and-button-color);
   }
   
   .portfolio .portfolio-wrap:hover::before {
@@ -802,10 +810,10 @@
     justify-content: center;
     width: 54px;
     height: 54px;
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     border-radius: 50%;
     transition: 0.5s;
-    border: 1px solid var(--highlight);
+    border: 1px solid var(--underline-and-button-color);
   }
   
   .services .icon i {
@@ -818,7 +826,7 @@
   }
   
   .services .icon-box:hover .icon i {
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
   }
   
   .services .title {
@@ -833,7 +841,7 @@
   }
   
   .services .title a:hover {
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
   }
   
   .services .description {
@@ -861,7 +869,7 @@
   
   .contact .info i {
     font-size: 20px;
-    color: var(--highlight);
+    color: var(--underline-and-button-color);
     float: left;
     width: 44px;
     height: 44px;
@@ -885,7 +893,7 @@
     padding: 0 0 10px 60px;
     margin-bottom: 20px;
     font-size: 14px;
-    color: var(--title-text);
+    color: var(--header-color);
   }
   
   .contact .info .email p {
@@ -912,12 +920,12 @@
   }
   
   .contact .info .social-links a:hover {
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     color: #fff;
   }
   
   .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     color: #fff;
   }
   
@@ -997,7 +1005,7 @@
   }
 
   .contact .php-email-form input:focus-within, .contact .php-email-form textarea:focus-within {
-    border-color: var(--attention);
+    border-color: var(--button-selected);
   }
   
   input[type="text"], select:focus, textarea {
@@ -1005,7 +1013,7 @@
   }
   
   .contact .php-email-form button[type="submit"] {
-    background: var(--highlight);
+    background: var(--underline-and-button-color);
     border: 0;
     padding: 10px 24px;
     color: #fff;
@@ -1014,7 +1022,7 @@
   }
   
   .contact .php-email-form button[type="submit"]:hover {
-    background: var(--attention);
+    background: var(--button-selected);
     transform: scale(1.1);
   }
 
@@ -1083,7 +1091,7 @@
   }
   
   .portfolio-details .portfolio-details-carousel .owl-dot.active {
-    background-color: var(--highlight) !important;
+    background-color: var(--underline-and-button-color) !important;
   }
   
   .portfolio-details .portfolio-info {
@@ -1140,7 +1148,7 @@
     }
 
     .portfolio .portfolio-wrap .portfolio-links a {
-      background: var(--highlight) !important;
+      background: var(--underline-and-button-color) !important;
       color: #fff !important;
       font-size: 28px !important;
       text-align: center !important;

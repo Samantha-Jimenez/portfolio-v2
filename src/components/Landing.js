@@ -8,7 +8,7 @@ const Landing = () => {
                 <div id="backgroundImg"></div>
                 <div className="hero-container aos-init aos-animate" data-aos="fade-left">
                     <h1 className="">Samantha Jimenez</h1>
-                    <p className="inter-main" style={{"display": "inline-flex"}}>I'm a <span style={{"borderBottom": "3px solid var(--attention)"}} className="typed inter-main" >
+                    <p className="inter-main" style={{"display": "inline-flex"}}>I'm a <span style={{"borderBottom": "3px solid var(--button-selected)"}} className="typed inter-main" >
                         <TypeAnimation
                             sequence={[
                                 'Full Stack Software Engineer',
