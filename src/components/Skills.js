@@ -31,6 +31,24 @@ const Skills = () => {
                 onChange={handleCategoryChange}
                 placeholder="Select categories..."
                 isSearchable={false}
+                styles={{
+                    control: (provided, state) => ({
+                        ...provided,
+                        boxShadow: state.isFocused ? '0 0 0 2px var(--button-selected)' : null,
+                        borderColor: state.isFocused ? 'var(--button-selected)' : provided.borderColor,
+                        '&:hover': {
+                            borderColor: 'var(--button-selected)',
+                        },
+                    }),
+                    option: (provided, state) => ({
+                        ...provided,
+                        backgroundColor: state.isSelected ? 'rgba(178, 204, 62, 0.8)' : state.isFocused ? 'rgba(178, 204, 62, 0.15)' : provided.backgroundColor,
+                        color: state.isFocused ? '#000' : provided.color,
+                        '&:active': {
+                            backgroundColor: 'rgba(178, 204, 62, 0.8)',
+                        },
+                    }),
+                }}
             />
             <div className="skills-content">
                 {filteredSkills.map((skill, index) => (
