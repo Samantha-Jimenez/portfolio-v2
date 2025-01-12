@@ -4,7 +4,7 @@ import { Link, Element } from 'react-scroll';
 import './css/style.css';
 import About from './components/About';
 import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
+// import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
@@ -300,7 +300,7 @@ function App() {
       {/* Modal for Under Construction */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+          <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm w-full text-center mx-2">
             <span className="absolute top-2 right-2 cursor-pointer text-gray-500" onClick={closeModal}>&times;</span>
             <h2 className="text-xl font-semibold">Under Construction</h2>
             <p className="mt-2">This website is currently under construction. <strong>Please enjoy this draft in the meantime. Don't mind the bugs.</strong></p>
