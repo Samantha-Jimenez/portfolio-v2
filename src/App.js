@@ -4,7 +4,8 @@ import { Link, Element } from 'react-scroll';
 import './css/style.css';
 import About from './components/About';
 import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
+// import Portfolio from './components/Portfolio';
+import Timeline from './components/Timeline';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
 import emailjs from '@emailjs/browser';
@@ -251,7 +252,8 @@ function App() {
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
+                {/* <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li> */}
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='timeline' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--calendar-time] mr-2"></span>Timeline</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
@@ -275,8 +277,11 @@ function App() {
             <section id="skills" className="skills section section-bg">
               <Element name='skills'><Skills/></Element>
             </section>
-            <section id="portfolio" className="portfolio section section-bg" style={{"height": "max-content"}}>
+            {/* <section id="portfolio" className="portfolio section section-bg" style={{"height": "max-content"}}>
               <Element name='portfolio'><Portfolio/></Element>
+            </section> */}
+            <section id="timeline" className="portfolio section section-bg" style={{"height": "max-content"}}>
+              <Element name='timeline'><Timeline/></Element>
             </section>
             <section id="contact" className="contact content-around section">
               <Element name='contact'><Contact/></Element>
@@ -295,7 +300,7 @@ function App() {
       {/* Modal for Under Construction */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+          <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm w-full text-center mx-2">
             <span className="absolute top-2 right-2 cursor-pointer text-gray-500" onClick={closeModal}>&times;</span>
             <h2 className="text-xl font-semibold">Under Construction</h2>
             <p className="mt-2">This website is currently under construction. <strong>Please enjoy this draft in the meantime. Don't mind the bugs.</strong></p>

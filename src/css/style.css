@@ -795,6 +795,41 @@
     display: inline-flex;
     overflow: hidden;
   }
+
+  .image-crop-container {
+    justify-items: center;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 371px) {
+    .image-crop-container {
+      margin-top: 25px;
+    }
+  }
+
+  .carousel-item {
+    height: 90% !important;
+  }
+
+  .slick-dots {
+    bottom: -10px !important;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    color: rgba(75, 85, 99, 0.7) !important;
+  }
+
+  .slick-prev {
+    left: -10px !important;
+  }
+
+  .slick-next {
+    right: -10px !important;
+  }
+
+  .slick-prev, .slick-next {
+    z-index: 1 !important;
+  }
   
   /*--------------------------------------------------------------
   # Services
