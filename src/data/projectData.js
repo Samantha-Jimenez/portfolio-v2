@@ -48,7 +48,13 @@ const pelotonSlides = [
     ];
 
 const zooVioSlides = [
-    <img src={project1} alt="Project 1" className="w-full px-7" />,
+    <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
+        <img src={project1} alt="Project 1" className="w-[90%] ml-auto mb-[10px] rounded-lg mx-auto" />
+        <div className="justify-center gap-2 grid-flow-col inline-grid min-[511px]:hidden text-center max-[403px]:grid-flow-row">
+            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner text-center">Live Site</a>
+            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner text-center">GitHub</a>
+        </div>
+    </div>,
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
         <p>
             • Integrated Firebase from Google to authenticate users and store pet’s information. <br/>
@@ -57,15 +63,20 @@ const zooVioSlides = [
             • Used WebRTC API to allow for video consultations between users and veterinarians. <br/>
             • Heroku, Netlify, React, Redux Toolkit, Node, Axios, Firebase, Bootstrap.
         </p>
-        <div className="justify-center gap-2 grid-flow-col inline-grid">
-            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner">Live Site</a>
-            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner">GitHub</a>
+        <div className="justify-center gap-2 grid-flow-col inline-grid display max-[510px]:hidden text-center">
+            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner text-center">Live Site</a>
+            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner text-center">GitHub</a>
         </div>
     </div>,
     ];
     
 const finstaSlides = [
-    <img src={project2} alt="Project 2" className="w-full px-7" />,
+    <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
+        <img src={project2} alt="Project 2" className="w-[90%] ml-auto mb-[10px] rounded-lg mx-auto" />
+        <div className="justify-center gap-2 grid-flow-col inline-grid min-[511px]:hidden text-center max-[403px]:grid-flow-row">
+            <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center">GitHub</a>
+        </div>
+    </div>,
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
         <p>
             • Integrated Firebase Storage to store uploaded photos and avatars. <br/>
@@ -73,14 +84,20 @@ const finstaSlides = [
             • Prepared SQL tables, queries, and routes and employed it for the applications Heroku backend. <br/>
             • Heroku, Netlify, React, Node, Axios, PostgreSQL, Firebase.
         </p>
-        <div className="justify-center gap-2 grid-flow-col inline-grid">
-            <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner">GitHub</a>
+        <div className="justify-center gap-2 grid-flow-col inline-grid display max-[510px]:hidden text-center">
+            <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center">GitHub</a>
         </div>
     </div>,
 ];
 
 const tastebudsSlides = [
-    <img src={project3} alt="Project 3" className="w-full px-7" />,
+    <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
+        <img src={project3} alt="Project 3" className="w-[90%] mb-[10px] rounded-lg mx-auto" />
+        <div className="justify-center gap-2 grid-flow-col inline-grid min-[521px]:hidden text-center max-[403px]:grid-flow-row">
+            <a href="https://tastebuds.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner">Live Site</a>
+            <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center">GitHub</a>
+        </div>
+    </div>,
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
         <p>
             • Collaborated with two engineers to create and build an application within 48 hours. <br/>
@@ -88,9 +105,9 @@ const tastebudsSlides = [
             • Applied Bootstraps JavaScript modal plugin to allow users to input information through dialog box. <br/>
             • React, Node, Axios, Bootstrap, PostgreSQL.
         </p>
-        <div className="justify-center gap-2 grid-flow-col inline-grid">
+        <div className="justify-center gap-2 grid-flow-col inline-grid display max-[520px]:hidden text-center">
             <a href="https://tastebuds.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner">Live Site</a>
-            <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 w-max inline-grid rounded-lg hover:shadow-inner">GitHub</a>
+            <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center">GitHub</a>
         </div>
     </div>,
 ];

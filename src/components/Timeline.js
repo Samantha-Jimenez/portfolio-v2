@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { mvmntSlides, othelloSlides, pelotonSlides, zooVioSlides, finstaSlides, tastebudsSlides } from './../data/projectData';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
 // Component definition
 const Timeline = () => {
@@ -165,37 +168,19 @@ const Timeline = () => {
                         </h2>
                         <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion3'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
-                                <div className="carousel w-full">
+                                <Slider 
+                                    dots={true} 
+                                    infinite={true} 
+                                    speed={500} 
+                                    slidesToShow={1} 
+                                    slidesToScroll={1}
+                                >
                                     {pelotonSlides.map((slide, index) => (
-                                        <div key={index} className={`carousel-item w-full flex-shrink-0 ${index === currentIndex ? 'block' : 'hidden'}`}>
+                                        <div key={index} className="carousel-item">
                                             {slide}
                                         </div>
                                     ))}
-                                </div>
-                                {/* Indicators for the carousel */}
-                                {pelotonSlides.length > 1 && (
-                                    <div className="flex justify-center mt-2">
-                                        {pelotonSlides.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[var(--button-selected)]' : 'bg-gray-300'}`}
-                                                onClick={() => handleIndicatorClick(index)}
-                                                aria-label={`Slide ${index + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                )}
-                                {/* Navigation buttons */}
-                                {pelotonSlides.length > 1 && (
-                                    <>
-                                        <button onClick={() => navigateSlide('prev', pelotonSlides)} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❮
-                                        </button>
-                                        <button onClick={() => navigateSlide('next', pelotonSlides)} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❯
-                                        </button>
-                                    </>
-                                )}
+                                </Slider>
                             </div>
                         </div>
                     </div>
@@ -223,37 +208,19 @@ const Timeline = () => {
                         </h2>
                         <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion4'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
-                                <div className="carousel w-full">
+                                <Slider 
+                                    dots={true} 
+                                    infinite={true} 
+                                    speed={500} 
+                                    slidesToShow={1} 
+                                    slidesToScroll={1}
+                                >
                                     {zooVioSlides.map((slide, index) => (
-                                        <div key={index} className={`carousel-item w-full flex-shrink-0 ${index === currentIndex ? 'block' : 'hidden'}`}>
+                                        <div key={index} className="carousel-item">
                                             {slide}
                                         </div>
                                     ))}
-                                </div>
-                                {/* Indicators for the carousel */}
-                                {zooVioSlides.length > 1 && (
-                                    <div className="flex justify-center mt-2">
-                                        {zooVioSlides.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[var(--button-selected)]' : 'bg-gray-300'}`}
-                                                onClick={() => handleIndicatorClick(index)}
-                                                aria-label={`Slide ${index + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                )}
-                                {/* Navigation buttons */}
-                                {zooVioSlides.length > 1 && (
-                                    <>
-                                        <button onClick={() => navigateSlide('prev', zooVioSlides)} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❮
-                                        </button>
-                                        <button onClick={() => navigateSlide('next', zooVioSlides)} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❯
-                                        </button>
-                                    </>
-                                )}
+                                </Slider>
                             </div>
                         </div>
                     </div>
@@ -279,37 +246,19 @@ const Timeline = () => {
                         </h2>
                         <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion5'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
-                                <div className="carousel w-full">
+                                <Slider 
+                                    dots={true} 
+                                    infinite={true} 
+                                    speed={500} 
+                                    slidesToShow={1} 
+                                    slidesToScroll={1}
+                                >
                                     {finstaSlides.map((slide, index) => (
-                                        <div key={index} className={`carousel-item w-full flex-shrink-0 ${index === currentIndex ? 'block' : 'hidden'}`}>
+                                        <div key={index} className="carousel-item">
                                             {slide}
                                         </div>
                                     ))}
-                                </div>
-                                {/* Indicators for the carousel */}
-                                {finstaSlides.length > 1 && (
-                                    <div className="flex justify-center mt-2">
-                                        {finstaSlides.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[var(--button-selected)]' : 'bg-gray-300'}`}
-                                                onClick={() => handleIndicatorClick(index)}
-                                                aria-label={`Slide ${index + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                )}
-                                {/* Navigation buttons */}
-                                {finstaSlides.length > 1 && (
-                                    <>
-                                        <button onClick={() => navigateSlide('prev', finstaSlides)} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❮
-                                        </button>
-                                        <button onClick={() => navigateSlide('next', finstaSlides)} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❯
-                                        </button>
-                                    </>
-                                )}
+                                </Slider>
                             </div>
                         </div>
                     </div>
@@ -336,37 +285,19 @@ const Timeline = () => {
                         </h2>
                         <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion6'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
-                                <div className="carousel w-full">
+                                <Slider 
+                                    dots={true} 
+                                    infinite={true} 
+                                    speed={500} 
+                                    slidesToShow={1} 
+                                    slidesToScroll={1}
+                                >
                                     {tastebudsSlides.map((slide, index) => (
-                                        <div key={index} className={`carousel-item w-full flex-shrink-0 ${index === currentIndex ? 'block' : 'hidden'}`}>
+                                        <div key={index} className="carousel-item">
                                             {slide}
                                         </div>
                                     ))}
-                                </div>
-                                {/* Indicators for the carousel */}
-                                {tastebudsSlides.length > 1 && (
-                                    <div className="flex justify-center mt-2">
-                                        {tastebudsSlides.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[var(--button-selected)]' : 'bg-gray-300'}`}
-                                                onClick={() => handleIndicatorClick(index)}
-                                                aria-label={`Slide ${index + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                )}
-                                {/* Navigation buttons */}
-                                {tastebudsSlides.length > 1 && (
-                                    <>
-                                        <button onClick={() => navigateSlide('prev', tastebudsSlides)} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❮
-                                        </button>
-                                        <button onClick={() => navigateSlide('next', tastebudsSlides)} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full">
-                                            ❯
-                                        </button>
-                                    </>
-                                )}
+                                </Slider>
                             </div>
                         </div>
                     </div>
