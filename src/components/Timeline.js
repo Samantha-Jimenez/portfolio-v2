@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { mvmntSlides, othelloSlides, pelotonSlides, zooVioSlides, finstaSlides, tastebudsSlides } from './../data/projectData';
+import React, { useState, useEffect } from 'react';
+import { mvmntSlides, othelloSlides, pelotonSlides, zooVioSlides, zooVioSlidesMobile, finstaSlides, finstaSlidesMobile, tastebudsSlides, tastebudsSlidesMobile } from './../data/projectData';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
@@ -10,6 +10,33 @@ const Timeline = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [openAccordions, setOpenAccordions] = useState({});
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [slides, setSlides] = useState(zooVioSlides);
+    const [finstagramSlidesState, setFinstagramSlidesState] = useState(finstaSlides);
+    const [tastebudsSlidesState, setTastebudsSlidesState] = useState(tastebudsSlides);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 385) {
+                setTastebudsSlidesState(tastebudsSlidesMobile);
+                setFinstagramSlidesState(finstaSlidesMobile);
+                setSlides(zooVioSlidesMobile);
+            } else if (window.innerWidth < 420) {
+                setFinstagramSlidesState(finstaSlidesMobile);
+                setSlides(zooVioSlidesMobile);
+            } else if (window.innerWidth < 470) {
+                setSlides(zooVioSlidesMobile);
+            } else {
+                setSlides(zooVioSlides);
+                setFinstagramSlidesState(finstaSlides);
+                setTastebudsSlidesState(tastebudsSlides);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Navigation function
     const navigateSlide = (direction, slides) => {
@@ -215,7 +242,7 @@ const Timeline = () => {
                                     slidesToShow={1} 
                                     slidesToScroll={1}
                                 >
-                                    {zooVioSlides.map((slide, index) => (
+                                    {slides.map((slide, index) => (
                                         <div key={index} className="carousel-item">
                                             {slide}
                                         </div>
@@ -253,7 +280,7 @@ const Timeline = () => {
                                     slidesToShow={1} 
                                     slidesToScroll={1}
                                 >
-                                    {finstaSlides.map((slide, index) => (
+                                    {finstagramSlidesState.map((slide, index) => (
                                         <div key={index} className="carousel-item">
                                             {slide}
                                         </div>
@@ -292,7 +319,7 @@ const Timeline = () => {
                                     slidesToShow={1} 
                                     slidesToScroll={1}
                                 >
-                                    {tastebudsSlides.map((slide, index) => (
+                                    {tastebudsSlidesState.map((slide, index) => (
                                         <div key={index} className="carousel-item">
                                             {slide}
                                         </div>

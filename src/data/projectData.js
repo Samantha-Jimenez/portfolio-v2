@@ -68,7 +68,30 @@ const zooVioSlides = [
             <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full">GitHub</a>
         </div>
     </div>,
-    ];
+];
+
+const zooVioSlidesMobile = [
+    <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
+        <img src={project1} alt="Project 1" className="w-[90%] ml-auto mb-[10px] rounded-lg mx-auto" />
+        <div className="gap-2 grid-flow-col inline-grid min-[511px]:hidden text-center max-[403px]:grid-flow-row w-full">
+            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full">Live Site</a>
+            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full">GitHub</a>
+        </div>
+    </div>,
+    <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
+        <p>
+            • Integrated Firebase from Google to authenticate users and store pet’s information. <br/>
+            • Utilized Yelp API to allow users to easily search for veterinarians via zip code. <br/>
+            • Applied Bootstrap for CSS to create a responsive web application. <br/>
+        </p>
+    </div>,
+        <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
+        <p>
+            • Used WebRTC API to allow for video consultations between users and veterinarians. <br/>
+            • Heroku, Netlify, React, Redux Toolkit, Node, Axios, Firebase, Bootstrap.
+        </p>
+    </div>,
+];
     
 const finstaSlides = [
     <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
@@ -87,6 +110,27 @@ const finstaSlides = [
         <div className="gap-2 grid-flow-col inline-grid display max-[510px]:hidden text-center w-full">
             <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full">GitHub</a>
         </div>
+    </div>,
+];
+
+const finstaSlidesMobile = [
+    <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
+        <img src={project2} alt="Project 2" className="w-[90%] ml-auto mb-[10px] rounded-lg mx-auto" />
+        <div className="gap-2 grid-flow-col inline-grid min-[511px]:hidden text-center max-[403px]:grid-flow-row w-full">
+            <a href="https://github.com/SamanthaBJimenez/my-ig" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full">GitHub</a>
+        </div>
+    </div>,
+    <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
+        <p>
+            • Integrated Firebase Storage to store uploaded photos and avatars. <br/>
+            • Implemented Firebase authentication that allows only logged in users to view photos, upload content, and leave comments. <br/>
+        </p>
+    </div>,
+        <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
+        <p>
+            • Prepared SQL tables, queries, and routes and employed it for the applications Heroku backend. <br/>
+            • Heroku, Netlify, React, Node, Axios, PostgreSQL, Firebase.
+        </p>
     </div>,
 ];
 
@@ -112,11 +156,36 @@ const tastebudsSlides = [
     </div>,
 ];
 
+const tastebudsSlidesMobile = [
+    <div className="image-crop-container flex flex-col items-center max-[365px]:gap-5">
+        <img src={project3} alt="Project 3" className="w-[90%] mb-[10px] rounded-lg mx-auto" />
+        <div className="gap-2 grid-flow-col inline-grid min-[521px]:hidden text-center max-[403px]:grid-flow-row w-full">
+            <a href="https://tastebuds.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full">Live Site</a>
+            <a href="https://github.com/SamanthaBJimenez/tastebuds" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full">GitHub</a>
+        </div>
+    </div>,
+    <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
+        <p>
+            • Collaborated with two engineers to create and build an application within 48 hours. <br/>
+            • Used PostgreSQL to store reservation data. <br/>
+        </p>
+    </div>,
+        <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full">
+        <p>
+            • Applied Bootstraps JavaScript modal plugin to allow users to input information through dialog box. <br/>
+            • React, Node, Axios, Bootstrap, PostgreSQL.
+        </p>
+    </div>,
+];
+
 export {
     mvmntSlides,
     othelloSlides,
     pelotonSlides,
     zooVioSlides,
+    zooVioSlidesMobile,
     finstaSlides,
+    finstaSlidesMobile,
     tastebudsSlides,
+    tastebudsSlidesMobile,
 };
