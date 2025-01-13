@@ -55,7 +55,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`${openAccordions['accordion1'] ? '' : 'hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[270ms] ease-in-out ${openAccordions['accordion1'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {mvmntSlides.map((slide, index) => (
@@ -109,7 +109,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`${openAccordions['accordion2'] ? '' : 'hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[270ms] ease-in-out ${openAccordions['accordion2'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {othelloSlides.map((slide, index) => (
@@ -163,7 +163,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`${openAccordions['accordion3'] ? '' : 'hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[270ms] ease-in-out ${openAccordions['accordion3'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {pelotonSlides.map((slide, index) => (
@@ -221,7 +221,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`${openAccordions['accordion4'] ? '' : 'hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[270ms] ease-in-out ${openAccordions['accordion4'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {zooVioSlides.map((slide, index) => (
@@ -277,7 +277,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`${openAccordions['accordion5'] ? '' : 'hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[270ms] ease-in-out ${openAccordions['accordion5'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {finstaSlides.map((slide, index) => (
@@ -334,7 +334,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`${openAccordions['accordion6'] ? '' : 'hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[270ms] ease-in-out ${openAccordions['accordion6'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {tastebudsSlides.map((slide, index) => (
