@@ -241,7 +241,7 @@ function App() {
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                     >
-                      <span className="icon-[material-symbols--devices-outline-rounded] mb-[2px]"></span>
+                      <span className="icon-[material-symbols--folder-supervised-outline-rounded] mb-[2px]"></span>
                     </div>
                   </a>
                 </div>
