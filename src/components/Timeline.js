@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { mvmntSlides, othelloSlides, pelotonSlides, zooVioSlides, zooVioSlidesMobile, finstaSlides, finstaSlidesMobile, tastebudsSlides, tastebudsSlidesMobile } from './../data/projectData';
+import { mvmntSlides, othelloSlides, pelotonSlides, zooVioSlides, zooVioSlidesTablet, zooVioSlidesMobile, finstaSlides, finstaSlidesMobile, finstaSlidesTablet, finstaSlidesExtraSmall, tastebudsSlides, tastebudsSlidesMobile, tastebudsSlidesTablet } from './../data/projectData';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
-// Component definition
 const Timeline = () => {
-    // State hooks
     const [openDropdown, setOpenDropdown] = useState(null);
     const [openAccordions, setOpenAccordions] = useState({});
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,27 +13,60 @@ const Timeline = () => {
     const [tastebudsSlidesState, setTastebudsSlidesState] = useState(tastebudsSlides);
 
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 385) {
+    const updateSlides = () => {
+            if (window.innerWidth < 420) {
+                setFinstagramSlidesState(finstaSlidesExtraSmall);
+                setSlides(zooVioSlidesMobile);
+                setTastebudsSlidesState(tastebudsSlidesMobile);
+            } else if (window.innerWidth < 460) {
+                setSlides(zooVioSlidesMobile);
                 setTastebudsSlidesState(tastebudsSlidesMobile);
                 setFinstagramSlidesState(finstaSlidesMobile);
-                setSlides(zooVioSlidesMobile);
-            } else if (window.innerWidth < 420) {
+            } else if (window.innerWidth < 480) {
+                setTastebudsSlidesState(tastebudsSlidesMobile);
                 setFinstagramSlidesState(finstaSlidesMobile);
-                setSlides(zooVioSlidesMobile);
-            } else if (window.innerWidth < 470) {
-                setSlides(zooVioSlidesMobile);
+                setSlides(zooVioSlidesTablet);
+            } else if (window.innerWidth < 550) {
+                setFinstagramSlidesState(finstaSlidesMobile);
+                setSlides(zooVioSlidesTablet);
+                setTastebudsSlidesState(tastebudsSlidesTablet);
+            } else if (window.innerWidth < 850) {
+                setSlides(zooVioSlidesTablet);
+                setTastebudsSlidesState(tastebudsSlidesTablet);
+                setFinstagramSlidesState(finstaSlidesMobile);
+            } else if (window.innerWidth < 870) {
+                setSlides(zooVioSlidesTablet);
+                setTastebudsSlidesState(tastebudsSlides);
+                setFinstagramSlidesState(finstaSlidesMobile);
+            } else if (window.innerWidth < 1024) {
+                setSlides(zooVioSlides);
+                setTastebudsSlidesState(tastebudsSlides);
+                setFinstagramSlidesState(finstaSlidesMobile);
+            } else if (window.innerWidth < 1170) {
+                setFinstagramSlidesState(finstaSlidesMobile);
+                setTastebudsSlidesState(tastebudsSlidesTablet);
+                setSlides(zooVioSlidesTablet);
+            } else if(window.innerWidth < 1214) {
+                setTastebudsSlidesState(tastebudsSlidesTablet);
+                setSlides(zooVioSlidesTablet);
+                setFinstagramSlidesState(finstaSlidesTablet);
+            } else if(window.innerWidth < 1266) {
+                setSlides(zooVioSlidesTablet);
+                setFinstagramSlidesState(finstaSlidesTablet);
+            } else if (window.innerWidth < 1312) {
+                setFinstagramSlidesState(finstaSlidesTablet);
             } else {
                 setSlides(zooVioSlides);
-                setFinstagramSlidesState(finstaSlides);
                 setTastebudsSlidesState(tastebudsSlides);
+                setFinstagramSlidesState(finstaSlides);
             }
-        };
+    };
 
-        window.addEventListener('resize', handleResize);
-        handleResize();
+    updateSlides(); // Set initial slides based on window width
 
-        return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', updateSlides); // Update slides on resize
+
+    return () => window.removeEventListener('resize', updateSlides);
     }, []);
 
     // Navigation function
@@ -47,7 +78,7 @@ const Timeline = () => {
         }
     };
 
-    // Also add the toggleAccordion function
+    // Add the toggleAccordion function
     const toggleAccordion = (id) => {
         setOpenAccordions(prev => {
             // Close all accordions except the one clicked
@@ -74,7 +105,10 @@ const Timeline = () => {
                     <div className="font-medium text-2xl text-green-600/55 mb-1 sm:mb-0 font-['Sora']" data-aos="fade-left" data-aos-duration="1500">Mvmnt Collectives</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                         <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-[var(--background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024 - '25</time>
-                        <div className="text-xl font-bold text-[var(--underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Run Club App</div>
+                        <div className="text-xl font-bold text-[var(--underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Running Club App</div>
+                    </div>
+                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                        Web app connecting runners to local clubs, events, and community updates.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">
@@ -127,8 +161,11 @@ const Timeline = () => {
                 <div className="relative pl-8 sm:pl-32 py-6 group">
                     <div className="font-medium text-2xl text-green-600/55 mb-1 sm:mb-0 font-['Sora']" data-aos="fade-left" data-aos-duration="1500">Othello</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        {/* <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-[var(--background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024</time> */}
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-[var(--background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024</time>
                         <div className="text-xl font-bold text-[var(--underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Pursuit Hackathon Award-Winning App for Most Innovative Use of AI</div>
+                    </div>
+                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                        AI-driven Othello game with dynamic opponents and blockers, built with AI-assisted coding tools.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">
@@ -221,8 +258,7 @@ const Timeline = () => {
                         <div className="text-xl font-bold text-slate-900" data-aos="fade-left" data-aos-duration="1500">Capstone Project at Pursuit Coding Fellowship</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
-                       A full stack web application which allow users to keep track of pet information and tasks, search for local veterinarians and schedule appointments, and
-                       message or video call with vets via the app
+                        Full-stack app for managing pet info, finding local vets, and scheduling video calls.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">
@@ -257,10 +293,11 @@ const Timeline = () => {
                 <div className="relative pl-8 sm:pl-32 py-6 group">
                     <div className="font-medium text-2xl text-green-600/55 mb-1 sm:mb-0 font-['Sora']" data-aos="fade-left" data-aos-duration="1500">Finstagram</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <div className="text-xl font-bold text-slate-900" data-aos="fade-left" data-aos-duration="1500">Independent Project Built during Pursuit Coding Fellowship</div>
+                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-[var(--background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
+                       <div className="text-xl font-bold text-slate-900" data-aos="fade-left" data-aos-duration="1500">Independent Project at Pursuit Coding Fellowship</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
-                        A social media web application which allows users to easily upload photos and share them with friends.
+                        Social media app for sharing photos effortlessly with friends.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">
@@ -295,11 +332,11 @@ const Timeline = () => {
                 <div className="relative pl-8 sm:pl-32 py-6 group">
                     <div className="font-caveat font-medium text-2xl text-green-600/55 mb-1 sm:mb-0 font-['Sora']" data-aos="fade-left" data-aos-duration="1500">Tastebuds</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <div className="text-xl font-bold text-slate-900" data-aos="fade-left" data-aos-duration="1500">Codecademy Sponsored Hackathon Award-Winning App for Most Creative from Pursuit Coding Fellowship</div>
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-[var(--background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
+                        <div className="text-xl font-bold text-slate-900" data-aos="fade-left" data-aos-duration="1500">Codecademy Sponsored Pursuit Hackathon Award-Winning App for Most Creative</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
-                        A frontend web application which allows users to create or join a two-person reservation at a local restaurant in order to pair diners who do not want to
-                        eat alone.
+                        Frontend app pairing solo diners for two-person restaurant reservations.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">

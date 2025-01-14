@@ -241,7 +241,7 @@ function App() {
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                     >
-                      <span className="icon-[material-symbols--devices-outline-rounded] mb-[2px]"></span>
+                      <span className="icon-[material-symbols--folder-supervised-outline-rounded] mb-[2px]"></span>
                     </div>
                   </a>
                 </div>
@@ -253,7 +253,7 @@ function App() {
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
                 {/* <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li> */}
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='timeline' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--calendar-time] mr-2"></span>Timeline</Link></span></a></li>
+                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
                 <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
@@ -281,7 +281,7 @@ function App() {
               <Element name='portfolio'><Portfolio/></Element>
             </section> */}
             <section id="timeline" className="portfolio section section-bg" style={{"height": "max-content"}}>
-              <Element name='timeline'><Timeline/></Element>
+              <Element name='portfolio'><Timeline/></Element>
             </section>
             <section id="contact" className="contact content-around section">
               <Element name='contact'><Contact/></Element>
