@@ -428,16 +428,6 @@
   /*--------------------------------------------------------------
   # Sections General
   --------------------------------------------------------------*/
-  /* section {
-    padding: 50px 65px 60px 65px;
-    overflow: hidden;
-  } */
-
-  /* @media (max-width: 768px) {
-    section {
-      padding: 20px 25px 60px 25px;
-    }
-  } */
   
   .section-bg {
     background: var(--background-and-text-primary);
@@ -830,61 +820,7 @@
   .slick-prev, .slick-next {
     z-index: 1 !important;
   }
-  
-  /*--------------------------------------------------------------
-  # Services
-  --------------------------------------------------------------*/
-  .services .icon-box {
-    margin-bottom: 20px;
-  }
-  
-  .services .icon {
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    background: var(--underline-and-button-color);
-    border-radius: 50%;
-    transition: 0.5s;
-    border: 1px solid var(--underline-and-button-color);
-  }
-  
-  .services .icon i {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .services .icon-box:hover .icon {
-    background: #fff;
-  }
-  
-  .services .icon-box:hover .icon i {
-    color: var(--underline-and-button-color);
-  }
-  
-  .services .title {
-    margin-left: 80px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  
-  .services .title a {
-    color: #343a40;
-  }
-  
-  .services .title a:hover {
-    color: var(--underline-and-button-color);
-  }
-  
-  .services .description {
-    margin-left: 80px;
-    line-height: 24px;
-    font-size: 14px;
-  }
-  
+
   /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
