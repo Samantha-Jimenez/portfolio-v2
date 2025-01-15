@@ -52,7 +52,7 @@ const Skills = () => {
             />
             <div className="skills-content">
                 {filteredSkills.map((skill, index) => (
-                    <div className={`iconDiv flex ${skill.category === 'tools' ? 'bg-gray-300' : skill.category === 'frontend' ? 'bg-orange-700/35' : 'bg-green-600/55'}`} key={index} data-aos="fade-up" data-aos-duration="500" >
+                    <div className={`iconDiv flex bg-white shadow-lg border ${skill.category === 'tools' ? 'border-gray-400' : skill.category === 'frontend' ? 'border-orange-700/40' : 'border-green-600/60'}`} key={index} data-aos="fade-up" data-aos-duration="500" >
                         <i className={`${skill.icon} icon`}></i>
                         <div className="progress">
                             <span className="skill">{skill.name}</span>

@@ -188,7 +188,7 @@ function App() {
                 </svg>
               </button>
             </div>
-          <main id="main" className="grid lg:grid-cols-[30vw_70vw] lg:grid-rows-[0.4fr_0.75fr_max-content_0.75fr_fit-content[100%]] grid-cols-[0vw_100vw]">
+          <main id="main" className="grid lg:grid-cols-[30vw_70vw] grid-rows-[0.4fr_max-content_max-content_0.75fr_max-content] grid-cols-[0vw_100vw]">
             <header id="header-back" className={`py-8 px-4 lg:w-[30vw] w-[307px] h-screen bg-[url('./imgFiles/avatar.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing/></Element>
             <button className="down-arrow hidden lg:block z-30 h-[5vh] whit mb-[35%]">
