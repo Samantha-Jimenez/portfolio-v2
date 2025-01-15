@@ -8,18 +8,8 @@
       "type": "image/png"
     },
     {
-      "src": "favicon_io/favicon-24x24.png",
-      "sizes": "24x24",
-      "type": "image/png"
-    },
-    {
       "src": "favicon_io/favicon-32x32.png",
       "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "favicon_io/favicon-64x64.png",
-      "sizes": "64x64",
       "type": "image/png"
     },
     {
