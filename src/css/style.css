@@ -52,36 +52,6 @@
   }
   
   /*--------------------------------------------------------------
-  # Back to top button
-  --------------------------------------------------------------*/
-  .back-to-top {
-    position: fixed;
-    display: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    right: 15px;
-    bottom: 15px;
-    background: var(--underline-and-button-color);
-    color: #fff;
-    transition: display 0.5s ease-in-out;
-    z-index: 99999;
-  }
-  
-  .back-to-top i {
-    font-size: 24px;
-    position: absolute;
-    top: 7px;
-    left: 8px;
-  }
-  
-  .back-to-top:hover {
-    color: #fff;
-    background: var(--underline-and-button-color);
-    transition: background 0.2s ease-in-out;
-  }
-  
-  /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
   .down-arrow {
@@ -153,6 +123,7 @@
   # Navigation Menu
   --------------------------------------------------------------*/
   /* Desktop Navigation */
+
   .nav-ul {
     height: 38vh;
     justify-content: space-around;
@@ -357,11 +328,6 @@
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-  
-  #backgroundImg {
-    width: 100%;
-    height: 100vh;
-  }
 
   #landing {
     grid-area: 1 / 2 / 2 / 3;
@@ -474,6 +440,7 @@
   /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
+
   .about {
     grid-area: 2 / 2 / 3 / 3;
   }
@@ -506,6 +473,7 @@
   /*--------------------------------------------------------------
   # Skills
   --------------------------------------------------------------*/
+
   .skills {
     grid-area: 3 / 2 / 4 / 3;
   }
@@ -628,6 +596,7 @@
   /*--------------------------------------------------------------
   # Portfolio
   --------------------------------------------------------------*/
+
   .portfolio {
     grid-area: 4 / 2 / 5 / 3;
   }
@@ -786,6 +755,73 @@
     overflow: hidden;
   }
 
+  @media (max-width: 768px) {
+    .portfolio .portfolio-wrap .portfolio-links a {
+      background: var(--underline-and-button-color) !important;
+      color: #fff !important;
+      font-size: 28px !important;
+      text-align: center !important;
+      transition: 0.3s !important;
+      width: 50% !important;
+      position: relative !important;
+      overflow: hidden !important;
+      z-index: 1 !important;
+      width: 100% !important;
+      box-shadow: 5px 5px 9px darkgrey !important;
+    }
+
+    .venobox .github-name {
+      width: 28% !important;
+      vertical-align: 6px !important;
+      transition: all ease-in-out .5s !important;
+      font-size: medium !important;
+      margin-left: 6% !important;
+      display: inline-flex !important;
+    }
+
+    .portfolio-wrap {
+      box-shadow: none;
+      transition: all ease-in-out .3s;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links {
+      opacity: 1;
+      bottom: 0;
+    }
+
+    .portfolio .portfolio-wrap .img-fluid {
+      opacity: .5;
+      transition: all .3s;
+    }
+
+    .portfolio-wrap .project-text {
+      color: #040B15;
+      z-index: 1;
+      transition: all ease-in-out .3s;
+      bottom: 125px;
+      font-size: 40px;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      left: 10px;
+      font-family: "Raleway", sans-serif;
+      color: var(--header);
+    }
+
+    .liveA .live-site {
+      width: 31%;
+      vertical-align: 6px;
+      transition: all ease-in-out .5s;
+      font-size: medium;
+      margin-left: 6%;
+      display: inline-flex;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links a + a {
+      border-left: 1px solid white;
+    }
+  }
+
   .image-crop-container {
     justify-items: center;
     margin-bottom: 15px;
@@ -824,6 +860,7 @@
   /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+  
   .contact {
     min-height: 102vh;
     grid-area: 5 / 2 / 6 / 3;
@@ -1031,162 +1068,10 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Portfolio Details
-  --------------------------------------------------------------*/
-  .portfolio-details {
-    padding-top: 40px;
-  }
-  
-  .portfolio-details .portfolio-details-container {
-    position: relative;
-  }
-  
-  .portfolio-details .portfolio-details-carousel {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-    margin-top: 5px;
-    text-align: left;
-  }
-  
-  .portfolio-details .portfolio-details-carousel .owl-dot {
-    display: inline-block;
-    margin: 0 10px 0 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ddd !important;
-  }
-  
-  .portfolio-details .portfolio-details-carousel .owl-dot.active {
-    background-color: var(--underline-and-button-color) !important;
-  }
-  
-  .portfolio-details .portfolio-info {
-    padding: 30px;
-    position: absolute;
-    right: 0;
-    bottom: -70px;
-    background: #fff;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-  }
-  
-  .portfolio-details .portfolio-info h3 {
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .portfolio-details .portfolio-info ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-  }
-  
-  .portfolio-details .portfolio-info ul li + li {
-    margin-top: 10px;
-  }
-  
-  .portfolio-details .portfolio-description {
-    padding-top: 50px;
-  }
-  
-  .portfolio-details .portfolio-description h2 {
-    width: 50%;
-    font-size: 26px;
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-  
-  .portfolio-details .portfolio-description p {
-    padding: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .portfolio-details .portfolio-description h2 {
-      width: 100%;
-    }
-
-    .portfolio-details .portfolio-info {
-      position: static;
-      margin-top: 30px;
-    }
-
-    .portfolio .portfolio-wrap .portfolio-links a {
-      background: var(--underline-and-button-color) !important;
-      color: #fff !important;
-      font-size: 28px !important;
-      text-align: center !important;
-      transition: 0.3s !important;
-      width: 50% !important;
-      position: relative !important;
-      overflow: hidden !important;
-      z-index: 1 !important;
-      width: 100% !important;
-      box-shadow: 5px 5px 9px darkgrey !important;
-    }
-
-    .venobox .github-name {
-      width: 28% !important;
-      vertical-align: 6px !important;
-      transition: all ease-in-out .5s !important;
-      font-size: medium !important;
-      margin-left: 6% !important;
-      display: inline-flex !important;
-    }
-
-    .portfolio-wrap {
-      box-shadow: none;
-      transition: all ease-in-out .3s;
-    }
-
-    .portfolio .portfolio-wrap .portfolio-links {
-      opacity: 1;
-      bottom: 0;
-    }
-
-    .portfolio .portfolio-wrap .img-fluid {
-      opacity: .5;
-      transition: all .3s;
-    }
-
-    .portfolio-wrap .project-text {
-      color: #040B15;
-      z-index: 1;
-      transition: all ease-in-out .3s;
-      bottom: 125px;
-      font-size: 40px;
-      position: relative;
-      display: flex;
-      justify-content: flex-start;
-      left: 10px;
-      font-family: "Raleway", sans-serif;
-      color: var(--header);
-    }
-
-    .liveA .live-site {
-      width: 31%;
-      vertical-align: 6px;
-      transition: all ease-in-out .5s;
-      font-size: medium;
-      margin-left: 6%;
-      display: inline-flex;
-    }
-
-    .portfolio .portfolio-wrap .portfolio-links a + a {
-      border-left: 1px solid white;
-    }
-  }
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
   #footer .credits {
     text-align: center;
     font-size: 13px;
