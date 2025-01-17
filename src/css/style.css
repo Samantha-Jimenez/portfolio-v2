@@ -54,6 +54,7 @@
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
+
   .down-arrow {
     bottom: 4%;
     width: 30vw;
@@ -185,47 +186,10 @@
   }
   
   /* Mobile Navigation */
-  .mobile-nav-toggle {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 9998;
-    border: 0;
-    background: none;
-    font-size: 24px;
-    transition: all 0.4s;
-    outline: none !important;
-    line-height: 1;
-    cursor: pointer;
-    text-align: right;
-  }
-  
-  .mobile-nav-toggle i {
-    color: var(--underline-and-button-color);
-  }
-  
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-  
-  .mobile-nav-active #header {
-    left: 0;
-  }
-  
-  .mobile-nav-active .mobile-nav-toggle i {
-    color: var(--menu-text-white);
-  }
-  
-  .icofont-navigation-menu {
-    font-size: 33px;
-  }
   
   @media (max-width: 820px) {
     #header {
       left: 0px;
-    }
-    .d-flex-i {
-      height: 85vh !important;
     }
     .nav-menu {
       margin-top: 4vh !important;
@@ -306,13 +270,6 @@
   #third_toggle:checked ~ .toggle_option_slider{
     background: rgba(255,255,255,.3);
     left: 20vh;
-  }
-  
-  .d-flex-i {
-    display: -ms-flexbox !important;
-    display: flex !important;
-    height: 95vh;
-    justify-content: space-around !important;
   }
   
   .d-flex {
@@ -860,7 +817,7 @@
   /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
-  
+
   .contact {
     min-height: 102vh;
     grid-area: 5 / 2 / 6 / 3;
