@@ -28,10 +28,13 @@
   # General
   --------------------------------------------------------------*/
   body {
-    font-family: "Inter", sans-serif;
     color: #272829;
     background-color: var(--background-secondary) !important;
     background: none !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
   }
   
   a {
@@ -43,12 +46,16 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Sora", sans-serif;
+      font-family: "Oswald", serif;
+      font-weight: 900;
+      font-style: normal;
   }
 
   p {
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
     font-weight: 300;
+    font-style: normal;
   }
   
   /*--------------------------------------------------------------
