@@ -79,6 +79,7 @@
   .header-title {
     color: var(--background-and-text-primary);
     font-size: 3.25rem;
+    padding-bottom: 4rem;
   }
   
   #header .profile h1 {
@@ -124,6 +125,13 @@
     }
     #main {
       margin-left: 0;
+    }
+  }
+
+  @media (max-width: 1402px) {
+    .header-title {
+      font-size: 4rem;
+      padding-bottom: 3rem;
     }
   }
   

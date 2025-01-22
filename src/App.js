@@ -193,8 +193,8 @@ function App() {
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen rounded-[5px] content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
-              <h1 className="header-title" data-aos="fade-up">Samantha Jimenez</h1>
-              <div className="social-links mt-8 text-center">
+              <h1 className="header-title leading-[1.1]" data-aos="fade-up">Samantha Jimenez</h1>
+              <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
                     className={`active:bg-white active:dark:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
