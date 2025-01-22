@@ -197,7 +197,7 @@ function App() {
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
-                    className={`active:bg-white active:dark:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
+                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
                     onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
                     <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[2px]`}></span>
@@ -207,14 +207,14 @@ function App() {
                     {/* Tooltip Tail */}
                     <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)]"></div>
                     <ul className={`ml-[-100%] absolute bg-[var(--shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
-                      <li className="hover:bg-gray-300 hover:dark:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
-                      <li className="hover:bg-gray-300 hover:dark:bg-gray-400/60 rounded p-1"><a href="https://github.com/samanthabjimenez" target="_blank" rel="noopener noreferrer">Previous Account</a></li>
+                      <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
+                      <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samanthabjimenez" target="_blank" rel="noopener noreferrer">Previous Account</a></li>
                     </ul>
                   </div>
                 )}
                 </div>
                 <div className="tooltip" data-tip="linkedin">
-                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin active:bg-white active:dark:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin active:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
                   <div 
                     className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                   >
@@ -223,7 +223,7 @@ function App() {
                   </a>
                 </div>
                 <div className="tooltip" data-tip="gmail"> 
-                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google active:bg-white active:dark:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google active:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
                   <div 
                     className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                   >
@@ -232,7 +232,7 @@ function App() {
                   </a>
                 </div>
                 <div className="tooltip" data-tip="previous portfolio">
-                  <a onClick={openLeavingModal} className="portfolio active:bg-white active:dark:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a onClick={openLeavingModal} className="portfolio active:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
                     >
