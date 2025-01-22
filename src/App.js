@@ -29,19 +29,12 @@ function App() {
   //button-selected: #B2CC3E
 
   const [currentThemeObj, setThemeObj] = useState({
-    "--shadow": "#2c2f3f",
-    // "--header": "#01200F",
-    "--title-text": "#96B0A3",
-    "--highlight": "#254D32",
-    // "--highlight": "#B2CC3E", this is the bright neon green
-    "--lowlight": "#582630",
-    // lowlight is hover
-    // "--shadow": "#45503B",
-    // what is shadow?
-    "--unselected-dark": "rgba(178, 204, 62, .5)",
-    // "--unselected-dark": "rgba(141, 160, 126, .9)",
-    "--unselected-light": "rgba(141, 160, 126, .8)",
-    "--shadow-background": "#EFF2F1",
+    "--header-color": "#96B0A3",
+    "--underline-and-button-color": "#254D32",
+    "--background-and-text-primary": "#EFF2F1",
+    "--background-secondary": "#ffffff",
+    "--menu-text-unselected": "rgba(178, 204, 62, .5)",
+    "--button-selected": "rgb(178, 204, 62)",
   });
 
   const greenThemeObj = {
