@@ -17,6 +17,7 @@
     /* --menu-text-white: #EFF2F1; */
     --menu-text-unselected: rgba(178, 204, 62, .5);
     --button-selected: rgb(178, 204, 62);
+    --shadow: #2c2f3f;
   }
 
   :root, [data-theme] {
@@ -208,6 +209,12 @@
     }
     .nav-menu {
       margin-top: 4vh !important;
+    }
+  }
+
+  @media (max-height: 670px) {
+    #header-hover {
+      gap: 45px;
     }
   }
   
