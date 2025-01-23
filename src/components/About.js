@@ -5,30 +5,36 @@ const About = () => {
         <div className="container">
             <div className="section-title" data-aos="fade-left" data-aos-duration="1500">
                 <h2 className="">About</h2>
-                <p>Brooklyn-born Afro-Latina. Builder. Creator. Problem Solver.</p>
+                {/* <p>Brooklyn-born Afro-Latina. Builder. Creator. Problem Solver.</p> */}
+                <p>Bridging Technology with Creativity. Turning Ideas into Impactful Applications and Seamless User Experiences.</p>
             </div>
             <div className="row">
-                {/* <div className="col-lg-4 aos-init aos-animate" data-aos="fade-right" style={{"height": "30vh", "overflow": "hidden", "marginLeft": "15px", "marginRight": "15px"}}>
-                </div> */}
                 <div className="col-lg-auto pt-4 pt-lg-0 content aos-init aos-animate">
-                    <h3 className="" data-aos="fade-left" data-aos-duration="1000">Welcome to my Portfolio</h3>
-                    <p className="fst-italic pt-4" data-aos="fade-left" data-aos-duration="1000">
-                        I’m a Full Stack Software Engineer passionate about crafting beautiful, functional applications that make an impact. My coding journey began in 2018, and by 2019, I joined Pursuit, a renowned coding fellowship in Queens, NY, where I turned curiosity into code and ideas into reality.                    
-                    </p>
+                    <h3 data-aos="fade-left" data-aos-duration="1000">Welcome to my Portfolio</h3>
                     <br />
-                    {/* <p style={{"fontWeight": "300"}}>
-                        I'm a former Secretary of an elementary school in South Williamsburg. I originally went to college for Accounting but decided to take some time to find a career path I was more passionate about. After extensive research I discovered that software engineering was a field that combined the analytical skills I’ve developed so far in my career, with my desire to build and create. Since then I discovered Pursuit, a software engineering fellowship, and have grown to appreciate all things full stack. 
-                    </p> */}
-                    {/* <p style={{"fontWeight": "300"}} data-aos="fade-left" data-aos-duration="1000">
-                        Welcome to my portfolio! 
-                    </p> */}
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        For over three years, I honed my skills at Peloton, playing a pivotal role in enhancing their membership platform and delivering seamless user experiences to a global audience. Alongside my engineering career, I earned a degree in Business, Management, & Economics from Empire State College, blending technical expertise with business strategy.
-                        Now, I’m on a mission to keep building, learning, and collaborating on projects that push boundaries and spark innovation.
+                        I’m a Full Stack Software Engineer driven by a passion for building intuitive, impactful, and visually compelling applications. My coding journey began in 2018 when I decided to teach myself programming, sparking a lifelong love for creating meaningful solutions through technology.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        Welcome to my portfolio—explore my work, and let’s connect to create something incredible together!
+                        In 2019, I joined <a className='font-medium text-lime-600 hover:text-lime-500' href="https://www.pursuit.org" target="_blank" rel="noopener noreferrer">Pursuit, an intensive coding fellowship</a> in Queens, NY, where I transformed my curiosity into expertise. The program not only refined my technical skills but also deepened my understanding of collaboration, problem-solving, and the power of community-driven innovation.
+                    </p>
+                    <br />
+                    <p data-aos="fade-left" data-aos-duration="1000">
+                        Following Pursuit, <span className='font-medium'>I spent over three years at Peloton,</span> where I made significant contributions to their membership platform, enhancing the user experience for millions of members worldwide. This hands-on experience allowed me to develop a keen eye for detail, a focus on scalability, and a commitment to delivering seamless digital experiences.
+                    </p>
+                    <br />
+                    <p data-aos="fade-left" data-aos-duration="1000">
+                        In addition to my engineering work, I earned a <span className='font-medium'>Bachelor of Science in Business, Management, & Economics</span> from Empire State College. This unique blend of technical and business expertise equips me to approach challenges with a well-rounded perspective, bridging the gap between strategy and execution.
+                    </p>
+                    <br />
+                    <p data-aos="fade-left" data-aos-duration="1000">
+                        Now, I’m channeling my skills and experience into creating projects that inspire, innovate, and empower others. Whether it's crafting engaging interfaces, optimizing backend systems, or collaborating with diverse teams, I’m always eager to push boundaries and learn something new.
+                    </p>
+                    <br />
+                    <p data-aos="fade-left" data-aos-duration="1000">
+                        <span className='font-medium'>Welcome to my portfolio!</span> Explore my projects, browse my skills and resume, or connect with me through the contact form. 
+                        <br/> <br/> Let’s create something extraordinary together!
                     </p>
                 </div>
             </div>
