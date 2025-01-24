@@ -93,10 +93,25 @@ function App() {
   // let previousGithubIcon = <span className="icon-[line-md--github-twotone]"></span>
 
   const menuRef = useRef(null);
+  const linkedinRef = useRef(null);
+  const gmailRef = useRef(null);
+  const portfolioRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setOpenGithubMenu(false);
+    }
+    // Reset LinkedIn click count if clicked outside the LinkedIn icon
+    if (linkedinRef.current && !linkedinRef.current.contains(event.target)) {
+      setLinkedinClickCount(0);
+    }
+    // Reset Gmail click count if clicked outside the Gmail icon
+    if (gmailRef.current && !gmailRef.current.contains(event.target)) {
+      setGmailClickCount(0);
+    }
+    // Reset Previous Portfolio click count if clicked outside the icon
+    if (portfolioRef.current && !portfolioRef.current.contains(event.target)) {
+      setPreviousPortfolioClickCount(0); // Reset the counter
     }
   };
 
@@ -106,17 +121,6 @@ function App() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-  
-  const [isLeavingModalOpen, setLeavingModalOpen] = useState(false);
-
-  const openLeavingModal = () => {
-    setLeavingModalOpen(true);
-  };
-
-  const handleContinue = () => {
-    window.open('https://samantha-jimenez.netlify.app/', '_blank');
-    setLeavingModalOpen(false);
-  };
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -131,6 +135,9 @@ function App() {
   // Set offset based on screen width
   const offset = windowWidth <= 768 ? -20 : -50; // Example: -30px for mobile, -50px for desktop
 
+  const [gmailClickCount, setGmailClickCount] = useState(0);
+  const [linkedinClickCount, setLinkedinClickCount] = useState(0);
+  const [previousPortfolioClickCount, setPreviousPortfolioClickCount] = useState(0);
 
   return (
     <div className="App">
@@ -197,10 +204,10 @@ function App() {
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
-                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white bg-[var(--shadow)] inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300`} 
+                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300 ${openGithubMenu ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`} 
                     onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
-                    <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[2px]`}></span>
+                  <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[1px]`}></span>
                   </div>
                 {openGithubMenu && (
                   <div className="relative">
@@ -214,29 +221,50 @@ function App() {
                 )}
                 </div>
                 <div className="tooltip" data-tip="linkedin">
-                  <a href='https://www.linkedin.com/in/samanthabjimenez/' target="_blank" rel="noopener noreferrer" className="linkedin active:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
-                  <div 
-                    className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
-                  >
-                    <span className="icon-[ri--linkedin-line] mb-[2px]"></span>
-                  </div>
+                  <a ref={linkedinRef} onClick={() => {
+                      setLinkedinClickCount(linkedinClickCount + 1);
+                      if (linkedinClickCount + 1 === 2) {
+                        window.open('https://www.linkedin.com/in/samanthabjimenez/', '_blank');
+                        setLinkedinClickCount(0); // Reset the counter
+                      }
+                    }} 
+                    target="_blank" rel="noopener noreferrer" className={`linkedin active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${linkedinClickCount === 1 ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`}>
+                    <div 
+                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${linkedinClickCount === 1 ? 'scale-[1.35]' : ''}`} 
+                    >
+                      <span className="icon-[ri--linkedin-line] mb-[1px]"></span>
+                    </div>
                   </a>
                 </div>
                 <div className="tooltip" data-tip="gmail"> 
-                  <a href='mailto:SamanthaB.Jimenez@gmail.com' target="_blank" rel="noopener noreferrer" className="google active:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
-                  <div 
-                    className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
-                  >
-                    <span className="icon-[material-symbols--mail-outline] mb-[2px]"></span>
-                  </div>
+                  <a ref={gmailRef} onClick={() => {
+                      setGmailClickCount(gmailClickCount + 1);
+                      if (gmailClickCount + 1 === 2) {
+                        window.open('mailto:SamanthaB.Jimenez@gmail.com', '_blank');
+                        setGmailClickCount(0); // Reset the counter
+                      }
+                    }} 
+                    className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`}>
+                    <div 
+                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${gmailClickCount === 1 ? 'scale-[1.35]' : ''}`} 
+                    >
+                      <span className="icon-[material-symbols--mail-outline] mb-[1px]"></span>
+                    </div>
                   </a>
                 </div>
                 <div className="tooltip" data-tip="previous portfolio">
-                  <a onClick={openLeavingModal} className="portfolio active:bg-neutral-200 text-lg inline-block bg-[var(--shadow)] text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300">
+                  <a ref={portfolioRef} onClick={() => {
+                      setPreviousPortfolioClickCount(previousPortfolioClickCount + 1);
+                      if (previousPortfolioClickCount + 1 === 2) {
+                        window.open('https://samantha-jimenez.netlify.app/', '_blank');
+                        setPreviousPortfolioClickCount(0); // Reset the counter
+                      }
+                    }} 
+                    className={`portfolio active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`}>
                     <div 
-                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]`} 
+                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${previousPortfolioClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
-                      <span className="icon-[material-symbols--folder-supervised-outline-rounded] mb-[2px]"></span>
+                      <span className="icon-[material-symbols--folder-supervised-outline-rounded] mb-[1px]"></span>
                     </div>
                   </a>
                 </div>
@@ -305,28 +333,6 @@ function App() {
               onClick={closeModal}
             >
               Continue
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Modal for Leaving Page */}
-      {isLeavingModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center relative">
-            <button 
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 px-[7px]" 
-              onClick={() => setLeavingModalOpen(false)}
-            >
-              &times;
-            </button>
-            <h2 className="text-xl font-semibold">Leaving Page</h2>
-            <p className="mt-2">You are about to leave this page to open my previous portfolio site, created in 2019.</p>
-            <button 
-              className="mt-4 bg-[#254D32] text-white font-bold py-2 px-4 rounded hover:bg-[#2A6A3D]"
-              onClick={handleContinue}
-            >
-              Enjoy!
             </button>
           </div>
         </div>
