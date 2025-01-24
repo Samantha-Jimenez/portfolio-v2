@@ -23,7 +23,7 @@ const Skills = () => {
         <div className="container">
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
                 <h2>Skills</h2>
-                <p>These are the technical skills I’ve cultivated along my journey. I’m eager to keep building on this foundation and mastering new technologies.</p>
+                <p data-aos="fade-up" data-aos-duration="1000">These are the technical skills I’ve cultivated along my journey. I’m eager to keep building on this foundation and mastering new technologies.</p>
             </div>
             <Select
                 isMulti

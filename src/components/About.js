@@ -4,9 +4,9 @@ const About = () => {
     return (
         <div className="container">
             <div className="section-title" data-aos="fade-left" data-aos-duration="1500">
-                <h2 className="">About</h2>
+                <h2>About</h2>
                 {/* <p>Brooklyn-born Afro-Latina. Builder. Creator. Problem Solver.</p> */}
-                <p>Bridging Technology with Creativity. Turning Ideas into Impactful Applications and Seamless User Experiences.</p>
+                <p data-aos="fade-left" data-aos-duration="1000">Bridging Technology with Creativity. Turning Ideas into Impactful Applications and Seamless User Experiences.</p>
             </div>
             <div className="row">
                 <div className="col-lg-auto pt-4 pt-lg-0 content aos-init aos-animate">
@@ -34,7 +34,10 @@ const About = () => {
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
                         <span className='font-medium'>Welcome to my portfolio!</span> Explore my projects, browse my skills and resume, or connect with me through the contact form. 
-                        <br/> <br/> Let’s create something extraordinary together!
+                    </p>
+                    <br />
+                    <p data-aos="fade-left" data-aos-duration="1000">
+                        Let’s create something extraordinary together!
                     </p>
                 </div>
             </div>

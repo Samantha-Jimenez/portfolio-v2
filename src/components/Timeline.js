@@ -95,9 +95,8 @@ const Timeline = () => {
         <div className="container">
             <div className="section-title" data-aos="fade-left" data-aos-duration="1500">
                 <h2>Portfolio</h2>
-                <p>Take a look at some of my work below and check back for updates and new projects in the future.</p>
+                <p data-aos="fade-left" data-aos-duration="1000">Take a look at some of my work below and check back for updates and new projects in the future.</p>
             </div>
-
             {/* Project Sections */}
             <div className="-my-6">
                 {/* Mvmnt Collectives */}
