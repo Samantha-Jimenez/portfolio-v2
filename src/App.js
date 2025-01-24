@@ -200,7 +200,7 @@ function App() {
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
-              <h1 className="header-title leading-[1.1]" data-aos="fade-up">Samantha Jimenez</h1>
+              <h1 className="header-title leading-[1.1]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
@@ -272,13 +272,13 @@ function App() {
             </div>
             <nav className="nav-menu">
               <ul className="nav-ul">
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
                 {/* <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li> */}
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
-                <li data-aos="fade-up"><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
             {/* <div className="wrapper"> */}
