@@ -162,7 +162,7 @@ function App() {
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
               {/* <!-- Mobile menu button--> */}
-              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-gray-700 text-white outline-none ring-2 ring-inset ring-white' : ''}`} aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
                 {/* <!--
@@ -191,7 +191,7 @@ function App() {
                 <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
               </Link>
             </button>
-            <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen rounded-[5px] content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
+            <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
               <h1 className="header-title leading-[1.1]" data-aos="fade-up">Samantha Jimenez</h1>
               <div className="social-links text-center">
