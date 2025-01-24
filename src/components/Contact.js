@@ -55,7 +55,7 @@ const Contact = () => {
             </script>
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
                 <h2>Contact</h2>
-                <p>Let's connect! Feel free to reach out and network with me!</p>
+                <p>Let’s connect! I’d love to hear from you — reach out to collaborate or network.</p>
             </div>
             <div className="row aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div className="mt-5 mt-lg-0 d-flex align-items-stretch">
