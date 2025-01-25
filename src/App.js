@@ -68,17 +68,17 @@ function App() {
     "--shadow": "#2c2f3f",
   }
 
-  // const changeTheme = (e) => {
-  //   setTheme(e.target.value);
-  //   // e.target.checked = true;
-  //   if(e.target.value === 'blueTheme') {
-  //     setThemeObj(blueThemeObj)
-  //   } else if(e.target.value === 'brownTheme') {
-  //     setThemeObj(brownThemeObj);
-  //   } else if(e.target.value === 'greenTheme') {
-  //     setThemeObj(greenThemeObj);
-  //   }
-  // }
+  const changeTheme = (e) => {
+    setTheme(e.target.value);
+    // e.target.checked = true;
+    if(e.target.value === 'blueTheme') {
+      setThemeObj(blueThemeObj)
+    } else if(e.target.value === 'tanTheme') {
+      setThemeObj(tanThemeObj);
+    } else if(e.target.value === 'greenTheme') {
+      setThemeObj(greenThemeObj);
+    }
+  }
   
   const [isMenuOpen, setMenuOpen] = useState(false);
 
