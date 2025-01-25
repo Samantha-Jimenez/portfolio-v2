@@ -38,6 +38,16 @@ function App() {
     "--shadow": "#2c2f3f",
   });
 
+  const blueThemeObj = {
+    "--header-color": "#4A6E8C", /* New header color */
+    "--underline-and-button-color": "#A3C6D4", /* New underline and button color */
+    "--background-and-text-primary": "#F0F4F8", /* New background and text primary */
+    "--background-secondary": "#FAFAFA", /* New background secondary */
+    "--menu-text-unselected": "rgba(150, 180, 200, .5)", /* New menu text unselected */
+    "--button-selected": "rgb(100, 150, 200)", /* New button selected */
+    "--shadow": "#1A1D2D",
+  }
+
   const greenThemeObj = {
     // "--header": "#01200F",
     "--title-text": "#96B0A3",
