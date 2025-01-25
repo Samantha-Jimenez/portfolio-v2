@@ -10,14 +10,14 @@
     --shadow-background: #000000; */
     /* --shadow-background: #EFF2F1; */
 
-    --header-color: #96B0A3;
+    /* --menu-text-white: #EFF2F1; */
+    /* --header-color: #96B0A3;
     --underline-and-button-color: #254D32;
     --background-and-text-primary: #EFF2F1;
     --background-secondary: #ffffff;
-    /* --menu-text-white: #EFF2F1; */
     --menu-text-unselected: rgba(178, 204, 62, .5);
     --button-selected: rgb(178, 204, 62);
-    --shadow: #2c2f3f;
+    --shadow: #2c2f3f; */
   }
 
   :root, [data-theme] {

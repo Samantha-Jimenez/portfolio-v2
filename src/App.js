@@ -35,6 +35,7 @@ function App() {
     "--background-secondary": "#ffffff",
     "--menu-text-unselected": "rgba(178, 204, 62, .5)",
     "--button-selected": "rgb(178, 204, 62)",
+    "--shadow": "#2c2f3f",
   });
 
   const greenThemeObj = {
