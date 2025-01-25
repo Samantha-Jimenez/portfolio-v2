@@ -281,18 +281,18 @@ function App() {
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
-            {/* <div className="wrapper"> */}
-            {/* <h5 className='theme_title'>Themes:</h5> */}
-              {/* <div className="toggle_radio"> */}
-                {/* {currentTheme === 'blueTheme' ? <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme}/>}
-                {currentTheme === 'brownTheme' ? <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="brownTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="brownTheme" onClick={changeTheme}/>}
-                {currentTheme === 'greenTheme' ? <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme}/>} */}
-                {/* <label htmlFor="first_toggle"><p>Blue</p></label>
-                <label htmlFor="second_toggle"><p>Brown</p></label>
-                <label htmlFor="third_toggle"><p>Green</p></label>
-                <div className="toggle_option_slider"></div> */}
-              {/* </div> */}
-            {/* </div> */}
+              {/* <div className="wrapper">
+                <span className='theme_title'>Themes:</span>
+                <div className="toggle_radio mt-2">
+                  {currentTheme === 'greenTheme' ? <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme}/>}
+                  {currentTheme === 'blueTheme' ? <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme}/>}
+                  {currentTheme === 'tanTheme' ? <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="tanTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="tanTheme" onClick={changeTheme}/>}
+                  <label htmlFor="first_toggle"><p>Green</p></label>
+                  <label htmlFor="second_toggle"><p>Blue</p></label>
+                  <label htmlFor="third_toggle"><p>Brown</p></label>
+                  <div className="toggle_option_slider"></div>
+                </div>
+              </div> */}
             </div>
             <section id="about" className="about section">
               <Element name='about'><About/></Element>
