@@ -48,6 +48,16 @@ function App() {
     "--shadow": "#1A1D2D",
   }
 
+  const tanThemeObj = {
+    "--header-color": "#D2B48C", /* New header color */
+    "--underline-and-button-color": "#C19A6B", /* New underline and button color */
+    "--background-and-text-primary": "#FAF0E6", /* New background and text primary */
+    "--background-secondary": "#FFFFFF", /* New background secondary */
+    "--menu-text-unselected": "rgba(210, 180, 140, .5)", /* New menu text unselected */
+    "--button-selected": "rgb(222, 184, 135)", /* New button selected */
+    "--shadow": "#A0522D",
+  }
+
   const greenThemeObj = {
     // "--header": "#01200F",
     "--title-text": "#96B0A3",
