@@ -301,7 +301,7 @@ function App() {
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
               </ul>             
             </nav>
-              {/* <div className="wrapper">
+              <div className="wrapper">
                 <span className='theme_title'>Themes:</span>
                 <div className="toggle_radio mt-2">
                   {currentTheme === 'greenTheme' ? <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme}/>}
@@ -312,7 +312,7 @@ function App() {
                   <label htmlFor="third_toggle"><p>Brown</p></label>
                   <div className="toggle_option_slider"></div>
                 </div>
-              </div> */}
+              </div>
             </div>
             <section id="about" className="about section">
               <Element name='about'><About/></Element>
