@@ -36,26 +36,29 @@ function App() {
     "--menu-text-unselected": "rgba(178, 204, 62, .5)",
     "--button-selected": "rgb(178, 204, 62)",
     "--shadow": "#2c2f3f",
+    "--timeline-header": "#16A34A8C",
   });
 
   const blueThemeObj = {
-    "--header-color": "#4A6E8C", /* New header color */
-    "--underline-and-button-color": "#A3C6D4", /* New underline and button color */
-    "--background-and-text-primary": "#F0F4F8", /* New background and text primary */
-    "--background-secondary": "#FAFAFA", /* New background secondary */
-    "--menu-text-unselected": "rgba(150, 180, 200, .5)", /* New menu text unselected */
-    "--button-selected": "rgb(100, 150, 200)", /* New button selected */
-    "--shadow": "#1A1D2D",
+    "--header-color": "#96A3B0", /* Muted light blue-gray */
+    "--underline-and-button-color": "#254D7A", /* Deep navy blue */
+    "--background-and-text-primary": "#EEF3F8", /* Very light bluish-white */
+    "--background-secondary": "#ffffff", /* White */
+    "--menu-text-unselected": "rgba(62, 137, 204, 0.5)", /* Soft sky blue */
+    "--button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue */
+    "--shadow": "#2C3340", /* Cool dark slate blue */
+    "--timeline-header": "#1D4ED88C", /* Muted vivid blue */
   }
 
   const tanThemeObj = {
-    "--header-color": "#D2B48C", /* New header color */
-    "--underline-and-button-color": "#C19A6B", /* New underline and button color */
-    "--background-and-text-primary": "#FAF0E6", /* New background and text primary */
-    "--background-secondary": "#FFFFFF", /* New background secondary */
-    "--menu-text-unselected": "rgba(210, 180, 140, .5)", /* New menu text unselected */
-    "--button-selected": "rgb(222, 184, 135)", /* New button selected */
-    "--shadow": "#A0522D",
+    "--header-color": "#B0A696", /* Muted tan-gray */
+    "--underline-and-button-color": "#4D3225", /* Rich dark brown */
+    "--background-and-text-primary": "#F5F3EF", /* Very light beige */
+    "--background-secondary": "#ffffff", /* White */
+    "--menu-text-unselected": "rgba(204, 178, 137, 0.5)", /* Pale tan */
+    "--button-selected": "rgb(204, 178, 137)", /* Soft tan */
+    "--shadow": "#3F352C", /* Deep brown-gray */
+    "--timeline-header": "#A1622E8C", /* Warm muted sienna */
   }
 
   const greenThemeObj = {
@@ -66,6 +69,7 @@ function App() {
     "--menu-text-unselected": "rgba(178, 204, 62, .5)",
     "--button-selected": "rgb(178, 204, 62)",
     "--shadow": "#2c2f3f",
+    "--timeline-header": "#16A34A8C",
   }
 
   const changeTheme = (e) => {
