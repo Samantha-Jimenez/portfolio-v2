@@ -17,7 +17,7 @@ const About = () => {
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        In 2019, I joined <a className='font-medium text-lime-600 hover:text-lime-500' href="https://www.pursuit.org" target="_blank" rel="noopener noreferrer">Pursuit, an intensive coding fellowship</a> in Queens, NY, where I transformed my curiosity into expertise. The program not only refined my technical skills but also deepened my understanding of collaboration, problem-solving, and the power of community-driven innovation.
+                        In 2019, I joined <a className='font-medium text-[var(--highlighted-text)] hover:text-[var(--highlighted-text-hover)]' href="https://www.pursuit.org" target="_blank" rel="noopener noreferrer">Pursuit, an intensive coding fellowship</a> in Queens, NY, where I transformed my curiosity into expertise. The program not only refined my technical skills but also deepened my understanding of collaboration, problem-solving, and the power of community-driven innovation.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
