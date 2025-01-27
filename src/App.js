@@ -37,6 +37,9 @@ function App() {
     "--button-selected": "rgb(178, 204, 62)",
     "--shadow": "#2c2f3f",
     "--timeline-header": "#16A34A8C",
+    "--highlighted-text": "#65A30D",
+    "--highlighted-text-hover": "#84CC16",
+    "--year-text": "#059669",
   });
 
   const blueThemeObj = {
@@ -48,6 +51,9 @@ function App() {
     "--button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue */
     "--shadow": "#2C3340", /* Cool dark slate blue */
     "--timeline-header": "#1D4ED88C", /* Muted vivid blue */
+    "--highlighted-text": "#2563EB", /* Strong vivid blue */
+    "--highlighted-text-hover": "#3B82F6", /* Bright blue hover */
+    "--year-text": "#1E3A8A", /* Deep dark blue */
   }
 
   const tanThemeObj = {
@@ -59,6 +65,9 @@ function App() {
     "--button-selected": "rgb(204, 178, 137)", /* Soft tan */
     "--shadow": "#3F352C", /* Deep brown-gray */
     "--timeline-header": "#A1622E8C", /* Warm muted sienna */
+    "--highlighted-text": "#A0522D", /* Rich sienna */
+    "--highlighted-text-hover": "#C68C5A", /* Warm light tan */
+    "--year-text": "#8B4513", /* Dark saddle brown */
   }
 
   const greenThemeObj = {
@@ -70,6 +79,9 @@ function App() {
     "--button-selected": "rgb(178, 204, 62)",
     "--shadow": "#2c2f3f",
     "--timeline-header": "#16A34A8C",
+    "--highlighted-text": "#65A30D",
+    "--highlighted-text-hover": "#84CC16",
+    "--year-text": "#059669",
   }
 
   const changeTheme = (e) => {
