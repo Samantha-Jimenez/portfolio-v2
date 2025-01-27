@@ -239,7 +239,7 @@
       border-radius: 50px;
       position: relative;
       height: 26px;
-      width: 29.5vh;
+      width: 28vh;
   }
   
   .toggle_radio input[type=radio]{
@@ -252,7 +252,7 @@
     color: rgba(255,255,255,.9);
     z-index: 0;
     display: block;
-    width: 9vh;
+    width: 8.72vh;
     height: 20px;
     margin: 3px 3px;
     -webkit-border-radius: 50px;
@@ -265,7 +265,7 @@
   }
 
   .toggle_option_slider{
-    width: 9vh;
+    width: 8.72vh;
     height: 20px;
     position: absolute;
     top: 3px;
@@ -286,12 +286,12 @@
 
   #second_toggle:checked ~ .toggle_option_slider{
     background: rgba(255,255,255,.3);
-    left: 10vh;
+    left: 9.5vh;
   }
 
   #third_toggle:checked ~ .toggle_option_slider{
     background: rgba(255,255,255,.3);
-    left: 20vh;
+    left: 19vh;
   }
   
   .d-flex {
