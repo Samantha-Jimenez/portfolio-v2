@@ -223,14 +223,14 @@ function App() {
               </button>
             </div>
           <main id="main" className="grid lg:grid-cols-[30vw_70vw] grid-rows-[0.4fr_max-content_max-content_0.75fr_max-content] grid-cols-[0vw_100vw]">
-            <header id="header-back" className={`py-8 px-4 lg:w-[30vw] w-[307px] h-screen bg-[url('./imgFiles/81563B65-38C8-49D2-98A2-36CD0ADBB84D_1_105_c.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
+            <header id="header-back" className={`py-8 px-4 min-[1026px]:w-[30vw] w-[290px] h-screen bg-[url('./imgFiles/81563B65-38C8-49D2-98A2-36CD0ADBB84D_1_105_c.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing/></Element>
             <button className="down-arrow hidden lg:block z-30 h-[5vh] whit mb-[35%]">
               <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={offset}>
                 <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
               </Link>
             </button>
-            <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 lg:w-[30vw] w-[307px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
+            <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 min-[1026px]:w-[30vw] w-[290px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
               <h1 className="header-title leading-[1.1]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
               <div className="social-links text-center">
@@ -315,7 +315,7 @@ function App() {
             </nav>
               <div className="wrapper">
                 <span className='theme_title'>Themes:</span>
-                <div className="toggle_radio mt-2">
+                <div className="toggle_radio">
                   {currentTheme === 'greenTheme' ? <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme}/>}
                   {currentTheme === 'blueTheme' ? <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme}/>}
                   {currentTheme === 'tanTheme' ? <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="tanTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="tanTheme" onClick={changeTheme}/>}
