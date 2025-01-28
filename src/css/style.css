@@ -989,6 +989,10 @@
   .contact .php-email-form input:focus-within, .contact .php-email-form textarea:focus-within {
     border-color: var(--button-selected);
   }
+
+  :focus-visible {
+    outline: var(--button-selected) auto 1px;
+  }
   
   input[type="text"], select:focus, textarea {
     font-size: 16px;

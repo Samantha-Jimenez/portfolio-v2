@@ -42,10 +42,10 @@ const Skills = () => {
                     }),
                     option: (provided, state) => ({
                         ...provided,
-                        backgroundColor: state.isSelected ? 'rgba(178, 204, 62, 0.8)' : state.isFocused ? 'rgba(178, 204, 62, 0.15)' : provided.backgroundColor,
+                        backgroundColor: state.isSelected ? 'var(--timeline-header)' : state.isFocused ? 'var(--background-and-text-primary)' : provided.backgroundColor,
                         color: state.isFocused ? '#000' : provided.color,
                         '&:active': {
-                            backgroundColor: 'rgba(178, 204, 62, 0.8)',
+                            backgroundColor: 'var(--menu-text-unselected)',
                         },
                     }),
                 }}
