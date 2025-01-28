@@ -233,7 +233,7 @@
       border-radius: 50px;
       position: relative;
       height: 26px;
-      width: 149px;
+      width: 200px;
       display: flex;
   }
   
@@ -247,7 +247,7 @@
     color: rgba(255,255,255,.9);
     z-index: 0;
     display: block;
-    width: 43px;
+    width: 60px;
     height: 20px;
     margin: 3px 3px;
     -webkit-border-radius: 50px;
@@ -260,7 +260,7 @@
   }
 
   .toggle_option_slider{
-    width: 48px;
+    width: 65px;
     height: 20px;
     position: absolute;
     top: 3px;
@@ -281,7 +281,7 @@
 
   #second_toggle:checked ~ .toggle_option_slider{
     background: rgba(255,255,255,.3);
-    left: 50px;
+    left: 67px;
   }
 
   #third_toggle:checked ~ .toggle_option_slider{
