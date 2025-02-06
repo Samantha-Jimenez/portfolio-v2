@@ -1,6 +1,9 @@
 import project1 from './../imgFiles/ZooVio.png';
 import project2 from './../imgFiles/Finstagram.png';
 import project3 from './../imgFiles/Tastebuds.png';
+import pelotonActivityFeed from './../imgFiles/PelotonActivityFeed.png';
+import pelotonBodyActivity from './../imgFiles/PelotonBodyActivity.png';
+import pelotonStravaConnect from './../imgFiles/PelotonStravaConnect.png';
 
 const mvmntSlides = [
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
@@ -24,12 +27,51 @@ const othelloSlides = [
 ];
 
 const pelotonSlides = [
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="h-[400px] w-[90%] overflow-hidden rounded-lg">
+            <img 
+                src={pelotonActivityFeed} 
+                alt="Peloton Activity Feed" 
+                className="w-full h-full object-cover object-top"
+            />
+        </div>
+        <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
+            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">Live Site</a>
+            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">GitHub</a>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="h-[400px] w-[90%] overflow-hidden rounded-lg">
+            <img 
+                src={pelotonBodyActivity} 
+                alt="Peloton Body Activity" 
+                className="w-full h-full object-cover object-left"
+            />
+        </div>
+        <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
+            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">Live Site</a>
+            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">GitHub</a>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="h-[400px] w-[90%] overflow-hidden rounded-lg">
+            <img 
+                src={pelotonStravaConnect} 
+                alt="Peloton Strava Connect" 
+                className="w-full h-full object-cover object-left"
+            />
+        </div>
+        <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
+            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">Live Site</a>
+            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">GitHub</a>
+        </div>
+    </div>,
       <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
         <p className="font-normal">
             • Spearheaded the development of web features for the company's launch of their at-home row machine, utilizing the Recharts library to design and
-            implement the user’s post-class details page featuring interactive graphs displaying detailed user output data during rowing exercises. <br/> <br/>
+            implement the user's post-class details page featuring interactive graphs displaying detailed user output data during rowing exercises. <br/> <br/>
             • Programmed social features on the website, including an activity feed, user interactions (stack, bookmark, high-five), a notification screen, and
-            integrated connectivity with user’s Strava account, enhancing user engagement and driving increased traffic through social functionality. <br/>
+            integrated connectivity with user's Strava account, enhancing user engagement and driving increased traffic through social functionality. <br/>
         </p>
       </div>,
       <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
@@ -64,7 +106,7 @@ const zooVioSlides = [
             I developed a responsive web application connecting pet owners with veterinarians and streamlining pet care. The app uses Firebase for secure authentication and pet data storage, and the Yelp API for quick vet searches by zip code. It features real-time video consultations via WebRTC, ensuring accessible remote care. Built with React, Redux Toolkit, Node.js, and Axios, and styled with Bootstrap, the app is deployed on Heroku and Netlify for scalability and performance. This project demonstrates my full-stack development expertise and ability to create impactful, user-focused solutions.
         </p>
         <p className="font-normal">
-            • Integrated Firebase from Google to authenticate users and store pet’s information. <br/>
+            • Integrated Firebase from Google to authenticate users and store pet's information. <br/>
             • Utilized Yelp API to allow users to easily search for veterinarians via zip code. <br/>
             • Applied Bootstrap for CSS to create a responsive web application. <br/>
             • Used WebRTC API to allow for video consultations between users and veterinarians. <br/>
@@ -93,7 +135,7 @@ const zooVioSlidesTablet = [
     </div>,
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
         <p className="font-normal">
-            • Integrated Firebase from Google to authenticate users and store pet’s information. <br/>
+            • Integrated Firebase from Google to authenticate users and store pet's information. <br/>
             • Utilized Yelp API to allow users to easily search for veterinarians via zip code. <br/>
             • Applied Bootstrap for CSS to create a responsive web application. <br/>
             • Used WebRTC API to allow for video consultations between users and veterinarians. <br/>
@@ -126,7 +168,7 @@ const zooVioSlidesMobile = [
     </div>,
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
         <p className="font-normal">
-            • Integrated Firebase from Google to authenticate users and store pet’s information. <br/>
+            • Integrated Firebase from Google to authenticate users and store pet's information. <br/>
             • Utilized Yelp API to allow users to easily search for veterinarians via zip code. <br/>
             • Applied Bootstrap for CSS to create a responsive web application. <br/>
         </p>
