@@ -36,8 +36,7 @@ const pelotonSlides = [
             />
         </div>
         <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
-            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">Live Site</a>
-            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">GitHub</a>
+            <p className="font-normal text-[15px] leading-tight">I worked on the activity feed, user interactions (stack, bookmark, high-five), and notification screen.</p>
         </div>
     </div>,
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -49,8 +48,7 @@ const pelotonSlides = [
             />
         </div>
         <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
-            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">Live Site</a>
-            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">GitHub</a>
+            <p className="font-normal text-[15px] leading-tight">I worked on the body activity page, which displays the user's body activity data.</p>
         </div>
     </div>,
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -62,8 +60,7 @@ const pelotonSlides = [
             />
         </div>
         <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
-            <a href="https://zoovio.netlify.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">Live Site</a>
-            <a href="https://github.com/Zoovio-app/zoovio" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner text-center w-full text-[15px]">GitHub</a>
+            <p className="font-normal text-[15px] leading-tight">I worked on the Strava Connect page, which allows users to connect their Strava account to their Peloton account.</p>
         </div>
     </div>,
       <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
