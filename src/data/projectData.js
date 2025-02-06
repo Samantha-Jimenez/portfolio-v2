@@ -36,7 +36,7 @@ const pelotonSlides = [
             />
         </div>
         <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
-            <p className="font-normal text-[15px] leading-tight">I worked on the activity feed, user interactions (stack, bookmark, high-five), and notification screen.</p>
+            <p className="font-normal text-[15px] leading-snug">I spearheaded the development of the <span className="font-bold">social activity feed</span>, which was pivotal in enhancing user engagement. I implemented key features such as <span className="font-bold">workout stacking, bookmarking, and high-fiving</span>—giving users a dynamic way to interact with each other’s fitness journeys. Additionally, I led the creation of a <span className="font-bold">personalized notification drawer</span> that kept users up to date with their social interactions. By bringing social functionality to the platform, I helped drive higher user engagement and increased website traffic, fostering a more connected and active Peloton community.</p>
         </div>
     </div>,
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -47,8 +47,9 @@ const pelotonSlides = [
                 className="w-full h-full object-cover object-left"
             />
         </div>
-        <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
-            <p className="font-normal text-[15px] leading-tight">I worked on the body activity page, which displays the user's body activity data.</p>
+        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <p className="font-normal text-[15px] leading-snug">I assisted in the development of the <span className="font-bold">Body Activity</span> card, a feature that provides users with insights into their workout history across various body regions. This card displays data on the percentage of body activity for each muscle group worked during the past 7 and 30 days, giving users a clear, visual breakdown of their fitness progress using the human body graphic. I helped implement the functionality of this feature, contributing to an enhanced user experience. This feature enabled users to better track and understand the effectiveness of their workouts, promoting more informed fitness decisions.</p>
+            <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
         </div>
     </div>,
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -59,30 +60,31 @@ const pelotonSlides = [
                 className="w-full h-full object-cover object-left"
             />
         </div>
-        <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
-            <p className="font-normal text-[15px] leading-tight">I worked on the Strava Connect page, which allows users to connect their Strava account to their Peloton account.</p>
+        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <p className="font-normal text-[15px] leading-snug">I assisted in the development of the <span className="font-bold">Strava integration</span> feature within Peloton's settings page, enabling users to easily connect their Strava accounts to their Peloton profiles. This integration allowed for <span className="font-bold">seamless synchronization of workout data</span>, providing users with a <span className="font-bold">comprehensive view of their fitness activities across both platforms</span>. Collaborating closely with the lead engineer, I helped implement the functionality, ensuring smooth and secure account linking for users. This feature not only enhanced the user experience by centralizing workout data but also contributed to greater engagement across the Peloton community by supporting cross-platform connectivity.</p>
+            <a href="https://www.pelobuddy.com/sync-peloton-strava-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
         </div>
     </div>,
       <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
         <p className="font-normal">
             • Spearheaded the development of web features for the company's launch of their at-home row machine, utilizing the Recharts library to design and
             implement the user's post-class details page featuring interactive graphs displaying detailed user output data during rowing exercises. <br/> <br/>
-            • Programmed social features on the website, including an activity feed, user interactions (stack, bookmark, high-five), a notification screen, and
-            integrated connectivity with user's Strava account, enhancing user engagement and driving increased traffic through social functionality. <br/>
-        </p>
-      </div>,
-      <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
-        <p className="font-normal">
-            • Optimized company website by transitioning REST APIs to GraphQL, resulting in improved data fetching capabilities and enhanced performance. <br/> <br/>
             • Implemented a fitness quiz for new users to recommend initial classes based on their preferences, enhancing immediate engagement upon website
-            onboarding. <br/>
+            onboarding. <br/> <br/>
+            <span className="line-through">• Programmed social features on the website, including an activity feed, user interactions (stack, bookmark, high-five), a notification screen, and integrated connectivity with user's Strava account, enhancing user engagement and driving increased traffic through social functionality.</span> <br/> <br/>
+            • Class Plan <br/>
+            • Activity Goals <br/>
+            • Row Charts <br/>
+            • Onboarding Quiz <br/>
+            • Notifications?? <br/>
         </p>
       </div>,
       <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
         <p className="font-normal">
-            • Served as on-call engineer for one week on a rotating schedule, responding to critical incidents such as site outages, troubleshooting urgent technical
-            issues, and escalating problems to ensure timely resolution and minimal impact on users. <br/> <br/>
-            • Facilitated bi-weekly retrospective meetings for Agile development teams of approximately 15-20 members to reflect on past sprints and identify
+            • Optimized company website by <span className="font-bold">transitioning REST APIs to GraphQL</span>, resulting in improved data fetching capabilities and enhanced performance. <br/> <br/>
+            • Served as <span className="font-bold">on-call engineer</span> for one week on a rotating schedule, responding to critical incidents such as <span className="font-bold">site outages, troubleshooting urgent technical
+            issues, and escalating problems</span> to ensure timely resolution and minimal impact on users. <br/> <br/>
+            • <span className="font-bold">Facilitated bi-weekly retrospective meetings</span> for Agile development teams of approximately <span className="font-bold">15-20 members</span> to reflect on past sprints and identify
             areas for improvement. <br/>
         </p>
       </div>,
