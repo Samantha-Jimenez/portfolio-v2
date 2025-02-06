@@ -35,7 +35,7 @@ const pelotonSlides = [
                 className="w-full h-full object-cover object-top"
             />
         </div>
-        <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
+        <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-tight">I worked on the activity feed, user interactions (stack, bookmark, high-five), and notification screen.</p>
         </div>
     </div>,
@@ -47,7 +47,7 @@ const pelotonSlides = [
                 className="w-full h-full object-cover object-left"
             />
         </div>
-        <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
+        <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-tight">I worked on the body activity page, which displays the user's body activity data.</p>
         </div>
     </div>,
@@ -59,7 +59,7 @@ const pelotonSlides = [
                 className="w-full h-full object-cover object-left"
             />
         </div>
-        <div className="gap-2 grid-flow-col inline-grid min-[1341px]:hidden text-center max-[403px]:grid-flow-row w-full">
+        <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-tight">I worked on the Strava Connect page, which allows users to connect their Strava account to their Peloton account.</p>
         </div>
     </div>,
