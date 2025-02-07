@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { mvmntSlides, othelloSlides, pelotonSlides, zooVioSlides, zooVioSlidesTablet, zooVioSlidesMobile, finstaSlides, finstaSlidesMobile, finstaSlidesTablet, finstaSlidesExtraSmall, tastebudsSlides, tastebudsSlidesMobile, tastebudsSlidesTablet } from './../data/projectData';
+import React, { useState, useEffect, useRef } from 'react';
+import createSlides from './../data/projectData';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
@@ -8,6 +8,37 @@ const Timeline = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [openAccordions, setOpenAccordions] = useState({});
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [expandedImage, setExpandedImage] = useState(null);
+    const [isExpanded, setIsExpanded] = useState(false);
+    const imageRef = useRef(null);
+
+    // Update the handleImageClick function
+    const handleImageClick = (e, imageSrc) => {
+        e.stopPropagation();
+        // Check if click is on image or magnify icon
+        if (e.target.tagName === 'IMG' || e.target.closest('.magnify-icon')) {
+            setExpandedImage(expandedImage === imageSrc ? null : imageSrc);
+        }
+    };
+
+    // Get all slides with the handleImageClick function
+    const {
+        mvmntSlides,
+        othelloSlides,
+        pelotonSlides,
+        zooVioSlides,
+        zooVioSlidesTablet,
+        zooVioSlidesMobile,
+        finstaSlides,
+        finstaSlidesMobile,
+        finstaSlidesTablet,
+        finstaSlidesExtraSmall,
+        tastebudsSlides,
+        tastebudsSlidesTablet,
+        tastebudsSlidesMobile
+    } = createSlides(handleImageClick);
+
+    // Move these state initializations after getting the slides
     const [slides, setSlides] = useState(zooVioSlides);
     const [finstagramSlidesState, setFinstagramSlidesState] = useState(finstaSlides);
     const [tastebudsSlidesState, setTastebudsSlidesState] = useState(tastebudsSlides);
@@ -67,6 +98,18 @@ const Timeline = () => {
     window.addEventListener('resize', updateSlides); // Update slides on resize
 
     return () => window.removeEventListener('resize', updateSlides);
+    }, []);
+
+    // Add this effect for handling clicks outside expanded image
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (imageRef.current && !imageRef.current.contains(event.target)) {
+                setExpandedImage(null);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     // Navigation function
@@ -239,8 +282,15 @@ const Timeline = () => {
                                     slidesToScroll={1}
                                 >
                                     {pelotonSlides.map((slide, index) => (
-                                        <div key={index} className="carousel-item">
-                                            {slide}
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
                                         </div>
                                     ))}
                                 </Slider>
@@ -278,8 +328,15 @@ const Timeline = () => {
                                     slidesToScroll={1}
                                 >
                                     {slides.map((slide, index) => (
-                                        <div key={index} className="carousel-item">
-                                            {slide}
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
                                         </div>
                                     ))}
                                 </Slider>
@@ -317,8 +374,15 @@ const Timeline = () => {
                                     slidesToScroll={1}
                                 >
                                     {finstagramSlidesState.map((slide, index) => (
-                                        <div key={index} className="carousel-item">
-                                            {slide}
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
                                         </div>
                                     ))}
                                 </Slider>
@@ -356,8 +420,15 @@ const Timeline = () => {
                                     slidesToScroll={1}
                                 >
                                     {tastebudsSlidesState.map((slide, index) => (
-                                        <div key={index} className="carousel-item">
-                                            {slide}
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
                                         </div>
                                     ))}
                                 </Slider>
@@ -366,6 +437,20 @@ const Timeline = () => {
                     </div>
                 </div>
             </div>
+            {expandedImage && (
+                <div 
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+                    onClick={() => setExpandedImage(null)}
+                >
+                    <img
+                        ref={imageRef}
+                        src={expandedImage}
+                        alt="Expanded view"
+                        className="max-h-[90vh] max-w-[90vw] object-contain cursor-zoom-out"
+                        onClick={() => setExpandedImage(null)}
+                    />
+                </div>
+            )}
         </div>
     );
 }
