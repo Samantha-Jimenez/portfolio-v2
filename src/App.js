@@ -86,7 +86,6 @@ function App() {
 
   const changeTheme = (e) => {
     setTheme(e.target.value);
-    // e.target.checked = true;
     if(e.target.value === 'blueTheme') {
       setThemeObj(blueThemeObj)
     } else if(e.target.value === 'tanTheme') {
@@ -176,7 +175,7 @@ function App() {
       <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>      <link rel="icon" href="favicon_io/android-chrome-192x192.png" sizes="192x192"/>
       <link rel="icon" href="favicon_io/android-chrome-512x512.png" sizes="512x512"/>
       <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png" sizes="180x180"/>
@@ -209,16 +208,16 @@ function App() {
 
                   Menu open: "hidden", Menu closed: "block"
                 --> */}
-                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <svg className="block size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
                 {/* <!--
                   Icon when menu is open.
 
                   Menu open: "block", Menu closed: "hidden"
                 --> */}
-                <svg className="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                <svg className="hidden size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
@@ -304,21 +303,69 @@ function App() {
             </div>
             <nav className="nav-menu">
               <ul className="nav-ul">
-                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='landing' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500}><span className="icon-[bx--home] mr-2"></span>Home</Link></span></a></li>
-                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='about' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--user-square-rounded] mr-2"></span>About</Link></span></a></li>
-                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='skills' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[tabler--list-check] mr-2"></span>Skills</Link></span></a></li>
-                {/* <li data-aos="fade-up"><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li> */}
-                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='portfolio' className="linkA"  activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--collection] mr-2"></span>Portfolio</Link></span></a></li>
-                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href=''><span><Link to='contact' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}><span className="icon-[bx--mail-send] mr-2"></span>Contact</Link></span></a></li>
-                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}><a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="icon-[tabler--file-text] mr-2"></span> <span style={{"marginLeft": "-4px"}}>Resume</span></a></li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <Link to='landing' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500}>
+                    <span className="icon-[bx--home] mr-2"></span>Home
+                  </Link>
+                </li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <Link to='about' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
+                    <span className="icon-[tabler--user-square-rounded] mr-2"></span>About
+                  </Link>
+                </li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <Link to='skills' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
+                    <span className="icon-[tabler--list-check] mr-2"></span>Skills
+                  </Link>
+                </li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <Link to='portfolio' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
+                    <span className="icon-[bx--collection] mr-2"></span>Portfolio
+                  </Link>
+                </li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <Link to='contact' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
+                    <span className="icon-[bx--mail-send] mr-2"></span>Contact
+                  </Link>
+                </li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <span className="icon-[tabler--file-text] mr-2"></span>
+                    <span style={{"marginLeft": "-4px"}}>Resume</span>
+                  </a>
+                </li>
               </ul>             
             </nav>
               <div className="wrapper">
                 <span className='theme_title'>Themes:</span>
                 <div className="toggle_radio">
-                  {currentTheme === 'greenTheme' ? <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="first_toggle" name="toggle_option" value="greenTheme" onClick={changeTheme}/>}
-                  {currentTheme === 'blueTheme' ? <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="second_toggle" name="toggle_option" value="blueTheme" onClick={changeTheme}/>}
-                  {currentTheme === 'tanTheme' ? <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="tanTheme" onClick={changeTheme} checked/> : <input type="radio" className="toggle_option" id="third_toggle" name="toggle_option" value="tanTheme" onClick={changeTheme}/>}
+                  <input 
+                    type="radio" 
+                    className="toggle_option" 
+                    id="first_toggle" 
+                    name="toggle_option" 
+                    value="greenTheme" 
+                    onChange={changeTheme}
+                    checked={currentTheme === 'greenTheme'}
+                  />
+                  <input 
+                    type="radio" 
+                    className="toggle_option" 
+                    id="second_toggle" 
+                    name="toggle_option" 
+                    value="blueTheme" 
+                    onChange={changeTheme}
+                    checked={currentTheme === 'blueTheme'}
+                  />
+                  <input 
+                    type="radio" 
+                    className="toggle_option" 
+                    id="third_toggle" 
+                    name="toggle_option" 
+                    value="tanTheme" 
+                    onChange={changeTheme}
+                    checked={currentTheme === 'tanTheme'}
+                  />
                   <label htmlFor="first_toggle"><p>Green</p></label>
                   <label htmlFor="second_toggle"><p>Blue</p></label>
                   <label htmlFor="third_toggle"><p>Brown</p></label>
