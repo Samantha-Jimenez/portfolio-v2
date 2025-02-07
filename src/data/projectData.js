@@ -4,6 +4,8 @@ import project3 from './../imgFiles/Tastebuds.png';
 import pelotonActivityFeed from './../imgFiles/PelotonActivityFeed.png';
 import pelotonBodyActivity from './../imgFiles/PelotonBodyActivity.png';
 import pelotonStravaConnect from './../imgFiles/PelotonStravaConnect.png';
+import pelotonClassPlan from './../imgFiles/PelotonClassPlan.png';
+import pelotonNotifications from './../imgFiles/PelotonNotifications.png';
 
 const mvmntSlides = [
     <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
@@ -55,6 +57,32 @@ const pelotonSlides = [
     <div className="image-crop-container flex flex-col items-center gap-4">
         <div className="h-[400px] w-[90%] overflow-hidden rounded-lg">
             <img 
+                src={pelotonClassPlan} 
+                alt="Peloton Class Plan" 
+                className="w-full h-full object-cover object-center"
+            />
+        </div>
+        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <p className="font-normal text-[15px] leading-snug">HEYHEYHEYHEYHEYHEYHEYHEY</p>
+            <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="h-[400px] w-[90%] overflow-hidden rounded-lg">
+            <img 
+                src={pelotonNotifications} 
+                alt="Peloton Notifications" 
+                className="w-full h-full object-cover object-right"
+            />
+        </div>
+        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <p className="font-normal text-[15px] leading-snug">HEYHEYHEYHEYHEYHEYHEYHEY</p>
+            <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-base shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="h-[400px] w-[90%] overflow-hidden rounded-lg">
+            <img 
                 src={pelotonStravaConnect} 
                 alt="Peloton Strava Connect" 
                 className="w-full h-full object-cover object-left"
@@ -72,11 +100,8 @@ const pelotonSlides = [
             • Implemented a fitness quiz for new users to recommend initial classes based on their preferences, enhancing immediate engagement upon website
             onboarding. <br/> <br/>
             <span className="line-through">• Programmed social features on the website, including an activity feed, user interactions (stack, bookmark, high-five), a notification screen, and integrated connectivity with user's Strava account, enhancing user engagement and driving increased traffic through social functionality.</span> <br/> <br/>
-            • Class Plan <br/>
-            • Activity Goals <br/>
             • Row Charts <br/>
             • Onboarding Quiz <br/>
-            • Notifications?? <br/>
         </p>
       </div>,
       <div className="flex justify-center h-full text-gray-600 px-7 py-4 flex-col gap-4 w-full text-[15px]">
