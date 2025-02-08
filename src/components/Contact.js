@@ -54,7 +54,7 @@ const Contact = () => {
                 })();
             </script>
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
-                <h2>Contact</h2>
+                <h2 className='text-[var(--header-color)] dark:text-[var(--dark-header-color)]'>Contact</h2>
                 <p data-aos="fade-up" data-aos-duration="1000">Let’s connect! I’d love to hear from you — reach out to collaborate or network.</p>
             </div>
             <div className="row aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000">

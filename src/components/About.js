@@ -4,20 +4,20 @@ const About = () => {
     return (
         <div className="container">
             <div className="section-title" data-aos="fade-left" data-aos-duration="1500">
-                <h2>About</h2>
+                <h2 className='text-[var(--header-color)] dark:text-[var(--dark-header-color)]'>About</h2>
                 {/* <p>Brooklyn-born Afro-Latina. Builder. Creator. Problem Solver.</p> */}
                 <p data-aos="fade-left" data-aos-duration="1000">Bridging Technology with Creativity. Turning Ideas into Impactful Applications and Seamless User Experiences.</p>
             </div>
             <div className="row">
                 <div className="col-lg-auto pt-4 pt-lg-0 content aos-init aos-animate">
-                    <h3 data-aos="fade-left" data-aos-duration="1000">Welcome to my Portfolio</h3>
+                    <h3 className='text-[var(--header-color)] dark:text-[var(--dark-header-color)]' data-aos="fade-left" data-aos-duration="1000">Welcome to my Portfolio</h3>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
                         I’m a Full Stack Software Engineer driven by a passion for building intuitive, impactful, and visually compelling applications. My coding journey began in 2018 when I decided to teach myself programming, sparking a lifelong love for creating meaningful solutions through technology.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        In 2019, I joined <a className='font-medium text-[var(--highlighted-text)] hover:text-[var(--highlighted-text-hover)]' href="https://www.pursuit.org" target="_blank" rel="noopener noreferrer">Pursuit, an intensive coding fellowship</a> in Queens, NY, where I transformed my curiosity into expertise. The program not only refined my technical skills but also deepened my understanding of collaboration, problem-solving, and the power of community-driven innovation.
+                        In 2019, I joined <a className='font-medium text-[var(--highlighted-text)] hover:text-[var(--highlighted-text-hover)] dark:text-[var(--dark-highlighted-text)] dark:hover:text-[var(--dark-highlighted-text-hover)]' href="https://www.pursuit.org" target="_blank" rel="noopener noreferrer">Pursuit, an intensive coding fellowship</a> in Queens, NY, where I transformed my curiosity into expertise. The program not only refined my technical skills but also deepened my understanding of collaboration, problem-solving, and the power of community-driven innovation.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">

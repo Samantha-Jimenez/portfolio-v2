@@ -7,7 +7,7 @@ const Projects = () => {
     return (
         <div className="container">
           <div className="section-title" data-aos="fade-left" data-aos-duration="1500">
-            <h2>Portfolio</h2>
+            <h2 className='text-[var(--header-color)] dark:text-[var(--dark-header-color)]'>Portfolio</h2>
             <p>Take a look at some of my work below and check back in for updates and new projects in the future.</p>
           </div>
           <div className="row portfolio-container aos-init aos-animate" data-aos-delay="100" >

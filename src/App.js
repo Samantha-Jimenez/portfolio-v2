@@ -40,6 +40,17 @@ function App() {
     "--highlighted-text": "#65A30D",
     "--highlighted-text-hover": "#84CC16",
     "--year-text": "#059669",
+    "--dark-header-color": "#A6C1B1", /* Lighter muted green */
+    "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
+    "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
+    // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
+    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
+    "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
+    "--dark-shadow": "#3A4C42", /* Lighter shadow */
+    "--dark-timeline-header": "#4DAA6A", /* Muted vivid green */
+    "--dark-highlighted-text": "#A7D04C", /* Bright yellow-green */
+    "--dark-highlighted-text-hover": "#A0D13A", /* Darker yellow-green hover */
+    "--dark-year-text": "#82A57C", /* Lighter dark green */
   });
 
   const blueThemeObj = {
@@ -54,6 +65,17 @@ function App() {
     "--highlighted-text": "#2563EB", /* Strong vivid blue */
     "--highlighted-text-hover": "#3B82F6", /* Bright blue hover */
     "--year-text": "#1E3A8A", /* Deep dark blue */
+    "--dark-header-color": "#A7B9C4", /* Lighter muted blue-gray */
+    "--dark-underline-and-button-color": "#A3C1D9", /* Lighter muted blue */
+    "--dark-background-and-text-primary": "#4A5661", /* Lighter background */
+    // "--dark-background-secondary": "#2E3A43", /* Slightly lighter dark background */
+    "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", /* Brighter unselected text */
+    "--dark-button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue button */
+    "--dark-shadow": "#3A4C57", /* Lighter dark slate blue */
+    "--dark-timeline-header": "#2B7AB3", /* Muted vivid blue */
+    "--dark-highlighted-text": "#5E99F8", /* Bright blue */
+    "--dark-highlighted-text-hover": "#3E7BC5", /* Darker vivid blue hover */
+    "--dark-year-text": "#5E99F8", /* Brighter blue year text */
   }
 
   const tanThemeObj = {
@@ -68,6 +90,17 @@ function App() {
     "--highlighted-text": "#A0522D", /* Rich sienna */
     "--highlighted-text-hover": "#C68C5A", /* Warm light tan */
     "--year-text": "#8B4513", /* Dark saddle brown */
+    "--dark-header-color": "#C8B78F", /* Lighter muted tan-gray */
+    "--dark-underline-and-button-color": "#D2B59C", /* Softer tan button */
+    "--dark-background-and-text-primary": "#5E6A5B", /* Lighter background */
+    // "--dark-background-secondary": "#3E4A3E", /* Slightly lighter dark background */
+    "--dark-menu-text-unselected": "rgba(204, 178, 137, 1)", /* Brighter unselected text */
+    "--dark-button-selected": "rgb(204, 178, 137)", /* Soft tan button */
+    "--dark-shadow": "#6A5F4A", /* Lighter brown-gray shadow */
+    "--dark-timeline-header": "#D59E62", /* Warm muted sienna */
+    "--dark-highlighted-text": "#E4C28E", /* Light warm tan */
+    "--dark-highlighted-text-hover": "#B38053", /* Darker rich sienna hover */
+    "--dark-year-text": "#B4854E", /* Lighter dark brown year text */
   }
 
   const greenThemeObj = {
@@ -82,6 +115,17 @@ function App() {
     "--highlighted-text": "#65A30D",
     "--highlighted-text-hover": "#84CC16",
     "--year-text": "#059669",
+    "--dark-header-color": "#A6C1B1", /* Lighter muted green */
+    "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
+    "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
+    // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
+    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
+    "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
+    "--dark-shadow": "#3A4C42", /* Lighter shadow */
+    "--dark-timeline-header": "#4DAA6A", /* Muted vivid green */
+    "--dark-highlighted-text": "#A7D04C", /* Bright yellow-green */
+    "--dark-highlighted-text-hover": "#A0D13A", /* Darker yellow-green hover */
+    "--dark-year-text": "#82A57C", /* Lighter dark green */
   }
 
   const changeTheme = (e) => {
@@ -200,7 +244,7 @@ function App() {
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
               {/* <!-- Mobile menu button--> */}
-              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
                 {/* <!--
@@ -231,11 +275,11 @@ function App() {
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 min-[1026px]:w-[30vw] w-[290px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
-              <h1 className="header-title leading-[1.1]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
+              <h1 className="header-title leading-[1.1] text-[var(--background-and-text-primary)] dark:text-[var(--dark-background-and-text-primary)]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
-                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300 ${openGithubMenu ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`} 
+                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300 ${openGithubMenu ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--shadow)] dark:bg-[var(--dark-shadow)]'}`} 
                     onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
                   <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[1px]`}></span>
@@ -243,7 +287,7 @@ function App() {
                 {openGithubMenu && (
                   <div className="relative">
                     {/* Tooltip Tail */}
-                    <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)]"></div>
+                    <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)] dark:border-b-[var(--dark-shadow)]"></div>
                     <ul className={`ml-[-100%] absolute bg-[var(--shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samanthabjimenez" target="_blank" rel="noopener noreferrer">Previous Account</a></li>
@@ -275,7 +319,7 @@ function App() {
                         setGmailClickCount(0); // Reset the counter
                       }
                     }} 
-                    className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`}>
+                    className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${gmailClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
@@ -382,13 +426,13 @@ function App() {
             <section id="about" className="about section">
               <Element name='about'><About/></Element>
             </section>
-            <section id="skills" className="skills section section-bg">
+            <section id="skills" className="skills section section-bg bg-[var(--background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]">
               <Element name='skills'><Skills/></Element>
             </section>
             {/* <section id="portfolio" className="portfolio section section-bg" style={{"height": "max-content"}}>
               <Element name='portfolio'><Portfolio/></Element>
             </section> */}
-            <section id="timeline" className="portfolio section section-bg" style={{"height": "max-content"}}>
+            <section id="timeline" className="portfolio section section-bg bg-[var(--background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]" style={{"height": "max-content"}}>
               <Element name='portfolio'><Timeline/></Element>
             </section>
             <section id="contact" className="contact content-around section">
