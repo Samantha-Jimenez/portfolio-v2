@@ -53,30 +53,55 @@ function App() {
     "--dark-year-text": "#82A57C", /* Lighter dark green */
   });
 
+  // const blueThemeObj = {
+  //   "--header-color": "#96A3B0", /* Muted light blue-gray */
+  //   "--underline-and-button-color": "#254D7A", /* Deep navy blue */
+  //   "--background-and-text-primary": "#EEF3F8", /* Very light bluish-white */
+  //   "--background-secondary": "#ffffff", /* White */
+  //   "--menu-text-unselected": "rgba(62, 137, 204, 0.5)", /* Soft sky blue */
+  //   "--button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue */
+  //   "--shadow": "#2C3340", /* Cool dark slate blue */
+  //   "--timeline-header": "#1D4ED88C", /* Muted vivid blue */
+  //   "--highlighted-text": "#2563EB", /* Strong vivid blue */
+  //   "--highlighted-text-hover": "#3B82F6", /* Bright blue hover */
+  //   "--year-text": "#1E3A8A", /* Deep dark blue */
+  //   "--dark-header-color": "#A7B9C4", /* Lighter muted blue-gray */
+  //   "--dark-underline-and-button-color": "#A3C1D9", /* Lighter muted blue */
+  //   "--dark-background-and-text-primary": "#4A5661", /* Lighter background */
+  //   // "--dark-background-secondary": "#2E3A43", /* Slightly lighter dark background */
+  //   "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", /* Brighter unselected text */
+  //   "--dark-button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue button */
+  //   "--dark-shadow": "#3A4C57", /* Lighter dark slate blue */
+  //   "--dark-timeline-header": "#2B7AB3", /* Muted vivid blue */
+  //   "--dark-highlighted-text": "#5E99F8", /* Bright blue */
+  //   "--dark-highlighted-text-hover": "#3E7BC5", /* Darker vivid blue hover */
+  //   "--dark-year-text": "#5E99F8", /* Brighter blue year text */
+  // }
+
   const blueThemeObj = {
-    "--header-color": "#96A3B0", /* Muted light blue-gray */
-    "--underline-and-button-color": "#254D7A", /* Deep navy blue */
-    "--background-and-text-primary": "#EEF3F8", /* Very light bluish-white */
-    "--background-secondary": "#ffffff", /* White */
-    "--menu-text-unselected": "rgba(62, 137, 204, 0.5)", /* Soft sky blue */
-    "--button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue */
-    "--shadow": "#2C3340", /* Cool dark slate blue */
-    "--timeline-header": "#1D4ED88C", /* Muted vivid blue */
-    "--highlighted-text": "#2563EB", /* Strong vivid blue */
-    "--highlighted-text-hover": "#3B82F6", /* Bright blue hover */
-    "--year-text": "#1E3A8A", /* Deep dark blue */
-    "--dark-header-color": "#A7B9C4", /* Lighter muted blue-gray */
-    "--dark-underline-and-button-color": "#A3C1D9", /* Lighter muted blue */
-    "--dark-background-and-text-primary": "#4A5661", /* Lighter background */
-    // "--dark-background-secondary": "#2E3A43", /* Slightly lighter dark background */
-    "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", /* Brighter unselected text */
-    "--dark-button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue button */
-    "--dark-shadow": "#3A4C57", /* Lighter dark slate blue */
-    "--dark-timeline-header": "#2B7AB3", /* Muted vivid blue */
-    "--dark-highlighted-text": "#5E99F8", /* Bright blue */
-    "--dark-highlighted-text-hover": "#3E7BC5", /* Darker vivid blue hover */
-    "--dark-year-text": "#5E99F8", /* Brighter blue year text */
-  }
+    "--header-color": "#A2B9CA", // Warm soft blue-gray header
+    "--underline-and-button-color": "#1E3969", // Deep navy blue
+    "--background-and-text-primary": "#F1F6FC", // Light blueish-white background
+    "--background-secondary": "#FFFFFF", // Clean white background
+    "--menu-text-unselected": "rgba(62, 137, 204, 0.5)", // Soft sky blue
+    "--button-selected": "#4F81B3", // Vibrant blue button
+    "--shadow": "#2C3340", // Cool dark slate blue shadow
+    "--timeline-header": "#1D4ED88C", // Muted vivid blue
+    "--highlighted-text": "#1D4ED8", // Electric blue for highlights
+    "--highlighted-text-hover": "#3B82F6", // Bright blue hover
+    "--year-text": "#1E3A8A", // Deep dark blue year text
+    "--dark-header-color": "#3A4C63", // Muted bluish-gray for dark mode header
+    "--dark-underline-and-button-color": "#5D7C94", // Darker blue with lighter accents for buttons
+    "--dark-background-and-text-primary": "#2A3A4B", // Slate-blue background for dark mode
+    "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", // Brighter unselected text in dark mode
+    "--dark-button-selected": "#5E99F8", // Vibrant blue button for dark mode
+    "--dark-shadow": "#4C5B6A", // Lightened dark slate blue shadow
+    "--dark-timeline-header": "#2B7AB3", // Muted vivid blue for timeline header
+    "--dark-highlighted-text": "#75A8F7", // Glowing bright blue for highlighted text
+    "--dark-highlighted-text-hover": "#3E7BC5", // Darker vivid blue hover for dark mode
+    "--dark-year-text": "#75A8F7", // Brighter blue year text in dark mode
+  };
+  
 
   const tanThemeObj = {
     "--header-color": "#B0A696", /* Muted tan-gray */
