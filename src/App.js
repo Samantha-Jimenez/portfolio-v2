@@ -103,30 +103,55 @@ function App() {
     "--dark-year-text": "#B4854E", /* Lighter dark brown year text */
   }
 
+  // const greenThemeObj = {
+  //   "--header-color": "#96B0A3",
+  //   "--underline-and-button-color": "#254D32",
+  //   "--background-and-text-primary": "#EFF2F1",
+  //   "--background-secondary": "#ffffff",
+  //   "--menu-text-unselected": "rgba(178, 204, 62, .5)",
+  //   "--button-selected": "rgb(178, 204, 62)",
+  //   "--shadow": "#2c2f3f",
+  //   "--timeline-header": "#16A34A8C",
+  //   "--highlighted-text": "#65A30D",
+  //   "--highlighted-text-hover": "#84CC16",
+  //   "--year-text": "#059669",
+  //   "--dark-header-color": "#A6C1B1", /* Lighter muted green */
+  //   "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
+  //   "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
+  //   // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
+  //   "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
+  //   "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
+  //   "--dark-shadow": "#3A4C42", /* Lighter shadow */
+  //   "--dark-timeline-header": "#4DAA6A", /* Muted vivid green */
+  //   "--dark-highlighted-text": "#A7D04C", /* Bright yellow-green */
+  //   "--dark-highlighted-text-hover": "#A0D13A", /* Darker yellow-green hover */
+  //   "--dark-year-text": "#82A57C", /* Lighter dark green */
+  // }
+
   const greenThemeObj = {
-    "--header-color": "#96B0A3",
-    "--underline-and-button-color": "#254D32",
-    "--background-and-text-primary": "#EFF2F1",
-    "--background-secondary": "#ffffff",
-    "--menu-text-unselected": "rgba(178, 204, 62, .5)",
-    "--button-selected": "rgb(178, 204, 62)",
-    "--shadow": "#2c2f3f",
-    "--timeline-header": "#16A34A8C",
-    "--highlighted-text": "#65A30D",
-    "--highlighted-text-hover": "#84CC16",
-    "--year-text": "#059669",
-    "--dark-header-color": "#A6C1B1", /* Lighter muted green */
-    "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
-    "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
-    // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
-    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
-    "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
-    "--dark-shadow": "#3A4C42", /* Lighter shadow */
-    "--dark-timeline-header": "#4DAA6A", /* Muted vivid green */
-    "--dark-highlighted-text": "#A7D04C", /* Bright yellow-green */
-    "--dark-highlighted-text-hover": "#A0D13A", /* Darker yellow-green hover */
-    "--dark-year-text": "#82A57C", /* Lighter dark green */
-  }
+    "--header-color": "#8D9B8E", // Soft greenish gray
+    "--underline-and-button-color": "#317A5C", // Deep green
+    "--background-and-text-primary": "#F4F6F2", // Light off-white background
+    "--background-secondary": "#FFFFFF", // Clean white secondary background
+    "--menu-text-unselected": "rgba(178, 204, 62, .5)", // Muted yellow-green
+    "--button-selected": "#99C82F", // Bright yellow-green button
+    "--shadow": "#2C2F3F", // Dark shadow
+    "--timeline-header": "#16A34A8C", // Lightened green timeline
+    "--highlighted-text": "#A7D06C", // Vibrant lime green
+    "--highlighted-text-hover": "#84CC16", // Bright green hover
+    "--year-text": "#059669", // Teal-like year text
+    "--dark-header-color": "#4B5D44", // Muted olive
+    "--dark-underline-and-button-color": "#5A7B56", // Muted green for button/underline
+    "--dark-background-and-text-primary": "#2A3528", // Charcoal greenish-dark background
+    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", // Bright unselected text
+    "--dark-button-selected": "#7FBF49", // Bright green button for dark mode
+    "--dark-shadow": "#2C3E29", // Light greenish shadow
+    "--dark-timeline-header": "#4DAA6A", // Muted vivid green for dark mode
+    "--dark-highlighted-text": "#A1D09E", // Light glowing green
+    "--dark-highlighted-text-hover": "#A0D13A", // Darker yellow-green hover
+    "--dark-year-text": "#82A57C", // Lighter dark green year text
+  };
+  
 
   const changeTheme = (e) => {
     setTheme(e.target.value);
