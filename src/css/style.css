@@ -1,4 +1,4 @@
-:root {
+/* :root { */
     /* --header:#040b14;
     --title-text: #96B0A3;
     --attention: #B2CC3E;
@@ -18,18 +18,18 @@
     --menu-text-unselected: rgba(178, 204, 62, .5);
     --button-selected: rgb(178, 204, 62);
     --shadow: #2c2f3f; */
-  }
+  /* } */
 
-  :root, [data-theme] {
-    background-color: white;
-    color: black;
-}
+  /* :root, [data-theme] { */
+    /* background-color: white; */
+    /* color: black; */
+/* } */
   
   /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
   body {
-    color: #272829;
+    /* color: #272829; */
     background-color: var(--background-secondary) !important;
     background: none !important;
     font-family: "Montserrat", serif;
