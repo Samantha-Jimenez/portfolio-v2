@@ -90,16 +90,16 @@ function App() {
     "--highlighted-text": "#1D4ED8", // Electric blue for highlights
     "--highlighted-text-hover": "#3B82F6", // Bright blue hover
     "--year-text": "#1E3A8A", // Deep dark blue year text
-    "--dark-header-color": "#3A4C63", // Muted bluish-gray for dark mode header
-    "--dark-underline-and-button-color": "#5D7C94", // Darker blue with lighter accents for buttons
-    "--dark-background-and-text-primary": "#2A3A4B", // Slate-blue background for dark mode
-    "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", // Brighter unselected text in dark mode
-    "--dark-button-selected": "#5E99F8", // Vibrant blue button for dark mode
-    "--dark-shadow": "#4C5B6A", // Lightened dark slate blue shadow
-    "--dark-timeline-header": "#2B7AB3", // Muted vivid blue for timeline header
-    "--dark-highlighted-text": "#75A8F7", // Glowing bright blue for highlighted text
-    "--dark-highlighted-text-hover": "#3E7BC5", // Darker vivid blue hover for dark mode
-    "--dark-year-text": "#75A8F7", // Brighter blue year text in dark mode
+    // "--dark-header-color": "#3A4C63", // Muted bluish-gray for dark mode header
+    // "--dark-underline-and-button-color": "#5D7C94", // Darker blue with lighter accents for buttons
+    // "--dark-background-and-text-primary": "#2A3A4B", // Slate-blue background for dark mode
+    // "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", // Brighter unselected text in dark mode
+    // "--dark-button-selected": "#5E99F8", // Vibrant blue button for dark mode
+    // "--dark-shadow": "#4C5B6A", // Lightened dark slate blue shadow
+    // "--dark-timeline-header": "#2B7AB3", // Muted vivid blue for timeline header
+    // "--dark-highlighted-text": "#75A8F7", // Glowing bright blue for highlighted text
+    // "--dark-highlighted-text-hover": "#3E7BC5", // Darker vivid blue hover for dark mode
+    // "--dark-year-text": "#75A8F7", // Brighter blue year text in dark mode
   };
   
 
@@ -115,17 +115,17 @@ function App() {
     "--highlighted-text": "#A0522D", /* Rich sienna */
     "--highlighted-text-hover": "#C68C5A", /* Warm light tan */
     "--year-text": "#8B4513", /* Dark saddle brown */
-    "--dark-header-color": "#C8B78F", /* Lighter muted tan-gray */
-    "--dark-underline-and-button-color": "#D2B59C", /* Softer tan button */
-    "--dark-background-and-text-primary": "#5E6A5B", /* Lighter background */
-    // "--dark-background-secondary": "#3E4A3E", /* Slightly lighter dark background */
-    "--dark-menu-text-unselected": "rgba(204, 178, 137, 1)", /* Brighter unselected text */
-    "--dark-button-selected": "rgb(204, 178, 137)", /* Soft tan button */
-    "--dark-shadow": "#6A5F4A", /* Lighter brown-gray shadow */
-    "--dark-timeline-header": "#D59E62", /* Warm muted sienna */
-    "--dark-highlighted-text": "#E4C28E", /* Light warm tan */
-    "--dark-highlighted-text-hover": "#B38053", /* Darker rich sienna hover */
-    "--dark-year-text": "#B4854E", /* Lighter dark brown year text */
+    // "--dark-header-color": "#C8B78F", /* Lighter muted tan-gray */
+    // "--dark-underline-and-button-color": "#D2B59C", /* Softer tan button */
+    // "--dark-background-and-text-primary": "#5E6A5B", /* Lighter background */
+    // // "--dark-background-secondary": "#3E4A3E", /* Slightly lighter dark background */
+    // "--dark-menu-text-unselected": "rgba(204, 178, 137, 1)", /* Brighter unselected text */
+    // "--dark-button-selected": "rgb(204, 178, 137)", /* Soft tan button */
+    // "--dark-shadow": "#6A5F4A", /* Lighter brown-gray shadow */
+    // "--dark-timeline-header": "#D59E62", /* Warm muted sienna */
+    // "--dark-highlighted-text": "#E4C28E", /* Light warm tan */
+    // "--dark-highlighted-text-hover": "#B38053", /* Darker rich sienna hover */
+    // "--dark-year-text": "#B4854E", /* Lighter dark brown year text */
   }
 
   // const greenThemeObj = {
@@ -165,16 +165,16 @@ function App() {
     "--highlighted-text": "#A7D06C", // Vibrant lime green
     "--highlighted-text-hover": "#84CC16", // Bright green hover
     "--year-text": "#059669", // Teal-like year text
-    "--dark-header-color": "#4B5D44", // Muted olive
-    "--dark-underline-and-button-color": "#5A7B56", // Muted green for button/underline
-    "--dark-background-and-text-primary": "#2A3528", // Charcoal greenish-dark background
-    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", // Bright unselected text
-    "--dark-button-selected": "#7FBF49", // Bright green button for dark mode
-    "--dark-shadow": "#2C3E29", // Light greenish shadow
-    "--dark-timeline-header": "#4DAA6A", // Muted vivid green for dark mode
-    "--dark-highlighted-text": "#A1D09E", // Light glowing green
-    "--dark-highlighted-text-hover": "#A0D13A", // Darker yellow-green hover
-    "--dark-year-text": "#82A57C", // Lighter dark green year text
+    // "--dark-header-color": "#4B5D44", // Muted olive
+    // "--dark-underline-and-button-color": "#5A7B56", // Muted green for button/underline
+    // "--dark-background-and-text-primary": "#2A3528", // Charcoal greenish-dark background
+    // "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", // Bright unselected text
+    // "--dark-button-selected": "#7FBF49", // Bright green button for dark mode
+    // "--dark-shadow": "#2C3E29", // Light greenish shadow
+    // "--dark-timeline-header": "#4DAA6A", // Muted vivid green for dark mode
+    // "--dark-highlighted-text": "#A1D09E", // Light glowing green
+    // "--dark-highlighted-text-hover": "#A0D13A", // Darker yellow-green hover
+    // "--dark-year-text": "#82A57C", // Lighter dark green year text
   };
   
 
