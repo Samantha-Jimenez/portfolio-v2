@@ -15,6 +15,65 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check localStorage for user preference
+    const savedPreference = localStorage.getItem('darkMode');
+    if (savedPreference !== null) {
+      return JSON.parse(savedPreference);
+    }
+    // Check user's preferred color scheme
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+  // Define lightMode based on darkMode
+  const [lightMode, setLightMode] = useState(false);
+
+  useEffect(() => {
+    // Apply initial theme based on preference
+    if (darkMode) {
+      applyDarkMode();
+    } else {
+      applyLightMode();
+    }
+  }, []);
+
+  const applyDarkMode = () => {
+    document.documentElement.classList.add('dark');
+    // Apply dark theme variables
+    Object.keys(currentThemeObj).forEach(key => {
+      if (key.startsWith('--dark-')) {
+        const baseKey = key.replace('--dark-', '--');
+        document.documentElement.style.setProperty(baseKey, currentThemeObj[key]);
+      }
+    });
+  };
+
+  const applyLightMode = () => {
+    document.documentElement.classList.remove('dark');
+    // Apply light theme variables
+    Object.keys(currentThemeObj).forEach(key => {
+      if (key.startsWith('--light-')) {
+        const baseKey = key.replace('--light-', '--');
+        document.documentElement.style.setProperty(baseKey, currentThemeObj[key]);
+      }
+    });
+  };
+
+  const toggleTheme = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    setLightMode(!newDarkMode);
+    
+    if (newDarkMode) {
+      applyDarkMode();
+    } else {
+      setThemeObj(lightThemeObj); // Ensure light theme object is set
+      applyLightMode();
+    }
+
+    // Save preference to localStorage
+    localStorage.setItem('darkMode', newDarkMode);
+  };
+
   const [openGithubMenu, setOpenGithubMenu] = useState(false);
 
   const [currentTheme, setTheme] = useState("greenTheme");
@@ -29,17 +88,17 @@ function App() {
   //button-selected: #B2CC3E
 
   const [currentThemeObj, setThemeObj] = useState({
-    "--header-color": "#96B0A3",
-    "--underline-and-button-color": "#254D32",
-    "--background-and-text-primary": "#EFF2F1",
-    "--background-secondary": "#ffffff",
-    "--menu-text-unselected": "rgba(178, 204, 62, .5)",
-    "--button-selected": "rgb(178, 204, 62)",
-    "--shadow": "#2c2f3f",
-    "--timeline-header": "#16A34A8C",
-    "--highlighted-text": "#65A30D",
-    "--highlighted-text-hover": "#84CC16",
-    "--year-text": "#059669",
+    "--light-header-color": "#96B0A3",
+    "--light-underline-and-button-color": "#254D32",
+    "--light-background-and-text-primary": "#EFF2F1",
+    "--light-background-secondary": "#ffffff",
+    "--light-menu-text-unselected": "rgba(178, 204, 62, .5)",
+    "--light-button-selected": "rgb(178, 204, 62)",
+    "--light-shadow": "#2c2f3f",
+    "--light-timeline-header": "#16A34A8C",
+    "--light-highlighted-text": "#65A30D",
+    "--light-highlighted-text-hover": "#84CC16",
+    "--light-year-text": "#059669",
     "--dark-header-color": "#A6C1B1", /* Lighter muted green */
     "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
     "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
@@ -53,43 +112,28 @@ function App() {
     "--dark-year-text": "#82A57C", /* Lighter dark green */
   });
 
-  // const blueThemeObj = {
-  //   "--header-color": "#96A3B0", /* Muted light blue-gray */
-  //   "--underline-and-button-color": "#254D7A", /* Deep navy blue */
-  //   "--background-and-text-primary": "#EEF3F8", /* Very light bluish-white */
-  //   "--background-secondary": "#ffffff", /* White */
-  //   "--menu-text-unselected": "rgba(62, 137, 204, 0.5)", /* Soft sky blue */
-  //   "--button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue */
-  //   "--shadow": "#2C3340", /* Cool dark slate blue */
-  //   "--timeline-header": "#1D4ED88C", /* Muted vivid blue */
-  //   "--highlighted-text": "#2563EB", /* Strong vivid blue */
-  //   "--highlighted-text-hover": "#3B82F6", /* Bright blue hover */
-  //   "--year-text": "#1E3A8A", /* Deep dark blue */
-  //   "--dark-header-color": "#A7B9C4", /* Lighter muted blue-gray */
-  //   "--dark-underline-and-button-color": "#A3C1D9", /* Lighter muted blue */
-  //   "--dark-background-and-text-primary": "#4A5661", /* Lighter background */
-  //   // "--dark-background-secondary": "#2E3A43", /* Slightly lighter dark background */
-  //   "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", /* Brighter unselected text */
-  //   "--dark-button-selected": "rgb(62, 137, 204)", /* Vibrant sky blue button */
-  //   "--dark-shadow": "#3A4C57", /* Lighter dark slate blue */
-  //   "--dark-timeline-header": "#2B7AB3", /* Muted vivid blue */
-  //   "--dark-highlighted-text": "#5E99F8", /* Bright blue */
-  //   "--dark-highlighted-text-hover": "#3E7BC5", /* Darker vivid blue hover */
-  //   "--dark-year-text": "#5E99F8", /* Brighter blue year text */
-  // }
+  const lightThemeObj = {
+    "--light-header-color": "#FFFFFF", // Example light header color
+    "--light-underline-and-button-color": "#CCCCCC", // Example light button color
+    "--light-background-and-text-primary": "#F0F0F0", // Example light background
+    "--light-background-secondary": "#FFFFFF", // Example light secondary background
+    "--light-menu-text-unselected": "rgba(0, 0, 0, 0.5)", // Example unselected text color
+    "--light-button-selected": "#007BFF", // Example selected button color
+    // Add more properties as needed
+  };
 
   const blueThemeObj = {
-    "--header-color": "#A2B9CA", // Warm soft blue-gray header
-    "--underline-and-button-color": "#1E3969", // Deep navy blue
-    "--background-and-text-primary": "#F1F6FC", // Light blueish-white background
-    "--background-secondary": "#FFFFFF", // Clean white background
-    "--menu-text-unselected": "rgba(62, 137, 204, 0.5)", // Soft sky blue
-    "--button-selected": "#4F81B3", // Vibrant blue button
-    "--shadow": "#2C3340", // Cool dark slate blue shadow
-    "--timeline-header": "#1D4ED88C", // Muted vivid blue
-    "--highlighted-text": "#1D4ED8", // Electric blue for highlights
-    "--highlighted-text-hover": "#3B82F6", // Bright blue hover
-    "--year-text": "#1E3A8A", // Deep dark blue year text
+    "--light-header-color": "#A2B9CA", // Warm soft blue-gray header
+    "--light-underline-and-button-color": "#1E3969", // Deep navy blue
+    "--light-background-and-text-primary": "#F1F6FC", // Light blueish-white background
+    "--light-background-secondary": "#FFFFFF", // Clean white background
+    "--light-menu-text-unselected": "rgba(62, 137, 204, 0.5)", // Soft sky blue
+    "--light-button-selected": "#4F81B3", // Vibrant blue button
+    "--light-shadow": "#2C3340", // Cool dark slate blue shadow
+    "--light-timeline-header": "#1D4ED88C", // Muted vivid blue
+    "--light-highlighted-text": "#1D4ED8", // Electric blue for highlights
+    "--light-highlighted-text-hover": "#3B82F6", // Bright blue hover
+    "--light-year-text": "#1E3A8A", // Deep dark blue year text
     "--dark-header-color": "#3A4C63", // Muted bluish-gray for dark mode header
     "--dark-underline-and-button-color": "#5D7C94", // Darker blue with lighter accents for buttons
     "--dark-background-and-text-primary": "#2A3A4B", // Slate-blue background for dark mode
@@ -105,17 +149,17 @@ function App() {
   
 
   const tanThemeObj = {
-    "--header-color": "#B0A696", /* Muted tan-gray */
-    "--underline-and-button-color": "#4D3225", /* Rich dark brown */
-    "--background-and-text-primary": "#F5F3EF", /* Very light beige */
-    "--background-secondary": "#ffffff", /* White */
-    "--menu-text-unselected": "rgba(204, 178, 137, 0.5)", /* Pale tan */
-    "--button-selected": "rgb(204, 178, 137)", /* Soft tan */
-    "--shadow": "#3F352C", /* Deep brown-gray */
-    "--timeline-header": "#A1622E8C", /* Warm muted sienna */
-    "--highlighted-text": "#A0522D", /* Rich sienna */
-    "--highlighted-text-hover": "#C68C5A", /* Warm light tan */
-    "--year-text": "#8B4513", /* Dark saddle brown */
+    "--light-header-color": "#B0A696", /* Muted tan-gray */
+    "--light-underline-and-button-color": "#4D3225", /* Rich dark brown */
+    "--light-background-and-text-primary": "#F5F3EF", /* Very light beige */
+    "--light-background-secondary": "#ffffff", /* White */
+    "--light-menu-text-unselected": "rgba(204, 178, 137, 0.5)", /* Pale tan */
+    "--light-button-selected": "rgb(204, 178, 137)", /* Soft tan */
+    "--light-shadow": "#3F352C", /* Deep brown-gray */
+    "--light-timeline-header": "#A1622E8C", /* Warm muted sienna */
+    "--light-highlighted-text": "#A0522D", /* Rich sienna */
+    "--light-highlighted-text-hover": "#C68C5A", /* Warm light tan */
+    "--light-year-text": "#8B4513", /* Dark saddle brown */
     "--dark-header-color": "#C8B78F", /* Lighter muted tan-gray */
     "--dark-underline-and-button-color": "#D2B59C", /* Softer tan button */
     "--dark-background-and-text-primary": "#5E6A5B", /* Lighter background */
@@ -129,43 +173,18 @@ function App() {
     "--dark-year-text": "#B4854E", /* Lighter dark brown year text */
   }
 
-  // const greenThemeObj = {
-  //   "--header-color": "#96B0A3",
-  //   "--underline-and-button-color": "#254D32",
-  //   "--background-and-text-primary": "#EFF2F1",
-  //   "--background-secondary": "#ffffff",
-  //   "--menu-text-unselected": "rgba(178, 204, 62, .5)",
-  //   "--button-selected": "rgb(178, 204, 62)",
-  //   "--shadow": "#2c2f3f",
-  //   "--timeline-header": "#16A34A8C",
-  //   "--highlighted-text": "#65A30D",
-  //   "--highlighted-text-hover": "#84CC16",
-  //   "--year-text": "#059669",
-  //   "--dark-header-color": "#A6C1B1", /* Lighter muted green */
-  //   "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
-  //   "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
-  //   // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
-  //   "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
-  //   "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
-  //   "--dark-shadow": "#3A4C42", /* Lighter shadow */
-  //   "--dark-timeline-header": "#4DAA6A", /* Muted vivid green */
-  //   "--dark-highlighted-text": "#A7D04C", /* Bright yellow-green */
-  //   "--dark-highlighted-text-hover": "#A0D13A", /* Darker yellow-green hover */
-  //   "--dark-year-text": "#82A57C", /* Lighter dark green */
-  // }
-
   const greenThemeObj = {
-    "--header-color": "#8D9B8E", // Soft greenish gray
-    "--underline-and-button-color": "#317A5C", // Deep green
-    "--background-and-text-primary": "#F4F6F2", // Light off-white background
-    "--background-secondary": "#FFFFFF", // Clean white secondary background
-    "--menu-text-unselected": "rgba(178, 204, 62, .5)", // Muted yellow-green
-    "--button-selected": "#99C82F", // Bright yellow-green button
-    "--shadow": "#2C2F3F", // Dark shadow
-    "--timeline-header": "#16A34A8C", // Lightened green timeline
-    "--highlighted-text": "#A7D06C", // Vibrant lime green
-    "--highlighted-text-hover": "#84CC16", // Bright green hover
-    "--year-text": "#059669", // Teal-like year text
+    "--light-header-color": "#8D9B8E", // Soft greenish gray
+    "--light-underline-and-button-color": "#317A5C", // Deep green
+    "--light-background-and-text-primary": "#F4F6F2", // Light off-white background
+    "--light-background-secondary": "#FFFFFF", // Clean white secondary background
+    "--light-menu-text-unselected": "rgba(178, 204, 62, .5)", // Muted yellow-green
+    "--light-button-selected": "#99C82F", // Bright yellow-green button
+    "--light-shadow": "#2C2F3F", // Dark shadow
+    "--light-timeline-header": "#16A34A8C", // Lightened green timeline
+    "--light-highlighted-text": "#A7D06C", // Vibrant lime green
+    "--light-highlighted-text-hover": "#84CC16", // Bright green hover
+    "--light-year-text": "#059669", // Teal-like year text
     "--dark-header-color": "#4B5D44", // Muted olive
     "--dark-underline-and-button-color": "#5A7B56", // Muted green for button/underline
     "--dark-background-and-text-primary": "#2A3528", // Charcoal greenish-dark background
@@ -347,7 +366,7 @@ function App() {
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
               {/* <!-- Mobile menu button--> */}
-              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--light-underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
                 {/* <!--
@@ -378,11 +397,11 @@ function App() {
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 min-[1026px]:w-[30vw] w-[290px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
-              <h1 className="header-title leading-[1.1] text-[var(--background-and-text-primary)] dark:text-[var(--dark-background-and-text-primary)]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
+              <h1 className="header-title leading-[1.1] text-[var(--light-background-and-text-primary)] dark:text-[var(--dark-background-and-text-primary)]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
-                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300 ${openGithubMenu ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--shadow)] dark:bg-[var(--dark-shadow)]'}`} 
+                    className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300 ${openGithubMenu ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`} 
                     onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
                   <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[1px]`}></span>
@@ -390,8 +409,8 @@ function App() {
                 {openGithubMenu && (
                   <div className="relative">
                     {/* Tooltip Tail */}
-                    <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--shadow)] dark:border-b-[var(--dark-shadow)]"></div>
-                    <ul className={`ml-[-100%] absolute bg-[var(--shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
+                    <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--light-shadow)] dark:border-b-[var(--dark-shadow)]"></div>
+                    <ul className={`ml-[-100%] absolute bg-[var(--light-shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samanthabjimenez" target="_blank" rel="noopener noreferrer">Previous Account</a></li>
                     </ul>
@@ -406,7 +425,7 @@ function App() {
                         setLinkedinClickCount(0); // Reset the counter
                       }
                     }} 
-                    target="_blank" rel="noopener noreferrer" className={`linkedin active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${linkedinClickCount === 1 ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`}>
+                    target="_blank" rel="noopener noreferrer" className={`linkedin active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${linkedinClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${linkedinClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
@@ -422,7 +441,7 @@ function App() {
                         setGmailClickCount(0); // Reset the counter
                       }
                     }} 
-                    className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--shadow)] dark:bg-[var(--dark-shadow)]'}`}>
+                    className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${gmailClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
@@ -438,7 +457,7 @@ function App() {
                         setPreviousPortfolioClickCount(0); // Reset the counter
                       }
                     }} 
-                    className={`portfolio active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--menu-text-unselected)]' : 'bg-[var(--shadow)]'}`}>
+                    className={`portfolio active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${previousPortfolioClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
@@ -490,7 +509,7 @@ function App() {
               </ul>             
             </nav>
               <div className="wrapper">
-                <span className='theme_title'>Themes:</span>
+                {/* <span className='theme_title'>Themes:</span>
                 <div className="toggle_radio">
                   <input 
                     type="radio" 
@@ -523,47 +542,46 @@ function App() {
                   <label htmlFor="second_toggle"><p>Blue</p></label>
                   <label htmlFor="third_toggle"><p>Brown</p></label>
                   <div className="toggle_option_slider"></div>
-                </div>
+                </div> */}
 
                 {/* Add dark mode toggle */}
-                <div className="mt-4" ref={darkModeToggleRef}>
-                  <span className='theme_title'>Mode:</span>
-                  <div className="toggle_radio dark_mode_toggle">
-                    <input 
-                      type="radio" 
-                      className="toggle_option" 
-                      id="light_toggle" 
-                      name="mode_toggle" 
-                      value="light"
-                      onChange={() => handleColorModeChange('light')}
-                      checked={colorMode === 'light'}
-                    />
-                    <input 
-                      type="radio" 
-                      className="toggle_option" 
-                      id="dark_toggle" 
-                      name="mode_toggle" 
-                      value="dark"
-                      onChange={() => handleColorModeChange('dark')}
-                      checked={colorMode === 'dark'}
-                    />
-                    <label htmlFor="light_toggle"><p>Light</p></label>
-                    <label htmlFor="dark_toggle"><p>Dark</p></label>
-                    <div className="toggle_option_slider"></div>
+                <label className="flex items-center py-2 sticky top-0 z-[11]">
+                  <div className="flex items-center toggle_radio">
+                  <input 
+                    type="radio" 
+                    className="toggle_option" 
+                    id="first_toggle" 
+                    name="toggle_option" 
+                    value="lightTheme" 
+                    onChange={() => toggleTheme()}
+                    checked={!darkMode}
+                  />
+                  <input 
+                    type="radio" 
+                    className="toggle_option" 
+                    id="second_toggle" 
+                    name="toggle_option" 
+                    value="darkTheme" 
+                    onChange={() => toggleTheme()}
+                    checked={darkMode}
+                  />
+                  <label htmlFor="first_toggle"><p>Light</p></label>
+                  <label htmlFor="second_toggle"><p>Dark</p></label>
+                  <div className="toggle_option_slider"></div>
                   </div>
-                </div>
+                </label>
               </div>
             </div>
-            <section id="about" className="about section bg-[var(--background-secondary)] dark:bg-[var(--dark-background-secondary)]">
+            <section id="about" className="about section bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)]">
               <Element name='about'><About/></Element>
             </section>
-            <section id="skills" className="skills section section-bg bg-[var(--background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]">
+            <section id="skills" className="skills section section-bg bg-[var(--light-background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]">
               <Element name='skills'><Skills/></Element>
             </section>
             {/* <section id="portfolio" className="portfolio section section-bg" style={{"height": "max-content"}}>
               <Element name='portfolio'><Portfolio/></Element>
             </section> */}
-            <section id="timeline" className="portfolio section section-bg bg-[var(--background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]" style={{"height": "max-content"}}>
+            <section id="timeline" className="portfolio section section-bg bg-[var(--light-background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]" style={{"height": "max-content"}}>
               <Element name='portfolio'><Timeline/></Element>
             </section>
             <section id="contact" className="contact content-around section bg-[var(--background-secondary)] dark:bg-[var(--dark-background-secondary)]">
