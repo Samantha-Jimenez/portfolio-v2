@@ -1059,3 +1059,33 @@
     font-size: 13px;
     line-height: 2em;
   }
+
+/* Dark mode toggle specific styles */
+.dark_mode_toggle {
+  width: 180px !important;
+  position: relative;
+}
+
+.dark_mode_toggle label {
+  width: 90px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.dark_mode_toggle .toggle_option_slider {
+  width: 90px !important;
+  background: rgba(255,255,255,.3) !important;
+  position: absolute !important;
+  height: 20px !important;
+  top: 3px !important;
+  transition: transform 0.4s ease !important;
+}
+
+/* Adjust the transform for the dark mode slider */
+.dark_mode_toggle input[type="radio"]:checked ~ .toggle_option_slider {
+  transform: translateX(90px) !important;
+}
+
+.dark_mode_toggle input[type="radio"]:first-of-type:checked ~ .toggle_option_slider {
+  transform: translateX(0) !important;
+}

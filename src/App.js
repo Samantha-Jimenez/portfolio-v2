@@ -199,9 +199,54 @@ function App() {
     setModalOpen(false);
   };
 
+  // Initialize dark mode based on user's system preference
+  const [colorMode, setColorMode] = useState(() => {
+    // First check localStorage for user preference
+    const savedPreference = localStorage.getItem('colorMode');
+    if (savedPreference !== null) {
+      return savedPreference;
+    }
+    
+    // If no saved preference, use system preference
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const initialMode = darkModeQuery.matches ? 'dark' : 'light';
+    console.log('System preference on load:', initialMode);
+    return initialMode;
+  });
+
+  // Listen for system theme changes
+  useEffect(() => {
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Only update based on system changes if no user preference exists
+    const handleChange = (e) => {
+      if (!localStorage.getItem('colorMode')) {
+        const newMode = e.matches ? 'dark' : 'light';
+        console.log('System theme changed to:', newMode);
+        setColorMode(newMode);
+      }
+    };
+
+    darkModeQuery.addEventListener('change', handleChange);
+    return () => darkModeQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  // Apply theme changes whenever colorMode changes
   useEffect(() => {
     applyTheme();
-  }, [currentTheme, currentThemeObj]);
+    if (colorMode === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [colorMode, currentTheme, currentThemeObj]);
+
+  // Handler for manual toggle
+  const handleColorModeChange = (mode) => {
+    console.log('Manual toggle to:', mode);
+    setColorMode(mode);
+    localStorage.setItem('colorMode', mode); // Save user preference
+  };
 
   const applyTheme = () => {
     Object.keys(currentThemeObj).map(key => {
@@ -223,9 +268,15 @@ function App() {
   const linkedinRef = useRef(null);
   const gmailRef = useRef(null);
   const portfolioRef = useRef(null);
+  const darkModeToggleRef = useRef(null);
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    // Check if click is inside the dark mode toggle
+    const isDarkModeToggleClick = event.target.closest('.dark_mode_toggle');
+    
+    if (menuRef.current && 
+        !menuRef.current.contains(event.target) && 
+        !isDarkModeToggleClick) {
       setOpenGithubMenu(false);
     }
     // Reset LinkedIn click count if clicked outside the LinkedIn icon
@@ -238,7 +289,7 @@ function App() {
     }
     // Reset Previous Portfolio click count if clicked outside the icon
     if (portfolioRef.current && !portfolioRef.current.contains(event.target)) {
-      setPreviousPortfolioClickCount(0); // Reset the counter
+      setPreviousPortfolioClickCount(0);
     }
   };
 
@@ -472,6 +523,34 @@ function App() {
                   <label htmlFor="second_toggle"><p>Blue</p></label>
                   <label htmlFor="third_toggle"><p>Brown</p></label>
                   <div className="toggle_option_slider"></div>
+                </div>
+
+                {/* Add dark mode toggle */}
+                <div className="mt-4" ref={darkModeToggleRef}>
+                  <span className='theme_title'>Mode:</span>
+                  <div className="toggle_radio dark_mode_toggle">
+                    <input 
+                      type="radio" 
+                      className="toggle_option" 
+                      id="light_toggle" 
+                      name="mode_toggle" 
+                      value="light"
+                      onChange={() => handleColorModeChange('light')}
+                      checked={colorMode === 'light'}
+                    />
+                    <input 
+                      type="radio" 
+                      className="toggle_option" 
+                      id="dark_toggle" 
+                      name="mode_toggle" 
+                      value="dark"
+                      onChange={() => handleColorModeChange('dark')}
+                      checked={colorMode === 'dark'}
+                    />
+                    <label htmlFor="light_toggle"><p>Light</p></label>
+                    <label htmlFor="dark_toggle"><p>Dark</p></label>
+                    <div className="toggle_option_slider"></div>
+                  </div>
                 </div>
               </div>
             </div>
