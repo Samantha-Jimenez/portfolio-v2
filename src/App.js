@@ -363,7 +363,7 @@ function App() {
 
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm w-full text-center mx-2">
+          <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm w-full text-center mx-2 text-black">
             <span className="absolute top-2 right-2 cursor-pointer text-gray-500" onClick={closeModal}>&times;</span>
             <h2 className="text-xl font-semibold">Under Construction</h2>
             <p className="mt-2">This website is currently under construction. <strong>Please enjoy this draft in the meantime. Don't mind the bugs.</strong></p>
