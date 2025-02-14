@@ -632,6 +632,19 @@
     color: var(--header-color);
   }
 
+  .timeline-header {
+    color: var(--timeline-header);
+  }
+
+  .timeline-subheader {
+    color: var(--underline-and-button-color);
+  }
+
+  .timeline-pill {
+    background-color: var(--background-secondary);
+    color: var(--year-text);
+  }
+
   .portfolio .portfolio-item {
     margin-bottom: 30px;
     padding: 5px;

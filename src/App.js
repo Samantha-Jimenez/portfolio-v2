@@ -202,7 +202,7 @@ function App() {
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 py-[48px] px-4 min-[1026px]:w-[30vw] w-[290px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
             <div className="profile">
-              <h1 className="header-title leading-[1.1] text-[var(--light-background-and-text-primary)] dark:text-[var(--dark-background-and-text-primary)]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
+              <h1 className="header-title leading-[1.1] text-[var(--light-background-and-text-primary)]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
                   <div 
@@ -245,7 +245,7 @@ function App() {
                         setGmailClickCount(0);
                       }
                     }} 
-                    className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
+                    className={`active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${gmailClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
@@ -261,7 +261,7 @@ function App() {
                         setPreviousPortfolioClickCount(0);
                       }
                     }} 
-                    className={`portfolio active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--shadow)] dark:bg-[var(--dark-shadow)]'}`}>
+                    className={`active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${previousPortfolioClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >

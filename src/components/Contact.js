@@ -63,18 +63,18 @@ const Contact = () => {
                         <div className="row">
                             <div className="form-group col-md-6" data-aos="zoom-in" data-aos-duration="1000">
                                 <label htmlFor="from_name">Name</label>
-                                <input type="text" name="from_name" className="form-control bg-white border w-full rounded-lg pl-3" id="name" autoComplete="name" required/>
+                                <input type="text" name="from_name" className="form-control w-full rounded-lg pl-3" id="name" autoComplete="name" required/>
                                 <div className="validate"></div>
                             </div>
                             <div className="form-group col-md-6" data-aos="zoom-in" data-aos-duration="1000">
                                 <label htmlFor="reply_to">Email</label>
-                                <input type="email" className="form-control bg-white border w-full rounded-lg pl-3" name="reply_to" id="email" data-rule="email" autoComplete="email" data-msg="Please enter a valid email" required/>
+                                <input type="email" className="form-control w-full rounded-lg pl-3" name="reply_to" id="email" data-rule="email" autoComplete="email" data-msg="Please enter a valid email" required/>
                                 <div className="validate"></div>
                             </div>
                         </div>
                         <div className="form-group" data-aos="zoom-in" data-aos-duration="1000">
                             <label htmlFor="message">Message</label>
-                            <textarea className="form-control bg-white border w-full" id="message" name="message" rows="10" data-rule="required" data-msg="Please write something for us" required></textarea>
+                            <textarea className="form-control w-full" id="message" name="message" rows="10" data-rule="required" data-msg="Please write something for us" required></textarea>
                             <div className="validate"></div>
                         </div>
                         <div className="mb-3">
