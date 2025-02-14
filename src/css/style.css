@@ -590,10 +590,6 @@
     margin: 0px 7px;
   }
 
-  .skill-tools {
-    border: 1px solid rgb(156, 163, 175);
-  }
-
   @media (max-width: 1200px) {
     .skills-content .skill {
       flex: 1 1 calc(25% - 10px);

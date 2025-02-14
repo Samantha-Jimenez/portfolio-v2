@@ -74,7 +74,7 @@ const Skills = () => {
             />
             <div className="skills-content">
                 {filteredSkills.map((skill, index) => (
-                    <div className={`iconDiv flex bg-white shadow-lg border ${skill.category === 'tools' ? 'border-gray-400 dark:bg-gray-300/20 dark:border-gray-100/40 skill-tools' : skill.category === 'frontend' ? 'border-orange-700/40 dark:bg-orange-300/20 dark:border-orange-100/40' : 'border-green-600/60 dark:bg-green-300/20 dark:border-green-100/40'}`} key={index} data-aos="fade-up" data-aos-duration="500" >
+                    <div className={`iconDiv flex shadow-lg ${skill.category === 'tools' ? 'bg-gray-300/20' : skill.category === 'frontend' ? 'bg-orange-300/20' : 'bg-green-300/20'}`} key={index} data-aos="fade-up" data-aos-duration="500" >
                         <i className={`${skill.icon} icon`}></i>
                         <div className="progress">
                             <span className="skill">{skill.name}</span>
