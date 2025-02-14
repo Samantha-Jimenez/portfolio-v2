@@ -6,11 +6,14 @@
   --light-background-secondary: #ffffff;
   --light-menu-text-unselected: rgba(178, 204, 62, .5);
   --light-button-selected: rgb(178, 204, 62);
-  --light-shadow: #2c2f3f;
+  --light-shadow: rgb(64, 64, 64);
+  /* --light-shadow: #2c2f3f; */
   --light-timeline-header: #16A34A8C;
   --light-highlighted-text: #65A30D;
   --light-highlighted-text-hover: #84CC16;
   --light-year-text: #059669;
+  --light-p-text: rgb(75, 85, 99);
+  --light-p-subtext: #4B5563;
 
   /* Dark Theme Colors */
   --dark-header-color: #A6C1B1;
@@ -25,7 +28,8 @@
   --dark-highlighted-text: #A7D04C;
   --dark-highlighted-text-hover: #A0D13A;
   --dark-year-text: #82A57C;
-
+  --dark-p-text: rgb(209, 213, 219);
+  --dark-p-subtext: #9CA3AF;
   /* Default Theme (Light) */
   --header-color: var(--light-header-color);
   --underline-and-button-color: var(--light-underline-and-button-color);
@@ -38,6 +42,8 @@
   --highlighted-text: var(--light-highlighted-text);
   --highlighted-text-hover: var(--light-highlighted-text-hover);
   --year-text: var(--light-year-text);
+  --p-text: var(--light-p-text);
+  --p-subtext: var(--light-p-subtext);
 }
 
 /* Dark Theme Override */
@@ -53,13 +59,15 @@
   --highlighted-text: var(--dark-highlighted-text);
   --highlighted-text-hover: var(--dark-highlighted-text-hover);
   --year-text: var(--dark-year-text);
+  --p-text: var(--dark-p-text);
+  --p-subtext: var(--dark-p-subtext);
 }
 
     /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
   body {
-    /* color: #272829; */
+    color: var(--p-text);
     background-color: var(--background-secondary) !important;
     background: none !important;
     font-family: "Montserrat", serif;
@@ -230,6 +238,10 @@
   .nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
     color: var(--button-selected);
   }
+
+  .github-menu {
+    background-color: var(--tooltip-color);
+  }
   
   /* Mobile Navigation */
   
@@ -255,70 +267,6 @@
     margin-left: 2vh;
   }
   
-  .toggle_radio{
-      background: rgba(255,255,255,.1);
-      margin: 6px 0px 4px 20px;
-      overflow: hidden;
-      padding: 0 !important;
-      border-radius: 50px;
-      position: relative;
-      height: 26px;
-      /* width: 200px; */
-      display: flex;
-  }
-  
-  .toggle_radio input[type=radio]{
-    display: none;
-  }
-
-  .toggle_radio label{
-    font-size: 12px;
-    font-weight: 300;
-    color: rgba(255,255,255,.9);
-    z-index: 0;
-    display: block;
-    width: 60px;
-    height: 20px;
-    margin: 3px 3px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 1;
-    text-align: center;
-    float: left;
-  }
-
-  .toggle_option_slider{
-    width: 65px;
-    height: 20px;
-    position: absolute;
-    top: 3px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    transition: all .4s ease;
-  }
-  
-  #first_toggle:checked ~ .toggle_option_slider{
-    background: rgba(255,255,255,.3);
-    left: .25vh;
-  }
-
-  #second_toggle:checked ~ .toggle_option_slider{
-    background: rgba(255,255,255,.3);
-    left: 67px;
-  }
-
-  #third_toggle:checked ~ .toggle_option_slider{
-    background: rgba(255,255,255,.3);
-    right: .25vh;
-  }
-  
   .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
@@ -328,6 +276,95 @@
     margin-bottom: 3px;
     left: 45% !important;
   }
+
+  .react-toggle-track-check, .react-toggle-track-x {
+    height: 15px !important;
+  }
+  
+  .custom-classname.react-toggle--checked .react-toggle-track, .react-toggle--checked .react-toggle-track {
+    background-color: #4D4D4D !important;
+  }
+  
+  /*bg-sky-300*/
+  .custom-classname.react-toggle {
+    color: rgb(125, 211, 252) !important;
+  }
+  
+  /*bg-amber-300*/
+  .custom-classname.react-toggle--checked {
+    color: rgb(252, 211, 77) !important;
+  }
+  
+  .custom-classname.react-toggle--checked:hover {
+    color: black !important;
+  }
+  
+  .custom-classname.react-toggle:hover {
+    color: black !important;
+  }
+  
+  /*bg-sky-600*/
+  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: rgb(2, 132, 199) !important;
+  }
+  
+  /*bg-amber-400*/
+  .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: rgb(251, 191, 36) !important;
+  }
+  
+  /* .input:focus, .input:focus-within, .textarea:focus {
+    outline-color: #90EE8F;
+    border-color: #90EE8F;
+  } */
+  
+  /*bg-sky-300*/
+  .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(125, 211, 252) !important;
+  }
+  
+  /*bg-sky-300*/
+  .react-toggle--focus .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(125, 211, 252) !important;
+  }
+  
+  /*bg-amber-400*/
+  .react-toggle--checked.react-toggle--focus .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(253, 230, 138) !important;
+  }
+  
+  /*bg-amber-400*/
+  .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(253, 230, 138) !important;
+  }
+  
+  /*bg-sky-300*/
+  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(125, 211, 252);
+  }
+  
+  .react-toggle--checked .react-toggle-thumb {
+    border-color: #4D4D4D !important;
+    border: .5px solid #4D4D4D !important;
+  }
+
+  /* Adjust icon positions */
+.custom-toggle .react-toggle-track-check,
+.custom-toggle .react-toggle-track-x {
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-toggle .react-toggle-track-check {
+  left: 5px;
+}
+
+.custom-toggle .react-toggle-track-x {
+  right: 5px;
+}
+
 
   /*--------------------------------------------------------------
   # Hero Section
@@ -645,6 +682,10 @@
     color: var(--year-text);
   }
 
+  .subtext {
+    color: var(--p-subtext);
+  }
+
   .portfolio .portfolio-item {
     margin-bottom: 30px;
     padding: 5px;
@@ -886,7 +927,7 @@
   }
 
   .slick-prev:before, .slick-next:before {
-    color: #0F172A !important;
+    color: var(--p-text) !important;
   }
 
   .slick-prev {
@@ -1065,90 +1106,3 @@
     font-size: 13px;
     line-height: 2em;
   }
-
-/* Dark mode toggle specific styles */
-.dark_mode_toggle {
-  width: 180px !important;
-  position: relative;
-}
-
-.dark_mode_toggle label {
-  width: 90px !important;
-  position: relative;
-  z-index: 1;
-}
-
-.dark_mode_toggle .toggle_option_slider {
-  width: 90px !important;
-  background: rgba(255,255,255,.3) !important;
-  position: absolute !important;
-  height: 20px !important;
-  top: 3px !important;
-  transition: transform 0.4s ease !important;
-}
-
-/* Adjust the transform for the dark mode slider */
-.dark_mode_toggle input[type="radio"]:checked ~ .toggle_option_slider {
-  transform: translateX(90px) !important;
-}
-
-.dark_mode_toggle input[type="radio"]:first-of-type:checked ~ .toggle_option_slider {
-  transform: translateX(0) !important;
-}
-
-/* Custom styles for react-toggle */
-.custom-toggle.react-toggle {
-  touch-action: pan-x;
-  position: relative;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-}
-
-.custom-toggle.react-toggle .react-toggle-track {
-  @apply bg-emerald-700;
-  width: 50px;
-  height: 24px;
-}
-
-.custom-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  @apply bg-emerald-800;
-}
-
-.custom-toggle.react-toggle--checked .react-toggle-track {
-  @apply bg-emerald-600;
-}
-
-.custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  @apply bg-emerald-500;
-}
-
-.custom-toggle.react-toggle .react-toggle-thumb {
-  @apply border-emerald-300;
-  top: 1px;
-  left: 1px;
-  width: 22px;
-  height: 22px;
-}
-
-.custom-toggle.react-toggle--checked .react-toggle-thumb {
-  left: 27px;
-}
-
-/* Adjust icon positions */
-.custom-toggle .react-toggle-track-check,
-.custom-toggle .react-toggle-track-x {
-  width: 17px;
-  height: 17px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.custom-toggle .react-toggle-track-check {
-  left: 5px;
-}
-
-.custom-toggle .react-toggle-track-x {
-  right: 5px;
-}

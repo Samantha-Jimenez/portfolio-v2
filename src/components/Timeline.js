@@ -149,12 +149,12 @@ const Timeline = () => {
                         <time className="timeline-pill sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024 - '25</time>
                         <div className="timeline-subheader text-xl font-bold" data-aos="fade-left" data-aos-duration="1500">Running Club App</div>
                     </div>
-                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                    <div className="text-neutral-500" data-aos="fade-left" data-aos-duration="1500">
                         Web app connecting runners to local clubs, events, and community updates.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
-                            <button type="button" className="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 text-gray-600 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion1')} aria-expanded={openAccordions['accordion1']} aria-controls="accordion-flush-body-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion1')} aria-expanded={openAccordions['accordion1']} aria-controls="accordion-flush-body-1">
                                 <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
                                 <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion1'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>
@@ -206,12 +206,12 @@ const Timeline = () => {
                         <time className="timeline-pill sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024</time>
                         <div className="timeline-subheader text-xl font-bold" data-aos="fade-left" data-aos-duration="1500">Pursuit Hackathon Award-Winning App for Most Innovative Use of AI</div>
                     </div>
-                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                    <div className="text-neutral-500" data-aos="fade-left" data-aos-duration="1500">
                         AI-driven Othello game with dynamic opponents and blockers, built with AI-assisted coding tools.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
-                            <button type="button" className="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 text-gray-600 dark:text-gray-400 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion2')} aria-expanded={openAccordions['accordion2']} aria-controls="accordion-flush-body-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion2')} aria-expanded={openAccordions['accordion2']} aria-controls="accordion-flush-body-1">
                                 <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
                                 <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion2'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>
@@ -265,7 +265,7 @@ const Timeline = () => {
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
-                            <button type="button" className="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 text-gray-600 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion3')} aria-expanded={openAccordions['accordion3']} aria-controls="accordion-flush-body-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion3')} aria-expanded={openAccordions['accordion3']} aria-controls="accordion-flush-body-1">
                                 <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
                                 <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion3'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>
@@ -306,12 +306,12 @@ const Timeline = () => {
                         <time className="timeline-pill sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
                         <div className="timeline-subheader text-xl font-bold" data-aos="fade-left" data-aos-duration="1500">Capstone Project at Pursuit Coding Fellowship</div>
                     </div>
-                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                    <div className="text-neutral-500" data-aos="fade-left" data-aos-duration="1500">
                         Full-stack app for managing pet info, finding local vets, and scheduling video calls.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
-                            <button type="button" className="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 text-gray-600 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion4')} aria-expanded={openAccordions['accordion4']} aria-controls="accordion-flush-body-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion4')} aria-expanded={openAccordions['accordion4']} aria-controls="accordion-flush-body-1">
                                 <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
                                 <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion4'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>
@@ -352,12 +352,12 @@ const Timeline = () => {
                        <time className="timeline-pill sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
                        <div className="timeline-subheader text-xl font-bold" data-aos="fade-left" data-aos-duration="1500">Independent Project at Pursuit Coding Fellowship</div>
                     </div>
-                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                    <div className="text-neutral-500" data-aos="fade-left" data-aos-duration="1500">
                         Social media app for sharing photos effortlessly with friends.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
-                            <button type="button" className="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 text-gray-600 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion5')} aria-expanded={openAccordions['accordion5']} aria-controls="accordion-flush-body-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion5')} aria-expanded={openAccordions['accordion5']} aria-controls="accordion-flush-body-1">
                                 <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
                                 <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion5'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>
@@ -398,12 +398,12 @@ const Timeline = () => {
                         <time className="timeline-pill sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
                         <div className="timeline-subheader text-xl font-bold" data-aos="fade-left" data-aos-duration="1500">Codecademy Sponsored Pursuit Hackathon Award-Winning App for Most Creative</div>
                     </div>
-                    <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
+                    <div className="text-neutral-500" data-aos="fade-left" data-aos-duration="1500">
                         Frontend app pairing solo diners for two-person restaurant reservations.
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
-                            <button type="button" className="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 text-gray-600 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion6')} aria-expanded={openAccordions['accordion6']} aria-controls="accordion-flush-body-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion6')} aria-expanded={openAccordions['accordion6']} aria-controls="accordion-flush-body-1">
                                 <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
                                 <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion6'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>

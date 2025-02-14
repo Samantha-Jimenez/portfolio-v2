@@ -214,7 +214,7 @@ function App() {
                 {openGithubMenu && (
                   <div className="relative">
                     <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--light-shadow)] dark:border-b-[var(--dark-shadow)]"></div>
-                    <ul className={`ml-[-100%] absolute bg-[var(--light-shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
+                    <ul className={`github-menu ml-[-100%] absolute p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samanthabjimenez" target="_blank" rel="noopener noreferrer">Previous Account</a></li>
                     </ul>
@@ -307,19 +307,34 @@ function App() {
               </ul>             
             </nav>
               <div className="wrapper">
-                <label className="flex items-center py-2 pl-6 sticky top-0 z-[11] bg-emerald-800/90 dark:bg-emerald-600/90 rounded-lg mx-4 backdrop-blur-sm">
+                <label className="flex items-center py-2 sticky top-0 z-[11] rounded-lg mx-4 backdrop-blur-sm">
+                  {darkMode ?
+                  <span className="text-sm pl-2 text-neutral-200 font-medium pr-2">
+                    Light
+                  </span>
+                  :
+                  <span className="text-sm pl-2 text-neutral-700 font-medium pr-2">
+                    Light
+                  </span>
+                  }
                   <Toggle
                     icons={{
-                      checked: <span className="icon-[ph--sun-bold] text-yellow-200"/>,
-                      unchecked: <span className="icon-[ph--moon-stars-bold] text-slate-200"/>
+                      checked: <span className="icon-[ph--sun-bold] text-amber-300 group-hover:text-[#4D4D4D]"/>,
+                      unchecked: <span className="icon-[ph--moon-stars-bold] text-sky-400 group-hover:text-white"/>
                     }}
                     checked={darkMode}
                     onChange={toggleDarkMode}
-                    className='custom-toggle'
+                    className='custom-toggle group'
                   />
-                  <span className="text-sm pl-2 text-gray-200 font-medium">
-                    {darkMode ? 'Dark Mode' : 'Light Mode'}
+                    {darkMode ? 
+                  <span className="text-sm pl-2 text-neutral-700 font-medium">
+                  Dark
                   </span>
+                    : 
+                    <span className="text-sm pl-2 text-neutral-200 font-medium">
+                  Dark
+                  </span>
+                  }
                 </label>
               </div>
             </div>
