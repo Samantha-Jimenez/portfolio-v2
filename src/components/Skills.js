@@ -23,7 +23,7 @@ const Skills = () => {
         <div className="container">
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
                 <h2 className=''>Skills</h2>
-                <p data-aos="fade-up" data-aos-duration="1000">These are the technical skills I’ve cultivated along my journey. I’m eager to keep building on this foundation and mastering new technologies.</p>
+                <p data-aos="fade-up" data-aos-duration="1000">These are the technical skills I've cultivated along my journey. I'm eager to keep building on this foundation and mastering new technologies.</p>
             </div>
             <Select
                 isMulti
@@ -34,25 +34,47 @@ const Skills = () => {
                 styles={{
                     control: (provided, state) => ({
                         ...provided,
-                        boxShadow: state.isFocused ? '0 0 0 2px var(--button-selected) dark:var(--dark-button-selected)' : null,
-                        borderColor: state.isFocused ? 'var(--button-selected) dark:var(--dark-button-selected)' : provided.borderColor,
+                        boxShadow: state.isFocused ? '0 0 0 2px var(--light-button-selected)' : null,
+                        borderColor: state.isFocused ? 'var(--light-button-selected)' : provided.borderColor,
                         '&:hover': {
-                            borderColor: 'var(--button-selected) dark:var(--dark-button-selected)',
+                            borderColor: 'var(--light-button-selected)',
                         },
+                        '@media (prefers-color-scheme: dark)': {
+                            boxShadow: state.isFocused ? '0 0 0 2px var(--dark-button-selected)' : null,
+                            borderColor: state.isFocused ? 'var(--dark-button-selected)' : provided.borderColor,
+                            '&:hover': {
+                                borderColor: 'var(--dark-button-selected)',
+                            },
+                        }
                     }),
                     option: (provided, state) => ({
                         ...provided,
-                        backgroundColor: state.isSelected ? 'var(--timeline-header) dark:var(--dark-timeline-header)' : state.isFocused ? 'var(--background-and-text-primary) dark:var(--dark-background-and-text-primary)' : provided.backgroundColor,
+                        backgroundColor: state.isSelected 
+                            ? 'var(--light-background-and-text-primary)' 
+                            : state.isFocused 
+                                ? 'var(--light-background-and-text-primary)' 
+                                : provided.backgroundColor,
                         color: state.isFocused ? '#000' : provided.color,
                         '&:active': {
-                            backgroundColor: 'var(--menu-text-unselected) dark:var(--dark-menu-text-unselected)',
+                            backgroundColor: 'var(--light-menu-text-unselected)',
                         },
+                        '@media (prefers-color-scheme: dark)': {
+                            backgroundColor: state.isSelected 
+                                ? 'var(--dark-year-text)' 
+                                : state.isFocused 
+                                    ? 'var(--dark-p-text)' 
+                                    : provided.backgroundColor,
+                            color: state.isFocused ? '#000' : 'var(--dark-p-subtext)',
+                            '&:active': {
+                                backgroundColor: 'var(--dark-menu-text-unselected)',
+                            },
+                        }
                     }),
                 }}
             />
             <div className="skills-content">
                 {filteredSkills.map((skill, index) => (
-                    <div className={`iconDiv flex bg-white shadow-lg border ${skill.category === 'tools' ? 'border-gray-400' : skill.category === 'frontend' ? 'border-orange-700/40' : 'border-green-600/60'}`} key={index} data-aos="fade-up" data-aos-duration="500" >
+                    <div className={`iconDiv flex bg-white shadow-lg border ${skill.category === 'tools' ? 'border-gray-400 dark:bg-gray-300/20 dark:border-gray-100/40 skill-tools' : skill.category === 'frontend' ? 'border-orange-700/40 dark:bg-orange-300/20 dark:border-orange-100/40' : 'border-green-600/60 dark:bg-green-300/20 dark:border-green-100/40'}`} key={index} data-aos="fade-up" data-aos-duration="500" >
                         <i className={`${skill.icon} icon`}></i>
                         <div className="progress">
                             <span className="skill">{skill.name}</span>
