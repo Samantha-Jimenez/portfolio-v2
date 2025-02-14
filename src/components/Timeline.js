@@ -137,17 +137,17 @@ const Timeline = () => {
     return (
         <div className="container">
             <div className="section-title" data-aos="fade-left" data-aos-duration="1500">
-                <h2 className='text-[var(--light-header-color)] dark:text-[var(--dark-header-color)]'>Portfolio</h2>
+                <h2 className='text-[#96B0A3] dark:text-[#A6C1B1]'>Portfolio</h2>
                 <p data-aos="fade-left" data-aos-duration="1000">Take a look at some of my work below and check back for updates and new projects in the future.</p>
             </div>
             {/* Project Sections */}
             <div className="-my-6">
                 {/* Mvmnt Collectives */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
-                    <div className="font-medium text-2xl text-[var(--light-timeline-header)] dark:text-[var(--dark-timeline-header)] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Mvmnt Collectives</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--light-button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[var(--light-year-text)] dark:text-[var(--dark-year-text)] bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024 - '25</time>
-                        <div className="text-xl font-bold text-[var(--light-underline-and-button-color)] dark:text-[var(--dark-underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Running Club App</div>
+                    <div className="font-medium text-2xl text-[#16A34A8C] dark:text-[#4DAA6A] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Mvmnt Collectives</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[#059669] dark:text-[#82A57C] bg-[#ffffff] dark:bg-[#2D3F2E] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024 - '25</time>
+                        <div className="text-xl font-bold text-[#254D32] dark:text-[#A6D4A1]" data-aos="fade-left" data-aos-duration="1500">Running Club App</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
                         Web app connecting runners to local clubs, events, and community updates.
@@ -176,7 +176,7 @@ const Timeline = () => {
                                         {mvmntSlides.map((_, index) => (
                                             <button
                                                 key={index}
-                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[var(--light-button-selected)] dark:bg-[var(--dark-button-selected)]' : 'bg-gray-300 dark:bg-gray-600'}`}
+                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[rgb(178,204,62)] dark:bg-[rgb(178,204,62)]' : 'bg-gray-300 dark:bg-gray-600'}`}
                                                 onClick={() => handleIndicatorClick(index)}
                                                 aria-label={`Slide ${index + 1}`}
                                             />
@@ -201,10 +201,10 @@ const Timeline = () => {
 
                 {/* Othello */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
-                    <div className="font-medium text-2xl text-[var(--light-timeline-header)] dark:text-[var(--dark-timeline-header)] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Othello</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--light-button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[var(--light-year-text)] dark:text-[var(--dark-year-text)] bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024</time>
-                        <div className="text-xl font-bold text-[var(--light-underline-and-button-color)] dark:text-[var(--dark-underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Pursuit Hackathon Award-Winning App for Most Innovative Use of AI</div>
+                    <div className="font-medium text-2xl text-[#16A34A8C] dark:text-[#4DAA6A] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Othello</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[#059669] dark:text-[#82A57C] bg-[#ffffff] dark:bg-[#2D3F2E] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024</time>
+                        <div className="text-xl font-bold text-[#254D32] dark:text-[#A6D4A1]" data-aos="fade-left" data-aos-duration="1500">Pursuit Hackathon Award-Winning App for Most Innovative Use of AI</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
                         AI-driven Othello game with dynamic opponents and blockers, built with AI-assisted coding tools.
@@ -233,7 +233,7 @@ const Timeline = () => {
                                         {othelloSlides.map((_, index) => (
                                             <button
                                                 key={index}
-                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[var(--light-button-selected)] dark:bg-[var(--dark-button-selected)]' : 'bg-gray-300 dark:bg-gray-600'}`}
+                                                className={`w-2 h-2 mx-1 rounded-full ${currentIndex === index ? 'bg-[rgb(178,204,62)] dark:bg-[rgb(178,204,62)]' : 'bg-gray-300 dark:bg-gray-600'}`}
                                                 onClick={() => handleIndicatorClick(index)}
                                                 aria-label={`Slide ${index + 1}`}
                                             />
@@ -258,10 +258,10 @@ const Timeline = () => {
 
                 {/* Peloton */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
-                    <div className="font-medium text-2xl text-[var(--light-timeline-header)] dark:text-[var(--dark-timeline-header)] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Peloton Interactive, Inc.</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--light-button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[var(--light-year-text)] dark:text-[var(--dark-year-text)] bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2021 - '23</time>
-                        <div className="text-xl font-bold text-[var(--light-underline-and-button-color)] dark:text-[var(--dark-underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Peloton Interactive, Inc.</div>
+                    <div className="font-medium text-2xl text-[#16A34A8C] dark:text-[#4DAA6A] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Peloton Interactive, Inc.</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[#059669] dark:text-[#82A57C] bg-[#ffffff] dark:bg-[#2D3F2E] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2021 - '23</time>
+                        <div className="text-xl font-bold text-[#254D32] dark:text-[#A6D4A1]" data-aos="fade-left" data-aos-duration="1500">Peloton Interactive, Inc.</div>
                     </div>
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
                         <h2 id="accordion-flush-heading-1">
@@ -301,10 +301,10 @@ const Timeline = () => {
 
                 {/* ZooVio */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
-                    <div className="font-medium text-2xl text-[var(--light-timeline-header)] dark:text-[var(--dark-timeline-header)] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">ZooVio</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--light-button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[var(--light-year-text)] dark:text-[var(--dark-year-text)] bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
-                        <div className="text-xl font-bold text-[var(--light-underline-and-button-color)] dark:text-[var(--dark-underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Capstone Project at Pursuit Coding Fellowship</div>
+                    <div className="font-medium text-2xl text-[#16A34A8C] dark:text-[#4DAA6A] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">ZooVio</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[#059669] dark:text-[#82A57C] bg-[#ffffff] dark:bg-[#2D3F2E] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
+                        <div className="text-xl font-bold text-[#254D32] dark:text-[#A6D4A1]" data-aos="fade-left" data-aos-duration="1500">Capstone Project at Pursuit Coding Fellowship</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
                         Full-stack app for managing pet info, finding local vets, and scheduling video calls.
@@ -347,10 +347,10 @@ const Timeline = () => {
 
                 {/* Finstagram */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
-                    <div className="font-medium text-2xl text-[var(--light-timeline-header)] dark:text-[var(--dark-timeline-header)] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Finstagram</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--light-button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[var(--light-year-text)] dark:text-[var(--dark-year-text)] bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
-                       <div className="text-xl font-bold text-[var(--light-underline-and-button-color)] dark:text-[var(--dark-underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Independent Project at Pursuit Coding Fellowship</div>
+                    <div className="font-medium text-2xl text-[#16A34A8C] dark:text-[#4DAA6A] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Finstagram</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[#059669] dark:text-[#82A57C] bg-[#ffffff] dark:bg-[#2D3F2E] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
+                       <div className="text-xl font-bold text-[#254D32] dark:text-[#A6D4A1]" data-aos="fade-left" data-aos-duration="1500">Independent Project at Pursuit Coding Fellowship</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
                         Social media app for sharing photos effortlessly with friends.
@@ -393,10 +393,10 @@ const Timeline = () => {
 
                 {/* Tastebuds */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
-                    <div className="font-caveat font-medium text-2xl text-[var(--light-timeline-header)] dark:text-[var(--dark-timeline-header)] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Tastebuds</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[var(--light-button-selected)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[var(--light-year-text)] dark:text-[var(--dark-year-text)] bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
-                        <div className="text-xl font-bold text-[var(--light-underline-and-button-color)] dark:text-[var(--dark-underline-and-button-color)]" data-aos="fade-left" data-aos-duration="1500">Codecademy Sponsored Pursuit Hackathon Award-Winning App for Most Creative</div>
+                    <div className="font-caveat font-medium text-2xl text-[#16A34A8C] dark:text-[#4DAA6A] mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Tastebuds</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                        <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-[#059669] dark:text-[#82A57C] bg-[#ffffff] dark:bg-[#2D3F2E] rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2019 - '20</time>
+                        <div className="text-xl font-bold text-[#254D32] dark:text-[#A6D4A1]" data-aos="fade-left" data-aos-duration="1500">Codecademy Sponsored Pursuit Hackathon Award-Winning App for Most Creative</div>
                     </div>
                     <div className="text-slate-500" data-aos="fade-left" data-aos-duration="1500">
                         Frontend app pairing solo diners for two-person restaurant reservations.

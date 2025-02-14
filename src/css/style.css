@@ -1,31 +1,61 @@
-/* :root { */
-    /* --header:#040b14;
-    --title-text: #96B0A3;
-    --attention: #B2CC3E;
-    --highlight: #254D32;
-    --lowlight: #582630;
-    --shadow: #2c2f3f;
-    --unselected-dark: rgba(178, 204, 62, .5);
-    --unselected-light: rgba(141, 160, 126, .8);
-    --shadow-background: #000000; */
-    /* --shadow-background: #EFF2F1; */
+:root {
+  /* Light Theme Colors */
+  --light-header-color: #96B0A3;
+  --light-underline-and-button-color: #254D32;
+  --light-background-and-text-primary: #EFF2F1;
+  --light-background-secondary: #ffffff;
+  --light-menu-text-unselected: rgba(178, 204, 62, .5);
+  --light-button-selected: rgb(178, 204, 62);
+  --light-shadow: #2c2f3f;
+  --light-timeline-header: #16A34A8C;
+  --light-highlighted-text: #65A30D;
+  --light-highlighted-text-hover: #84CC16;
+  --light-year-text: #059669;
 
-    /* --menu-text-white: #EFF2F1; */
-    /* --header-color: #96B0A3;
-    --underline-and-button-color: #254D32;
-    --background-and-text-primary: #EFF2F1;
-    --background-secondary: #ffffff;
-    --menu-text-unselected: rgba(178, 204, 62, .5);
-    --button-selected: rgb(178, 204, 62);
-    --shadow: #2c2f3f; */
-  /* } */
+  /* Dark Theme Colors */
+  --dark-header-color: #A6C1B1;
+  --dark-underline-and-button-color: #A6D4A1;
+  --dark-background-and-text-primary: #4C5E54;
+  /* --dark-background-secondary: #2D3F2E; */
+  --dark-background-secondary: #262626;
+  --dark-menu-text-unselected: rgba(178, 204, 62, 1);
+  --dark-button-selected: rgb(178, 204, 62);
+  --dark-shadow: #3A4C42;
+  --dark-timeline-header: #4DAA6A;
+  --dark-highlighted-text: #A7D04C;
+  --dark-highlighted-text-hover: #A0D13A;
+  --dark-year-text: #82A57C;
 
-  /* :root, [data-theme] { */
-    /* background-color: white; */
-    /* color: black; */
-/* } */
-  
-  /*--------------------------------------------------------------
+  /* Default Theme (Light) */
+  --header-color: var(--light-header-color);
+  --underline-and-button-color: var(--light-underline-and-button-color);
+  --background-and-text-primary: var(--light-background-and-text-primary);
+  --background-secondary: var(--light-background-secondary);
+  --menu-text-unselected: var(--light-menu-text-unselected);
+  --button-selected: var(--light-button-selected);
+  --shadow: var(--light-shadow);
+  --timeline-header: var(--light-timeline-header);
+  --highlighted-text: var(--light-highlighted-text);
+  --highlighted-text-hover: var(--light-highlighted-text-hover);
+  --year-text: var(--light-year-text);
+}
+
+/* Dark Theme Override */
+:root.dark {
+  --header-color: var(--dark-header-color);
+  --underline-and-button-color: var(--dark-underline-and-button-color);
+  --background-and-text-primary: var(--dark-background-and-text-primary);
+  --background-secondary: var(--dark-background-secondary);
+  --menu-text-unselected: var(--dark-menu-text-unselected);
+  --button-selected: var(--dark-button-selected);
+  --shadow: var(--dark-shadow);
+  --timeline-header: var(--dark-timeline-header);
+  --highlighted-text: var(--dark-highlighted-text);
+  --highlighted-text-hover: var(--dark-highlighted-text-hover);
+  --year-text: var(--dark-year-text);
+}
+
+    /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
   body {
@@ -306,6 +336,10 @@
   #landing {
     grid-area: 1 / 2 / 2 / 3;
   }
+
+  #hero {
+    background-color: var(--background-and-text-primary);
+  }
   
   #hero:before {
     position: absolute;
@@ -329,18 +363,18 @@
     font-size: clamp(24px, 4vw + 1rem, 64px);
     font-weight: 700;
     line-height: 56px;
-    /* color: var(--header-color); */
+    color: var(--header-color);
   }
   
   #hero p {
-    /* color: var(--header-color); */
+    color: var(--header-color);
     margin-bottom: 50px;
     font-size: clamp(18px, 0.5vw + 1rem, 26px);
     font-weight: 300;
   }
   
   #hero p span {
-    /* color: var(--header-color); */
+    color: var(--header-color);
     padding-bottom: 4px;
     margin-left: 5px;
   }
@@ -417,12 +451,17 @@
 
   .about {
     grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--background-secondary);
+  }
+
+  .about h2 {
+    color: var(--header-color);
   }
 
   .about .content h3 {
     font-weight: 700;
     font-size: 26px;
-    /* color: var(--header-color); */
+    color: var(--header-color);
   }
   
   .about .content ul {
@@ -443,6 +482,14 @@
   .about .content p:last-child {
     margin-bottom: 0;
   }
+
+  .highlighted-text {
+    color: var(--highlighted-text);
+  }
+
+  .highlighted-text:hover {
+    color: var(--highlighted-text-hover);
+  }
   
   /*--------------------------------------------------------------
   # Skills
@@ -450,6 +497,11 @@
 
   .skills {
     grid-area: 3 / 2 / 4 / 3;
+    background-color: var(--background-and-text-primary);
+  }
+
+  .skills h2 {
+    color: var(--header-color);
   }
   
   .skills .progress {
@@ -573,8 +625,13 @@
 
   .portfolio {
     grid-area: 4 / 2 / 5 / 3;
+    background-color: var(--background-and-text-primary);
   }
   
+  .portfolio h2 {
+    color: var(--header-color);
+  }
+
   .portfolio .portfolio-item {
     margin-bottom: 30px;
     padding: 5px;
@@ -840,9 +897,14 @@
     grid-area: 5 / 2 / 6 / 3;
     grid-template-rows: max-content max-content;
     display: grid;
+    background-color: var(--background-secondary);
+  }
+
+  .contact h2 {
+    color: var(--header-color);
   }
   
-  .contact .info {
+  /* .contact .info {
     padding: 30px;
     background: #fff;
     width: 100%;
@@ -869,7 +931,7 @@
     font-weight: 600;
     margin-bottom: 5px;
     color: #050d18;
-  }
+  } */
   
   /* .contact .info p {
     padding: 0 0 10px 60px;
@@ -878,7 +940,7 @@
     color: var(--header-color);
   } */
   
-  .contact .info .email p {
+  /* .contact .info .email p {
     padding-top: 5px;
   }
   
@@ -909,12 +971,12 @@
   .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
     background: var(--underline-and-button-color);
     color: #fff;
-  }
+  } */
   
   .contact .php-email-form {
     width: 100%;
     padding: 30px;
-    background: #fff;
+    background: var(--background-secondary);
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   }
   
@@ -1088,4 +1150,61 @@
 
 .dark_mode_toggle input[type="radio"]:first-of-type:checked ~ .toggle_option_slider {
   transform: translateX(0) !important;
+}
+
+/* Custom styles for react-toggle */
+.custom-toggle.react-toggle {
+  touch-action: pan-x;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.custom-toggle.react-toggle .react-toggle-track {
+  @apply bg-emerald-700;
+  width: 50px;
+  height: 24px;
+}
+
+.custom-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  @apply bg-emerald-800;
+}
+
+.custom-toggle.react-toggle--checked .react-toggle-track {
+  @apply bg-emerald-600;
+}
+
+.custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  @apply bg-emerald-500;
+}
+
+.custom-toggle.react-toggle .react-toggle-thumb {
+  @apply border-emerald-300;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+}
+
+.custom-toggle.react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+}
+
+/* Adjust icon positions */
+.custom-toggle .react-toggle-track-check,
+.custom-toggle .react-toggle-track-x {
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-toggle .react-toggle-track-check {
+  left: 5px;
+}
+
+.custom-toggle .react-toggle-track-x {
+  right: 5px;
 }

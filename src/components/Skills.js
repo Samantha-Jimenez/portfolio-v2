@@ -22,7 +22,7 @@ const Skills = () => {
     return (
         <div className="container">
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
-                <h2 className='text-[var(--light-header-color)] dark:text-[var(--dark-header-color)]'>Skills</h2>
+                <h2 className=''>Skills</h2>
                 <p data-aos="fade-up" data-aos-duration="1000">These are the technical skills I’ve cultivated along my journey. I’m eager to keep building on this foundation and mastering new technologies.</p>
             </div>
             <Select
@@ -34,18 +34,18 @@ const Skills = () => {
                 styles={{
                     control: (provided, state) => ({
                         ...provided,
-                        boxShadow: state.isFocused ? '0 0 0 2px var(--light-button-selected) dark:var(--dark-button-selected)' : null,
-                        borderColor: state.isFocused ? 'var(--light-button-selected) dark:var(--dark-button-selected)' : provided.borderColor,
+                        boxShadow: state.isFocused ? '0 0 0 2px var(--button-selected) dark:var(--dark-button-selected)' : null,
+                        borderColor: state.isFocused ? 'var(--button-selected) dark:var(--dark-button-selected)' : provided.borderColor,
                         '&:hover': {
-                            borderColor: 'var(--light-button-selected) dark:var(--dark-button-selected)',
+                            borderColor: 'var(--button-selected) dark:var(--dark-button-selected)',
                         },
                     }),
                     option: (provided, state) => ({
                         ...provided,
-                        backgroundColor: state.isSelected ? 'var(--light-timeline-header) dark:var(--dark-timeline-header)' : state.isFocused ? 'var(--light-background-and-text-primary) dark:var(--dark-background-and-text-primary)' : provided.backgroundColor,
+                        backgroundColor: state.isSelected ? 'var(--timeline-header) dark:var(--dark-timeline-header)' : state.isFocused ? 'var(--background-and-text-primary) dark:var(--dark-background-and-text-primary)' : provided.backgroundColor,
                         color: state.isFocused ? '#000' : provided.color,
                         '&:active': {
-                            backgroundColor: 'var(--light-menu-text-unselected) dark:var(--dark-menu-text-unselected)',
+                            backgroundColor: 'var(--menu-text-unselected) dark:var(--dark-menu-text-unselected)',
                         },
                     }),
                 }}

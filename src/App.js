@@ -11,81 +11,20 @@ import Contact from './components/Contact';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Toggle from 'react-toggle';
+import "react-toggle/style.css";
 
 AOS.init();
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage for user preference
-    const savedPreference = localStorage.getItem('darkMode');
-    if (savedPreference !== null) {
-      return JSON.parse(savedPreference);
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return true;
     }
-    // Check user's preferred color scheme
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return false;
   });
-  // Define lightMode based on darkMode
-  const [lightMode, setLightMode] = useState(false);
-
-  useEffect(() => {
-    // Apply initial theme based on preference
-    if (darkMode) {
-      applyDarkMode();
-    } else {
-      applyLightMode();
-    }
-  }, []);
-
-  const applyDarkMode = () => {
-    document.documentElement.classList.add('dark');
-    // Apply dark theme variables
-    Object.keys(currentThemeObj).forEach(key => {
-      if (key.startsWith('--dark-')) {
-        const baseKey = key.replace('--dark-', '--');
-        document.documentElement.style.setProperty(baseKey, currentThemeObj[key]);
-      }
-    });
-  };
-
-  const applyLightMode = () => {
-    document.documentElement.classList.remove('dark');
-    // Apply light theme variables
-    Object.keys(currentThemeObj).forEach(key => {
-      if (key.startsWith('--light-')) {
-        const baseKey = key.replace('--light-', '--');
-        document.documentElement.style.setProperty(baseKey, currentThemeObj[key]);
-      }
-    });
-  };
-
-  const toggleTheme = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    setLightMode(!newDarkMode);
-    
-    if (newDarkMode) {
-      applyDarkMode();
-    } else {
-      setThemeObj(lightThemeObj); // Ensure light theme object is set
-      applyLightMode();
-    }
-
-    // Save preference to localStorage
-    localStorage.setItem('darkMode', newDarkMode);
-  };
-
-  const [openGithubMenu, setOpenGithubMenu] = useState(false);
 
   const [currentTheme, setTheme] = useState("greenTheme");
-
-  //Current Color Scheme
-  //header-color: #96B0A3
-  //underline-and-button-color: #254D32
-  //background-primary: bg-[#EFF2F1]
-  //background-secondary: #ffffff
-  //menu-text-white: #EFF2F1
-  //menu-text-unselected: rgba(178, 204, 62, .5)
-  //button-selected: #B2CC3E
 
   const [currentThemeObj, setThemeObj] = useState({
     "--light-header-color": "#96B0A3",
@@ -101,8 +40,10 @@ function App() {
     "--light-year-text": "#059669",
     "--dark-header-color": "#A6C1B1", /* Lighter muted green */
     "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
-    "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
-    "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
+    // "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
+    "--dark-background-and-text-primary": "#171717",
+    // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
+    "--dark-background-secondary": "#262626",
     "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
     "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
     "--dark-shadow": "#3A4C42", /* Lighter shadow */
@@ -112,104 +53,6 @@ function App() {
     "--dark-year-text": "#82A57C", /* Lighter dark green */
   });
 
-  const lightThemeObj = {
-    "--light-header-color": "#FFFFFF", // Example light header color
-    "--light-underline-and-button-color": "#CCCCCC", // Example light button color
-    "--light-background-and-text-primary": "#F0F0F0", // Example light background
-    "--light-background-secondary": "#FFFFFF", // Example light secondary background
-    "--light-menu-text-unselected": "rgba(0, 0, 0, 0.5)", // Example unselected text color
-    "--light-button-selected": "#007BFF", // Example selected button color
-    // Add more properties as needed
-  };
-
-  const blueThemeObj = {
-    "--light-header-color": "#A2B9CA", // Warm soft blue-gray header
-    "--light-underline-and-button-color": "#1E3969", // Deep navy blue
-    "--light-background-and-text-primary": "#F1F6FC", // Light blueish-white background
-    "--light-background-secondary": "#FFFFFF", // Clean white background
-    "--light-menu-text-unselected": "rgba(62, 137, 204, 0.5)", // Soft sky blue
-    "--light-button-selected": "#4F81B3", // Vibrant blue button
-    "--light-shadow": "#2C3340", // Cool dark slate blue shadow
-    "--light-timeline-header": "#1D4ED88C", // Muted vivid blue
-    "--light-highlighted-text": "#1D4ED8", // Electric blue for highlights
-    "--light-highlighted-text-hover": "#3B82F6", // Bright blue hover
-    "--light-year-text": "#1E3A8A", // Deep dark blue year text
-    "--dark-header-color": "#3A4C63", // Muted bluish-gray for dark mode header
-    "--dark-underline-and-button-color": "#5D7C94", // Darker blue with lighter accents for buttons
-    "--dark-background-and-text-primary": "#2A3A4B", // Slate-blue background for dark mode
-    "--dark-background-secondary": "#2E3A43", // Slate-blue background for dark mode
-    "--dark-menu-text-unselected": "rgba(62, 137, 204, 1)", // Brighter unselected text in dark mode
-    "--dark-button-selected": "#5E99F8", // Vibrant blue button for dark mode
-    "--dark-shadow": "#4C5B6A", // Lightened dark slate blue shadow
-    "--dark-timeline-header": "#2B7AB3", // Muted vivid blue for timeline header
-    "--dark-highlighted-text": "#75A8F7", // Glowing bright blue for highlighted text
-    "--dark-highlighted-text-hover": "#3E7BC5", // Darker vivid blue hover for dark mode
-    "--dark-year-text": "#75A8F7", // Brighter blue year text in dark mode
-  };
-  
-
-  const tanThemeObj = {
-    "--light-header-color": "#B0A696", /* Muted tan-gray */
-    "--light-underline-and-button-color": "#4D3225", /* Rich dark brown */
-    "--light-background-and-text-primary": "#F5F3EF", /* Very light beige */
-    "--light-background-secondary": "#ffffff", /* White */
-    "--light-menu-text-unselected": "rgba(204, 178, 137, 0.5)", /* Pale tan */
-    "--light-button-selected": "rgb(204, 178, 137)", /* Soft tan */
-    "--light-shadow": "#3F352C", /* Deep brown-gray */
-    "--light-timeline-header": "#A1622E8C", /* Warm muted sienna */
-    "--light-highlighted-text": "#A0522D", /* Rich sienna */
-    "--light-highlighted-text-hover": "#C68C5A", /* Warm light tan */
-    "--light-year-text": "#8B4513", /* Dark saddle brown */
-    "--dark-header-color": "#C8B78F", /* Lighter muted tan-gray */
-    "--dark-underline-and-button-color": "#D2B59C", /* Softer tan button */
-    "--dark-background-and-text-primary": "#5E6A5B", /* Lighter background */
-    "--dark-background-secondary": "#3E4A3E", /* Slightly lighter dark background */
-    "--dark-menu-text-unselected": "rgba(204, 178, 137, 1)", /* Brighter unselected text */
-    "--dark-button-selected": "rgb(204, 178, 137)", /* Soft tan button */
-    "--dark-shadow": "#6A5F4A", /* Lighter brown-gray shadow */
-    "--dark-timeline-header": "#D59E62", /* Warm muted sienna */
-    "--dark-highlighted-text": "#E4C28E", /* Light warm tan */
-    "--dark-highlighted-text-hover": "#B38053", /* Darker rich sienna hover */
-    "--dark-year-text": "#B4854E", /* Lighter dark brown year text */
-  }
-
-  const greenThemeObj = {
-    "--light-header-color": "#8D9B8E", // Soft greenish gray
-    "--light-underline-and-button-color": "#317A5C", // Deep green
-    "--light-background-and-text-primary": "#F4F6F2", // Light off-white background
-    "--light-background-secondary": "#FFFFFF", // Clean white secondary background
-    "--light-menu-text-unselected": "rgba(178, 204, 62, .5)", // Muted yellow-green
-    "--light-button-selected": "#99C82F", // Bright yellow-green button
-    "--light-shadow": "#2C2F3F", // Dark shadow
-    "--light-timeline-header": "#16A34A8C", // Lightened green timeline
-    "--light-highlighted-text": "#A7D06C", // Vibrant lime green
-    "--light-highlighted-text-hover": "#84CC16", // Bright green hover
-    "--light-year-text": "#059669", // Teal-like year text
-    "--dark-header-color": "#4B5D44", // Muted olive
-    "--dark-underline-and-button-color": "#5A7B56", // Muted green for button/underline
-    "--dark-background-and-text-primary": "#2A3528", // Charcoal greenish-dark background
-    "--dark-background-secondary": "#2D3F2E", // Charcoal greenish-dark background
-    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", // Bright unselected text
-    "--dark-button-selected": "#7FBF49", // Bright green button for dark mode
-    "--dark-shadow": "#2C3E29", // Light greenish shadow
-    "--dark-timeline-header": "#4DAA6A", // Muted vivid green for dark mode
-    "--dark-highlighted-text": "#A1D09E", // Light glowing green
-    "--dark-highlighted-text-hover": "#A0D13A", // Darker yellow-green hover
-    "--dark-year-text": "#82A57C", // Lighter dark green year text
-  };
-  
-
-  const changeTheme = (e) => {
-    setTheme(e.target.value);
-    if(e.target.value === 'blueTheme') {
-      setThemeObj(blueThemeObj)
-    } else if(e.target.value === 'tanTheme') {
-      setThemeObj(tanThemeObj);
-    } else if(e.target.value === 'greenTheme') {
-      setThemeObj(greenThemeObj);
-    }
-  }
-  
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const [isModalOpen, setModalOpen] = useState(true);
@@ -218,62 +61,6 @@ function App() {
     setModalOpen(false);
   };
 
-  // Initialize dark mode based on user's system preference
-  const [colorMode, setColorMode] = useState(() => {
-    // First check localStorage for user preference
-    const savedPreference = localStorage.getItem('colorMode');
-    if (savedPreference !== null) {
-      return savedPreference;
-    }
-    
-    // If no saved preference, use system preference
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const initialMode = darkModeQuery.matches ? 'dark' : 'light';
-    console.log('System preference on load:', initialMode);
-    return initialMode;
-  });
-
-  // Listen for system theme changes
-  useEffect(() => {
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Only update based on system changes if no user preference exists
-    const handleChange = (e) => {
-      if (!localStorage.getItem('colorMode')) {
-        const newMode = e.matches ? 'dark' : 'light';
-        console.log('System theme changed to:', newMode);
-        setColorMode(newMode);
-      }
-    };
-
-    darkModeQuery.addEventListener('change', handleChange);
-    return () => darkModeQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  // Apply theme changes whenever colorMode changes
-  useEffect(() => {
-    applyTheme();
-    if (colorMode === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [colorMode, currentTheme, currentThemeObj]);
-
-  // Handler for manual toggle
-  const handleColorModeChange = (mode) => {
-    console.log('Manual toggle to:', mode);
-    setColorMode(mode);
-    localStorage.setItem('colorMode', mode); // Save user preference
-  };
-
-  const applyTheme = () => {
-    Object.keys(currentThemeObj).map(key => {
-      const value = currentThemeObj[key];
-      document.documentElement.style.setProperty(key, value);
-    });
-  }
-
   const openMenu = (isOpen, setIsOpen) => {
     setIsOpen(!isOpen);
   };  
@@ -281,7 +68,6 @@ function App() {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-  // let previousGithubIcon = <span className="icon-[line-md--github-twotone]"></span>
 
   const menuRef = useRef(null);
   const linkedinRef = useRef(null);
@@ -290,23 +76,16 @@ function App() {
   const darkModeToggleRef = useRef(null);
 
   const handleClickOutside = (event) => {
-    // Check if click is inside the dark mode toggle
-    const isDarkModeToggleClick = event.target.closest('.dark_mode_toggle');
-    
     if (menuRef.current && 
-        !menuRef.current.contains(event.target) && 
-        !isDarkModeToggleClick) {
+        !menuRef.current.contains(event.target)) {
       setOpenGithubMenu(false);
     }
-    // Reset LinkedIn click count if clicked outside the LinkedIn icon
     if (linkedinRef.current && !linkedinRef.current.contains(event.target)) {
       setLinkedinClickCount(0);
     }
-    // Reset Gmail click count if clicked outside the Gmail icon
     if (gmailRef.current && !gmailRef.current.contains(event.target)) {
       setGmailClickCount(0);
     }
-    // Reset Previous Portfolio click count if clicked outside the icon
     if (portfolioRef.current && !portfolioRef.current.contains(event.target)) {
       setPreviousPortfolioClickCount(0);
     }
@@ -329,12 +108,49 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Set offset based on screen width
-  const offset = windowWidth <= 768 ? -20 : -50; // Example: -30px for mobile, -50px for desktop
+  const offset = windowWidth <= 768 ? -20 : -50;
 
   const [gmailClickCount, setGmailClickCount] = useState(0);
   const [linkedinClickCount, setLinkedinClickCount] = useState(0);
   const [previousPortfolioClickCount, setPreviousPortfolioClickCount] = useState(0);
+
+  const [openGithubMenu, setOpenGithubMenu] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      Object.keys(currentThemeObj).forEach(key => {
+        if (key.startsWith('--dark-')) {
+          const baseKey = key.replace('--dark-', '--');
+          document.documentElement.style.setProperty(baseKey, currentThemeObj[key]);
+        }
+      });
+    } else {
+      document.documentElement.classList.remove('dark');
+      Object.keys(currentThemeObj).forEach(key => {
+        if (key.startsWith('--light-')) {
+          const baseKey = key.replace('--light-', '--');
+          document.documentElement.style.setProperty(baseKey, currentThemeObj[key]);
+        }
+      });
+    }
+  }, [darkMode, currentThemeObj]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const handleChange = (e) => {
+      setDarkMode(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
+  };
 
   return (
     <div className="App">
@@ -365,23 +181,12 @@ function App() {
       <div className="vsc-initialized" data-aos-easing="ease-in-out-back" data-aos-duration="1000" data-aos-delay="0" data-spy="scroll" data-target="#header" data-offset="50">
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
-              {/* <!-- Mobile menu button--> */}
               <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--light-underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
-                {/* <!--
-                  Icon when menu is closed.
-
-                  Menu open: "hidden", Menu closed: "block"
-                --> */}
                 <svg className="block size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                {/* <!--
-                  Icon when menu is open.
-
-                  Menu open: "block", Menu closed: "hidden"
-                --> */}
                 <svg className="hidden size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
@@ -408,7 +213,6 @@ function App() {
                   </div>
                 {openGithubMenu && (
                   <div className="relative">
-                    {/* Tooltip Tail */}
                     <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--light-shadow)] dark:border-b-[var(--dark-shadow)]"></div>
                     <ul className={`ml-[-100%] absolute bg-[var(--light-shadow)] p-2 text-xs w-max rounded-lg top-[8px] z-[12] text-white`}>
                       <li className="hover:bg-gray-400/60 rounded p-1"><a href="https://github.com/samantha-jimenez" target="_blank" rel="noopener noreferrer">Current Account</a></li>
@@ -422,7 +226,7 @@ function App() {
                       setLinkedinClickCount(linkedinClickCount + 1);
                       if (linkedinClickCount + 1 === 2) {
                         window.open('https://www.linkedin.com/in/samanthabjimenez/', '_blank');
-                        setLinkedinClickCount(0); // Reset the counter
+                        setLinkedinClickCount(0);
                       }
                     }} 
                     target="_blank" rel="noopener noreferrer" className={`linkedin active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${linkedinClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
@@ -438,7 +242,7 @@ function App() {
                       setGmailClickCount(gmailClickCount + 1);
                       if (gmailClickCount + 1 === 2) {
                         window.open('mailto:SamanthaB.Jimenez@gmail.com', '_blank');
-                        setGmailClickCount(0); // Reset the counter
+                        setGmailClickCount(0);
                       }
                     }} 
                     className={`google active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
@@ -454,10 +258,10 @@ function App() {
                       setPreviousPortfolioClickCount(previousPortfolioClickCount + 1);
                       if (previousPortfolioClickCount + 1 === 2) {
                         window.open('https://samantha-jimenez.netlify.app/', '_blank');
-                        setPreviousPortfolioClickCount(0); // Reset the counter
+                        setPreviousPortfolioClickCount(0);
                       }
                     }} 
-                    className={`portfolio active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
+                    className={`portfolio active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--shadow)] dark:bg-[var(--dark-shadow)]'}`}>
                     <div 
                       className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${previousPortfolioClickCount === 1 ? 'scale-[1.35]' : ''}`} 
                     >
@@ -494,12 +298,6 @@ function App() {
                     <span className="icon-[bx--mail-send] mr-2"></span>Contact
                   </Link>
                 </li>
-                 {/* <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
-                   <a className="menuLink" href="https://drive.google.com/file/d/1mLEMcUxuJGYWjr4ebNv7zvZY6Yo-RS_w/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                     <span className="icon-[tabler--file-text] mr-2"></span>
-                     <span style={{"marginLeft": "-4px"}}>Resume</span>
-                   </a>
-                 </li> */}
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <a className="menuLink" href="https://www.canva.com/design/DAGdIEMAtNo/9Ogf8MbGWa3s1OrTmh8cqA/view?utm_content=DAGdIEMAtNo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h856a94e905" target="_blank" rel="noopener noreferrer">
                     <span className="icon-[tabler--file-text] mr-2"></span>
@@ -509,82 +307,32 @@ function App() {
               </ul>             
             </nav>
               <div className="wrapper">
-                {/* <span className='theme_title'>Themes:</span>
-                <div className="toggle_radio">
-                  <input 
-                    type="radio" 
-                    className="toggle_option" 
-                    id="first_toggle" 
-                    name="toggle_option" 
-                    value="greenTheme" 
-                    onChange={changeTheme}
-                    checked={currentTheme === 'greenTheme'}
-                  />
-                  <input 
-                    type="radio" 
-                    className="toggle_option" 
-                    id="second_toggle" 
-                    name="toggle_option" 
-                    value="blueTheme" 
-                    onChange={changeTheme}
-                    checked={currentTheme === 'blueTheme'}
-                  />
-                  <input 
-                    type="radio" 
-                    className="toggle_option" 
-                    id="third_toggle" 
-                    name="toggle_option" 
-                    value="tanTheme" 
-                    onChange={changeTheme}
-                    checked={currentTheme === 'tanTheme'}
-                  />
-                  <label htmlFor="first_toggle"><p>Green</p></label>
-                  <label htmlFor="second_toggle"><p>Blue</p></label>
-                  <label htmlFor="third_toggle"><p>Brown</p></label>
-                  <div className="toggle_option_slider"></div>
-                </div> */}
-
-                {/* Add dark mode toggle */}
-                <label className="flex items-center py-2 sticky top-0 z-[11]">
-                  <div className="flex items-center toggle_radio">
-                  <input 
-                    type="radio" 
-                    className="toggle_option" 
-                    id="first_toggle" 
-                    name="toggle_option" 
-                    value="lightTheme" 
-                    onChange={() => toggleTheme()}
-                    checked={!darkMode}
-                  />
-                  <input 
-                    type="radio" 
-                    className="toggle_option" 
-                    id="second_toggle" 
-                    name="toggle_option" 
-                    value="darkTheme" 
-                    onChange={() => toggleTheme()}
+                <label className="flex items-center py-2 pl-6 sticky top-0 z-[11] bg-emerald-800/90 dark:bg-emerald-600/90 rounded-lg mx-4 backdrop-blur-sm">
+                  <Toggle
+                    icons={{
+                      checked: <span className="icon-[ph--sun-bold] text-yellow-200"/>,
+                      unchecked: <span className="icon-[ph--moon-stars-bold] text-slate-200"/>
+                    }}
                     checked={darkMode}
+                    onChange={toggleDarkMode}
+                    className='custom-toggle'
                   />
-                  <label htmlFor="first_toggle"><p>Light</p></label>
-                  <label htmlFor="second_toggle"><p>Dark</p></label>
-                  <div className="toggle_option_slider"></div>
-                  </div>
+                  <span className="text-sm pl-2 text-gray-200 font-medium">
+                    {darkMode ? 'Dark Mode' : 'Light Mode'}
+                  </span>
                 </label>
               </div>
             </div>
-            <section id="about" className="about section bg-[var(--light-background-secondary)] dark:bg-[var(--dark-background-secondary)]">
+            <section id="about" className="about section bg-white dark:bg-neutral-800">
               <Element name='about'><About/></Element>
             </section>
-            <section id="skills" className="skills section section-bg bg-[var(--light-background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]">
+            <section id="skills" className="skills section section-bg bg-gray-100 dark:bg-neutral-900">
               <Element name='skills'><Skills/></Element>
             </section>
-            {/* <section id="portfolio" className="portfolio section section-bg" style={{"height": "max-content"}}>
-              <Element name='portfolio'><Portfolio/></Element>
-            </section> */}
-            <section id="timeline" className="portfolio section section-bg bg-[var(--light-background-and-text-primary)] dark:bg-[var(--dark-background-and-text-primary)]" style={{"height": "max-content"}}>
+            <section id="timeline" className="portfolio section section-bg bg-gray-100 dark:bg-neutral-900" style={{"height": "max-content"}}>
               <Element name='portfolio'><Timeline/></Element>
             </section>
-            <section id="contact" className="contact content-around section bg-[var(--background-secondary)] dark:bg-[var(--dark-background-secondary)]">
+            <section id="contact" className="contact content-around section">
               <Element name='contact'><Contact/></Element>
               <footer id='footer' data-aos="fade-up">
                 <p className='credits pt-10'>
@@ -598,7 +346,6 @@ function App() {
         </div>
       </div>
 
-      {/* Modal for Under Construction */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm w-full text-center mx-2">
