@@ -87,6 +87,7 @@ html {
 
 .form-control {
   margin: 1vh 0;
+  background-color: var(--background-and-text-primary);
 }
 
 .container-fluid {

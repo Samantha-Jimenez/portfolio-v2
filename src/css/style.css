@@ -1,35 +1,77 @@
 :root {
-    /* --header:#040b14;
-    --title-text: #96B0A3;
-    --attention: #B2CC3E;
-    --highlight: #254D32;
-    --lowlight: #582630;
-    --shadow: #2c2f3f;
-    --unselected-dark: rgba(178, 204, 62, .5);
-    --unselected-light: rgba(141, 160, 126, .8);
-    --shadow-background: #000000; */
-    /* --shadow-background: #EFF2F1; */
+  /* Light Theme Colors */
+  --light-header-color: #96B0A3;
+  --light-underline-and-button-color: #254D32;
+  --light-button-color: #254D32;
+  --light-background-and-text-primary: #EFF2F1;
+  --light-background-secondary: #ffffff;
+  --light-menu-text-unselected: rgba(178, 204, 62, .5);
+  --light-button-selected: rgb(178, 204, 62);
+  --light-shadow: rgb(64, 64, 64);
+  /* --light-shadow: #2c2f3f; */
+  --light-timeline-header: #16A34A8C;
+  --light-highlighted-text: #65A30D;
+  --light-highlighted-text-hover: #84CC16;
+  --light-year-text: #059669;
+  --light-p-text: rgb(75, 85, 99);
+  --light-p-subtext: #4B5563;
 
-    /* --menu-text-white: #EFF2F1; */
-    /* --header-color: #96B0A3;
-    --underline-and-button-color: #254D32;
-    --background-and-text-primary: #EFF2F1;
-    --background-secondary: #ffffff;
-    --menu-text-unselected: rgba(178, 204, 62, .5);
-    --button-selected: rgb(178, 204, 62);
-    --shadow: #2c2f3f; */
-  }
-
-  :root, [data-theme] {
-    background-color: white;
-    color: black;
+  /* Dark Theme Colors */
+  --dark-header-color: #A6C1B1;
+  --dark-underline-and-button-color: #A6D4A1;
+  --dark-button-color: #4DAA6A;
+  --dark-background-and-text-primary: #4C5E54;
+  /* --dark-background-secondary: #2D3F2E; */
+  --dark-background-secondary: #262626;
+  --dark-menu-text-unselected: rgba(178, 204, 62, 1);
+  --dark-button-selected: rgb(178, 204, 62);
+  --dark-shadow: #3A4C42;
+  --dark-timeline-header: #4DAA6A;
+  --dark-highlighted-text: #A7D04C;
+  --dark-highlighted-text-hover: #A0D13A;
+  --dark-year-text: #82A57C;
+  --dark-p-text: rgb(209, 213, 219);
+  --dark-p-subtext: #9CA3AF;
+  /* Default Theme (Light) */
+  --header-color: var(--light-header-color);
+  --underline-and-button-color: var(--light-underline-and-button-color);
+  --button-color: var(--light-button-color);
+  --background-and-text-primary: var(--light-background-and-text-primary);
+  --background-secondary: var(--light-background-secondary);
+  --menu-text-unselected: var(--light-menu-text-unselected);
+  --button-selected: var(--light-button-selected);
+  --shadow: var(--light-shadow);
+  --timeline-header: var(--light-timeline-header);
+  --highlighted-text: var(--light-highlighted-text);
+  --highlighted-text-hover: var(--light-highlighted-text-hover);
+  --year-text: var(--light-year-text);
+  --p-text: var(--light-p-text);
+  --p-subtext: var(--light-p-subtext);
 }
-  
-  /*--------------------------------------------------------------
+
+/* Dark Theme Override */
+:root.dark {
+  --header-color: var(--dark-header-color);
+  --underline-and-button-color: var(--dark-underline-and-button-color);
+  --button-color: var(--dark-button-color);
+  --background-and-text-primary: var(--dark-background-and-text-primary);
+  --background-secondary: var(--dark-background-secondary);
+  --menu-text-unselected: var(--dark-menu-text-unselected);
+  --button-selected: var(--dark-button-selected);
+  --shadow: var(--dark-shadow);
+  --timeline-header: var(--dark-timeline-header);
+  --highlighted-text: var(--dark-highlighted-text);
+  --highlighted-text-hover: var(--dark-highlighted-text-hover);
+  --year-text: var(--dark-year-text);
+  --p-text: var(--dark-p-text);
+  --p-subtext: var(--dark-p-subtext);
+}
+
+    /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
   body {
-    color: #272829;
+    color: var(--p-text);
     background-color: var(--background-secondary) !important;
     background: none !important;
     font-family: "Montserrat", serif;
@@ -78,7 +120,7 @@
   }
 
   .header-title {
-    color: var(--background-and-text-primary);
+    /* color: var(--background-and-text-primary); */
     font-size: 3.25rem;
     padding-bottom: 4rem;
   }
@@ -200,6 +242,10 @@
   .nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
     color: var(--button-selected);
   }
+
+  .github-menu {
+    background-color: var(--tooltip-color);
+  }
   
   /* Mobile Navigation */
   
@@ -225,70 +271,6 @@
     margin-left: 2vh;
   }
   
-  .toggle_radio{
-      background: rgba(255,255,255,.1);
-      margin: 6px 0px 4px 20px;
-      overflow: hidden;
-      padding: 0 !important;
-      border-radius: 50px;
-      position: relative;
-      height: 26px;
-      width: 200px;
-      display: flex;
-  }
-  
-  .toggle_radio input[type=radio]{
-    display: none;
-  }
-
-  .toggle_radio label{
-    font-size: 12px;
-    font-weight: 300;
-    color: rgba(255,255,255,.9);
-    z-index: 0;
-    display: block;
-    width: 60px;
-    height: 20px;
-    margin: 3px 3px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 1;
-    text-align: center;
-    float: left;
-  }
-
-  .toggle_option_slider{
-    width: 65px;
-    height: 20px;
-    position: absolute;
-    top: 3px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    transition: all .4s ease;
-  }
-  
-  #first_toggle:checked ~ .toggle_option_slider{
-    background: rgba(255,255,255,.3);
-    left: .25vh;
-  }
-
-  #second_toggle:checked ~ .toggle_option_slider{
-    background: rgba(255,255,255,.3);
-    left: 67px;
-  }
-
-  #third_toggle:checked ~ .toggle_option_slider{
-    background: rgba(255,255,255,.3);
-    right: .25vh;
-  }
-  
   .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
@@ -299,12 +281,105 @@
     left: 45% !important;
   }
 
+  .react-toggle-track-check, .react-toggle-track-x {
+    height: 15px !important;
+  }
+  
+  .custom-classname.react-toggle--checked .react-toggle-track, .react-toggle--checked .react-toggle-track {
+    background-color: #4D4D4D !important;
+  }
+  
+  /*bg-sky-300*/
+  .custom-classname.react-toggle {
+    color: rgb(125, 211, 252) !important;
+  }
+  
+  /*bg-amber-300*/
+  .custom-classname.react-toggle--checked {
+    color: rgb(252, 211, 77) !important;
+  }
+  
+  .custom-classname.react-toggle--checked:hover {
+    color: black !important;
+  }
+  
+  .custom-classname.react-toggle:hover {
+    color: black !important;
+  }
+  
+  /*bg-sky-600*/
+  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: rgb(2, 132, 199) !important;
+  }
+  
+  /*bg-amber-400*/
+  .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: rgb(251, 191, 36) !important;
+  }
+  
+  /* .input:focus, .input:focus-within, .textarea:focus {
+    outline-color: #90EE8F;
+    border-color: #90EE8F;
+  } */
+  
+  /*bg-sky-300*/
+  .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(125, 211, 252) !important;
+  }
+  
+  /*bg-sky-300*/
+  .react-toggle--focus .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(125, 211, 252) !important;
+  }
+  
+  /*bg-amber-400*/
+  .react-toggle--checked.react-toggle--focus .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(253, 230, 138) !important;
+  }
+  
+  /*bg-amber-400*/
+  .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(253, 230, 138) !important;
+  }
+  
+  /*bg-sky-300*/
+  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-thumb {
+    box-shadow: 0px 0px 5px 3px rgb(125, 211, 252);
+  }
+  
+  .react-toggle--checked .react-toggle-thumb {
+    border-color: #4D4D4D !important;
+    border: .5px solid #4D4D4D !important;
+  }
+
+  /* Adjust icon positions */
+.custom-toggle .react-toggle-track-check,
+.custom-toggle .react-toggle-track-x {
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-toggle .react-toggle-track-check {
+  left: 5px;
+}
+
+.custom-toggle .react-toggle-track-x {
+  right: 5px;
+}
+
+
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
 
   #landing {
     grid-area: 1 / 2 / 2 / 3;
+  }
+
+  #hero {
+    background-color: var(--background-and-text-primary);
   }
   
   #hero:before {
@@ -369,9 +444,9 @@
   # Sections General
   --------------------------------------------------------------*/
   
-  .section-bg {
-    background: var(--background-and-text-primary);
-  }
+  /* .section-bg { */
+    /* background: var(--background-and-text-primary); */
+  /* } */
   
   .section-title {
     padding-bottom: 30px;
@@ -383,7 +458,7 @@
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: var(--header-color);
+    /* color: var(--header-color); */
   }
   
   .section-title h2::after {
@@ -417,6 +492,11 @@
 
   .about {
     grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--background-secondary);
+  }
+
+  .about h2 {
+    color: var(--header-color);
   }
 
   .about .content h3 {
@@ -443,6 +523,14 @@
   .about .content p:last-child {
     margin-bottom: 0;
   }
+
+  .highlighted-text {
+    color: var(--highlighted-text);
+  }
+
+  .highlighted-text:hover {
+    color: var(--highlighted-text-hover);
+  }
   
   /*--------------------------------------------------------------
   # Skills
@@ -450,6 +538,11 @@
 
   .skills {
     grid-area: 3 / 2 / 4 / 3;
+    background-color: var(--background-and-text-primary);
+  }
+
+  .skills h2 {
+    color: var(--header-color);
   }
   
   .skills .progress {
@@ -466,7 +559,7 @@
     text-transform: uppercase;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
-    color: var(--underline-and-button-color);
+    color: var(--p-text);
     font-size: small;
   }
   
@@ -486,7 +579,7 @@
   .icon {
     font-size: 20px;
     align-content: center;
-    color: var(--underline-and-button-color);
+    color: var(--p-text);
   }
   
   .iconDiv {
@@ -573,8 +666,30 @@
 
   .portfolio {
     grid-area: 4 / 2 / 5 / 3;
+    background-color: var(--background-and-text-primary);
   }
   
+  .portfolio h2 {
+    color: var(--header-color);
+  }
+
+  .timeline-header {
+    color: var(--timeline-header);
+  }
+
+  .timeline-subheader {
+    color: var(--underline-and-button-color);
+  }
+
+  .timeline-pill {
+    background-color: var(--background-secondary);
+    color: var(--year-text);
+  }
+
+  .subtext {
+    color: var(--p-subtext);
+  }
+
   .portfolio .portfolio-item {
     margin-bottom: 30px;
     padding: 5px;
@@ -816,7 +931,7 @@
   }
 
   .slick-prev:before, .slick-next:before {
-    color: #0F172A !important;
+    color: var(--p-text) !important;
   }
 
   .slick-prev {
@@ -840,81 +955,17 @@
     grid-area: 5 / 2 / 6 / 3;
     grid-template-rows: max-content max-content;
     display: grid;
+    background-color: var(--background-secondary);
   }
-  
-  .contact .info {
-    padding: 30px;
-    background: #fff;
-    width: 100%;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  }
-  
-  .contact .info i {
-    font-size: 20px;
-    color: var(--underline-and-button-color);
-    float: left;
-    width: 44px;
-    height: 44px;
-    background: #dff3fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .contact .info h4 {
-    padding: 0 0 0 60px;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #050d18;
-  }
-  
-  .contact .info p {
-    padding: 0 0 10px 60px;
-    margin-bottom: 20px;
-    font-size: 14px;
+
+  .contact h2 {
     color: var(--header-color);
-  }
-  
-  .contact .info .email p {
-    padding-top: 5px;
-  }
-  
-  .contact .info .social-links {
-    padding-left: 60px;
-  }
-  
-  .contact .info .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-    margin-right: 10px;
-  }
-  
-  .contact .info .social-links a:hover {
-    background: var(--underline-and-button-color);
-    color: #fff;
-  }
-  
-  .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-    background: var(--underline-and-button-color);
-    color: #fff;
   }
   
   .contact .php-email-form {
     width: 100%;
     padding: 30px;
-    background: #fff;
+    background: var(--background-secondary);
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   }
   
@@ -1003,7 +1054,7 @@
   }
   
   .contact .php-email-form button[type="submit"] {
-    background: var(--underline-and-button-color);
+    background: var(--button-color);
     border: 0;
     padding: 10px 24px;
     color: #fff;
