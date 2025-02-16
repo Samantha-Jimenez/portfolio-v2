@@ -107,9 +107,7 @@
 
   .down-arrow {
     bottom: 4%;
-    width: 30vw;
     text-align: center;
-    background-color: unset;
     border: none;
     position: sticky;
     align-self: self-end;
@@ -376,9 +374,6 @@
 
   #landing {
     grid-area: 1 / 2 / 2 / 3;
-  }
-
-  #hero {
     background-color: var(--background-and-text-primary);
   }
   
