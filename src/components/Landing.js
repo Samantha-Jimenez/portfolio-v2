@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 
-const Landing = () => {
+const Landing = ({ isMenuOpen }) => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
+    const offset = windowWidth <= 768 ? -20 : -50;
+
     return (
         <div>
             <section id="hero" className="d-flex flex-column justify-content-end h-screen ml-auto p-0 section">
@@ -25,6 +38,13 @@ const Landing = () => {
                     </span></p>
                 </div>
             </section>
+            { !isMenuOpen && (
+              <button className="down-arrow lg:hidden block z-30 h-[5vh] white mb-[5vh] focus:outline-none w-[100vw]">
+                <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={offset}>
+                  <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
+                </Link>
+              </button>
+            )}
         </div>
     )
 }
