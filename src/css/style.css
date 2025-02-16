@@ -437,6 +437,7 @@
     }
     #hero .hero-container {
       padding: 0em 2em;
+      top: 60vh;
     }
   }
   
