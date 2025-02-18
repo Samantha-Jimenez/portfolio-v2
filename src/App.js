@@ -63,7 +63,6 @@ function App() {
   const linkedinRef = useRef(null);
   const gmailRef = useRef(null);
   const portfolioRef = useRef(null);
-  const darkModeToggleRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (menuRef.current && 
