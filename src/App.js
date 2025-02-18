@@ -299,7 +299,7 @@ function App() {
               </ul>             
             </nav>
               <div className="wrapper">
-                <label className="flex items-center py-2 sticky top-0 z-[11] rounded-lg mx-4 backdrop-blur-sm">
+                <label className="flex items-center py-2 sticky top-0 z-[11] rounded-lg mx-4 backdrop-blur-sm w-fit">
                   {darkMode ?
                   <span className="text-sm pl-2 text-neutral-200 font-medium pr-2">
                     Light
