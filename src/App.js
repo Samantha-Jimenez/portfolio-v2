@@ -55,12 +55,6 @@ function App() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isModalOpen, setModalOpen] = useState(true);
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -359,23 +353,6 @@ function App() {
           </main>
         </div>
       </div>
-
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm w-full text-center mx-2 text-black">
-            <span className="absolute top-2 right-2 cursor-pointer text-gray-500" onClick={closeModal}>&times;</span>
-            <h2 className="text-xl font-semibold">Under Construction</h2>
-            <p className="mt-2">This website is currently under construction. <strong>Please enjoy this draft in the meantime. Don't mind the bugs.</strong></p>
-            <p>Check back later for the final version!</p>
-            <button 
-              className="mt-4 bg-[#254D32] text-white font-bold py-2 px-4 rounded hover:bg-[#2A6A3D]"
-              onClick={closeModal}
-            >
-              Continue
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
