@@ -18,9 +18,12 @@ AOS.init();
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return true;
-    }
+
+    // FOR NOW I WANT TO SET DEFAULT TO LIGHT MODE
+    // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //   return true;
+    // }
+
     return false;
   });
 
