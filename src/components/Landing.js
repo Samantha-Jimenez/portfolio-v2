@@ -39,9 +39,9 @@ const Landing = ({ isMenuOpen }) => {
                 </div>
             </section>
             { !isMenuOpen && (
-              <button className="down-arrow lg:hidden block z-30 h-[5vh] white mb-[5vh] focus:outline-none w-[100vw]">
+              <button className="down-arrow lg:hidden block z-30 h-[5vh] mb-[5vh] focus:outline-none w-[100vw]">
                 <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={offset}>
-                  <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
+                  <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-[var(--p-text)] opacity-[.30]'/>
                 </Link>
               </button>
             )}
