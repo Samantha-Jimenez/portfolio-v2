@@ -16,6 +16,11 @@ import "react-toggle/style.css";
 
 AOS.init();
 
+// Define the openMenu function
+const openMenu = (currentState, setStateFunction) => {
+  setStateFunction(!currentState);
+};
+
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
 
