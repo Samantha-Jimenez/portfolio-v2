@@ -31,7 +31,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_7z8bwyp', 'template_gte2cwa', form.current, { publicKey: 'lYPDqWbwbsFTQDuJz'})
+        emailjs.sendForm('service_7z8bwyp', 'template_57acheq', form.current, { publicKey: 'lYPDqWbwbsFTQDuJz'})
             .then((result) => {
                 console.log(result.text);
                 notifySuccess();
@@ -70,6 +70,10 @@ const Contact = () => {
                                 <label htmlFor="reply_to">Email</label>
                                 <input type="email" className="form-control w-full rounded-lg pl-3" name="reply_to" id="email" data-rule="email" autoComplete="email" data-msg="Please enter a valid email" required/>
                                 <div className="validate"></div>
+                            </div>
+                            <div className="form-group col-md-6 hidden" data-aos="zoom-in" data-aos-duration="1000">
+                                <label htmlFor="site_name">Site Name</label>
+                                <input type="text" name="site_name" value="Personal Website" className="form-control w-full rounded-lg pl-3" id="site_name" autoComplete="site_name" required/>
                             </div>
                         </div>
                         <div className="form-group" data-aos="zoom-in" data-aos-duration="1000">
