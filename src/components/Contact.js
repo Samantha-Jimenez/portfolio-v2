@@ -73,7 +73,7 @@ const Contact = () => {
                             </div>
                             <div className="form-group col-md-6 hidden" data-aos="zoom-in" data-aos-duration="1000">
                                 <label htmlFor="site_name">Site Name</label>
-                                <input type="text" name="site_name" value="Personal Website" className="form-control w-full rounded-lg pl-3" id="site_name" autoComplete="site_name" required/>
+                                <input type="hidden" name="site_name" defaultValue="Personal Website" />
                             </div>
                         </div>
                         <div className="form-group" data-aos="zoom-in" data-aos-duration="1000">
