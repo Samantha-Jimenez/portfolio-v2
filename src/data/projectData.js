@@ -8,6 +8,7 @@ import pelotonClassPlan from './../imgFiles/PelotonClassPlan.png';
 import pelotonNotifications from './../imgFiles/PelotonNotifications.png';
 import pelotonRowOne from './../imgFiles/PelotonRowOne.png';
 import pelotonRowTwo from './../imgFiles/PelotonRowTwo.png';
+import othelloScreenRecording from './../imgFiles/OthelloRecordingTrim.mov';
 
 const mvmntSlides = [
     <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
@@ -22,6 +23,21 @@ const mvmntSlides = [
 
 const othelloSlides = [
     <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
+            <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <video 
+                    src={othelloScreenRecording} 
+                    alt="Othello Game Demo" 
+                    className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                />
+            </div>
+        </div>
+    </div>
         <p className="font-normal">
             I collaborated with a team of engineers during a Hackathon to develop an AI-driven version of the Othello board game, incorporating an AI opponent for single-player mode and AI-generated blockers to enhance the game's difficulty. By blending traditional gameplay with advanced AI features, we created a more engaging and strategic experience for users. Our project secured second place overall and received the "Most Innovative Use of AI" award, demonstrating my expertise in AI integration, teamwork, and delivering innovative solutions under tight deadlines.        </p>
         <div className="gap-2 grid-flow-col inline-grid w-full text-center">
