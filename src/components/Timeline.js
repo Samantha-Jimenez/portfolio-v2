@@ -165,8 +165,15 @@ const Timeline = () => {
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <div className="carousel w-full">
                                     {mvmntSlides.map((slide, index) => (
-                                        <div key={index} className={`carousel-item w-full flex-shrink-0 transition-transform duration-500 ease-in-out transform ${index === currentIndex ? 'translate-x-0' : 'translate-x-full'}`}>
-                                            {slide}
+                                        <div key={index} className={`carousel-item w-full flex-shrink-0 ${index === currentIndex ? 'block' : 'hidden'}`}>
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
                                         </div>
                                     ))}
                                 </div>
