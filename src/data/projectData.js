@@ -9,11 +9,35 @@ import pelotonNotifications from './../imgFiles/PelotonNotifications.png';
 import pelotonRowOne from './../imgFiles/PelotonRowOne.png';
 import pelotonRowTwo from './../imgFiles/PelotonRowTwo.png';
 import othelloScreenRecording from './../imgFiles/OthelloRecordingTrim.mov';
+import mvmntCollectives from './../imgFiles/MvmntCo.png';
 
 const mvmntSlides = [
-    <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={mvmntCollectives} 
+                    alt="Mvmnt Collectives" 
+                    className="w-full rounded-lg cursor-zoom-in"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
         <p className="font-normal">
-            Mvmnt Collectives is a web application that connects runners with local running clubs and events. Users can discover running clubs in their area, view club information, and stay updated on upcoming running events.
+            Mvmnt Collectives is a web application that connects runners with local running clubs and events. Users can discover running clubs in their area, view club information, and find weekly runs.
         </p>
         <div className="gap-2 grid-flow-col inline-grid w-full text-center">
             <a href="https://mvmntcollectives.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
@@ -23,23 +47,24 @@ const mvmntSlides = [
 
 const othelloSlides = [
     <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
-            <div className="image-crop-container flex flex-col items-center gap-4">
-        <div className="relative w-[90%] mx-auto mb-[10px]">
-            <div className="relative w-full h-full group">
-                <video 
-                    src={othelloScreenRecording} 
-                    alt="Othello Game Demo" 
-                    className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
-                    controls
-                    autoPlay
-                    muted
-                    loop
-                />
+        <div className="image-crop-container flex flex-col items-center gap-4">
+            <div className="relative w-[90%] mx-auto mb-[10px]">
+                <div className="relative w-full h-full group">
+                    <video 
+                        src={othelloScreenRecording} 
+                        alt="Othello Game Demo" 
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
+                        controls
+                        autoPlay
+                        muted
+                        loop
+                    />
+                </div>
             </div>
         </div>
-    </div>
         <p className="font-normal">
-            I collaborated with a team of engineers during a Hackathon to develop an AI-driven version of the Othello board game, incorporating an AI opponent for single-player mode and AI-generated blockers to enhance the game's difficulty. By blending traditional gameplay with advanced AI features, we created a more engaging and strategic experience for users. Our project secured second place overall and received the "Most Innovative Use of AI" award, demonstrating my expertise in AI integration, teamwork, and delivering innovative solutions under tight deadlines.        </p>
+            I collaborated with a team of engineers during a Hackathon to develop an AI-driven version of the Othello board game, incorporating an AI opponent for single-player mode and AI-generated blockers to enhance the game's difficulty. By blending traditional gameplay with advanced AI features, we created a more engaging and strategic experience for users. Our project secured second place overall and received the "Most Innovative Use of AI" award, demonstrating my expertise in AI integration, teamwork, and delivering innovative solutions under tight deadlines.
+        </p>
         <div className="gap-2 grid-flow-col inline-grid w-full text-center">
             <a href="https://github.com/dmorocho/othello" target="_blank" rel="noopener noreferrer" className="bg-gray-500 text-white shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">GitHub</a>
         </div>
@@ -778,7 +803,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonRowOne} 
                         alt="Peloton Row One" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -806,7 +831,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonRowTwo} 
                         alt="Peloton Row Two" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -834,7 +859,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonActivityFeed} 
                         alt="Peloton Activity Feed" 
-                        className="w-full h-full object-cover object-top cursor-zoom-in"
+                        className="w-full h-full object-cover object-top cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -862,7 +887,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonBodyActivity} 
                         alt="Peloton Body Activity" 
-                        className="w-full h-full object-cover object-left cursor-zoom-in"
+                        className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -891,7 +916,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonClassPlan} 
                         alt="Peloton Class Plan" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -920,7 +945,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonNotifications} 
                         alt="Peloton Notifications" 
-                        className="w-full h-full object-cover object-right cursor-zoom-in"
+                        className="w-full h-full object-cover object-right cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -949,7 +974,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonStravaConnect} 
                         alt="Peloton Strava Connect" 
-                        className="w-full h-full object-cover object-left cursor-zoom-in"
+                        className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
