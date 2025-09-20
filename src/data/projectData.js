@@ -10,6 +10,9 @@ import pelotonRowOne from './../imgFiles/PelotonRowOne.png';
 import pelotonRowTwo from './../imgFiles/PelotonRowTwo.png';
 import othelloScreenRecording from './../imgFiles/OthelloRecordingTrim.mov';
 import mvmntCollectives from './../imgFiles/MvmntCo.png';
+import motevisOne from './../imgFiles/MotevisOne.png';
+import motevisTwo from './../imgFiles/MotevisTwo.png';
+import motevisThree from './../imgFiles/MotevisThree.png';
 
 const mvmntSlides = [
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -44,6 +47,113 @@ const mvmntSlides = [
         </div>
     </div>,
 ];
+
+const motevisSlides = [
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={motevisOne} 
+                    alt="Motevis One" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal">
+                Motevis (formerly Mvmnt Collectives) is a web app where runners can <span className="font-bold">discover local clubs, view club info, and find weekly runs and race events</span> throughout New York City.
+            </p>
+            <div className="gap-2 grid-flow-col inline-grid w-full text-center">
+                <a href="https://mvmntcollectives.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
+            </div>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={motevisTwo} 
+                    alt="Motevis Two" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal">
+                Users can <span className="font-bold">search for clubs, weekly runs, or race events</span> by name, tag, or borough. Weekly runs can also be filtered with <span className="font-bold">time range sliders</span>, making it easy to find runs that fit any schedule.
+            </p>
+        </div>
+    </div>,
+        <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={motevisThree} 
+                    alt="Motevis Three" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal">
+                Each club page highlights the run club's details, including its <span className="font-bold">email, founding year, social links, description, and hashtags.</span> The page also features a schedule of weekly runs and race events, making it easy for members to stay informed and connected.
+            </p>
+        </div>
+    </div>,
+    <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
+        <p className="font-normal">
+            • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <br/>
+            • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <br/>
+            • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <br/>
+            • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <br/>
+            • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <br/>
+            {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
+        </p>
+    </div>,
+    ];
 
 const othelloSlides = [
     <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
@@ -96,7 +206,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+        <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">As the <span className="font-bold">lead web engineer for Peloton's rowing machine launch,</span> I was responsible for building key web features to enhance the user experience on the Peloton website. I led the development of the post-class details page, where I implemented the <span className="font-bold">Form Breakdown</span> section, displaying data for the key phases of the rowing stroke: <span className="font-bold">Catch, Drive, Finish, and Recovery.</span> I also integrated a <span className="font-bold">Form Score Percent</span> to help users assess their form accuracy and performance.</p>
         </div>
     </div>,
@@ -124,7 +234,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+        <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">Additionally, I developed <span className="font-bold">interactive graphs using the Recharts library</span> to visualize detailed user output data. These charts provided users with valuable insights into their performance, including metrics like <span className="font-bold">stroke output, stroke rate, and pace</span>, allowing them to track and analyze their rowing exercises. This work was <span className="font-bold">crucial in delivering an informative and engaging post-class experience</span>, empowering users to better understand their progress and refine their technique.</p>
         </div>
     </div>,
@@ -152,7 +262,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
+        <div className="gap-2 grid-flow-col inline-grid max-[403px]:grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">I spearheaded the development of the <span className="font-bold">social activity feed</span>, which was pivotal in enhancing user engagement. I implemented key features such as <span className="font-bold">workout stacking, bookmarking, and high-fiving</span>—giving users a dynamic way to interact with each other's fitness journeys. Additionally, I led the creation of a <span className="font-bold">personalized notification drawer</span> that kept users up to date with their social interactions. By bringing social functionality to the platform, I helped drive higher user engagement and increased website traffic, fostering a more connected and active Peloton community.</p>
         </div>
     </div>,
@@ -180,7 +290,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+        <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">I assisted in the development of the <span className="font-bold">Body Activity</span> card, a feature that provides users with insights into their workout history across various body regions. This card displays data on the <span className="font-bold">percentage of body activity for each muscle group worked</span> during the past 7 and 30 days, giving users a clear, visual breakdown of their fitness progress using the human body graphic. I helped implement the functionality of this feature, contributing to an enhanced user experience. This feature <span className="font-bold">enabled users to better track and understand the effectiveness of their workouts</span>, promoting more informed fitness decisions.</p>
             <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
         </div>
@@ -209,7 +319,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+        <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">I contributed to the development of the <span className="font-bold">Class Plan</span> feature on Peloton's platform, which provides users with a detailed breakdown of the exercises included in a class. When users click on a class and scroll down to the Class Plan section, they can see a <span className="font-bold">list of exercises along with their durations</span>. Additionally, I helped build the interactive chevron dropdowns that allow users to click on an exercise name to reveal <span className="font-bold">a video of the trainer demonstrating the move, as well as a list of targeted muscles</span>. This feature enhances the user experience by offering clear, easy-to-follow workout details and giving users a deeper understanding of the exercises in each class.</p>
             <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
         </div>
@@ -238,7 +348,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+        <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">I contributed to the development of the <span className="font-bold">notifications feature</span> on the Peloton website, adding a notification bell icon to the navigation bar. When clicked, the bell opens a drawer on the right side of the screen, displaying a list of social notifications, such as <span className="font-bold">likes and high-fives from other users</span>. This feature was designed to <span className="font-bold">foster social engagement</span> on the platform, allowing users to easily connect with others and stay updated on interactions related to their activity and progress.</p>
             <a href="https://www.pelobuddy.com/activity-feed-notifications/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
         </div>
@@ -267,7 +377,7 @@ const pelotonSlides = [
                 </div>
             </div>
         </div>
-        <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+        <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal text-[15px] leading-snug">I assisted in the development of the <span className="font-bold">Strava integration</span> feature within Peloton's settings page, enabling users to easily connect their Strava accounts to their Peloton profiles. This integration allowed for <span className="font-bold">seamless synchronization of workout data</span>, providing users with a <span className="font-bold">comprehensive view of their fitness activities across both platforms</span>. Collaborating closely with the lead engineer, I helped implement the functionality, ensuring smooth and secure account linking for users. This feature not only enhanced the user experience by centralizing workout data but also contributed to greater engagement across the Peloton community by supporting cross-platform connectivity.</p>
             <a href="https://www.pelobuddy.com/sync-peloton-strava-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
         </div>
@@ -821,7 +931,7 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <div className="gap-2 inline-grid grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">As the <span className="font-bold">lead web engineer for Peloton's rowing machine launch,</span> I was responsible for building key web features to enhance the user experience on the Peloton website. I led the development of the post-class details page, where I implemented the <span className="font-bold">Form Breakdown</span> section, displaying data for the key phases of the rowing stroke: <span className="font-bold">Catch, Drive, Finish, and Recovery.</span> I also integrated a <span className="font-bold">Form Score Percent</span> to help users assess their form accuracy and performance.</p>
             </div>
         </div>,
@@ -849,7 +959,7 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <div className="gap-2 inline-grid grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">Additionally, I developed <span className="font-bold">interactive graphs using the Recharts library</span> to visualize detailed user output data. These charts provided users with valuable insights into their performance, including metrics like <span className="font-bold">stroke output, stroke rate, and pace</span>, allowing them to track and analyze their rowing exercises. This work was <span className="font-bold">crucial in delivering an informative and engaging post-class experience</span>, empowering users to better understand their progress and refine their technique.</p>
             </div>
         </div>,
@@ -877,7 +987,7 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 grid-flow-col inline-grid text-center max-[403px]:grid-flow-row w-full">
+            <div className="gap-2 grid-flow-col inline-grid max-[403px]:grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">I spearheaded the development of the <span className="font-bold">social activity feed</span>, which was pivotal in enhancing user engagement. I implemented key features such as <span className="font-bold">workout stacking, bookmarking, and high-fiving</span>—giving users a dynamic way to interact with each other's fitness journeys. Additionally, I led the creation of a <span className="font-bold">personalized notification drawer</span> that kept users up to date with their social interactions. By bringing social functionality to the platform, I helped drive higher user engagement and increased website traffic, fostering a more connected and active Peloton community.</p>
             </div>
         </div>,
@@ -905,9 +1015,9 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <div className="gap-2 inline-grid grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">I assisted in the development of the <span className="font-bold">Body Activity</span> card, a feature that provides users with insights into their workout history across various body regions. This card displays data on the <span className="font-bold">percentage of body activity for each muscle group worked</span> during the past 7 and 30 days, giving users a clear, visual breakdown of their fitness progress using the human body graphic. I helped implement the functionality of this feature, contributing to an enhanced user experience. This feature <span className="font-bold">enabled users to better track and understand the effectiveness of their workouts</span>, promoting more informed fitness decisions.</p>
-                <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
+                <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px] text-center">Read More on PeloBuddy.com</a>
             </div>
         </div>,
         <div className="image-crop-container flex flex-col items-center gap-4">
@@ -934,9 +1044,9 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <div className="gap-2 inline-grid grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">I contributed to the development of the <span className="font-bold">Class Plan</span> feature on Peloton's platform, which provides users with a detailed breakdown of the exercises included in a class. When users click on a class and scroll down to the Class Plan section, they can see a <span className="font-bold">list of exercises along with their durations</span>. Additionally, I helped build the interactive chevron dropdowns that allow users to click on an exercise name to reveal <span className="font-bold">a video of the trainer demonstrating the move, as well as a list of targeted muscles</span>. This feature enhances the user experience by offering clear, easy-to-follow workout details and giving users a deeper understanding of the exercises in each class.</p>
-                <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
+                <a href="https://www.pelobuddy.com/class-plan-body-activity-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px] text-center">Read More on PeloBuddy.com</a>
             </div>
         </div>,
         <div className="image-crop-container flex flex-col items-center gap-4">
@@ -963,9 +1073,9 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <div className="gap-2 inline-grid grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">I contributed to the development of the <span className="font-bold">notifications feature</span> on the Peloton website, adding a notification bell icon to the navigation bar. When clicked, the bell opens a drawer on the right side of the screen, displaying a list of social notifications, such as <span className="font-bold">likes and high-fives from other users</span>. This feature was designed to <span className="font-bold">foster social engagement</span> on the platform, allowing users to easily connect with others and stay updated on interactions related to their activity and progress.</p>
-                <a href="https://www.pelobuddy.com/activity-feed-notifications/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
+                <a href="https://www.pelobuddy.com/activity-feed-notifications/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px] text-center">Read More on PeloBuddy.com</a>
             </div>
         </div>,
         <div className="image-crop-container flex flex-col items-center gap-4">
@@ -992,9 +1102,9 @@ const createSlides = (handleImageClick) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-2 inline-grid text-center grid-flow-row w-full">
+            <div className="gap-2 inline-grid grid-flow-row w-full">
                 <p className="font-normal text-[15px] leading-snug">I assisted in the development of the <span className="font-bold">Strava integration</span> feature within Peloton's settings page, enabling users to easily connect their Strava accounts to their Peloton profiles. This integration allowed for <span className="font-bold">seamless synchronization of workout data</span>, providing users with a <span className="font-bold">comprehensive view of their fitness activities across both platforms</span>. Collaborating closely with the lead engineer, I helped implement the functionality, ensuring smooth and secure account linking for users. This feature not only enhanced the user experience by centralizing workout data but also contributed to greater engagement across the Peloton community by supporting cross-platform connectivity.</p>
-                <a href="https://www.pelobuddy.com/sync-peloton-strava-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Read More on PeloBuddy.com</a>
+                <a href="https://www.pelobuddy.com/sync-peloton-strava-web/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px] text-center">Read More on PeloBuddy.com</a>
             </div>
         </div>,
         <div className="flex justify-center h-full px-7 py-4 flex-col gap-4 w-full text-[15px]">
@@ -1010,7 +1120,7 @@ const createSlides = (handleImageClick) => {
     ];
 
     return {
-        mvmntSlides,
+        motevisSlides,
         othelloSlides,
         pelotonSlides,
         zooVioSlides,
