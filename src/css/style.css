@@ -159,6 +159,11 @@
     grid-template-columns: 32vw 80vw;
     grid-template-rows: 100vh;
   }
+
+  #header-hover {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   
   @media (max-width: 1199px) {
     #header {
@@ -175,7 +180,32 @@
       padding-bottom: 3rem;
     }
   }
-  
+
+  @media (max-height: 580px) {
+    #header-hover {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @media (max-height: 515px) {
+    .header-title {
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media (max-height: 490px) {
+    #header-hover {
+      align-content: space-around;
+    }
+  }
+
+  @media (max-height: 475px) {
+    .header-title {
+      font-size: 2.15rem;
+    }
+  }
+
   /*--------------------------------------------------------------
   # Navigation Menu
   --------------------------------------------------------------*/
@@ -252,7 +282,19 @@
       left: 0px;
     }
     .nav-menu {
-      margin-top: 4vh !important;
+      margin-top: 4vh;
+    }
+  }
+
+  @media (max-height: 490px) {
+    .nav-menu {
+      margin: 0vh 2vh;
+    }
+  }
+
+  @media (max-height: 445px) {
+    .nav-ul {
+      height: unset;
     }
   }
 
@@ -367,6 +409,11 @@
   right: 5px;
 }
 
+  @media (max-height: 490px) {
+    .wrapper {
+      margin: 0;
+    }
+  }
 
   /*--------------------------------------------------------------
   # Hero Section
