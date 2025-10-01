@@ -78,7 +78,7 @@ const motevisSlides = [
                 Motevis (formerly Mvmnt Collectives) is a web app where runners can <span className="font-bold">discover local clubs, view club info, and find weekly runs and race events</span> throughout New York City.
             </p>
             <div className="gap-2 grid-flow-col inline-grid w-full text-center">
-                <a href="https://mvmntcollectives.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
+                <a href="https://motevis.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
             </div>
         </div>
     </div>,
