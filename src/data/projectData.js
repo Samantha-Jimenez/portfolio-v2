@@ -145,11 +145,11 @@ const motevisSlides = [
     <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
         <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
         <p className="font-normal">
-            • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <br/>
-            • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <br/>
-            • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <br/>
-            • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <br/>
-            • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <br/>
+            • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden md:inline"><br/></span>
+            • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden md:inline"><br/></span>
+            • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden md:inline"><br/></span>
+            • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden md:inline"><br/></span>
+            • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden md:inline"><br/></span>
             {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
         </p>
     </div>,
@@ -1109,12 +1109,12 @@ const createSlides = (handleImageClick) => {
         </div>,
         <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
             <p className="font-normal">
-                • Implemented a <span className="font-bold">fitness quiz</span> for new users to recommend initial classes based on their preferences, <span className="font-bold">enhancing immediate engagement</span> upon website onboarding. <br/> <br/>
-                • Optimized company website by <span className="font-bold">transitioning REST APIs to GraphQL</span>, resulting in improved data fetching capabilities and enhanced performance. <br/> <br/>
+                • Implemented a <span className="font-bold">fitness quiz</span> for new users to recommend initial classes based on their preferences, <span className="font-bold">enhancing immediate engagement</span> upon website onboarding. <br/> <span className="hidden md:inline"> <br/></span>
+                • Optimized company website by <span className="font-bold">transitioning REST APIs to GraphQL</span>, resulting in improved data fetching capabilities and enhanced performance. <br/> <span className="hidden md:inline"> <br/></span>
                 • Served as <span className="font-bold">on-call engineer</span> for one week on a rotating schedule, responding to critical incidents such as <span className="font-bold">site outages, troubleshooting urgent technical
-                issues, and escalating problems</span> to ensure timely resolution and minimal impact on users. <br/> <br/>
+                issues, and escalating problems</span> to ensure timely resolution and minimal impact on users. <br/> <span className="hidden md:inline"> <br/></span>
                 • <span className="font-bold">Facilitated bi-weekly retrospective meetings</span> for Agile development teams of approximately <span className="font-bold">15-20 members</span> to reflect on past sprints and identify
-                areas for improvement. <br/>
+                areas for improvement.<span className="hidden md:inline"> <br/></span>
             </p>
         </div>,
     ];
