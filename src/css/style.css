@@ -978,11 +978,11 @@
   }
 
   .slick-prev {
-    left: -10px !important;
+    left: -20px !important;
   }
 
   .slick-next {
-    right: -10px !important;
+    right: -15px !important;
   }
 
   .slick-prev, .slick-next {
