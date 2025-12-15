@@ -31,7 +31,12 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_7z8bwyp', 'template_57acheq', form.current, { publicKey: 'lYPDqWbwbsFTQDuJz'})
+        emailjs.sendForm(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            form.current,
+            { publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY }
+        )
             .then((result) => {
                 console.log(result.text);
                 notifySuccess();
@@ -44,15 +49,6 @@ const Contact = () => {
 
     return (
         <div className="container">
-            <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-            <script type="text/javascript">
-                (function(){
-                    emailjs.init({
-                    publicKey: "lYPDqWbwbsFTQDuJz",
-                    })
-                })();
-            </script>
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
                 <h2 className=''>Contact</h2>
                 <p data-aos="fade-up" data-aos-duration="1000">Let’s connect! I’d love to hear from you — reach out to collaborate or network.</p>
