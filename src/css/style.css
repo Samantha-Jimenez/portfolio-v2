@@ -666,6 +666,16 @@
     }
   }
 
+  /* Skill Tooltip Styling - Limit width and enable wrapping */
+  .skills-content .tooltip::before {
+    max-width: 200px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
+    line-height: 1.4 !important;
+    padding: 8px 10px !important;
+  }
+
   @-webkit-keyframes bounce {
     0%,  
     100% {
