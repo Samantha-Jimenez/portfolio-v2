@@ -35,6 +35,7 @@ const skills = [
     { name: 'firebase', icon: 'devicon-firebase-plain', category: 'backend', tooltip: 'Backend services for auth, data, and hosting.' },
     { name: 'flask', icon: 'devicon-flask-original', category: 'backend', tooltip: 'A lightweight Python framework for simple APIs.' },
     { name: 'react router', icon: 'devicon-reactrouter-plain', category: 'backend', tooltip: 'Handles navigation and routing in React apps.' },
+    { name: 'davinci resolve', icon: 'simple-icons:davinciresolve', category: 'tools', tooltip: 'Professional video editing and color grading software.' },
 ];
 
 export default skills;
