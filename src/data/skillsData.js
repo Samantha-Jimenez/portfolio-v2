@@ -36,6 +36,12 @@ const skills = [
     { name: 'flask', icon: 'devicon-flask-original', category: 'backend', tooltip: 'A lightweight Python framework for simple APIs.' },
     { name: 'react router', icon: 'devicon-reactrouter-plain', category: 'backend', tooltip: 'Handles navigation and routing in React apps.' },
     { name: 'davinci resolve', icon: 'simple-icons:davinciresolve', category: 'tools', tooltip: 'Professional video editing and color grading software.' },
+    { name: 'cursor', icon: 'simple-icons:cursor', category: 'tools', tooltip: 'AI-powered code editor for faster development.' },
+    { name: 'quickbooks', icon: 'simple-icons:quickbooks', category: 'tools', tooltip: 'Accounting software for small businesses.' },
+    { name: 'asana', icon: 'simple-icons:asana', category: 'tools', tooltip: 'Project management and collaboration tool.' },
+    { name: 'zoom', icon: 'simple-icons:zoom', category: 'tools', tooltip: 'Video conferencing and collaboration platform.' },
+    { name: 'microsoft 365', icon: 'simple-icons:microsoft', category: 'tools', tooltip: 'Productivity suite for word processing, spreadsheets, and presentations.' },
+    { name: 'google workspace', icon: 'simple-icons:google', category: 'tools', tooltip: 'Collaborative tools for email, calendar, and document sharing.' },
 ];
 
 export default skills;
