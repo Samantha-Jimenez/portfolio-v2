@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import { Icon } from '@iconify/react';
 import skills from '../data/skillsData';
 
 const categoryOptions = [
@@ -73,14 +74,23 @@ const Skills = () => {
                 }}
             />
             <div className="skills-content">
-                {filteredSkills.map((skill, index) => (
-                    <div className={`iconDiv flex shadow-lg tooltip tooltip-top ${skill.category === 'tools' ? 'bg-gray-400/20' : skill.category === 'frontend' ? 'bg-orange-300/20' : 'bg-green-300/20'}`} key={index} data-aos="fade-up" data-aos-duration="500" data-tip={skill.tooltip}>
-                        <i className={`${skill.icon} icon`}></i>
-                        <div className="progress">
-                            <span className="skill">{skill.name}</span>
+                {filteredSkills.map((skill, index) => {
+                    // Check if icon is from Iconify (contains colon) or Devicon
+                    const isIconify = skill.icon.includes(':');
+                    
+                    return (
+                        <div className={`iconDiv flex shadow-lg tooltip tooltip-top items-center ${skill.category === 'tools' ? 'bg-gray-400/20' : skill.category === 'frontend' ? 'bg-orange-300/20' : 'bg-green-300/20'}`} key={index} data-aos="fade-up" data-aos-duration="500" data-tip={skill.tooltip}>
+                            {isIconify ? (
+                                <Icon icon={skill.icon} className="icon" />
+                            ) : (
+                                <i className={`${skill.icon} icon`}></i>
+                            )}
+                            <div className="progress">
+                                <span className="skill">{skill.name}</span>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     )
