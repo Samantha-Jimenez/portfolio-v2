@@ -13,6 +13,114 @@ import mvmntCollectives from './../imgFiles/MvmntCo.png';
 import motevisOne from './../imgFiles/MotevisOne.png';
 import motevisTwo from './../imgFiles/MotevisTwo.png';
 import motevisThree from './../imgFiles/MotevisThree.png';
+// import OurRootlineOne from './../imgFiles/OurRootlineOne.png';
+
+// const ourRootlineSlides = [
+//     <div className="image-crop-container flex flex-col items-center gap-4">
+//         <div className="relative w-[90%] mx-auto mb-[10px]">
+//             <div className="relative w-full h-full group">
+//                 <img 
+//                     src={OurRootlineOne} 
+//                     alt="Our Rootline One" 
+//                     className="w-full cursor-zoom-in rounded-lg"
+//                 />
+//                 <div 
+//                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+//                     onClick={(e) => {
+//                         e.stopPropagation();
+//                         const imgElement = e.currentTarget.parentElement.querySelector('img');
+//                         if (imgElement) {
+//                             handleImageClick(e, imgElement.src);
+//                         }
+//                     }}
+//                 >
+//                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+//                     </svg>
+//                 </div>
+//             </div>
+//         </div>
+//         <div className="gap-2 inline-grid grid-flow-row w-full">
+//             <p className="font-normal px-3 md:px-0">
+//                 Motevis (formerly Mvmnt Collectives) is a web app where runners can <span className="font-bold">discover local clubs, view club info, and find weekly runs and race events</span> throughout New York City.
+//             </p>
+//             <div className="gap-2 grid-flow-col inline-grid w-full text-center">
+//                 <a href="https://motevis.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
+//             </div>
+//         </div>
+//     </div>,
+//     <div className="image-crop-container flex flex-col items-center gap-4">
+//         <div className="relative w-[90%] mx-auto mb-[10px]">
+//             <div className="relative w-full h-full group">
+//                 {/* <img 
+//                     src={motevisTwo} 
+//                     alt="Our Rootline Two" 
+//                     className="w-full cursor-zoom-in rounded-lg"
+//                 /> */}
+//                 <div 
+//                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+//                     onClick={(e) => {
+//                         e.stopPropagation();
+//                         const imgElement = e.currentTarget.parentElement.querySelector('img');
+//                         if (imgElement) {
+//                             handleImageClick(e, imgElement.src);
+//                         }
+//                     }}
+//                 >
+//                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+//                     </svg>
+//                 </div>
+//             </div>
+//         </div>
+//         <div className="gap-2 inline-grid grid-flow-row w-full">
+//             <p className="font-normal px-3 md:px-0">
+//                 Users can <span className="font-bold">search for clubs, weekly runs, or race events</span> by name, tag, or borough. Weekly runs can also be filtered with <span className="font-bold">time range sliders</span>, making it easy to find runs that fit any schedule.
+//             </p>
+//         </div>
+//     </div>,
+//         <div className="image-crop-container flex flex-col items-center gap-4">
+//         <div className="relative w-[90%] mx-auto mb-[10px]">
+//             <div className="relative w-full h-full group">
+//                 {/* <img 
+//                     src={motevisThree} 
+//                     alt="Our Rootline Three" 
+//                     className="w-full cursor-zoom-in rounded-lg"
+//                 /> */}
+//                 <div 
+//                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+//                     onClick={(e) => {
+//                         e.stopPropagation();
+//                         const imgElement = e.currentTarget.parentElement.querySelector('img');
+//                         if (imgElement) {
+//                             handleImageClick(e, imgElement.src);
+//                         }
+//                     }}
+//                 >
+//                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+//                     </svg>
+//                 </div>
+//             </div>
+//         </div>
+//         <div className="gap-2 inline-grid grid-flow-row w-full">
+//             <p className="font-normal px-3 md:px-0">
+//                 Each club page highlights the run club's details, including its <span className="font-bold">email, founding year, social links, description, and hashtags.</span> The page also features a schedule of weekly runs and race events, making it easy for members to stay informed and connected.
+//             </p>
+//         </div>
+//     </div>,
+//     <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+//         <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
+//         <p className="font-normal">
+//             • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden md:inline"><br/></span>
+//             • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden md:inline"><br/></span>
+//             • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden md:inline"><br/></span>
+//             • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden md:inline"><br/></span>
+//             • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden md:inline"><br/></span>
+//             {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
+//         </p>
+//     </div>,
+//     ];
 
 const mvmntSlides = [
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -1120,6 +1228,7 @@ const createSlides = (handleImageClick) => {
     ];
 
     return {
+        // ourRootlineSlides,
         motevisSlides,
         othelloSlides,
         pelotonSlides,
