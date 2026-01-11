@@ -23,6 +23,7 @@ const Timeline = () => {
 
     // Get all slides with the handleImageClick function
     const {
+        ourRootlineSlides,
         motevisSlides,
         othelloSlides,
         pelotonSlides,
@@ -147,6 +148,52 @@ const Timeline = () => {
             </div>
             {/* Project Sections */}
             <div className="-my-6">
+                {/* Our Rootline
+                <div className="relative pl-8 sm:pl-32 py-6 group">
+                    <div className="timeline-header font-medium text-2xl mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Our Rootline</div>
+                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                        <time className="timeline-pill sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 rounded-full shadow-lg" data-aos="fade-right" data-aos-duration="1500">2024 - '25</time>
+                        <div className="timeline-subheader text-xl font-bold" data-aos="fade-left" data-aos-duration="1500">Family Tree & Photo Album App</div>
+                    </div>
+                    <div className="text-neutral-500" data-aos="fade-left" data-aos-duration="1500">
+                        Web app for managing family tree and photo albums.
+                    </div>
+                    <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-gray-900 text-white" data-inactive-classes="text-gray-400">
+                        <h2 id="accordion-flush-heading-1">
+                            <button type="button" className="subtext flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-300 gap-3 focus:outline-none" onClick={() => toggleAccordion('accordion1')} aria-expanded={openAccordions['accordion1']} aria-controls="accordion-flush-body-1">
+                                <span data-aos="fade-left" data-aos-duration="1500">Learn more</span>
+                                <svg data-accordion-icon className={`w-3 h-3 ${openAccordions['accordion1'] ? 'rotate-180' : ''} shrink-0`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5"/>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion1'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                            <div className="relative w-full h-max py-5 border-b border-gray-300">
+                                <Slider 
+                                    dots={true} 
+                                    infinite={true} 
+                                    speed={500} 
+                                    slidesToShow={1} 
+                                    slidesToScroll={1}
+                                >
+                                    {ourRootlineSlides.map((slide, index) => (
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
+                                        </div>
+                                    ))}
+                                </Slider>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+
                 {/* Motevis */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
                     <div className="timeline-header font-medium text-2xl mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Motevis</div>
