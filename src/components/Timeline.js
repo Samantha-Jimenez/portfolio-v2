@@ -24,7 +24,9 @@ const Timeline = () => {
     // Get all slides with the handleImageClick function
     const {
         ourRootlineSlides,
+        ourRootlineSlidesMobile,
         motevisSlides,
+        motevisSlidesMobile,
         othelloSlides,
         pelotonSlides,
         zooVioSlides,
@@ -148,7 +150,7 @@ const Timeline = () => {
             </div>
             {/* Project Sections */}
             <div className="-my-6">
-                Our Rootline
+                {/* Our Rootline */}
                 <div className="relative pl-8 sm:pl-32 py-6 group">
                     <div className="timeline-header font-medium text-2xl mb-1 sm:mb-0" data-aos="fade-left" data-aos-duration="1500">Our Rootline</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[rgb(178,204,62)] after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
@@ -167,7 +169,7 @@ const Timeline = () => {
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion1'] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
+                        <div id="accordion-flush-body-1" className={`accordion-content transition-all duration-[500ms] ease-in-out ${openAccordions['accordion1'] ? 'h-max opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`} aria-labelledby="accordion-flush-heading-1">
                             <div className="relative w-full h-max py-5 border-b border-gray-300">
                                 <Slider 
                                     dots={true} 
@@ -176,7 +178,18 @@ const Timeline = () => {
                                     slidesToShow={1} 
                                     slidesToScroll={1}
                                 >
-                                    {ourRootlineSlides.map((slide, index) => (
+                                    {window.innerWidth < 515 ? ourRootlineSlidesMobile.map((slide, index) => (
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
+                                        </div>
+                                    )) : ourRootlineSlides.map((slide, index) => (
                                         <div key={index} className="carousel-item relative">
                                             {React.cloneElement(slide, {
                                                 onClick: (e) => {
@@ -222,7 +235,18 @@ const Timeline = () => {
                                     slidesToShow={1} 
                                     slidesToScroll={1}
                                 >
-                                    {motevisSlides.map((slide, index) => (
+                                    {window.innerWidth < 495 ? motevisSlidesMobile.map((slide, index) => (
+                                        <div key={index} className="carousel-item relative">
+                                            {React.cloneElement(slide, {
+                                                onClick: (e) => {
+                                                    const imgElement = e.target;
+                                                    if (imgElement.tagName === 'IMG' || imgElement.closest('.magnify-icon')) {
+                                                        handleImageClick(e, imgElement.tagName === 'IMG' ? imgElement.src : imgElement.closest('.group').querySelector('img').src);
+                                                    }
+                                                }
+                                            })}
+                                        </div>
+                                    )) : motevisSlides.map((slide, index) => (
                                         <div key={index} className="carousel-item relative">
                                             {React.cloneElement(slide, {
                                                 onClick: (e) => {

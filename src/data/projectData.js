@@ -269,31 +269,317 @@ const ourRootlineSlides = [
     <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
         <h1 className="text-2xl font-bold mb-4">More Features</h1>
         <p className="font-normal">
-        <p className="font-bold">Modern Frontend Architecture</p>
-        Built with Next.js 15.3 (App Router) and React 18, written in TypeScript for type safety and maintainability. Styling is handled with Tailwind CSS and daisyUI, including custom themes and subtle UI animations.
+            <p className="font-bold">Modern Frontend Architecture</p>
+            Built with Next.js 15.3 (App Router) and React 18, written in TypeScript for type safety and maintainability. Styling is handled with Tailwind CSS and daisyUI, including custom themes and subtle UI animations.
 
-        <p className="font-bold mt-2">Amplify Gen 2 Infrastructure</p>
-        Uses AWS Amplify Gen 2 to manage backend infrastructure, with Cognito authentication supporting email login and optional MFA, DynamoDB for structured application data, and S3 for scalable photo storage and retrieval.
+            <p className="font-bold mt-0 sm:mt-4">Amplify Gen 2 Infrastructure</p>
+            Uses AWS Amplify Gen 2 to manage backend infrastructure, with Cognito authentication supporting email login and optional MFA, DynamoDB for structured application data, and S3 for scalable photo storage and retrieval.
 
-        <p className="font-bold mt-2">Advanced Calendar Engine</p>
-        Calendar functionality is powered by FullCalendar with multiple plugins (day, time, list, multimonth, interaction, Google Calendar, iCalendar, and RRule), enabling recurring events, external calendar imports, and flexible viewing modes. iCal.js handles iCalendar parsing.
+            <p className="font-bold mt-0 sm:mt-4">Advanced Calendar Engine</p>
+            Calendar functionality is powered by FullCalendar with multiple plugins (day, time, list, multimonth, interaction, Google Calendar, iCalendar, and RRule), enabling recurring events, external calendar imports, and flexible viewing modes. iCal.js handles iCalendar parsing.
 
-        <p className="font-bold mt-2">State Management & Data Access Patterns</p>
-        Application state is managed through React Context (Auth, User, Calendar, Toast contexts), paired with custom hooks for DynamoDB reads and writes to keep data access consistent and reusable across features.
-
-        <p className="font-bold mt-2">Image Processing & Optimization Pipeline</p>
-        Server-side image optimization uses Sharp, with pngjs for targeted PNG manipulation, ensuring efficient storage, fast loading, and consistent visual quality across devices.
-
-        <p className="font-bold mt-2">Drag-and-Drop & Interaction Enhancements</p>
-        Interactive UI behaviors such as drag-and-drop are implemented with @dnd-kit, supporting flexible layouts and future extensibility for features like album organization.
-
-        <p className="font-bold mt-2">Utility Libraries & UX Enhancements</p>
-        Uses uuid for ID generation, react-range for time and range-based inputs, and @iconify/react with multiple icon sets for a consistent, scalable icon system.
-
-        <p className="font-bold mt-2">Code Quality & Build Tooling</p>
-        The project is configured with ESLint for linting, PostCSS and Autoprefixer for CSS processing, and a clean component architecture to support long-term maintainability and growth.
+            <p className="font-bold mt-0 sm:mt-4">State Management & Data Access Patterns</p>
+            Application state is managed through React Context (Auth, User, Calendar, Toast contexts), paired with custom hooks for DynamoDB reads and writes to keep data access consistent and reusable across features.
         </p>
      </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+         <h1 className="text-2xl font-bold mb-4">More Features</h1>
+         <p className="font-normal">
+            <p className="font-bold mt-0 sm:mt-4">Image Processing & Optimization Pipeline</p>
+            Server-side image optimization uses Sharp, with pngjs for targeted PNG manipulation, ensuring efficient storage, fast loading, and consistent visual quality across devices.
+
+            <p className="font-bold mt-0 sm:mt-4">Drag-and-Drop & Interaction Enhancements</p>
+            Interactive UI behaviors such as drag-and-drop are implemented with @dnd-kit, supporting flexible layouts and future extensibility for features like album organization.
+
+            <p className="font-bold mt-0 sm:mt-4">Utility Libraries & UX Enhancements</p>
+            Uses uuid for ID generation, react-range for time and range-based inputs, and @iconify/react with multiple icon sets for a consistent, scalable icon system.
+
+            <p className="font-bold mt-0 sm:mt-4">Code Quality & Build Tooling</p>
+            The project is configured with ESLint for linting, PostCSS and Autoprefixer for CSS processing, and a clean component architecture to support long-term maintainability and growth.
+         </p>
+      </div>,
+    ];
+
+const ourRootlineSlidesMobile = [
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineOne} 
+                    alt="Our Rootline One" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                Our Rootline is a private family platform designed to preserve memories, relationships, and history in one shared digital space. Built with <span className="font-bold">Next.js and Tailwind</span> on the frontend and powered by <span className="font-bold">Amplify authentication, DynamoDB, and S3-backed media storage</span>, the app allows families to <span className="font-bold">upload and organize photos, tag relatives across generations, and explore a living, interactive family tree</span>. What started as a deeply personal idea became a full-stack product that turns scattered albums and fragmented records into a searchable, connected family archive.
+            </p>
+            <div className="gap-2 grid-flow-col inline-grid w-full text-center">
+                <a href="https://main.d2a1izsfm6wl9b.amplifyapp.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
+            </div>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineTwo} 
+                    alt="Our Rootline Two" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The dashboard acts as each user's personal home base, combining profile details like identity, family roles, bios, hobbies, and contact links in one view. Built with the <span className="font-bold">Next.js App Router and Tailwind/daisyUI</span>, the page pulls personalized data through <span className="font-bold">Amplify authentication and DynamoDB</span>. Below the profile, users can browse <span className="font-bold">uploaded photos, tagged memories, favorites, and albums</span> stored in <span className="font-bold">S3-backed media storage</span>, while a side panel highlights upcoming family events and birthdays, keeping past milestones visible at a glance.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineThree} 
+                    alt="Our Rootline Three" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                Hobby Hubs create shared spaces where family members can connect around common interests beyond lineage. Each hub  <span className="font-bold">displays participating relatives and includes a comment feed</span> where members can chat, share experiences, and post photos. Built with <span className="font-bold">Next.js client components and DynamoDB-backed threads</span>, this feature uses the same authenticated context as the rest of the app to foster organic, interest-driven family conversations.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineFour} 
+                    alt="Our Rootline Four" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The notification drawer provides real-time updates for key family activity, including <span className="font-bold">comments, RSVPs, and photo tags</span>. Accessible from a bell icon in the navbar, the slide-out panel supports filtering, batch actions, and saved notification preferences. Implemented with <span className="font-bold">React and Tailwind UI patterns</span> and backed by <span className="font-bold">authenticated API hooks</span>, it keeps users informed while giving them control over how much they see.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineFive} 
+                    alt="Our Rootline Five" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The photos page brings together every image shared across the family into a single, searchable gallery. Images are stored in <span className="font-bold">S3 with metadata managed in DynamoDB</span>, allowing users to filter memories by <span className="font-bold">location, tagged relatives, and time.</span> Selecting a photo opens a <span className="font-bold">detailed view with metadata and family comments</span>, transforming each image from a static upload into a shared, contextualized story.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineSix} 
+                    alt="Our Rootline Six" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+            The upload page allows users to add photos while enriching them with meaningful context. During upload, family members can <span className="font-bold">tag relatives, specify when the photo was taken, and add detailed location data from country down to neighborhood</span>. Photos are securely uploaded to <span className="font-bold">S3 with structured metadata saved to DynamoDB</span>, ensuring every memory is easy to organize, search, and connect back to people and places over time.            
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineSeven} 
+                    alt="Our Rootline Seven" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The Family Tree visualizes relationships across generations through an animated, expandable layout. Users can <span className="font-bold">navigate the tree by moving, expanding, and collapsing branches</span> to explore lineage over time, with relationship data sourced from DynamoDB. Selecting a family member opens their <span className="font-bold">profile page</span>, seamlessly linking the visual structure of the tree to personal histories and shared media.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineEight} 
+                    alt="Our Rootline Eight" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The calendar <span className="font-bold">centralizes family events and birthdays in one shared view</span>, with support for month, week, year, and list layouts. Built using <span className="font-bold">FullCalendar with recurring events and RSVP functionality</span>, family members can add events directly from a streamlined modal. Events are persisted via <span className="font-bold">DynamoDB</span> and synced through authenticated actions, keeping gatherings and milestones coordinated across the family.
+            </p>
+        </div>
+    </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">More Features</h1>
+        <p className="font-normal">
+            <p className="font-bold">Modern Frontend Architecture</p>
+            Built with Next.js 15.3 (App Router) and React 18, written in TypeScript for type safety and maintainability. Styling is handled with Tailwind CSS and daisyUI, including custom themes and subtle UI animations.
+
+            <p className="font-bold mt-2">Amplify Gen 2 Infrastructure</p>
+            Uses AWS Amplify Gen 2 to manage backend infrastructure, with Cognito authentication supporting email login and optional MFA, DynamoDB for structured application data, and S3 for scalable photo storage and retrieval.
+
+            <p className="font-bold mt-2">Advanced Calendar Engine</p>
+            Calendar functionality is powered by FullCalendar with multiple plugins (day, time, list, multimonth, interaction, Google Calendar, iCalendar, and RRule), enabling recurring events, external calendar imports, and flexible viewing modes. iCal.js handles iCalendar parsing.
+        </p>
+    </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">More Features</h1>
+        <p className="font-normal">
+            <p className="font-bold mt-2">State Management & Data Access Patterns</p>
+            Application state is managed through React Context (Auth, User, Calendar, Toast contexts), paired with custom hooks for DynamoDB reads and writes to keep data access consistent and reusable across features.
+
+            <p className="font-bold mt-2">Image Processing & Optimization Pipeline</p>
+            Server-side image optimization uses Sharp, with pngjs for targeted PNG manipulation, ensuring efficient storage, fast loading, and consistent visual quality across devices.
+
+            <p className="font-bold mt-2">Drag-and-Drop & Interaction Enhancements</p>
+            Interactive UI behaviors such as drag-and-drop are implemented with @dnd-kit, supporting flexible layouts and future extensibility for features like album organization.
+        </p>
+    </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">More Features</h1>
+        <p className="font-normal">
+            <p className="font-bold mt-2">Utility Libraries & UX Enhancements</p>
+            Uses uuid for ID generation, react-range for time and range-based inputs, and @iconify/react with multiple icon sets for a consistent, scalable icon system.
+
+            <p className="font-bold mt-2">Code Quality & Build Tooling</p>
+            The project is configured with ESLint for linting, PostCSS and Autoprefixer for CSS processing, and a clean component architecture to support long-term maintainability and growth.
+        </p>
+    </div>,
     ];
 
 const mvmntSlides = [
@@ -427,15 +713,171 @@ const motevisSlides = [
     <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
         <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
         <p className="font-normal">
-            • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden md:inline"><br/></span>
-            • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden md:inline"><br/></span>
-            • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden md:inline"><br/></span>
-            • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden md:inline"><br/></span>
-            • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden md:inline"><br/></span>
+            • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden min-[560px]:inline"><br/></span>
+            • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden min-[560px]:inline"><br/></span>
+            • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden min-[560px]:inline"><br/></span>
+            • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden min-[560px]:inline"><br/></span>
+            • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden min-[560px]:inline"><br/></span>
             {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
         </p>
+        <div className="gap-2 grid-flow-col inline-grid w-72 text-center mb-4 self-center">
+            <div className="tooltip font-normal" data-tip="Instagram">      
+                <a href="https://www.instagram.com/motevisapp/" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1">
+                    <span className='icon-[ri--instagram-line] text-base'></span>
+                </a>
+            </div>
+            <div className="tooltip font-normal" data-tip="Twitter">
+                <a href="https://x.com/motevisapp" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1 shadow-lg">
+                    <span className='icon-[ri--twitter-x-line] text-base'></span>
+                </a>
+            </div>
+            <div className="tooltip font-normal" data-tip="TikTok">
+                <a href="https://www.tiktok.com/@motevisapp" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1 shadow-lg">
+                    <span className='icon-[ri--tiktok-fill] text-base'></span>
+                </a>
+            </div>
+            <div className="tooltip font-normal" data-tip="Email">
+                <a href="mailto:info@motevis.com" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1 shadow-lg">
+                    <span className='icon-[tabler--mail] text-base'></span>
+                </a>
+            </div>
+        </div>
     </div>,
     ];
+
+const motevisSlidesMobile = [
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={motevisOne} 
+                    alt="Motevis One" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                Motevis (formerly Mvmnt Collectives) is a web app where runners can <span className="font-bold">discover local clubs, view club info, and find weekly runs and race events</span> throughout New York City.
+            </p>
+            <div className="gap-2 grid-flow-col inline-grid w-full text-center">
+                <a href="https://motevis.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
+            </div>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={motevisTwo} 
+                    alt="Motevis Two" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                Users can <span className="font-bold">search for clubs, weekly runs, or race events</span> by name, tag, or borough. Weekly runs can also be filtered with <span className="font-bold">time range sliders</span>, making it easy to find runs that fit any schedule.
+            </p>
+        </div>
+    </div>,
+        <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={motevisThree} 
+                    alt="Motevis Three" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                Each club page highlights the run club's details, including its <span className="font-bold">email, founding year, social links, description, and hashtags.</span> The page also features a schedule of weekly runs and race events, making it easy for members to stay informed and connected.
+            </p>
+        </div>
+    </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
+        <p className="font-normal">
+            • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className=""><br/></span>
+            • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className=""><br/></span>
+            • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className=""><br/></span>
+        </p>
+    </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
+        <p className="font-normal">
+            • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className=""><br/></span>
+            • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className=""><br/></span>
+            {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
+        </p>
+        <div className="gap-2 grid-flow-col inline-grid w-72 text-center mb-4 self-center">
+            <div className="tooltip font-normal" data-tip="Instagram">      
+                <a href="https://www.instagram.com/motevisapp/" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1">
+                    <span className='icon-[ri--instagram-line] text-base'></span>
+                </a>
+            </div>
+            <div className="tooltip font-normal" data-tip="Twitter">
+                <a href="https://x.com/motevisapp" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1 shadow-lg">
+                    <span className='icon-[ri--twitter-x-line] text-base'></span>
+                </a>
+            </div>
+            <div className="tooltip font-normal" data-tip="TikTok">
+                <a href="https://www.tiktok.com/@motevisapp" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1 shadow-lg">
+                    <span className='icon-[ri--tiktok-fill] text-base'></span>
+                </a>
+            </div>
+            <div className="tooltip font-normal" data-tip="Email">
+                <a href="mailto:info@motevis.com" target="_blank" rel="noopener noreferrer" className="bg-zinc-200 shadow-lg hover:bg-white hover:shadow-inner text-black px-2 py-2 inline-grid rounded-lg w-full text-[12px] flex items-center justify-center gap-1 shadow-lg">
+                    <span className='icon-[tabler--mail] text-base'></span>
+                </a>
+            </div>
+        </div>
+    </div>,
+];
 
 const othelloSlides = [
     <div className="flex justify-center h-full py-4 flex-col gap-4 w-full text-[15px]">
@@ -1403,7 +1845,9 @@ const createSlides = (handleImageClick) => {
 
     return {
         ourRootlineSlides,
+        ourRootlineSlidesMobile,
         motevisSlides,
+        motevisSlidesMobile,
         othelloSlides,
         pelotonSlides,
         zooVioSlides,
