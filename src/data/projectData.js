@@ -13,114 +13,260 @@ import mvmntCollectives from './../imgFiles/MvmntCo.png';
 import motevisOne from './../imgFiles/MotevisOne.png';
 import motevisTwo from './../imgFiles/MotevisTwo.png';
 import motevisThree from './../imgFiles/MotevisThree.png';
-// import OurRootlineOne from './../imgFiles/OurRootlineOne.png';
+import ourRootlineOne from './../imgFiles/OurRootlineOne.png';
+import ourRootlineTwo from './../imgFiles/OurRootlineTwo.png';
+import ourRootlineThree from './../imgFiles/OurRootlineThree.png';
+import ourRootlineFour from './../imgFiles/OurRootlineFour.png';
+import ourRootlineFive from './../imgFiles/OurRootlineFive.png';
+import ourRootlineSix from './../imgFiles/OurRootlineSix.png';
+import ourRootlineSeven from './../imgFiles/OurRootlineSeven.png';
+import ourRootlineEight from './../imgFiles/OurRootlineEight.png';
 
-// const ourRootlineSlides = [
-//     <div className="image-crop-container flex flex-col items-center gap-4">
-//         <div className="relative w-[90%] mx-auto mb-[10px]">
-//             <div className="relative w-full h-full group">
-//                 <img 
-//                     src={OurRootlineOne} 
-//                     alt="Our Rootline One" 
-//                     className="w-full cursor-zoom-in rounded-lg"
-//                 />
-//                 <div 
-//                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
-//                     onClick={(e) => {
-//                         e.stopPropagation();
-//                         const imgElement = e.currentTarget.parentElement.querySelector('img');
-//                         if (imgElement) {
-//                             handleImageClick(e, imgElement.src);
-//                         }
-//                     }}
-//                 >
-//                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-//                     </svg>
-//                 </div>
-//             </div>
-//         </div>
-//         <div className="gap-2 inline-grid grid-flow-row w-full">
-//             <p className="font-normal px-3 md:px-0">
-//                 Motevis (formerly Mvmnt Collectives) is a web app where runners can <span className="font-bold">discover local clubs, view club info, and find weekly runs and race events</span> throughout New York City.
-//             </p>
-//             <div className="gap-2 grid-flow-col inline-grid w-full text-center">
-//                 <a href="https://motevis.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
-//             </div>
-//         </div>
-//     </div>,
-//     <div className="image-crop-container flex flex-col items-center gap-4">
-//         <div className="relative w-[90%] mx-auto mb-[10px]">
-//             <div className="relative w-full h-full group">
-//                 {/* <img 
-//                     src={motevisTwo} 
-//                     alt="Our Rootline Two" 
-//                     className="w-full cursor-zoom-in rounded-lg"
-//                 /> */}
-//                 <div 
-//                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
-//                     onClick={(e) => {
-//                         e.stopPropagation();
-//                         const imgElement = e.currentTarget.parentElement.querySelector('img');
-//                         if (imgElement) {
-//                             handleImageClick(e, imgElement.src);
-//                         }
-//                     }}
-//                 >
-//                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-//                     </svg>
-//                 </div>
-//             </div>
-//         </div>
-//         <div className="gap-2 inline-grid grid-flow-row w-full">
-//             <p className="font-normal px-3 md:px-0">
-//                 Users can <span className="font-bold">search for clubs, weekly runs, or race events</span> by name, tag, or borough. Weekly runs can also be filtered with <span className="font-bold">time range sliders</span>, making it easy to find runs that fit any schedule.
-//             </p>
-//         </div>
-//     </div>,
-//         <div className="image-crop-container flex flex-col items-center gap-4">
-//         <div className="relative w-[90%] mx-auto mb-[10px]">
-//             <div className="relative w-full h-full group">
-//                 {/* <img 
-//                     src={motevisThree} 
-//                     alt="Our Rootline Three" 
-//                     className="w-full cursor-zoom-in rounded-lg"
-//                 /> */}
-//                 <div 
-//                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
-//                     onClick={(e) => {
-//                         e.stopPropagation();
-//                         const imgElement = e.currentTarget.parentElement.querySelector('img');
-//                         if (imgElement) {
-//                             handleImageClick(e, imgElement.src);
-//                         }
-//                     }}
-//                 >
-//                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-//                     </svg>
-//                 </div>
-//             </div>
-//         </div>
-//         <div className="gap-2 inline-grid grid-flow-row w-full">
-//             <p className="font-normal px-3 md:px-0">
-//                 Each club page highlights the run club's details, including its <span className="font-bold">email, founding year, social links, description, and hashtags.</span> The page also features a schedule of weekly runs and race events, making it easy for members to stay informed and connected.
-//             </p>
-//         </div>
-//     </div>,
-//     <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
-//         <h1 className="text-2xl font-bold mb-4">Upcoming Features</h1>
-//         <p className="font-normal">
-//             • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden md:inline"><br/></span>
-//             • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden md:inline"><br/></span>
-//             • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden md:inline"><br/></span>
-//             • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden md:inline"><br/></span>
-//             • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden md:inline"><br/></span>
-//             {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
-//         </p>
-//     </div>,
-//     ];
+const ourRootlineSlides = [
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineOne} 
+                    alt="Our Rootline One" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                <span className="font-bold">Our Rootline is a private family platform designed to preserve memories, relationships, and history in one shared digital space.</span> The app allows family members to upload and organize photos, tag relatives across generations, and explore a living family tree that connects people, stories, and milestones over time. <br/>Built as both a technical project and a deeply personal one, Our Rootline blends thoughtful UX with full-stack engineering to create a modern alternative to scattered photo albums and fragmented family records—turning family history into something interactive, searchable, and alive.
+            </p>
+            <div className="gap-2 grid-flow-col inline-grid w-full text-center">
+                <a href="https://main.d2a1izsfm6wl9b.amplifyapp.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
+            </div>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineTwo} 
+                    alt="Our Rootline Two" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The dashboard acts as each user&apos;s personal home base, bringing together profile details like <span className="font-bold">identity, family roles, bios, hobbies, and contact links</span> in one place. Below the profile, users can view their <span className="font-bold">uploaded photos, tagged photos, favorites, and albums</span>, while a side panel highlights <span className="font-bold">upcoming family events and birthdays</span>, with past milestones preserved below. The layout balances personal identity with shared family history, making it easy to stay connected at a glance.            
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineThree} 
+                    alt="Our Rootline Three" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+            The <span className="font-bold">Photos page brings together every image shared across the family into a single, searchable gallery.</span> Users can filter memories by <span className="font-bold">location, tagged relatives, and time</span> using intuitive controls, making it easy to rediscover moments across years and places. Selecting a photo opens a detailed view with <span className="font-bold">metadata and family comments</span>, turning each image into a shared story rather than a static upload.            
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineFour} 
+                    alt="Our Rootline Four" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The upload page allows users to add photos while enriching them with meaningful context. When uploading, family members can <span className="font-bold">tag relatives, specify when the photo was taken, and add detailed location data from country down to neighborhood.</span> This structured approach ensures every memory is easy to organize, search, and connect back to people and places over time.            
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineFive} 
+                    alt="Our Rootline Five" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The <span className="font-bold">Family Tree visualizes relationships across generations through an animated, expandable layout.</span> Users can navigate the tree by moving, expanding, and collapsing branches to explore the full lineage over time. Selecting a family member opens their <span className="font-bold">profile page</span>, seamlessly connecting family structure with personal histories and shared memories.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineSix} 
+                    alt="Our Rootline Six" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The <span className="font-bold">calendar centralizes family events and birthdays in one shared view, making it easy to stay in sync.</span> Users can switch between <span className="font-bold">month, week, year, or list views</span>, <span className="font-bold">RSVP to events</span>, and add new ones directly from the calendar. Selecting a date opens a streamlined <span className="font-bold">event modal</span>, allowing family members to quickly create and manage gatherings and milestones.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineSeven} 
+                    alt="Our Rootline Seven" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The <span className="font-bold">calendar centralizes family events and birthdays in one shared view, making it easy to stay in sync.</span> Users can switch between <span className="font-bold">month, week, year, or list views</span>, <span className="font-bold">RSVP to events</span>, and add new ones directly from the calendar. Selecting a date opens a streamlined <span className="font-bold">event modal</span>, allowing family members to quickly create and manage gatherings and milestones.
+            </p>
+        </div>
+    </div>,
+    <div className="image-crop-container flex flex-col items-center gap-4">
+        <div className="relative w-[90%] mx-auto mb-[10px]">
+            <div className="relative w-full h-full group">
+                <img 
+                    src={ourRootlineEight} 
+                    alt="Our Rootline Eight" 
+                    className="w-full cursor-zoom-in rounded-lg"
+                />
+                <div 
+                    className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        const imgElement = e.currentTarget.parentElement.querySelector('img');
+                        if (imgElement) {
+                            handleImageClick(e, imgElement.src);
+                        }
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div className="gap-2 inline-grid grid-flow-row w-full">
+            <p className="font-normal px-3 md:px-0">
+                The <span className="font-bold">calendar centralizes family events and birthdays in one shared view, making it easy to stay in sync.</span> Users can switch between <span className="font-bold">month, week, year, or list views</span>, <span className="font-bold">RSVP to events</span>, and add new ones directly from the calendar. Selecting a date opens a streamlined <span className="font-bold">event modal</span>, allowing family members to quickly create and manage gatherings and milestones.
+            </p>
+        </div>
+    </div>,
+    ];
 
 const mvmntSlides = [
     <div className="image-crop-container flex flex-col items-center gap-4">
@@ -1228,7 +1374,7 @@ const createSlides = (handleImageClick) => {
     ];
 
     return {
-        // ourRootlineSlides,
+        ourRootlineSlides,
         motevisSlides,
         othelloSlides,
         pelotonSlides,
