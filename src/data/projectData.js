@@ -49,7 +49,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                <span className="font-bold">Our Rootline is a private family platform designed to preserve memories, relationships, and history in one shared digital space.</span> The app allows family members to upload and organize photos, tag relatives across generations, and explore a living family tree that connects people, stories, and milestones over time. <br/>Built as both a technical project and a deeply personal one, Our Rootline blends thoughtful UX with full-stack engineering to create a modern alternative to scattered photo albums and fragmented family records—turning family history into something interactive, searchable, and alive.
+                Our Rootline is a private family platform designed to preserve memories, relationships, and history in one shared digital space. Built with <span className="font-bold">Next.js and Tailwind</span> on the frontend and powered by <span className="font-bold">Amplify authentication, DynamoDB, and S3-backed media storage</span>, the app allows families to <span className="font-bold">upload and organize photos, tag relatives across generations, and explore a living, interactive family tree</span>. What started as a deeply personal idea became a full-stack product that turns scattered albums and fragmented records into a searchable, connected family archive.
             </p>
             <div className="gap-2 grid-flow-col inline-grid w-full text-center">
                 <a href="https://main.d2a1izsfm6wl9b.amplifyapp.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black shadow-lg px-4 py-2 inline-grid rounded-lg hover:shadow-inner w-full text-[15px]">Live Site</a>
@@ -82,7 +82,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The dashboard acts as each user&apos;s personal home base, bringing together profile details like <span className="font-bold">identity, family roles, bios, hobbies, and contact links</span> in one place. Below the profile, users can view their <span className="font-bold">uploaded photos, tagged photos, favorites, and albums</span>, while a side panel highlights <span className="font-bold">upcoming family events and birthdays</span>, with past milestones preserved below. The layout balances personal identity with shared family history, making it easy to stay connected at a glance.            
+                The dashboard acts as each user's personal home base, combining profile details like identity, family roles, bios, hobbies, and contact links in one view. Built with the <span className="font-bold">Next.js App Router and Tailwind/daisyUI</span>, the page pulls personalized data through <span className="font-bold">Amplify authentication and DynamoDB</span>. Below the profile, users can browse <span className="font-bold">uploaded photos, tagged memories, favorites, and albums</span> stored in <span className="font-bold">S3-backed media storage</span>, while a side panel highlights upcoming family events and birthdays, keeping past milestones visible at a glance.
             </p>
         </div>
     </div>,
@@ -112,7 +112,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                <span className="font-bold">Hobby Hubs</span> create shared spaces where family members can connect around common interests. <span className="font-bold">Each hub shows who&apos;s part of the hobby and includes a comment feed where members can chat, share experiences, and post photos.</span> This feature encourages connection beyond lineage, turning shared interests into ongoing family conversations.
+                Hobby Hubs create shared spaces where family members can connect around common interests beyond lineage. Each hub  <span className="font-bold">displays participating relatives and includes a comment feed</span> where members can chat, share experiences, and post photos. Built with <span className="font-bold">Next.js client components and DynamoDB-backed threads</span>, this feature uses the same authenticated context as the rest of the app to foster organic, interest-driven family conversations.
             </p>
         </div>
     </div>,
@@ -142,7 +142,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The <span className="font-bold">notification drawer</span> provides real-time updates for key family activity, including comments, RSVPs, and photo tags. Accessible from the navbar, the slide-out panel allows users to <span className="font-bold">filter notifications, batch manage them, and customize preferences</span> to control what they receive. This system keeps family members informed without overwhelming them, balancing engagement with user control.
+                The notification drawer provides real-time updates for key family activity, including <span className="font-bold">comments, RSVPs, and photo tags</span>. Accessible from a bell icon in the navbar, the slide-out panel supports filtering, batch actions, and saved notification preferences. Implemented with <span className="font-bold">React and Tailwind UI patterns</span> and backed by <span className="font-bold">authenticated API hooks</span>, it keeps users informed while giving them control over how much they see.
             </p>
         </div>
     </div>,
@@ -172,7 +172,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-            The <span className="font-bold">Photos page brings together every image shared across the family into a single, searchable gallery.</span> Users can filter memories by <span className="font-bold">location, tagged relatives, and time</span> using intuitive controls, making it easy to rediscover moments across years and places. Selecting a photo opens a detailed view with <span className="font-bold">metadata and family comments</span>, turning each image into a shared story rather than a static upload.            
+                The photos page brings together every image shared across the family into a single, searchable gallery. Images are stored in <span className="font-bold">S3 with metadata managed in DynamoDB</span>, allowing users to filter memories by <span className="font-bold">location, tagged relatives, and time.</span> Selecting a photo opens a <span className="font-bold">detailed view with metadata and family comments</span>, transforming each image from a static upload into a shared, contextualized story.
             </p>
         </div>
     </div>,
@@ -202,7 +202,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The upload page allows users to add photos while enriching them with meaningful context. When uploading, family members can <span className="font-bold">tag relatives, specify when the photo was taken, and add detailed location data from country down to neighborhood.</span> This structured approach ensures every memory is easy to organize, search, and connect back to people and places over time.            
+            The upload page allows users to add photos while enriching them with meaningful context. During upload, family members can <span className="font-bold">tag relatives, specify when the photo was taken, and add detailed location data from country down to neighborhood</span>. Photos are securely uploaded to <span className="font-bold">S3 with structured metadata saved to DynamoDB</span>, ensuring every memory is easy to organize, search, and connect back to people and places over time.            
             </p>
         </div>
     </div>,
@@ -232,7 +232,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The <span className="font-bold">Family Tree visualizes relationships across generations through an animated, expandable layout.</span> Users can navigate the tree by moving, expanding, and collapsing branches to explore the full lineage over time. Selecting a family member opens their <span className="font-bold">profile page</span>, seamlessly connecting family structure with personal histories and shared memories.
+                The Family Tree visualizes relationships across generations through an animated, expandable layout. Users can <span className="font-bold">navigate the tree by moving, expanding, and collapsing branches</span> to explore lineage over time, with relationship data sourced from DynamoDB. Selecting a family member opens their <span className="font-bold">profile page</span>, seamlessly linking the visual structure of the tree to personal histories and shared media.
             </p>
         </div>
     </div>,
@@ -262,7 +262,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The <span className="font-bold">calendar centralizes family events and birthdays in one shared view, making it easy to stay in sync.</span> Users can switch between <span className="font-bold">month, week, year, or list views</span>, <span className="font-bold">RSVP to events</span>, and add new ones directly from the calendar. Selecting a date opens a streamlined <span className="font-bold">event modal</span>, allowing family members to quickly create and manage gatherings and milestones.
+                The calendar <span className="font-bold">centralizes family events and birthdays in one shared view</span>, with support for month, week, year, and list layouts. Built using <span className="font-bold">FullCalendar with recurring events and RSVP functionality</span>, family members can add events directly from a streamlined modal. Events are persisted via <span className="font-bold">DynamoDB</span> and synced through authenticated actions, keeping gatherings and milestones coordinated across the family.
             </p>
         </div>
     </div>,
