@@ -112,7 +112,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-            The <span className="font-bold">Photos page brings together every image shared across the family into a single, searchable gallery.</span> Users can filter memories by <span className="font-bold">location, tagged relatives, and time</span> using intuitive controls, making it easy to rediscover moments across years and places. Selecting a photo opens a detailed view with <span className="font-bold">metadata and family comments</span>, turning each image into a shared story rather than a static upload.            
+                <span className="font-bold">Hobby Hubs</span> create shared spaces where family members can connect around common interests. <span className="font-bold">Each hub shows who&apos;s part of the hobby and includes a comment feed where members can chat, share experiences, and post photos.</span> This feature encourages connection beyond lineage, turning shared interests into ongoing family conversations.
             </p>
         </div>
     </div>,
@@ -142,7 +142,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The upload page allows users to add photos while enriching them with meaningful context. When uploading, family members can <span className="font-bold">tag relatives, specify when the photo was taken, and add detailed location data from country down to neighborhood.</span> This structured approach ensures every memory is easy to organize, search, and connect back to people and places over time.            
+                The <span className="font-bold">notification drawer</span> provides real-time updates for key family activity, including comments, RSVPs, and photo tags. Accessible from the navbar, the slide-out panel allows users to <span className="font-bold">filter notifications, batch manage them, and customize preferences</span> to control what they receive. This system keeps family members informed without overwhelming them, balancing engagement with user control.
             </p>
         </div>
     </div>,
@@ -172,7 +172,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The <span className="font-bold">Family Tree visualizes relationships across generations through an animated, expandable layout.</span> Users can navigate the tree by moving, expanding, and collapsing branches to explore the full lineage over time. Selecting a family member opens their <span className="font-bold">profile page</span>, seamlessly connecting family structure with personal histories and shared memories.
+            The <span className="font-bold">Photos page brings together every image shared across the family into a single, searchable gallery.</span> Users can filter memories by <span className="font-bold">location, tagged relatives, and time</span> using intuitive controls, making it easy to rediscover moments across years and places. Selecting a photo opens a detailed view with <span className="font-bold">metadata and family comments</span>, turning each image into a shared story rather than a static upload.            
             </p>
         </div>
     </div>,
@@ -202,7 +202,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The <span className="font-bold">calendar centralizes family events and birthdays in one shared view, making it easy to stay in sync.</span> Users can switch between <span className="font-bold">month, week, year, or list views</span>, <span className="font-bold">RSVP to events</span>, and add new ones directly from the calendar. Selecting a date opens a streamlined <span className="font-bold">event modal</span>, allowing family members to quickly create and manage gatherings and milestones.
+                The upload page allows users to add photos while enriching them with meaningful context. When uploading, family members can <span className="font-bold">tag relatives, specify when the photo was taken, and add detailed location data from country down to neighborhood.</span> This structured approach ensures every memory is easy to organize, search, and connect back to people and places over time.            
             </p>
         </div>
     </div>,
@@ -232,7 +232,7 @@ const ourRootlineSlides = [
         </div>
         <div className="gap-2 inline-grid grid-flow-row w-full">
             <p className="font-normal px-3 md:px-0">
-                The <span className="font-bold">calendar centralizes family events and birthdays in one shared view, making it easy to stay in sync.</span> Users can switch between <span className="font-bold">month, week, year, or list views</span>, <span className="font-bold">RSVP to events</span>, and add new ones directly from the calendar. Selecting a date opens a streamlined <span className="font-bold">event modal</span>, allowing family members to quickly create and manage gatherings and milestones.
+                The <span className="font-bold">Family Tree visualizes relationships across generations through an animated, expandable layout.</span> Users can navigate the tree by moving, expanding, and collapsing branches to explore the full lineage over time. Selecting a family member opens their <span className="font-bold">profile page</span>, seamlessly connecting family structure with personal histories and shared memories.
             </p>
         </div>
     </div>,
@@ -266,6 +266,17 @@ const ourRootlineSlides = [
             </p>
         </div>
     </div>,
+    // <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+    //     <h1 className="text-2xl font-bold mb-4">More Features</h1>
+    //     <p className="font-normal">
+    //         • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden md:inline"><br/></span>
+    //         • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden md:inline"><br/></span>
+    //         • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden md:inline"><br/></span>
+    //         • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden md:inline"><br/></span>
+    //         • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden md:inline"><br/></span>
+    //         {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
+    //     </p>
+    // </div>,
     ];
 
 const mvmntSlides = [
