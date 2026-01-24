@@ -266,17 +266,34 @@ const ourRootlineSlides = [
             </p>
         </div>
     </div>,
-    // <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
-    //     <h1 className="text-2xl font-bold mb-4">More Features</h1>
-    //     <p className="font-normal">
-    //         • Allow users to <span className="font-bold">sign up and log in</span> and securely access gated pages through authentication. <br/> <span className="hidden md:inline"><br/></span>
-    //         • Provide runners with a <span className="font-bold">personalized dashboard</span> where they can follow and stay updated on their favorite clubs. <br/> <span className="hidden md:inline"><br/></span>
-    //         • Enable run club captains to <span className="font-bold">manage their own club pages</span>, updating descriptions and weekly run information. <br/> <span className="hidden md:inline"><br/></span>
-    //         • Invite users to <span className="font-bold">subscribe by email</span> to our newsletter, featuring updates on new clubs, upcoming events, and platform features. <br/> <span className="hidden md:inline"><br/></span>
-    //         • Expand beyond <span className="font-bold">New York City</span> to connect runners and fitness enthusiasts across the United States. <br/> <span className="hidden md:inline"><br/></span>
-    //         {/* • Broaden our focus from only run clubs to include <span className="font-bold">other fitness communities</span> such as pickleball, rollerblading, and surf clubs. <br/> */}
-    //     </p>
-    // </div>,
+    <div className="flex justify-center h-full px-3 py-4 flex-col gap-4 w-full text-[15px]">
+        <h1 className="text-2xl font-bold mb-4">More Features</h1>
+        <p className="font-normal">
+        <p className="font-bold">Modern Frontend Architecture</p>
+        Built with Next.js 15.3 (App Router) and React 18, written in TypeScript for type safety and maintainability. Styling is handled with Tailwind CSS and daisyUI, including custom themes and subtle UI animations.
+
+        <p className="font-bold mt-2">Amplify Gen 2 Infrastructure</p>
+        Uses AWS Amplify Gen 2 to manage backend infrastructure, with Cognito authentication supporting email login and optional MFA, DynamoDB for structured application data, and S3 for scalable photo storage and retrieval.
+
+        <p className="font-bold mt-2">Advanced Calendar Engine</p>
+        Calendar functionality is powered by FullCalendar with multiple plugins (day, time, list, multimonth, interaction, Google Calendar, iCalendar, and RRule), enabling recurring events, external calendar imports, and flexible viewing modes. iCal.js handles iCalendar parsing.
+
+        <p className="font-bold mt-2">State Management & Data Access Patterns</p>
+        Application state is managed through React Context (Auth, User, Calendar, Toast contexts), paired with custom hooks for DynamoDB reads and writes to keep data access consistent and reusable across features.
+
+        <p className="font-bold mt-2">Image Processing & Optimization Pipeline</p>
+        Server-side image optimization uses Sharp, with pngjs for targeted PNG manipulation, ensuring efficient storage, fast loading, and consistent visual quality across devices.
+
+        <p className="font-bold mt-2">Drag-and-Drop & Interaction Enhancements</p>
+        Interactive UI behaviors such as drag-and-drop are implemented with @dnd-kit, supporting flexible layouts and future extensibility for features like album organization.
+
+        <p className="font-bold mt-2">Utility Libraries & UX Enhancements</p>
+        Uses uuid for ID generation, react-range for time and range-based inputs, and @iconify/react with multiple icon sets for a consistent, scalable icon system.
+
+        <p className="font-bold mt-2">Code Quality & Build Tooling</p>
+        The project is configured with ESLint for linting, PostCSS and Autoprefixer for CSS processing, and a clean component architecture to support long-term maintainability and growth.
+        </p>
+     </div>,
     ];
 
 const mvmntSlides = [
