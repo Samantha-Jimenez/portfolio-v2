@@ -981,6 +981,8 @@
 
   .slick-dots {
     bottom: -10px !important;
+    width: max-content !important;
+    justify-self: center !important;
   }
 
   .slick-prev:before, .slick-next:before {
