@@ -79,7 +79,7 @@ const Skills = () => {
                     const isIconify = skill.icon.includes(':');
                     
                     return (
-                        <div className={`iconDiv flex shadow-lg tooltip tooltip-top items-center ${skill.category === 'tools' ? 'bg-white' : skill.category === 'frontend' ? 'bg-orange-300/20' : 'bg-green-300/20'}`} key={index} data-aos="fade-up" data-aos-duration="500" data-tip={skill.tooltip}>
+                        <div className={`iconDiv flex shadow-lg tooltip tooltip-top items-center ${skill.category === 'tools' ? 'bg-zinc-400/20' : skill.category === 'frontend' ? 'bg-orange-300/20 dark:bg-orange-300/20' : 'bg-green-300/20 dark:bg-green-300/20'}`} key={index} data-aos="fade-up" data-aos-duration="500" data-tip={skill.tooltip}>
                             {isIconify ? (
                                 <Icon icon={skill.icon} className="icon" />
                             ) : (
