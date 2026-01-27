@@ -299,7 +299,7 @@ function App() {
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
-                  <a className="menuLink" href="https://www.canva.com/design/DAGdIEMAtNo/9Ogf8MbGWa3s1OrTmh8cqA/view?utm_content=DAGdIEMAtNo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h856a94e905" target="_blank" rel="noopener noreferrer">
+                  <a className="menuLink" href="https://docs.google.com/document/d/1a4At28-w9IjCKgRU2sKoFoAF9aHgVHb0eFkq1eMm7wc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                     <span className="icon-[tabler--file-text] mr-2"></span>
                     <span style={{"marginLeft": "-4px"}}>Resume</span>
                   </a>
