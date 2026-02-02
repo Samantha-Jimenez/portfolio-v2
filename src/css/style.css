@@ -574,14 +574,114 @@
   .highlighted-text:hover {
     color: var(--highlighted-text-hover);
   }
+
+  /*--------------------------------------------------------------
+  # GitHub Activity
+  --------------------------------------------------------------*/
+
+  .github-activity {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: var(--background-and-text-primary);
+  }
+
+  .github-activity h2 {
+    color: var(--header-color);
+  }
+
+  /* GitHub Profile Link - Slide Animation */
+  .github-profile-link {
+    gap: 0;
+  }
+
+  .github-text-slide {
+    overflow: hidden;
+    margin-left: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .github-text-slide {
+      margin-left: 0;
+    }
+    
+    .github-profile-link:hover .github-text-slide {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .github-activity-content {
+    padding-top: 20px;
+  }
+
+  .github-stats-grid img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .github-stats-grid img:hover {
+    transform: translateY(-2px);
+  }
+
+  .github-calendar-container {
+    margin-top: 1rem;
+  }
+
+  .calendar-wrapper {
+    background: var(--background-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  :root.dark .calendar-wrapper {
+    background: #1f1f1f;
+  }
+
+  /* GitHub Calendar Tooltip Styles */
+  .react-activity-calendar__tooltip {
+    width: max-content;
+    max-width: calc(100vw - 20px);
+    padding: 0.4em 0.75em;
+    border-radius: 0.5em;
+    background-color: var(--shadow);
+    color: #fff;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  .react-activity-calendar__tooltip-arrow {
+    fill: var(--shadow);
+  }
+
+  .react-activity-calendar__tooltip[data-color-scheme='dark'] {
+    background-color: #e5e5e5;
+    color: #171717;
+  }
+
+  .react-activity-calendar__tooltip[data-color-scheme='dark'] .react-activity-calendar__tooltip-arrow {
+    fill: #e5e5e5;
+  }
+
+  /* Responsive adjustments for GitHub calendar */
+  @media (max-width: 768px) {
+    .calendar-wrapper {
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    
+    .github-stats-grid img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
   
   /*--------------------------------------------------------------
   # Skills
   --------------------------------------------------------------*/
 
   .skills {
-    grid-area: 3 / 2 / 4 / 3;
-    background-color: var(--background-and-text-primary);
+    grid-area: 4 / 2 / 5 / 3;
+    background-color: var(--background-secondary);
   }
 
   .skills h2 {
@@ -718,7 +818,7 @@
   --------------------------------------------------------------*/
 
   .portfolio {
-    grid-area: 4 / 2 / 5 / 3;
+    grid-area: 5 / 2 / 6 / 3;
     background-color: var(--background-and-text-primary);
   }
   
@@ -1009,7 +1109,7 @@
 
   .contact {
     min-height: 102vh;
-    grid-area: 5 / 2 / 6 / 3;
+    grid-area: 6 / 2 / 7 / 3;
     grid-template-rows: max-content max-content;
     display: grid;
     background-color: var(--background-secondary);

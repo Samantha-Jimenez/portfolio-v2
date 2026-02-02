@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Timeline from './components/Timeline';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
+import GitHubActivity from './components/GitHubActivity';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Toggle from 'react-toggle';
@@ -236,6 +237,11 @@ function App() {
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
+                  <Link to='github' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
+                    <span className="icon-[mdi--github] mr-2" aria-hidden="true"></span>GitHub
+                  </Link>
+                </li>
+                <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <Link to='skills' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
                     <span className="icon-[tabler--list-check] mr-2" aria-hidden="true"></span>Skills
                   </Link>
@@ -293,7 +299,10 @@ function App() {
             <section id="about" className="about section bg-white dark:bg-neutral-800">
               <Element name='about'><About/></Element>
             </section>
-            <section id="skills" className="skills section section-bg bg-gray-100 dark:bg-neutral-900">
+            <section id="github" className="github-activity section bg-gray-100 dark:bg-neutral-900">
+              <Element name='github'><GitHubActivity darkMode={darkMode}/></Element>
+            </section>
+            <section id="skills" className="skills section section-bg bg-white dark:bg-neutral-800">
               <Element name='skills'><Skills/></Element>
             </section>
             <section id="timeline" className="portfolio section section-bg bg-gray-100 dark:bg-neutral-900" style={{"height": "max-content"}}>
