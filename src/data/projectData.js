@@ -28,7 +28,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineOne} 
-                    alt="Our Rootline One" 
+                    alt="Our Rootline - Family tree and photo album landing page" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -61,7 +61,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineTwo} 
-                    alt="Our Rootline Two" 
+                    alt="Our Rootline - User dashboard with profile and photos" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -91,7 +91,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineThree} 
-                    alt="Our Rootline Three" 
+                    alt="Our Rootline - Hobby Hubs feature for family interests" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -121,7 +121,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineFour} 
-                    alt="Our Rootline Four" 
+                    alt="Our Rootline - Notification drawer with family activity updates" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -151,7 +151,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineFive} 
-                    alt="Our Rootline Five" 
+                    alt="Our Rootline - Family photos gallery with search and filters" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -181,7 +181,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineSix} 
-                    alt="Our Rootline Six" 
+                    alt="Our Rootline - Photo detail view with metadata and comments" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -211,7 +211,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineSeven} 
-                    alt="Our Rootline Seven" 
+                    alt="Our Rootline - Family member tagging feature" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -241,7 +241,7 @@ const ourRootlineSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineEight} 
-                    alt="Our Rootline Eight" 
+                    alt="Our Rootline - Interactive family tree visualization" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -306,7 +306,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineOne} 
-                    alt="Our Rootline One" 
+                    alt="Our Rootline - Family tree and photo album landing page" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -339,7 +339,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineTwo} 
-                    alt="Our Rootline Two" 
+                    alt="Our Rootline - User dashboard with profile and photos" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -369,7 +369,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineThree} 
-                    alt="Our Rootline Three" 
+                    alt="Our Rootline - Hobby Hubs feature for family interests" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -399,7 +399,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineFour} 
-                    alt="Our Rootline Four" 
+                    alt="Our Rootline - Notification drawer with family activity updates" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -429,7 +429,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineFive} 
-                    alt="Our Rootline Five" 
+                    alt="Our Rootline - Family photos gallery with search and filters" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -459,7 +459,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineSix} 
-                    alt="Our Rootline Six" 
+                    alt="Our Rootline - Photo detail view with metadata and comments" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -489,7 +489,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineSeven} 
-                    alt="Our Rootline Seven" 
+                    alt="Our Rootline - Family member tagging feature" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -519,7 +519,7 @@ const ourRootlineSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={ourRootlineEight} 
-                    alt="Our Rootline Eight" 
+                    alt="Our Rootline - Interactive family tree visualization" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -588,7 +588,7 @@ const mvmntSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={mvmntCollectives} 
-                    alt="Mvmnt Collectives" 
+                    alt="Motevis - Movement collectives community feature" 
                     className="w-full rounded-lg cursor-zoom-in"
                 />
                 <div 
@@ -622,7 +622,7 @@ const motevisSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={motevisOne} 
-                    alt="Motevis One" 
+                    alt="Motevis - Running club discovery and events landing page" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -655,7 +655,7 @@ const motevisSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={motevisTwo} 
-                    alt="Motevis Two" 
+                    alt="Motevis - Weekly runs schedule and club details" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -685,7 +685,7 @@ const motevisSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={motevisThree} 
-                    alt="Motevis Three" 
+                    alt="Motevis - Race events and registration interface" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -751,7 +751,7 @@ const motevisSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={motevisOne} 
-                    alt="Motevis One" 
+                    alt="Motevis - Running club discovery and events landing page" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -784,7 +784,7 @@ const motevisSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={motevisTwo} 
-                    alt="Motevis Two" 
+                    alt="Motevis - Weekly runs schedule and club details" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -814,7 +814,7 @@ const motevisSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={motevisThree} 
-                    alt="Motevis Three" 
+                    alt="Motevis - Race events and registration interface" 
                     className="w-full cursor-zoom-in rounded-lg"
                 />
                 <div 
@@ -911,7 +911,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonRowOne} 
-                    alt="Peloton Row One" 
+                    alt="Peloton - Row machine workout interface" 
                     className="w-full h-full object-cover object-center cursor-zoom-in"
                 />
                 <div 
@@ -939,7 +939,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonRowTwo} 
-                    alt="Peloton Row Two" 
+                    alt="Peloton - Row machine metrics and stats display" 
                     className="w-full h-full object-cover object-center cursor-zoom-in"
                 />
                 <div 
@@ -967,7 +967,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonActivityFeed} 
-                    alt="Peloton Activity Feed" 
+                    alt="Peloton - Member activity feed showing workouts and achievements" 
                     className="w-full h-full object-cover object-top cursor-zoom-in"
                 />
                 <div 
@@ -995,7 +995,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonBodyActivity} 
-                    alt="Peloton Body Activity" 
+                    alt="Peloton - Body activity tracking and workout summary" 
                     className="w-full h-full object-cover object-left cursor-zoom-in"
                 />
                 <div 
@@ -1024,7 +1024,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonClassPlan} 
-                    alt="Peloton Class Plan" 
+                    alt="Peloton - Class planning and scheduling feature" 
                     className="w-full h-full object-cover object-center cursor-zoom-in"
                 />
                 <div 
@@ -1053,7 +1053,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonNotifications} 
-                    alt="Peloton Notifications" 
+                    alt="Peloton - Member notifications and alerts interface" 
                     className="w-full h-full object-cover object-right cursor-zoom-in"
                 />
                 <div 
@@ -1082,7 +1082,7 @@ const pelotonSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={pelotonStravaConnect} 
-                    alt="Peloton Strava Connect" 
+                    alt="Peloton - Strava integration and third-party connectivity" 
                     className="w-full h-full object-cover object-left cursor-zoom-in"
                 />
                 <div 
@@ -1126,7 +1126,7 @@ const zooVioSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project1} 
-                    alt="Project 1" 
+                    alt="ZooVio app interface - pet management and veterinarian connection platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1174,7 +1174,7 @@ const zooVioSlidesTablet = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project1} 
-                    alt="Project 1" 
+                    alt="ZooVio app interface - pet management and veterinarian connection platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1225,7 +1225,7 @@ const zooVioSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project1} 
-                    alt="Project 1" 
+                    alt="ZooVio app interface - pet management and veterinarian connection platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1282,7 +1282,7 @@ const finstaSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project2} 
-                    alt="Project 2" 
+                    alt="Finstagram app interface - social media photo sharing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1327,7 +1327,7 @@ const finstaSlidesTablet = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project2} 
-                    alt="Project 2" 
+                    alt="Finstagram app interface - social media photo sharing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1374,7 +1374,7 @@ const finstaSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project2} 
-                    alt="Project 2" 
+                    alt="Finstagram app interface - social media photo sharing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1426,7 +1426,7 @@ const finstaSlidesExtraSmall = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project2} 
-                    alt="Project 2" 
+                    alt="Finstagram app interface - social media photo sharing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1488,7 +1488,7 @@ const tastebudsSlides = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project3} 
-                    alt="Project 3" 
+                    alt="Tastebuds app interface - restaurant reservation pairing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1535,7 +1535,7 @@ const tastebudsSlidesTablet = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project3} 
-                    alt="Project 3" 
+                    alt="Tastebuds app interface - restaurant reservation pairing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1584,7 +1584,7 @@ const tastebudsSlidesMobile = [
             <div className="relative w-full h-full group">
                 <img 
                     src={project3} 
-                    alt="Project 3" 
+                    alt="Tastebuds app interface - restaurant reservation pairing platform" 
                     className="w-full rounded-lg cursor-zoom-in" 
                 />
                 <div 
@@ -1636,7 +1636,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonRowOne} 
-                        alt="Peloton Row One" 
+                        alt="Peloton - Row machine workout interface" 
                         className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
                     />
                     <div 
@@ -1664,7 +1664,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonRowTwo} 
-                        alt="Peloton Row Two" 
+                        alt="Peloton - Row machine metrics and stats display" 
                         className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
                     />
                     <div 
@@ -1692,7 +1692,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonActivityFeed} 
-                        alt="Peloton Activity Feed" 
+                        alt="Peloton - Member activity feed showing workouts and achievements" 
                         className="w-full h-full object-cover object-top cursor-zoom-in rounded-lg"
                     />
                     <div 
@@ -1720,7 +1720,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonBodyActivity} 
-                        alt="Peloton Body Activity" 
+                        alt="Peloton - Body activity tracking and workout summary" 
                         className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg"
                     />
                     <div 
@@ -1749,7 +1749,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonClassPlan} 
-                        alt="Peloton Class Plan" 
+                        alt="Peloton - Class planning and scheduling feature" 
                         className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
                     />
                     <div 
@@ -1778,7 +1778,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonNotifications} 
-                        alt="Peloton Notifications" 
+                        alt="Peloton - Member notifications and alerts interface" 
                         className="w-full h-full object-cover object-right cursor-zoom-in rounded-lg"
                     />
                     <div 
@@ -1807,7 +1807,7 @@ const createSlides = (handleImageClick) => {
                 <div className="relative w-full h-full group">
                     <img 
                         src={pelotonStravaConnect} 
-                        alt="Peloton Strava Connect" 
+                        alt="Peloton - Strava integration and third-party connectivity" 
                         className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg"
                     />
                     <div 

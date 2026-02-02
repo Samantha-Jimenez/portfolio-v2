@@ -68,23 +68,11 @@ function App() {
   };
 
   const menuRef = useRef(null);
-  const linkedinRef = useRef(null);
-  const gmailRef = useRef(null);
-  const portfolioRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (menuRef.current && 
         !menuRef.current.contains(event.target)) {
       setOpenGithubMenu(false);
-    }
-    if (linkedinRef.current && !linkedinRef.current.contains(event.target)) {
-      setLinkedinClickCount(0);
-    }
-    if (gmailRef.current && !gmailRef.current.contains(event.target)) {
-      setGmailClickCount(0);
-    }
-    if (portfolioRef.current && !portfolioRef.current.contains(event.target)) {
-      setPreviousPortfolioClickCount(0);
     }
   };
 
@@ -106,10 +94,6 @@ function App() {
   }, []);
 
   const offset = windowWidth <= 768 ? -20 : -50;
-
-  const [gmailClickCount, setGmailClickCount] = useState(0);
-  const [linkedinClickCount, setLinkedinClickCount] = useState(0);
-  const [previousPortfolioClickCount, setPreviousPortfolioClickCount] = useState(0);
 
   const [openGithubMenu, setOpenGithubMenu] = useState(false);
 
@@ -178,7 +162,7 @@ function App() {
       <div className="vsc-initialized" data-aos-easing="ease-in-out-back" data-aos-duration="1000" data-aos-delay="0" data-spy="scroll" data-target="#header" data-offset="50">
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
-              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--light-underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--light-underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded={isMenuOpen} aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}>
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? (
@@ -195,9 +179,9 @@ function App() {
           <main id="main" className="grid lg:grid-cols-[30vw_70vw] grid-rows-[0.4fr_max-content_max-content_0.75fr_fit-content] grid-cols-[0vw_100vw]">
             <header id="header-back" className={`py-8 px-4 min-[1026px]:w-[30vw] w-[290px] h-screen bg-[url('./imgFiles/81563B65-38C8-49D2-98A2-36CD0ADBB84D_1_105_c.jpeg')] bg-cover bg-center fixed grid-area-1/1/2/2 z-10 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}></header>
             <Element id="landing" name="landing"><Landing isMenuOpen={isMenuOpen} /></Element>
-            <button className="down-arrow hidden lg:block z-30 h-[5vh] white mb-[35%] focus:outline-none w-[30vw]">
+            <button className="down-arrow hidden lg:block z-30 h-[5vh] white mb-[35%] focus:outline-none w-[30vw]" aria-label="Scroll down to About section">
               <Link to='about' className="linkA" activeClass='activeNav' spy={true} smooth={true} duration={1200} offset={offset}>
-                <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]'/>
+                <span className='icon-[line-md--chevron-down] w-[60px] h-[100%] animate-bounce bg-white opacity-[.80]' aria-hidden="true"/>
               </Link>
             </button>
             <div id="header-hover" className={`sticky top-0 bg-[rgb(9,18,14)] opacity-80 px-4 min-[1026px]:w-[30vw] w-[290px] h-screen content-evenly z-20 lg:grid ${isMenuOpen ? 'grid' : 'hidden'}`}>
@@ -205,12 +189,16 @@ function App() {
               <h1 className="header-title leading-[1.1] text-[var(--light-background-and-text-primary)]" data-aos={windowWidth > 1023 ? "fade-up" : undefined}>Samantha Jimenez</h1>
               <div className="social-links text-center">
                 <div ref={menuRef} className="tooltip" data-tip="github">
-                  <div 
+                  <button 
+                    type="button"
+                    aria-label="Open GitHub profile menu"
+                    aria-expanded={openGithubMenu}
+                    aria-haspopup="true"
                     className={`active:bg-neutral-200 transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] text-white inline-block text-[18px] leading-[1] py-[8px] mr-[4px] rounded-full text-center w-[36px] h-[36px] transition-all duration-300 ${openGithubMenu ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`} 
                     onClick={() => openMenu(openGithubMenu, setOpenGithubMenu)}
                   >
-                  <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[1px]`}></span>
-                  </div>
+                  <span className={`icon-[ri--github-line] ${openGithubMenu ? 'scale-[1.35]' : ''} hover:scale-125 transition-transform duration-200 mb-[1px]`} aria-hidden="true"></span>
+                  </button>
                 {openGithubMenu && (
                   <div className="relative">
                     <div className="absolute left-[19px] transform -translate-x-1/2 top-[3px] w-0 h-0 border-l-[5px] border-r-[5px] border-b-[5px] border-transparent border-b-[var(--light-shadow)] dark:border-b-[var(--dark-shadow)]"></div>
@@ -222,50 +210,39 @@ function App() {
                 )}
                 </div>
                 <div className="tooltip" data-tip="linkedin">
-                  <a ref={linkedinRef} onClick={() => {
-                      setLinkedinClickCount(linkedinClickCount + 1);
-                      if (linkedinClickCount + 1 === 2) {
-                        window.open('https://www.linkedin.com/in/samanthabjimenez/', '_blank');
-                        setLinkedinClickCount(0);
-                      }
-                    }} 
-                    target="_blank" rel="noopener noreferrer" className={`linkedin active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${linkedinClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
-                    <div 
-                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${linkedinClickCount === 1 ? 'scale-[1.35]' : ''}`} 
-                    >
-                      <span className="icon-[ri--linkedin-line] mb-[1px]"></span>
+                  <a 
+                    href="https://www.linkedin.com/in/samanthabjimenez/"
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Visit LinkedIn profile (opens in new tab)"
+                    className="linkedin active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)] hover:bg-[var(--light-menu-text-unselected)] dark:hover:bg-[var(--dark-menu-text-unselected)]"
+                  >
+                    <div className="hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]">
+                      <span className="icon-[ri--linkedin-line] mb-[1px]" aria-hidden="true"></span>
                     </div>
                   </a>
                 </div>
-                <div className="tooltip" data-tip="gmail"> 
-                  <a ref={gmailRef} onClick={() => {
-                      setGmailClickCount(gmailClickCount + 1);
-                      if (gmailClickCount + 1 === 2) {
-                        window.open('mailto:SamanthaB.Jimenez@gmail.com', '_blank');
-                        setGmailClickCount(0);
-                      }
-                    }} 
-                    className={`active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${gmailClickCount === 1 ? 'bg-[var(--menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
-                    <div 
-                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${gmailClickCount === 1 ? 'scale-[1.35]' : ''}`} 
-                    >
-                      <span className="icon-[material-symbols--mail-outline] mb-[1px]"></span>
+                <div className="tooltip" data-tip="email"> 
+                  <a 
+                    href="mailto:SamanthaB.Jimenez@gmail.com"
+                    aria-label="Send email to Samantha Jimenez"
+                    className="active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)] hover:bg-[var(--light-menu-text-unselected)] dark:hover:bg-[var(--dark-menu-text-unselected)]"
+                  >
+                    <div className="hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]">
+                      <span className="icon-[material-symbols--mail-outline] mb-[1px]" aria-hidden="true"></span>
                     </div>
                   </a>
                 </div>
                 <div className="tooltip" data-tip="previous portfolio">
-                  <a ref={portfolioRef} onClick={() => {
-                      setPreviousPortfolioClickCount(previousPortfolioClickCount + 1);
-                      if (previousPortfolioClickCount + 1 === 2) {
-                        window.open('https://samantha-jimenez.netlify.app/', '_blank');
-                        setPreviousPortfolioClickCount(0);
-                      }
-                    }} 
-                    className={`active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 ${previousPortfolioClickCount === 1 ? 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]' : 'bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)]'}`}>
-                    <div 
-                      className={`hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12] ${previousPortfolioClickCount === 1 ? 'scale-[1.35]' : ''}`} 
-                    >
-                      <span className="icon-[material-symbols--folder-supervised-outline-rounded] mb-[1px]"></span>
+                  <a 
+                    href="https://samantha-jimenez.netlify.app/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="View previous portfolio (opens in new tab)"
+                    className="active:bg-neutral-200 text-lg inline-block text-white leading-1 p-2 mr-1 rounded-full text-center w-9 h-9 transition duration-300 bg-[var(--light-shadow)] dark:bg-[var(--dark-shadow)] hover:bg-[var(--light-menu-text-unselected)] dark:hover:bg-[var(--dark-menu-text-unselected)]"
+                  >
+                    <div className="hover:scale-125 hover:bg-transparent transition-transform duration-200 cursor-pointer w-[104%] hover:z-[12]">
+                      <span className="icon-[material-symbols--folder-supervised-outline-rounded] mb-[1px]" aria-hidden="true"></span>
                     </div>
                   </a>
                 </div>
@@ -275,32 +252,32 @@ function App() {
               <ul className="nav-ul">
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <Link to='landing' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500}>
-                    <span className="icon-[bx--home] mr-2"></span>Home
+                    <span className="icon-[bx--home] mr-2" aria-hidden="true"></span>Home
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <Link to='about' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
-                    <span className="icon-[tabler--user-square-rounded] mr-2"></span>About
+                    <span className="icon-[tabler--user-square-rounded] mr-2" aria-hidden="true"></span>About
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <Link to='skills' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
-                    <span className="icon-[tabler--list-check] mr-2"></span>Skills
+                    <span className="icon-[tabler--list-check] mr-2" aria-hidden="true"></span>Skills
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <Link to='portfolio' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
-                    <span className="icon-[bx--collection] mr-2"></span>Portfolio
+                    <span className="icon-[bx--collection] mr-2" aria-hidden="true"></span>Portfolio
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
                   <Link to='contact' className="menuLink linkA" activeClass='activeNav' spy={true} smooth={true} duration={500} offset={offset}>
-                    <span className="icon-[bx--mail-send] mr-2"></span>Contact
+                    <span className="icon-[bx--mail-send] mr-2" aria-hidden="true"></span>Contact
                   </Link>
                 </li>
                 <li data-aos={windowWidth > 1023 ? "fade-up" : undefined}>
-                  <a className="menuLink" href="https://docs.google.com/document/d/1a4At28-w9IjCKgRU2sKoFoAF9aHgVHb0eFkq1eMm7wc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <span className="icon-[tabler--file-text] mr-2"></span>
+                  <a className="menuLink" href="https://docs.google.com/document/d/1a4At28-w9IjCKgRU2sKoFoAF9aHgVHb0eFkq1eMm7wc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View Resume (opens in new tab)">
+                    <span className="icon-[tabler--file-text] mr-2" aria-hidden="true"></span>
                     <span style={{"marginLeft": "-4px"}}>Resume</span>
                   </a>
                 </li>
