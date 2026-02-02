@@ -9,6 +9,7 @@ import Timeline from './components/Timeline';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
 import GitHubActivity from './components/GitHubActivity';
+import BackToTop from './components/BackToTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Toggle from 'react-toggle';
@@ -319,6 +320,7 @@ function App() {
               </footer>
             </section>
           </main>
+          <BackToTop />
         </div>
       </div>
     </div>
