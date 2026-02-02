@@ -304,7 +304,7 @@ function App() {
               <Element name='github'><GitHubActivity darkMode={darkMode}/></Element>
             </section>
             <section id="skills" className="skills section section-bg bg-white dark:bg-neutral-800">
-              <Element name='skills'><Skills/></Element>
+              <Element name='skills'><Skills darkMode={darkMode}/></Element>
             </section>
             <section id="timeline" className="portfolio section section-bg bg-gray-100 dark:bg-neutral-900" style={{"height": "max-content"}}>
               <Element name='portfolio'><Timeline/></Element>

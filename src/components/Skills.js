@@ -9,7 +9,7 @@ const categoryOptions = [
     { value: 'tools', label: 'Tools' },
 ];
 
-const Skills = () => {
+const Skills = ({ darkMode }) => {
     const [selectedCategories, setSelectedCategories] = useState([]);
 
     const handleCategoryChange = (selectedOptions) => {
@@ -19,6 +19,86 @@ const Skills = () => {
     const filteredSkills = skills.filter(skill => 
         selectedCategories.length === 0 || selectedCategories.some(option => option.value === skill.category)
     );
+
+    // Dynamic styles based on darkMode prop
+    const selectStyles = {
+        control: (provided, state) => ({
+            ...provided,
+            backgroundColor: darkMode ? '#262626' : '#fff',
+            borderColor: state.isFocused 
+                ? 'var(--button-selected)' 
+                : darkMode ? '#404040' : '#e5e5e5',
+            boxShadow: state.isFocused ? '0 0 0 2px var(--button-selected)' : null,
+            '&:hover': {
+                borderColor: 'var(--button-selected)',
+            },
+        }),
+        menu: (provided) => ({
+            ...provided,
+            backgroundColor: darkMode ? '#262626' : '#fff',
+            border: darkMode ? '1px solid #404040' : '1px solid #e5e5e5',
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            backgroundColor: state.isSelected 
+                ? darkMode ? 'var(--button-color)' : 'var(--button-color)'
+                : state.isFocused 
+                    ? darkMode ? '#404040' : '#f5f5f5'
+                    : 'transparent',
+            color: state.isSelected 
+                ? '#fff' 
+                : darkMode ? '#e5e5e5' : '#171717',
+            '&:active': {
+                backgroundColor: '#525A5E',
+            },
+        }),
+        multiValue: (provided) => ({
+            ...provided,
+            backgroundColor: darkMode ? '#404040' : '#e5e5e5',
+        }),
+        multiValueLabel: (provided) => ({
+            ...provided,
+            color: darkMode ? '#e5e5e5' : '#171717',
+        }),
+        multiValueRemove: (provided) => ({
+            ...provided,
+            color: darkMode ? '#a3a3a3' : '#525252',
+            '&:hover': {
+                backgroundColor: 'var(--button-selected)',
+                color: '#fff',
+            },
+        }),
+        placeholder: (provided) => ({
+            ...provided,
+            color: darkMode ? '#a3a3a3' : '#737373',
+        }),
+        input: (provided) => ({
+            ...provided,
+            color: darkMode ? '#e5e5e5' : '#171717',
+        }),
+        singleValue: (provided) => ({
+            ...provided,
+            color: darkMode ? '#e5e5e5' : '#171717',
+        }),
+        indicatorSeparator: (provided) => ({
+            ...provided,
+            backgroundColor: darkMode ? '#404040' : '#e5e5e5',
+        }),
+        dropdownIndicator: (provided) => ({
+            ...provided,
+            color: darkMode ? '#a3a3a3' : '#737373',
+            '&:hover': {
+                color: darkMode ? '#e5e5e5' : '#171717',
+            },
+        }),
+        clearIndicator: (provided) => ({
+            ...provided,
+            color: darkMode ? '#a3a3a3' : '#737373',
+            '&:hover': {
+                color: darkMode ? '#e5e5e5' : '#171717',
+            },
+        }),
+    };
 
     return (
         <div className="container">
@@ -32,46 +112,7 @@ const Skills = () => {
                 onChange={handleCategoryChange}
                 placeholder="Select categories..."
                 isSearchable={false}
-                styles={{
-                    control: (provided, state) => ({
-                        ...provided,
-                        boxShadow: state.isFocused ? '0 0 0 2px var(--light-button-selected)' : null,
-                        borderColor: state.isFocused ? 'var(--light-button-selected)' : provided.borderColor,
-                        '&:hover': {
-                            borderColor: 'var(--light-button-selected)',
-                        },
-                        '@media (prefers-color-scheme: dark)': {
-                            boxShadow: state.isFocused ? '0 0 0 2px var(--dark-button-selected)' : null,
-                            borderColor: state.isFocused ? 'var(--dark-button-selected)' : provided.borderColor,
-                            '&:hover': {
-                                borderColor: 'var(--dark-button-selected)',
-                            },
-                        }
-                    }),
-                    option: (provided, state) => ({
-                        ...provided,
-                        backgroundColor: state.isSelected 
-                            ? 'var(--light-background-and-text-primary)' 
-                            : state.isFocused 
-                                ? 'var(--light-background-and-text-primary)' 
-                                : provided.backgroundColor,
-                        color: state.isFocused ? '#000' : provided.color,
-                        '&:active': {
-                            backgroundColor: 'var(--light-menu-text-unselected)',
-                        },
-                        '@media (prefers-color-scheme: dark)': {
-                            backgroundColor: state.isSelected 
-                                ? 'var(--dark-year-text)' 
-                                : state.isFocused 
-                                    ? 'var(--dark-p-text)' 
-                                    : provided.backgroundColor,
-                            color: state.isFocused ? '#000' : 'var(--dark-p-subtext)',
-                            '&:active': {
-                                backgroundColor: 'var(--dark-menu-text-unselected)',
-                            },
-                        }
-                    }),
-                }}
+                styles={selectStyles}
             />
             <div className="skills-content">
                 {filteredSkills.map((skill, index) => {
