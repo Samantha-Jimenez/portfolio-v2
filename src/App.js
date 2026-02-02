@@ -8,7 +8,6 @@ import Skills from './components/Skills';
 import Timeline from './components/Timeline';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
-import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Toggle from 'react-toggle';
@@ -135,30 +134,6 @@ function App() {
 
   return (
     <div className="App">
-      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>      <link rel="icon" href="favicon_io/android-chrome-192x192.png" sizes="192x192"/>
-      <link rel="icon" href="favicon_io/android-chrome-512x512.png" sizes="512x512"/>
-      <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png" sizes="180x180"/>
-      <style>
-        @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
-      </style>  
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
-      <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-      </script>
-      <script type="text/javascript">
-        (function(){
-            emailjs.init({
-              publicKey: "lYPDqWbwbsFTQDuJz",
-            })
-        })();
-      </script>
       <div className="vsc-initialized" data-aos-easing="ease-in-out-back" data-aos-duration="1000" data-aos-delay="0" data-spy="scroll" data-target="#header" data-offset="50">
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">

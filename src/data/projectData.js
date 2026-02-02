@@ -29,7 +29,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineOne} 
                     alt="Our Rootline - Family tree and photo album landing page" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -62,7 +62,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineTwo} 
                     alt="Our Rootline - User dashboard with profile and photos" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -92,7 +92,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineThree} 
                     alt="Our Rootline - Hobby Hubs feature for family interests" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -122,7 +122,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineFour} 
                     alt="Our Rootline - Notification drawer with family activity updates" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -152,7 +152,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineFive} 
                     alt="Our Rootline - Family photos gallery with search and filters" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -182,7 +182,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineSix} 
                     alt="Our Rootline - Photo detail view with metadata and comments" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -212,7 +212,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineSeven} 
                     alt="Our Rootline - Family member tagging feature" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -242,7 +242,7 @@ const ourRootlineSlides = [
                 <img 
                     src={ourRootlineEight} 
                     alt="Our Rootline - Interactive family tree visualization" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -307,7 +307,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineOne} 
                     alt="Our Rootline - Family tree and photo album landing page" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -340,7 +340,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineTwo} 
                     alt="Our Rootline - User dashboard with profile and photos" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -370,7 +370,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineThree} 
                     alt="Our Rootline - Hobby Hubs feature for family interests" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -400,7 +400,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineFour} 
                     alt="Our Rootline - Notification drawer with family activity updates" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -430,7 +430,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineFive} 
                     alt="Our Rootline - Family photos gallery with search and filters" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -460,7 +460,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineSix} 
                     alt="Our Rootline - Photo detail view with metadata and comments" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -490,7 +490,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineSeven} 
                     alt="Our Rootline - Family member tagging feature" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -520,7 +520,7 @@ const ourRootlineSlidesMobile = [
                 <img 
                     src={ourRootlineEight} 
                     alt="Our Rootline - Interactive family tree visualization" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -589,7 +589,7 @@ const mvmntSlides = [
                 <img 
                     src={mvmntCollectives} 
                     alt="Motevis - Movement collectives community feature" 
-                    className="w-full rounded-lg cursor-zoom-in"
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -623,7 +623,7 @@ const motevisSlides = [
                 <img 
                     src={motevisOne} 
                     alt="Motevis - Running club discovery and events landing page" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -656,7 +656,7 @@ const motevisSlides = [
                 <img 
                     src={motevisTwo} 
                     alt="Motevis - Weekly runs schedule and club details" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -686,7 +686,7 @@ const motevisSlides = [
                 <img 
                     src={motevisThree} 
                     alt="Motevis - Race events and registration interface" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -752,7 +752,7 @@ const motevisSlidesMobile = [
                 <img 
                     src={motevisOne} 
                     alt="Motevis - Running club discovery and events landing page" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -785,7 +785,7 @@ const motevisSlidesMobile = [
                 <img 
                     src={motevisTwo} 
                     alt="Motevis - Weekly runs schedule and club details" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -815,7 +815,7 @@ const motevisSlidesMobile = [
                 <img 
                     src={motevisThree} 
                     alt="Motevis - Race events and registration interface" 
-                    className="w-full cursor-zoom-in rounded-lg"
+                    className="w-full cursor-zoom-in rounded-lg" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -887,7 +887,7 @@ const othelloSlides = [
                     <video 
                         src={othelloScreenRecording} 
                         alt="Othello Game Demo" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg" loading="lazy"
                         controls
                         autoPlay
                         muted
@@ -912,7 +912,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonRowOne} 
                     alt="Peloton - Row machine workout interface" 
-                    className="w-full h-full object-cover object-center cursor-zoom-in"
+                    className="w-full h-full object-cover object-center cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -940,7 +940,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonRowTwo} 
                     alt="Peloton - Row machine metrics and stats display" 
-                    className="w-full h-full object-cover object-center cursor-zoom-in"
+                    className="w-full h-full object-cover object-center cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -968,7 +968,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonActivityFeed} 
                     alt="Peloton - Member activity feed showing workouts and achievements" 
-                    className="w-full h-full object-cover object-top cursor-zoom-in"
+                    className="w-full h-full object-cover object-top cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -996,7 +996,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonBodyActivity} 
                     alt="Peloton - Body activity tracking and workout summary" 
-                    className="w-full h-full object-cover object-left cursor-zoom-in"
+                    className="w-full h-full object-cover object-left cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1025,7 +1025,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonClassPlan} 
                     alt="Peloton - Class planning and scheduling feature" 
-                    className="w-full h-full object-cover object-center cursor-zoom-in"
+                    className="w-full h-full object-cover object-center cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1054,7 +1054,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonNotifications} 
                     alt="Peloton - Member notifications and alerts interface" 
-                    className="w-full h-full object-cover object-right cursor-zoom-in"
+                    className="w-full h-full object-cover object-right cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1083,7 +1083,7 @@ const pelotonSlides = [
                 <img 
                     src={pelotonStravaConnect} 
                     alt="Peloton - Strava integration and third-party connectivity" 
-                    className="w-full h-full object-cover object-left cursor-zoom-in"
+                    className="w-full h-full object-cover object-left cursor-zoom-in" loading="lazy"
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1127,7 +1127,7 @@ const zooVioSlides = [
                 <img 
                     src={project1} 
                     alt="ZooVio app interface - pet management and veterinarian connection platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1175,7 +1175,7 @@ const zooVioSlidesTablet = [
                 <img 
                     src={project1} 
                     alt="ZooVio app interface - pet management and veterinarian connection platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1226,7 +1226,7 @@ const zooVioSlidesMobile = [
                 <img 
                     src={project1} 
                     alt="ZooVio app interface - pet management and veterinarian connection platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1283,7 +1283,7 @@ const finstaSlides = [
                 <img 
                     src={project2} 
                     alt="Finstagram app interface - social media photo sharing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1328,7 +1328,7 @@ const finstaSlidesTablet = [
                 <img 
                     src={project2} 
                     alt="Finstagram app interface - social media photo sharing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1375,7 +1375,7 @@ const finstaSlidesMobile = [
                 <img 
                     src={project2} 
                     alt="Finstagram app interface - social media photo sharing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1427,7 +1427,7 @@ const finstaSlidesExtraSmall = [
                 <img 
                     src={project2} 
                     alt="Finstagram app interface - social media photo sharing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1489,7 +1489,7 @@ const tastebudsSlides = [
                 <img 
                     src={project3} 
                     alt="Tastebuds app interface - restaurant reservation pairing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1536,7 +1536,7 @@ const tastebudsSlidesTablet = [
                 <img 
                     src={project3} 
                     alt="Tastebuds app interface - restaurant reservation pairing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1585,7 +1585,7 @@ const tastebudsSlidesMobile = [
                 <img 
                     src={project3} 
                     alt="Tastebuds app interface - restaurant reservation pairing platform" 
-                    className="w-full rounded-lg cursor-zoom-in" 
+                    className="w-full rounded-lg cursor-zoom-in" loading="lazy" 
                 />
                 <div 
                     className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1637,7 +1637,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonRowOne} 
                         alt="Peloton - Row machine workout interface" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg" loading="lazy"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1665,7 +1665,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonRowTwo} 
                         alt="Peloton - Row machine metrics and stats display" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg" loading="lazy"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1721,7 +1721,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonBodyActivity} 
                         alt="Peloton - Body activity tracking and workout summary" 
-                        className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg" loading="lazy"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1750,7 +1750,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonClassPlan} 
                         alt="Peloton - Class planning and scheduling feature" 
-                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-center cursor-zoom-in rounded-lg" loading="lazy"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1779,7 +1779,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonNotifications} 
                         alt="Peloton - Member notifications and alerts interface" 
-                        className="w-full h-full object-cover object-right cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-right cursor-zoom-in rounded-lg" loading="lazy"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
@@ -1808,7 +1808,7 @@ const createSlides = (handleImageClick) => {
                     <img 
                         src={pelotonStravaConnect} 
                         alt="Peloton - Strava integration and third-party connectivity" 
-                        className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg"
+                        className="w-full h-full object-cover object-left cursor-zoom-in rounded-lg" loading="lazy"
                     />
                     <div 
                         className="absolute bottom-3 right-3 bg-black bg-opacity-50 p-2 rounded-full text-white transition-opacity duration-300 cursor-pointer md:hidden magnify-icon"
