@@ -3,14 +3,22 @@ import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 
 const Landing = ({ isMenuOpen }) => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
 
     useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
+        if (typeof window === 'undefined') return;
+        let resizeTimer = null;
+        const handleResize = () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => setWindowWidth(window.innerWidth), 150);
+        };
     
         window.addEventListener('resize', handleResize);
     
-        return () => window.removeEventListener('resize', handleResize);
+        return () => {
+            clearTimeout(resizeTimer);
+            window.removeEventListener('resize', handleResize);
+        };
       }, []);
 
     const offset = windowWidth <= 768 ? -20 : -50;

@@ -47,60 +47,71 @@ const Timeline = () => {
     const [tastebudsSlidesState, setTastebudsSlidesState] = useState(tastebudsSlides);
 
     useEffect(() => {
-    const updateSlides = () => {
-            if (window.innerWidth < 420) {
+        if (typeof window === 'undefined') return;
+        let resizeTimer = null;
+
+        const updateSlides = () => {
+            const width = window.innerWidth;
+            if (width < 420) {
                 setFinstagramSlidesState(finstaSlidesExtraSmall);
                 setSlides(zooVioSlidesMobile);
                 setTastebudsSlidesState(tastebudsSlidesMobile);
-            } else if (window.innerWidth < 460) {
+            } else if (width < 460) {
                 setSlides(zooVioSlidesMobile);
                 setTastebudsSlidesState(tastebudsSlidesMobile);
                 setFinstagramSlidesState(finstaSlidesMobile);
-            } else if (window.innerWidth < 480) {
+            } else if (width < 480) {
                 setTastebudsSlidesState(tastebudsSlidesMobile);
                 setFinstagramSlidesState(finstaSlidesMobile);
                 setSlides(zooVioSlidesTablet);
-            } else if (window.innerWidth < 550) {
+            } else if (width < 550) {
                 setFinstagramSlidesState(finstaSlidesMobile);
                 setSlides(zooVioSlidesTablet);
                 setTastebudsSlidesState(tastebudsSlidesTablet);
-            } else if (window.innerWidth < 850) {
+            } else if (width < 850) {
                 setSlides(zooVioSlidesTablet);
                 setTastebudsSlidesState(tastebudsSlidesTablet);
                 setFinstagramSlidesState(finstaSlidesMobile);
-            } else if (window.innerWidth < 870) {
+            } else if (width < 870) {
                 setSlides(zooVioSlidesTablet);
                 setTastebudsSlidesState(tastebudsSlides);
                 setFinstagramSlidesState(finstaSlidesMobile);
-            } else if (window.innerWidth < 1024) {
+            } else if (width < 1024) {
                 setSlides(zooVioSlides);
                 setTastebudsSlidesState(tastebudsSlides);
                 setFinstagramSlidesState(finstaSlidesMobile);
-            } else if (window.innerWidth < 1170) {
+            } else if (width < 1170) {
                 setFinstagramSlidesState(finstaSlidesMobile);
                 setTastebudsSlidesState(tastebudsSlidesTablet);
                 setSlides(zooVioSlidesTablet);
-            } else if(window.innerWidth < 1214) {
+            } else if(width < 1214) {
                 setTastebudsSlidesState(tastebudsSlidesTablet);
                 setSlides(zooVioSlidesTablet);
                 setFinstagramSlidesState(finstaSlidesTablet);
-            } else if(window.innerWidth < 1266) {
+            } else if(width < 1266) {
                 setSlides(zooVioSlidesTablet);
                 setFinstagramSlidesState(finstaSlidesTablet);
-            } else if (window.innerWidth < 1312) {
+            } else if (width < 1312) {
                 setFinstagramSlidesState(finstaSlidesTablet);
             } else {
                 setSlides(zooVioSlides);
                 setTastebudsSlidesState(tastebudsSlides);
                 setFinstagramSlidesState(finstaSlides);
             }
-    };
+        };
 
-    updateSlides(); // Set initial slides based on window width
+        const debouncedUpdate = () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateSlides, 150);
+        };
 
-    window.addEventListener('resize', updateSlides); // Update slides on resize
+        updateSlides(); // initial
+        window.addEventListener('resize', debouncedUpdate);
 
-    return () => window.removeEventListener('resize', updateSlides);
+        return () => {
+            clearTimeout(resizeTimer);
+            window.removeEventListener('resize', debouncedUpdate);
+        };
     }, []);
 
     // Add this effect for handling clicks outside expanded image

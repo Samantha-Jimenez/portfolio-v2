@@ -1,19 +1,21 @@
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { Link, Element } from 'react-scroll';
 import './css/style.css';
 import About from './components/About';
 import Skills from './components/Skills';
 // import Portfolio from './components/Portfolio';
-import Timeline from './components/Timeline';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
-import GitHubActivity from './components/GitHubActivity';
 import BackToTop from './components/BackToTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Toggle from 'react-toggle';
 import "react-toggle/style.css";
+import themes from './theme';
+
+const Timeline = lazy(() => import('./components/Timeline'));
+const GitHubActivity = lazy(() => import('./components/GitHubActivity'));
 
 // Define the openMenu function
 const openMenu = (currentState, setStateFunction) => {
@@ -32,36 +34,11 @@ function App() {
   });
 
   const [currentTheme, setTheme] = useState("greenTheme");
-
-  const [currentThemeObj, setThemeObj] = useState({
-    "--light-header-color": "#96B0A3",
-    "--light-underline-and-button-color": "#254D32",
-    "--light-background-and-text-primary": "#EFF2F1",
-    "--light-background-secondary": "#ffffff",
-    "--light-menu-text-unselected": "rgba(178, 204, 62, .5)",
-    "--light-button-selected": "rgb(178, 204, 62)",
-    "--light-shadow": "#2c2f3f",
-    "--light-timeline-header": "#16A34A8C",
-    "--light-highlighted-text": "#65A30D",
-    "--light-highlighted-text-hover": "#84CC16",
-    "--light-year-text": "#059669",
-    "--dark-header-color": "#A6C1B1", /* Lighter muted green */
-    "--dark-underline-and-button-color": "#A6D4A1", /* Lighter muted green */
-    // "--dark-background-and-text-primary": "#4C5E54", /* Lighter background */
-    "--dark-background-and-text-primary": "#171717",
-    // "--dark-background-secondary": "#2D3F2E", /* Slightly lighter dark background */
-    "--dark-background-secondary": "#262626",
-    "--dark-menu-text-unselected": "rgba(178, 204, 62, 1)", /* Brighter unselected text */
-    "--dark-button-selected": "rgb(178, 204, 62)", /* Vibrant yellow-green button */
-    "--dark-shadow": "#3A4C42", /* Lighter shadow */
-    "--dark-timeline-header": "#4DAA6A", /* Muted vivid green */
-    "--dark-highlighted-text": "#A7D04C", /* Bright yellow-green */
-    "--dark-highlighted-text-hover": "#A0D13A", /* Darker yellow-green hover */
-    "--dark-year-text": "#82A57C", /* Lighter dark green */
-  });
+  const [currentThemeObj, setThemeObj] = useState(themes["greenTheme"]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuToggleRef = useRef(null);
+  const aosInitializedRef = useRef(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -85,36 +62,54 @@ function App() {
 
   // Respect prefers-reduced-motion when initializing AOS animations
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     const initAOS = () => {
+      if (aosInitializedRef.current) {
+        return;
+      }
       AOS.init({
         disable: mediaQuery.matches,
         duration: 1000,
         easing: 'ease-in-out-back',
       });
-
       if (!mediaQuery.matches) {
         AOS.refresh();
       }
+      aosInitializedRef.current = true;
     };
 
     initAOS();
 
-    const handleChange = () => initAOS();
-    mediaQuery.addEventListener('change', handleChange);
+    const handleChange = () => {
+      aosInitializedRef.current = false;
+      initAOS();
+    };
 
+    mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+  const resizeTimer = useRef(null);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
+    if (typeof window === 'undefined') return;
+    const handleResize = () => {
+      clearTimeout(resizeTimer.current);
+      resizeTimer.current = setTimeout(() => {
+        setWindowWidth(window.innerWidth);
+      }, 150);
+    };
 
     window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      clearTimeout(resizeTimer.current);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const offset = windowWidth <= 768 ? -20 : -50;
@@ -142,6 +137,10 @@ function App() {
       menuToggleRef.current.focus();
     }
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    setThemeObj(themes[currentTheme]);
+  }, [currentTheme]);
 
   useEffect(() => {
     if (darkMode) {
@@ -354,13 +353,21 @@ function App() {
               <Element name='about'><About/></Element>
             </section>
             <section id="github" className="github-activity section bg-gray-100 dark:bg-neutral-900">
-              <Element name='github'><GitHubActivity darkMode={darkMode}/></Element>
+              <Element name='github'>
+                <Suspense fallback={<div className="py-10 text-center text-neutral-500">Loading GitHub activity…</div>}>
+                  <GitHubActivity darkMode={darkMode}/>
+                </Suspense>
+              </Element>
             </section>
             <section id="skills" className="skills section section-bg bg-white dark:bg-neutral-800">
               <Element name='skills'><Skills darkMode={darkMode}/></Element>
             </section>
             <section id="timeline" className="portfolio section section-bg bg-gray-100 dark:bg-neutral-900" style={{"height": "max-content"}}>
-              <Element name='portfolio'><Timeline/></Element>
+              <Element name='portfolio'>
+                <Suspense fallback={<div className="py-10 text-center text-neutral-500">Loading projects…</div>}>
+                  <Timeline/>
+                </Suspense>
+              </Element>
             </section>
             <section id="contact" className="contact content-around section">
               <Element name='contact'><Contact/></Element>
