@@ -55,10 +55,19 @@ const Skills = ({ darkMode }) => {
         multiValue: (provided) => ({
             ...provided,
             backgroundColor: darkMode ? '#404040' : '#e5e5e5',
+            border: darkMode ? '1px solid #525252' : '1px solid #d4d4d4',
+            boxShadow: '0 1px 2px rgba(0,0,0,0.08)',
+            transition: 'transform 120ms ease, box-shadow 150ms ease',
+            ':hover': {
+                transform: 'translateY(-1px)',
+                boxShadow: '0 4px 10px rgba(0,0,0,0.14)',
+                borderColor: 'var(--button-selected)',
+            },
         }),
         multiValueLabel: (provided) => ({
             ...provided,
             color: darkMode ? '#e5e5e5' : '#171717',
+            fontWeight: 600,
         }),
         multiValueRemove: (provided) => ({
             ...provided,
@@ -66,7 +75,9 @@ const Skills = ({ darkMode }) => {
             '&:hover': {
                 backgroundColor: 'var(--button-selected)',
                 color: '#fff',
+                transform: 'translateY(-1px)',
             },
+            transition: 'transform 120ms ease, background-color 150ms ease, color 150ms ease',
         }),
         placeholder: (provided) => ({
             ...provided,

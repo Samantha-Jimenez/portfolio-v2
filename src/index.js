@@ -4,6 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Suppress benign ResizeObserver loop errors (e.g. from react-hot-toast / layout shifts)
+const resizeObserverErr = window.onerror;
+window.onerror = function (message, ...args) {
+  if (
+    typeof message === 'string' &&
+    (message.includes('ResizeObserver loop') || message.includes('ResizeObserver loop limit exceeded'))
+  ) {
+    return true;
+  }
+  return resizeObserverErr ? resizeObserverErr(message, ...args) : false;
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

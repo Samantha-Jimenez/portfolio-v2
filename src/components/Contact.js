@@ -200,7 +200,11 @@ const Contact = () => {
                             <button 
                                 type="submit" 
                                 disabled={isSubmitting}
-                                className={`relative ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+                                className={`relative inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-all duration-150 ease-out
+                                    focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--button-selected)]
+                                    hover:translate-y-[1px] hover:shadow-lg active:translate-y-[2px] active:shadow-md
+                                    bg-[var(--button-color)] text-white
+                                    ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
                             >
                                 {isSubmitting ? (
                                     <span className="flex items-center justify-center gap-2">

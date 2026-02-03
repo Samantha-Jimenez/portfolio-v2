@@ -15,8 +15,6 @@ import 'aos/dist/aos.css';
 import Toggle from 'react-toggle';
 import "react-toggle/style.css";
 
-AOS.init();
-
 // Define the openMenu function
 const openMenu = (currentState, setStateFunction) => {
   setStateFunction(!currentState);
@@ -63,6 +61,7 @@ function App() {
   });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuToggleRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -84,6 +83,30 @@ function App() {
     };
   }, []);
 
+  // Respect prefers-reduced-motion when initializing AOS animations
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const initAOS = () => {
+      AOS.init({
+        disable: mediaQuery.matches,
+        duration: 1000,
+        easing: 'ease-in-out-back',
+      });
+
+      if (!mediaQuery.matches) {
+        AOS.refresh();
+      }
+    };
+
+    initAOS();
+
+    const handleChange = () => initAOS();
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -97,6 +120,28 @@ function App() {
   const offset = windowWidth <= 768 ? -20 : -50;
 
   const [openGithubMenu, setOpenGithubMenu] = useState(false);
+
+  // Close GitHub dropdown on Escape for keyboard users
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setOpenGithubMenu(false);
+      }
+    };
+
+    if (openGithubMenu) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [openGithubMenu]);
+
+  // Return focus to the menu trigger after the mobile menu closes
+  useEffect(() => {
+    if (!isMenuOpen && menuToggleRef.current) {
+      menuToggleRef.current.focus();
+    }
+  }, [isMenuOpen]);
 
   useEffect(() => {
     if (darkMode) {
@@ -139,7 +184,15 @@ function App() {
       <div className="vsc-initialized" data-aos-easing="ease-in-out-back" data-aos-duration="1000" data-aos-delay="0" data-spy="scroll" data-target="#header" data-offset="50">
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
-              <button type="button" onClick={toggleMenu} className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--light-underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`} aria-controls="mobile-menu" aria-expanded={isMenuOpen} aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}>
+              <button
+                ref={menuToggleRef}
+                type="button"
+                onClick={toggleMenu}
+                className={`absolute top-2.5 right-2.5 rounded-md p-1 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${isMenuOpen ? 'bg-[var(--light-underline-and-button-color)] dark:bg-[var(--dark-underline-and-button-color)] text-white outline-none ring-2 ring-inset ring-white' : 'bg-[var(--light-menu-text-unselected)] dark:bg-[var(--dark-menu-text-unselected)]'}`}
+                aria-controls="mobile-menu"
+                aria-expanded={isMenuOpen}
+                aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              >
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? (
