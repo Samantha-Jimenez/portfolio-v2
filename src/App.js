@@ -180,6 +180,12 @@ function App() {
 
   return (
     <div className="App">
+      <a
+        href="#main"
+        className="skip-link"
+      >
+        Skip to main content
+      </a>
       <div className="vsc-initialized" data-aos-easing="ease-in-out-back" data-aos-duration="1000" data-aos-delay="0" data-spy="scroll" data-target="#header" data-offset="50">
         <div className="show" id="navbarSupportedContent">
             <div className="flex lg:hidden sticky top-0 z-10 place-self-end">
