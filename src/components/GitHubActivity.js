@@ -25,7 +25,7 @@ const GitHubActivity = ({ darkMode }) => {
         <div className="container">
             <div className="section-title" data-aos="fade-up" data-aos-duration="1500">
                 <h2>GitHub Activity</h2>
-                <div className="mt-4 inline-flex gap-2 w-full justify-between" data-aos="fade-up" data-aos-duration="1000">
+                <div className="mt-4 inline-flex gap-3 w-full justify-between" data-aos="fade-up" data-aos-duration="1000">
                 <p data-aos="fade-up" data-aos-duration="1000">
                     A snapshot of my GitHub contributions and coding activity.
                 </p>
