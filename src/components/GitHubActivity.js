@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { GitHubCalendar } from 'react-github-calendar';
 
 const GitHubActivity = ({ darkMode }) => {
+    const calendarWrapperRef = useRef(null);
     // Theme for the contribution calendar that matches portfolio colors
     const calendarTheme = {
         light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
@@ -20,6 +21,37 @@ const GitHubActivity = ({ darkMode }) => {
             year: 'numeric' 
         });
     };
+
+    // Scroll to the right (most recent dates) on mount and when calendar loads
+    useEffect(() => {
+        const scrollToRight = () => {
+            // Scroll the internal react-activity-calendar scroll container
+            if (calendarWrapperRef.current) {
+                const internalScrollContainer = calendarWrapperRef.current.querySelector('.react-activity-calendar__scroll-container');
+                if (internalScrollContainer) {
+                    // Only scroll if content is wider than container (horizontal scroll exists)
+                    if (internalScrollContainer.scrollWidth > internalScrollContainer.clientWidth) {
+                        internalScrollContainer.scrollLeft = internalScrollContainer.scrollWidth;
+                    }
+                }
+            }
+        };
+
+        // Try scrolling multiple times with delays to ensure calendar is fully rendered
+        const timeouts = [
+            setTimeout(scrollToRight, 100),
+            setTimeout(scrollToRight, 500),
+            setTimeout(scrollToRight, 1000)
+        ];
+
+        // Also scroll when window resizes (in case calendar size changes)
+        window.addEventListener('resize', scrollToRight);
+
+        return () => {
+            timeouts.forEach(timeoutId => clearTimeout(timeoutId));
+            window.removeEventListener('resize', scrollToRight);
+        };
+    }, [darkMode]); // Re-scroll when theme changes (calendar might re-render)
 
     return (
         <div className="container">
@@ -47,7 +79,7 @@ const GitHubActivity = ({ darkMode }) => {
             <div className="github-activity-content" data-aos="fade-up" data-aos-duration="1000">
                 {/* GitHub Contribution Calendar */}
                 <div className="github-calendar-container flex justify-center overflow-x-auto pb-4">
-                    <div className="calendar-wrapper">
+                    <div ref={calendarWrapperRef} className="calendar-wrapper overflow-x-auto">
                         <GitHubCalendar 
                             username="samantha-jimenez"
                             colorScheme={darkMode ? 'dark' : 'light'}
