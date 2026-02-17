@@ -25,7 +25,7 @@ const BackToTop = () => {
             spy={true}
             smooth={true}
             duration={800}
-            className={`back-to-top fixed bottom-6 right-6 z-50 p-3 rounded-full bg-[var(--button-color)] text-white shadow-lg cursor-pointer transition-all duration-300 hover:bg-[var(--button-selected)] hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--button-color)] ${
+            className={`back-to-top fixed bottom-6 right-8 z-50 p-3 rounded-full bg-[var(--button-color)] text-white shadow-lg cursor-pointer transition-all duration-300 hover:bg-[var(--button-selected)] hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--button-color)] ${
                 isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-4 pointer-events-none'
