@@ -21,15 +21,15 @@ const About = () => {
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        Following Pursuit, <span className='font-medium'>I spent over three years at Peloton,</span> where I made significant contributions to their membership platform, enhancing the user experience for millions of members worldwide. This hands-on experience allowed me to develop a keen eye for detail, a focus on scalability, and a commitment to delivering seamless digital experiences.
+                        Following Pursuit, <span className='font-medium'>I spent over three years at Peloton,</span> where I made significant contributions to their membership platform, enhancing the user experience for millions of members worldwide. This experience strengthened my ability to build scalable applications, collaborate across teams, and deliver polished, high-quality user experiences at scale.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        In addition to my engineering work, I earned a <span className='font-medium'>Bachelor of Science in Business, Management, & Economics</span> from Empire State College. This unique blend of technical and business expertise equips me to approach challenges with a well-rounded perspective, bridging the gap between strategy and execution.
+                        In addition to my engineering work, I earned a <span className='font-medium'>Bachelor of Science in Business, Management, & Economics</span> from Empire State College. This blend of technical and business expertise allows me to approach product development holistically, connecting user needs, technical implementation, and long-term strategy.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
-                        Now, I’m channeling my skills and experience into creating projects that inspire, innovate, and empower others. Whether it's crafting engaging interfaces, optimizing backend systems, or collaborating with diverse teams, I’m always eager to push boundaries and learn something new.
+                        Today, I'm focused on designing and building products that combine technology, community, and storytelling. I'm currently developing <a href="#motevis" className="highlighted-text font-medium underline decoration-2 underline-offset-2 hover:opacity-90 transition-opacity cursor-pointer">Motevis</a>, a platform that helps people discover run clubs and fitness communities, making movement more accessible and social. I'm also building <a href="#our-rootline" className="highlighted-text font-medium underline decoration-2 underline-offset-2 hover:opacity-90 transition-opacity cursor-pointer">Our Rootline</a>, a private family platform designed to preserve memories, share photos, and visualize family history across generations. These projects reflect my passion for creating meaningful tools that connect people and bring ideas to life.
                     </p>
                     <br />
                     <p data-aos="fade-left" data-aos-duration="1000">
