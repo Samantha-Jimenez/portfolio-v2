@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Light Theme Colors */
   --light-header-color: #96B0A3;

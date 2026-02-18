@@ -162,7 +162,7 @@ const Timeline = () => {
             {/* Project Sections */}
             <div className="-my-6">
                 {/* Our Rootline */}
-                <div className="relative pl-8 sm:pl-32 py-6 group">
+                <div id="our-rootline" className="relative pl-8 sm:pl-32 py-6 group scroll-mt-24">
                     <div className="timeline-header font-medium text-2xl mb-1 sm:mb-0 flex items-center gap-2" data-aos="fade-left" data-aos-duration="1500">
                         Our Rootline
                         <span className="in-dev-badge inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-medium rounded-full bg-orange-300/20 text-orange-600 dark:text-orange-400">
@@ -225,7 +225,7 @@ const Timeline = () => {
                 </div>
 
                 {/* Motevis */}
-                <div className="relative pl-8 sm:pl-32 py-6 group">
+                <div id="motevis" className="relative pl-8 sm:pl-32 py-6 group scroll-mt-24">
                     <div className="timeline-header font-medium text-2xl mb-1 sm:mb-0 flex items-center gap-2" data-aos="fade-left" data-aos-duration="1500">
                         Motevis
                         <span className="in-dev-badge inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-medium rounded-full bg-orange-300/20 text-orange-600 dark:text-orange-400">
